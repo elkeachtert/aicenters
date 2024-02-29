@@ -92,6 +92,10 @@
 .b-yellow {
 	border: 1px solid var(--mcmlyellow);
 }
+
+.green {
+  color: #00883a;
+}
 	
 
 .container-fluid.fullwidth {
