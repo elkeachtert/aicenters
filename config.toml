@@ -58,7 +58,7 @@ unsafe="true"
 # ----------------------------------------------------------------------------------------      
 [params.navigation]
 	home  = "Home"
-    logo = "images/MCML_Logo_cropped.jpg"
+    logo = "images/dmlab.png"
 	
 	# About #
     [[params.navigation.entry]]
