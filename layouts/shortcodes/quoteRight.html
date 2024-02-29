@@ -1,0 +1,30 @@
+{{ $name := .Get "name" -}}
+{{ $position := .Get "position" -}}
+{{ $quote := .Get "quote" -}}
+{{ $img := .Get "img" -}}
+{{ $size := .Get "size" -}}
+{{ $copyright := .Get "copyright" -}}
+
+{{ $path := printf "/static%s" $img -}} 
+{{ if not (os.FileExists $path) -}}
+{{ errorf "The quote at %q requires a valid image path:%q" .Page.Permalink $path}}
+{{ end -}}
+
+<div class="row justify-content-center mt-4">
+	{{ if eq $size "small" -}}
+	<div class="col-quote-small mb-4">
+	{{ else -}}
+	<div class="col-quote mb-4">
+	{{ end -}}
+		<div class="quote-txt quote-txt-right">
+			<p>&laquo;{{ $quote }}&raquo;</p>
+    </div>
+   	<div class="quote-img quote-img-right">
+   	  <img src="{{ $img }}" alt="{{ $name }}" width="100" height="100" style="background: linear-gradient(rgba(228, 228, 228, 0.5), rgba(164, 164, 164, 0.5));"/>
+			{{ if $copyright -}}
+			<p class="copyright pt-0 mt-0">&copy; {{ $copyright }}</p>
+			{{ end -}}
+			<p class="p-xs bold">{{ $name }}<br>{{ $position }}</p>
+  	</div>
+	</div>  
+</div>

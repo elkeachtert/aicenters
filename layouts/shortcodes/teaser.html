@@ -1,0 +1,11 @@
+{{ $padding := .Get "padding" -}}
+{{ if $padding -}}
+<div class="row {{ $padding }}">
+{{ else -}}
+<div class="row">
+{{ end -}}
+	<div class="col-xl-9 col-lg-12 teaser">
+		<p>{{ .Get "txt" | markdownify }}</p>
+	</div>
+</div>
+

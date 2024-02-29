@@ -1,0 +1,12 @@
+{{- $title := .Get "title" }}
+{{- $author := .Get "author" }}
+{{- $link := .Get "link" }}
+{{- $linktext := .Get "linktext"}}
+
+<div class="row m-4">
+<p class="mb-0">{{ $author }}. </p>
+<p class="bold mb-0">{{ $title}}.<br>
+{{ if $link }}	
+	<a class="p-s" href="{{ $link }}">{{ $linktext }}</a></p>
+{{ end }}
+</div>

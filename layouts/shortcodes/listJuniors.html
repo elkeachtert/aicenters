@@ -1,0 +1,5 @@
+{{ if eq "subarea" (.Get "order") -}}
+{{ partial "listJuniorsBySubarea" (dict "pi" (.Get "pi")) -}}
+{{ else -}}
+{{ partial "listJuniors" (dict "pi" (.Get "pi")) -}}
+{{ end -}}

@@ -1,0 +1,27 @@
+{{ "<!-- txt Two Col Start -->" | safeHTML }}
+<div class="row mb-lg-3 mt-lg-3 pt-3">
+	<div class="col col-12 col-lg-4 pt-1">
+		<h3>{{ .Get "title" | markdownify }}</h3>
+	</div>
+	<div class="col col-12 col-lg-8 pt-1 txtTwoCol-md">
+		{{ if .Get "img" -}}
+		{{ partial "img-float" (dict "src" (.Get "img") "caption" (.Get "caption") "alt" (.Get "title") "float" (.Get "float") "copyright" (.Get "copyright")) }}
+		{{ end -}}
+		
+		{{ partial "myMarkdownify" (dict "txt" (.Get "txt1")) }}
+		
+		{{ if .Get "txt2" -}}
+		{{ partial "myMarkdownify" (dict "txt" (.Get "txt2")) }}
+		{{ end -}}
+		
+		{{ if .Get "txt3" -}}
+		{{ partial "myMarkdownify" (dict "txt" (.Get "txt3")) }}
+		{{ end -}}
+		<div style="clear:both;"></div>
+		
+		{{ if .Get "link" -}}
+		{{ partial "learnMore" (dict "link" (.Get "link") "text" (.Get "linktext") "size" ("medium")) -}}
+		{{ end -}}
+	</div>
+</div>
+{{ "<!-- txt Two Col End -->" | safeHTML }}

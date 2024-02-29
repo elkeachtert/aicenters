@@ -1,0 +1,79 @@
+{{ $img1 := .Get "img1" -}}
+{{ $imgAlt1 := .Get "imgAlt1" -}}
+{{ $text1 := .Get "text1" -}}
+{{ $caption1 := .Get "caption1" -}}
+{{ $img2 := .Get "img2" -}}
+{{ $imgAlt2 := .Get "imgAlt2" -}}
+{{ $text2 := .Get "text2" -}}
+{{ $caption2 := .Get "caption2" -}}
+{{ $img3 := .Get "img3" -}}
+{{ $imgAlt3 := .Get "imgAlt3" -}}
+{{ $text3 := .Get "text3" -}}
+{{ $caption3 := .Get "caption3" -}}
+{{ $img4 := .Get "img4" -}}
+{{ $imgAlt4 := .Get "imgAlt4" -}}
+{{ $text4 := .Get "text4" -}}
+{{ $caption4 := .Get "caption4" -}}
+{{ $copyright1 := .Get "copyright1" -}}
+{{ $copyright2 := .Get "copyright2" -}}
+{{ $copyright3 := .Get "copyright3" -}}
+{{ $copyright4 := .Get "copyright4" -}}
+
+{{ $width := 300 -}}
+{{ $height := 200 -}}
+{{ $orientation := .Get "orientation" -}}
+{{ if eq $orientation "portrait" -}}
+	{{ $width = 200 -}}
+	{{ $height = 300 -}}
+{{ end -}}
+
+<div class="row pt-3 pb-3 row-cols-1 row-cols-md-2">
+	<div class="col mt-1 mb-xl-0 mb-3">
+		<img src="{{ $img1 }}" width="{{ $width }}" height="{{ $height }}" class="img-100" alt="{{ $imgAlt1 }}"/>
+		{{ if $copyright1 -}}
+		<p class="pb-0 mb-0 copyright">&copy;{{ $copyright1 }} </p>
+		{{ end -}}
+		{{ if ne $caption1 "" -}}
+		<p class="p-xs gray mt-1"> {{ $caption1 | markdownify }} </p>
+		{{ end -}}
+		{{ if ne $text1 "" -}}
+		<p class="p-s mt-3"> {{ $text1 | markdownify }} </p>
+		{{ end -}}
+	</div>
+	<div class="col mt-1 mb-xl-0 mb-3">
+		<img src="{{ $img2 }}" width="{{ $width }}" height="{{ $height }}" class="img-100" alt="{{ $imgAlt2 }}"/>
+		{{ if $copyright2 -}}
+		<p class="pb-0 mb-0 copyright">&copy;{{ $copyright2 }} </p>
+		{{ end -}}
+		{{ if ne $caption2 "" -}}
+		<p class="p-xs gray mt-1"> {{ $caption2 | markdownify }} </p>
+		{{ end -}}
+		{{ if ne $text2 "" -}}
+		<p class="p-s mt-3"> {{ $text2 | markdownify }} </p>
+		{{ end -}}
+	</div>
+	<div class="col mt-1 mb-xl-0 mb-3">
+		<img src="{{ $img3 }}" width="{{ $width }}" height="{{ $height }}" class="img-100" alt="{{ $imgAlt3 }}"/>
+		{{ if $copyright3 -}}
+		<p class="pb-0 mb-0 copyright">&copy;{{ $copyright3 }} </p>
+		{{ end -}}
+		{{ if ne $caption3 "" -}}
+		<p class="p-xs gray mt-1"> {{ $caption3 | markdownify }} </p>
+		{{ end -}}
+		{{ if ne $text3 "" -}}
+		<p class="p-s mt-3"> {{ $text3 | markdownify }} </p>
+		{{ end -}}
+	</div>
+	<div class="col mt-1 mb-xl-0 mb-3">
+		<img src="{{ $img4 }}" width="{{ $width }}" height="{{ $height }}" class="img-100" alt="{{ $imgAlt4 }}"/>
+		{{ if $copyright4 -}}
+		<p class="pb-0 mb-0 copyright">&copy;{{ $copyright4 }} </p>
+		{{ end -}}
+		{{ if ne $caption4 "" -}}
+		<p class="p-xs gray mt-1"> {{ $caption4 | markdownify }} </p>
+		{{ end -}}
+		{{ if ne $text4 "" -}}
+		<p class="p-s mt-3"> {{ $text4 | markdownify }} </p>
+		{{ end -}}
+	</div>
+</div>

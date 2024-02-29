@@ -1,0 +1,3 @@
+<tr><td width=40>[{{ .Get "no" }}]</td>
+    <td>{{ .Get "author" }}. <b>&ldquo;{{ .Get "title" }}&rdquo;</b>. {{ .Get "journal" }}. {{if .Get "location" }}{{ .Get "location" }}, {{ .Get "date" }}.{{ end }} {{if .Get "link" }}<a href="{{ .Get "link" }}">{{ .Get "linktext"}}</a>.{{ end }}{{if .Get "link2" }} <a href="{{ .Get "link2" }}">{{ .Get "linktext2"}}</a>.{{ end}}</td>
+</tr>

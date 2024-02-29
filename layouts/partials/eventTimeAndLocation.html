@@ -1,0 +1,26 @@
+{{ $start := time.Format "02.01.2006" .startDate -}}
+{{ $end := time.Format "02.01.2006" .endDate -}}
+{{ $starttime := .startDate | time.Format ":time_short" -}}
+{{ $endtime := .endDate | time.Format ":time_short" -}}
+
+{{ if .p }}
+<p class="{{ .p }}">
+{{ else -}}
+<p class="bold">
+{{ end -}}
+
+{{ if eq $start $end -}}
+	{{ if .allDay -}}
+		{{ $start }}
+	{{ else -}}
+		{{ $start }}<br>{{ $starttime }} - {{ $endtime }}
+	{{ end -}}
+{{ else -}}
+	{{ $start }} - {{ $end }}
+{{ end -}}
+
+{{ if .location -}}
+<br>{{ .location }}</p>
+{{ else -}}
+</p>
+{{ end -}}

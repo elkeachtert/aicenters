@@ -1,0 +1,47 @@
+{{ partial "header.html" . }}
+{{ partial "navigation.html" . }}
+
+<section class="list-content bg-mask-top-white" id="section">	
+	{{partial "breadcrumbs.html" . }} 
+	<!-- {{partial "quicklinks.html" . }} -->	
+	<div class="container-fluid"> 
+		<div class="row row-cols-1 row-cols-lg-1">
+			<div class="col">
+			{{ if .Params.shorttitle -}}
+				<h1>{{ .Params.shorttitle | markdownify }}</h1>
+			{{ else -}}
+				<h1>{{ .Title }}</h1>
+			{{ end -}}
+			</div>
+			{{ partial "search-form-news.html" . }}
+		</div>
+	</div>
+	
+	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
+		<div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 mt-0 posts" id="posts">			
+		{{ $range := .Pages }}
+		{{ $paginator := .Paginate $range }}
+		{{ $pageSize := $paginator.PageSize }}
+		{{ $totalPostsToShow := mul $paginator.PageNumber $pageSize }}
+		{{ range $index, $el := (first $totalPostsToShow $range) }}
+			<div {{ if eq $index (sub $totalPostsToShow $pageSize) }}id="newpage"{{ end }} class="post col mt-3 mb-3">
+				{{ .Scratch.Set "hero" false -}}
+				{{ partial "cardShortNews" . -}}
+			</div>
+		{{ end }}
+		{{ if and (gt $paginator.TotalPages 1) ($paginator.HasNext) }}
+			<div>
+				<a href="{{ $paginator.Next.URL }}#newpage" class="quicklink has--icon mt-0 mb-0 medium nextpage">
+					<span class="quicklink_icon">
+						<i class="fas fa-arrow-right"></i>
+					</span>
+					Load more
+				</a>
+			</div>
+		{{ end }}
+		</div>
+	</div>
+</section>
+{{"<!-- Content End -->" | safeHTML}}
+
+{{ partial "footer.html" . }}

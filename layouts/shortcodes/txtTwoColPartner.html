@@ -1,0 +1,47 @@
+{{- $type := .Get "type" }}
+<div class="row mb-lg-5 mt-lg-5">
+	<div class="col col-12 col-lg-4">
+		<h2>{{ .Get "title" | markdownify }}</h2>
+	</div>
+	<div class="col col-12 col-lg-8">
+		<p class="p-l">{{ .Get "txt1"| markdownify }}</p>
+		
+		{{ if .Get "txt2" -}}
+		<p class="p-l">{{ .Get "txt2"| markdownify }}</p>
+		{{ end -}}
+		
+		{{ if .Get "txt3" -}}
+		<p class="p-l">{{ .Get "txt3"| markdownify }}</p>
+		{{ end -}}
+			
+		{{- if eq $type "institutional"}}
+		<div class="row">
+			{{- range sort (where .Site.Data.partners.partner "type" $type) "name" }}
+			
+			{{ $path := printf "/static%s" .image -}} 
+			{{ if not (os.FileExists $path) -}}
+			{{ errorf "The image at %q requires a valid image path:%q" . $path}}
+			{{ end -}}
+			
+			<div class="col-6">
+				<a href="{{ .link }}">
+					<img src="{{ .image }}" width="200" height="100" class="img-partner" alt="{{ .name }}">
+				</a>
+			</div>
+			{{ end }}
+		</div>
+
+
+		{{- else }}
+		<div class="row">
+			{{- range sort (where .Site.Data.partners.partner "type" $type) "name" }}
+			<div class="col-6 col-md-4">
+				<a href="{{ .link }}">
+					<img src="{{ .image }}" width="200" height="100" class="img-partner mb-3" alt="{{ .name }}">
+				</a>
+			</div>
+			{{ end }}
+		</div>
+		{{- end}}
+	</div>
+</div>

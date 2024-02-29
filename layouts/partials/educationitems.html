@@ -1,0 +1,21 @@
+
+	<h2 id="{{ .year }}">{{ .year }}</h2>
+	<hr>
+	{{- range .course sort "chairname"}}
+	<div class="row">		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			{{ .type }}<br>
+			{{- if .link }}
+			<h3><a style="font-weight:bold;" href="{{ .link }}">{{ .name }}</a></h3>
+			{{- else }}
+			<h3><span style="font-weight:bold;">{{ .name }}</span></h3>
+			{{- end}}
+			
+			{{ .chairtitle }} {{ .chairfirstname }} {{ .chairname }}. <a href="{{ .unitlink }}">{{ .unit }}</a><br>
+		</div>
+	</div>
+	<hr class = "light">		  
+	{{ end }} 
+	<br>
+	<br>
+

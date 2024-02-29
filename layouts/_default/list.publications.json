@@ -1,0 +1,21 @@
+[ {{- $i := 0 -}}
+{{ $section := .Page.Section}}
+{{ range $.Site.Data.publications -}}
+	{{ range .pubitem -}}
+        {{- if gt $i 0 }},{{ end }}
+        {
+			"id":"{{ .no }}", 
+			"url":"{{ .Permalink }}", 
+			"title":{{ .title | jsonify  }}, 
+			"author":"{{ .author }}", 
+			"journal":"{{ .journal }}",
+			"link":"{{ .link }}",
+			"linktext":"{{ .linktext }}",
+			"link2":"{{ .link2 }}",
+			"linktext2":"{{ .linktext2 }}"
+		}
+        {{- $i = add $i 1 -}}
+	{{- end -}}
+{{- end -}} ]
+
+

@@ -1,0 +1,25 @@
+<div class="row mb-lg-5 mt-lg-5 pt-5">
+	<div class="col col-12 col-lg-4 pt-1 txtTwoCol">
+		<h2 class="h3">{{ .Get "title" | markdownify }}</h2>
+	</div>
+	<div class="col col-12 col-lg-8 pt-3 txtTwoCol">
+		{{ if .Get "img" -}}
+		{{ partial "img-float" (dict "src" (.Get "img") "caption" (.Get "caption") "alt" (.Get "title") "float" (.Get "float") "copyright" (.Get "copyright")) -}}
+		{{ end -}}
+		
+		{{ partial "myMarkdownify" (dict "txt" (.Get "txt1")) }}
+		
+		{{ if .Get "txt2" -}}
+		{{ partial "myMarkdownify" (dict "txt" (.Get "txt2")) }}
+		{{ end -}}
+		
+		{{ if .Get "txt3" -}}
+		{{ partial "myMarkdownify" (dict "txt" (.Get "txt3")) }}
+		{{ end -}}
+		<br clear="all">
+		
+		{{ if .Get "link" -}}
+		{{ partial "learnMore" (dict "link" (.Get "link") "text" (.Get "linktext") "size" ("medium")) -}}
+		{{ end -}}
+	</div>
+</div>

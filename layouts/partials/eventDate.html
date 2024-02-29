@@ -1,0 +1,65 @@
+{{ $start := time.Format "02.01.2006" .startDate -}}
+{{ $end := time.Format "02.01.2006" .endDate -}}
+{{ $starttime := .startDate | time.Format ":time_short" -}}
+{{ $endtime := .endDate | time.Format ":time_short" -}}
+
+{{ $start_d := time.Format "02" .startDate -}}
+{{ $end_d := time.Format "02" .endDate -}}
+
+{{ $start_m := time.Format "01" .startDate -}}
+{{ $end_m := time.Format "01" .endDate -}}
+
+{{ if or (eq .format "en") (eq .format "en1") }}
+{{ $start_m = time.Format "Jan" .startDate -}}
+{{ $end_m = time.Format "Jan" .endDate -}}
+{{ end -}}
+
+{{ $start_y := time.Format "2006" .startDate -}}
+{{ $end_y := time.Format "2006" .endDate -}}
+
+{{ $margin_start := 3 -}}
+{{ if .margin_start }}
+{{ $margin_start = .margin_start -}}
+{{ end -}}
+
+{{ if eq .format "en" }}
+<div class="ratio1 ratio1-1x1">
+<div class="flex-row d-inline-flex align-items-stretch bg-black b-white ms-{{ $margin_start }}" style="position: absolute;">
+	<div class="bg-black ps-3 pe-3 pt-2 pb-2 m-0">
+		<p class="b-red1 p-s bold text-center mb-0">{{ $start_d }}</p>
+		<p class="b-red1 p-s bold text-center mt-0 mb-0 pt-0">{{ $start_m}}</p>
+	</div>
+	{{ if ne $start $end -}}
+	<div class="bg-black m-0 ps-0 pe-0 align-items-center">
+		<p class="bold p-s b-red1 text-center"><br>-</p>
+	</div>
+	<div class="bg-black ps-3 pe-3 pt-2 pb-2 m-0">
+		<p class="b-red1 bold p-s text-center mb-0">{{ $end_d }}</p>
+		<p class="b-red1 bold p-s text-center mb-0 mt-0 pt-0">{{ $end_m}}</p>
+	</div>
+	{{ end -}}
+</div>
+</div>
+
+{{ else if eq .format "en1" }}
+{{ $start_m }}&nbsp;{{ $start_d }}
+
+{{ if ne $start_y $end_y -}}
+,&nbsp;{{ $start_y }}-
+{{ else -}}
+-
+{{ end -}}
+
+{{ if ne $start_m $end_m -}}
+{{ $end_m }}&nbsp;
+{{ end -}}
+
+{{ $end_d }},&nbsp; {{ $end_y}}
+
+{{ else -}}
+{{ if eq $start $end -}}
+{{ $start }} 
+{{ else -}}
+{{ $start }} - {{ $end }}
+{{ end -}}
+{{ end -}}

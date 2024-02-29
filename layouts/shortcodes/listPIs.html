@@ -1,0 +1,25 @@
+{{ $subarea := .Get "subarea" }}
+
+<div class="row g-3 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-5 mt-5">
+	{{ if .Get "subarea" -}}
+		{{ range sort (where .Site.Data.pis.pi "subarea" $subarea) "name" -}}
+			{{ partial "cardMember" (dict "image" .image "title" .title "firstName" .firstName "name" .name "uni" .uni "affiliation" .affiliation "contact" .contact ) -}}
+		{{ end -}}
+		{{ range sort (where .Site.Data.pis.senior "subarea" $subarea) "name" -}}
+			{{ partial "cardMember" (dict "image" .image "title" .title "firstName" .firstName "name" .name "uni" .uni "affiliation" .affiliation "affil" "Senior Researcher" "contact" .contact ) -}}
+		{{ end -}}
+		{{ range sort (where .Site.Data.pis.affil "subarea" $subarea) "name" -}}
+			{{ partial "cardMember" (dict "image" .image "title" .title "firstName" .firstName "name" .name "uni" .uni "affiliation" .affiliation "affil" "Affiliated Senior Researcher" "contact" .contact ) -}}
+		{{ end -}}
+	{{ else -}}
+		{{ range sort .Site.Data.pis.pi "name" -}}
+			{{ partial "cardMember" . -}}
+		{{ end -}}
+		{{ range sort .Site.Data.pis.senior "name" -}}
+			{{ partial "cardMember" . -}}
+		{{ end -}}
+		{{ range sort .Site.Data.pis.affil "name" -}}
+			{{ partial "cardMember" . -}}
+		{{ end -}}
+	{{ end -}}
+</div>
