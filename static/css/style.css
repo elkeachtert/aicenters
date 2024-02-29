@@ -1162,6 +1162,16 @@ img.img-40 {
 	height: auto;
 }
 
+img.img-30 {
+	width: 30%;
+	height: auto;
+}
+
+img.img-20 {
+	width: 20%;
+	height: auto;
+}
+
 img.img-social {
 	width:70px;
 	height: auto;
