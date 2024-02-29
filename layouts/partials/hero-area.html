@@ -19,22 +19,9 @@
 		<div class="row mt-5">
 			<div class="col col-12">
 			  {{ partial "cardTeam" (dict "image" "/images/pis/seidl.webp" "title" "Prof. Dr" "firstName" "Thomas" "name" "Seidl" "bio" "MCML Director, spokeperson, LRZ Director, KI-Rat, etc..." ) -}}
+			  {{ partial "learnMore" (dict "link" "about/" "txt" "About Us") -}}
 			</div>
 		</div>
-
-		<div class="row mt-5 mb-5">
-			<div class="col col-12 col-lg-3 pe-lg-4 txtTwoCol">
-				<h2>Our Vision</h2>
-			</div>
-			<div class="col col-12 col-lg-6 txtTwoCol">		
-				<p class="p-l">
-					{{ .Site.Params.hero.vision }}
-				</p>
-				{{ $code := partial "learnMore" (dict "link" "about/") -}}
-				{{ partial "file" (dict "code" $code "indent" 4) }}
-			</div>
-		</div>
-		{{"<!-- Vision End -->" | safeHTML}}	
 	</div>
 </section>
 {{"<!-- Hero Area End -->" | safeHTML}}
