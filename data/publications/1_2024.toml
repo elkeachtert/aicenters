@@ -1,0 +1,492 @@
+year=2024
+
+[[pubitem]]
+  no="840"
+  author="J. W. Grootjen, H. Weingärtner and S. Mayer"
+  title="Uncovering and Addressing Blink-Related Challenges in Using Eye Tracking for Interactive Systems"
+  journal="Conference on Human Factors in Computing Systems (CHI 2024). Honolulu, Hawaii, May. 11-16, 2024. To be published"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="839"
+  author="L. Haliburton, I. Damen, C. Lallemand, J. Niess, A. Ahtinen and P. W. Woźniak"
+  title="Office Wellbeing by Design: Don’t Stand for Anything Less"
+  journal="Conference on Human Factors in Computing Systems (CHI 2024). Honolulu, Hawaii, May. 11-16, 2024. To be published"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="838"
+  author="L. Haliburton, D. J. Grüning, F. Riedel, A. Schmidt and N. Terzimehić"
+  title="A Longitudinal In-the-Wild Investigation of Design Frictions to Prevent Smartphone Overuse"
+  journal="Conference on Human Factors in Computing Systems (CHI 2024). Honolulu, Hawaii, May. 11-16, 2024. To be published"
+  linktext="URL"
+  link="https://www.researchgate.net/publication/377774169_A_Longitudinal_In-the-Wild_Investigation_of_Design_Frictions_to_Prevent_Smartphone_Overuse"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="837"
+  author="S. Sakel, T. Blenk, A. Schmidt and L. Haliburton"
+  title="The Social Journal: Investigating Technology to Support and Reflect on Meaningful Social Interactions"
+  journal="Conference on Human Factors in Computing Systems (CHI 2024). Honolulu, Hawaii, May. 11-16, 2024. To be published"
+  linktext="URL"
+  link="https://www.researchgate.net/publication/377774093_The_Social_Journal_Investigating_Technology_to_Support_and_Reflect_on_Meaningful_Social_Interactions"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="836"
+  author="V. Bengs, B. Haddenhorst and E. Hüllermeier"
+  title="Identifying Copeland Winners in Dueling Bandits with Indifferences"
+  journal="27th International Conference on Artificial Intelligence and Statistics (AISTATS 2024). Valencia, Spain, May. 02-04, 2024. Accepted"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="835"
+  author="D. Dold, D. Rügamer, B. Sick and O. Dürr"
+  title="Semi-Structured Subspace Inference"
+  journal="27th International Conference on Artificial Intelligence and Statistics (AISTATS 2024). Valencia, Spain, May. 02-04, 2024. Accepted"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="834"
+  author="N. Palm and T. Nagler"
+  title="An Online Bootstrap for Time Series"
+  journal="27th International Conference on Artificial Intelligence and Statistics (AISTATS 2024). Valencia, Spain, May. 02-04, 2024. Preprint at arXiv"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2310.19683"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="833"
+  author="D. Rügamer"
+  title="Scalable Higher-Order Tensor Product Spline Models"
+  journal="27th International Conference on Artificial Intelligence and Statistics (AISTATS 2024). Valencia, Spain, May. 02-04, 2024. Accepted"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="832"
+  author="N. Strauß and M. Schubert"
+  title="Spatial-Aware Deep Reinforcement Learning for the Traveling Officer Problem"
+  journal="SIAM International Conference on Data Mining (SDM 2024). Houston, TX, USA, Apr. 18-20, 2024. To be published. Preprint at arXiv"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2401.05969"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="831"
+  author="J. Beck, S. Eckman, B. Ma, R. Chew and F. Kreuter"
+  title="Order Effects in Annotation Tasks: Further Evidence of Annotation Sensitivity"
+  journal="18th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2024). St. Julians, Malta, Mar. 17-22, 2024. To be published"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="830"
+  author="P. Lin, C. Hu, Z. Zhang, A. F. T. Martins and H. Schütze"
+  title="mPLM-Sim: Better Cross-Lingual Similarity and Transfer in Multilingual Pretrained Language Models"
+  journal="18th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2024). St. Julians, Malta, Mar. 17-22, 2024. Preprint at arXiv"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2305.13684"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="829"
+  author="B. Ma, E. Nie, S. Yuan, H. Schmid, M. Färber, F. Kreuter and H. Schütze"
+  title="ToPro: Token-Level Prompt Decomposition for Cross-Lingual Sequence Labeling Tasks"
+  journal="18th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2024). St. Julians, Malta, Mar. 17-22, 2024. To be published. Preprint at arXiv"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2401.16589"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="828"
+  author="L. K. Şenel, B. Ebing, K. Baghirova, H. Schütze and G. Glavaš"
+  title="Kardeş-NLU: Transfer to Low-Resource Languages with Big Brother’s Help – A Benchmark and Evaluation for Turkic Languages"
+  journal="18th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2024). St. Julians, Malta, Mar. 17-22, 2024. To be published"
+  linktext="URL"
+  link="https://openreview.net/forum?id=2AXe-Qe48t"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="827"
+  author="H. Chen, Y. Zhang, D. Krompass, J. Gu and V. Tresp"
+  title="FedDAT: An Approach for Foundation Model Finetuning in Multi-Modal Heterogeneous Federated Learning"
+  journal="38th Conference on Artificial Intelligence (AAAI 2024). Vancouver, Canada, Feb. 20-27, 2024"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="826"
+  author="P. Kolpaczki, V. Bengs, M. Muschalik and E. Hüllermeier"
+  title="Approximating the Shapley Value without Marginal Contributions"
+  journal="36th Annual Conference on Innovative Applications of Artificial Intelligence (IAAI 2024). Vancouver, Canada, Feb. 20-27, 2024. Preprint at arXiv"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2302.00736"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="825"
+  author="T. Ladner and M. Althoff"
+  title="Exponent Relaxation of Polynomial Zonotopes and Its Applications in Formal Neural Network Verification"
+  journal="38th Conference on Artificial Intelligence (AAAI 2024). Vancouver, Canada, Feb. 20-27, 2024"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="824"
+  author="J. Lienen and E. Hüllermeier"
+  title="Mitigating Label Noise through Data Ambiguation"
+  journal="38th Conference on Artificial Intelligence (AAAI 2024). Vancouver, Canada, Feb. 20-27, 2024"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2305.13764"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="823"
+  author="M. Muschalik, F. Fumagalli, B. Hammer and E. Hüllermeier"
+  title="Beyond TreeSHAP: Efficient Computation of Any-Order Shapley Interactions for Tree Ensembles"
+  journal="38th Conference on Artificial Intelligence (AAAI 2024). Vancouver, Canada, Feb. 20-27, 2024"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2401.12069"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="822"
+  author="T. N. Wolf, F. Bongratz, A.-M. Rickmann, S. Pölsterl and C. Wachinger"
+  title="Keep the Faith: Faithful Explanations in Convolutional Neural Networks for Case-Based Reasoning"
+  journal="38th Conference on Artificial Intelligence (AAAI 2024). Vancouver, Canada, Feb. 20-27, 2024"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2312.09783"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="821"
+  author="A. Reithmeir, J. A. Schnabel and V. A. Zimmer"
+  title="Learning physics-inspired regularization for medical image registration with hypernetworks"
+  journal="SPIE Medical Imaging: Image Processing 2024. San Diego, CA, USA, Feb. 18-22, 2024"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2311.08239"
+  linktext2="URL"
+  link2="https://spie.org/medical-imaging/presentation/Learning-physics-inspired-regularization-for-medical-image-registration-with-hypernetworks/12926-90"
+
+[[pubitem]]
+  no="820"
+  author="H. Weerts, F. Pfisterer, M. Feurer, K. Eggensperger, E. Bergman, N. Awad, J. Vanschoren, M. Pechenizkiy, B. Bischl and F. Hutter"
+  title="Can Fairness be Automated? Guidelines and Opportunities for Fairness-aware AutoML"
+  journal="Journal of Artificial Intelligence Research 79 (Feb. 17, 2024)"
+  linktext="DOI"
+  link="https://doi.org/10.1613/jair.1.14747"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="819"
+  author="R. van Koningsbruggen, L. Haliburton, B. Rossmy, C. George, E. Hornecker and B. Hengeveld"
+  title="Metaphors and `Tacit' Data: the Role of Metaphors in Data and Physical Data Representations"
+  journal="18th International Conference on Tangible, Embedded, and Embodied Interaction. Cork, Ireland, Feb. 11-14, 2024"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3623509.3633355"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="818"
+  author="D. Racek, B. I. Davidson, P. W. Thurner, X. Zhu and G. Kauermann"
+  title="The Russian war in Ukraine increased Ukrainian language use on social media"
+  journal="Communications Psychology 2.1 (Jan. 10, 2024)"
+  linktext="DOI"
+  link="https://doi.org/10.1038/s44271-023-00045-6"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="817"
+  author="C. Geldhauser and H. Diebel-Fischer"
+  title="Is diverse and inclusive AI trapped in the gap between reality and algorithmizability?"
+  journal="24th Nordic Conference on Computational Linguistics (NoDaLiDa 2023). Tromsø, Norway, Jan. 09-11, 2024"
+  linktext="URL"
+  link="https://openreview.net/forum?id=bnjr0jiMcW"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="816"
+  author="M. Bernhard, R. Amoroso, Y. Kindermann, M. Schubert, L. Baraldi, R. Cucchiara and V. Tresp"
+  title="What’s Outside the Intersection? Fine-grained Error Analysis for Semantic Segmentation Beyond IoU"
+  journal="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024). Waikoloa, Hawaii, Jan. 04-08, 2024"
+  linktext="URL"
+  link="https://openaccess.thecvf.com/content/WACV2024/html/Bernhard_Whats_Outside_the_Intersection_Fine-Grained_Error_Analysis_for_Semantic_Segmentation_WACV_2024_paper.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="815"
+  author="A. R. Bhattarai, M. Nießner and A. Sevastopolsky"
+  title="TriPlaneNet: An Encoder for EG3D Inversion"
+  journal="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024). Waikoloa, Hawaii, Jan. 04-08, 2024"
+  linktext="URL"
+  link="https://openaccess.thecvf.com/content/WACV2024/html/Bhattarai_TriPlaneNet_An_Encoder_for_EG3D_Inversion_WACV_2024_paper.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="814"
+  author="M. Brahimi, B. Haefner, T. Yenamandra, B. Goldluecke and D. Cremers"
+  title="SupeRVol: Super-Resolution Shape and Reflectance Estimation in Inverse Volume Rendering"
+  journal="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024). Waikoloa, Hawaii, Jan. 04-08, 2024"
+  linktext="URL"
+  link="https://openaccess.thecvf.com/content/WACV2024/html/Brahimi_SupeRVol_Super-Resolution_Shape_and_Reflectance_Estimation_in_Inverse_Volume_Rendering_WACV_2024_paper.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="813"
+  author="M. Z. Darestani, V. Nath, W. Li, Y. He, H. R. Roth, Z. Xu, D. Xu, R. Heckel and C. Zhao"
+  title="IR-FRestormer: Iterative Refinement With Fourier-Based Restormer for Accelerated MRI Reconstruction"
+  journal="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024). Waikoloa, Hawaii, Jan. 04-08, 2024"
+  linktext="URL"
+  link="https://openaccess.thecvf.com/content/WACV2024/html/Darestani_IR-FRestormer_Iterative_Refinement_With_Fourier-Based_Restormer_for_Accelerated_MRI_Reconstruction_WACV_2024_paper.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="812"
+  author="S. Klenk, D. Bonello, L. Koestler, N. Araslanov and D. Cremers"
+  title="Masked Event Modeling: Self-Supervised Pretraining for Event Cameras"
+  journal="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024). Waikoloa, Hawaii, Jan. 04-08, 2024"
+  linktext="URL"
+  link="https://openaccess.thecvf.com/content/WACV2024/html/Klenk_Masked_Event_Modeling_Self-Supervised_Pretraining_for_Event_Cameras_WACV_2024_paper.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="811"
+  author="U. Sahin, H. Li, Q. Khan, D. Cremers and V. Tresp"
+  title="Enhancing Multimodal Compositional Reasoning of Visual Language Models With Generative Negative Mining"
+  journal="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024). Waikoloa, Hawaii, Jan. 04-08, 2024"
+  linktext="URL"
+  link="https://openaccess.thecvf.com/content/WACV2024/html/Sahin_Enhancing_Multimodal_Compositional_Reasoning_of_Visual_Language_Models_With_Generative_WACV_2024_paper.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="810"
+  author="T. Weber, M. Ingrisch, B. Bischl and D. Rügamer"
+  title="Constrained Probabilistic Mask Learning for Task-specific Undersampled MRI Reconstruction"
+  journal="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024). Waikoloa, Hawaii, Jan. 04-08, 2024"
+  linktext="URL"
+  link="https://openaccess.thecvf.com/content/WACV2024/html/Weber_Constrained_Probabilistic_Mask_Learning_for_Task-Specific_Undersampled_MRI_Reconstruction_WACV_2024_paper.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="809"
+  author="T. Yenamandra, A. Tewari, N. Yang, F. Bernard, C. Theobalt and D. Cremers"
+  title="FIRe: Fast Inverse Rendering Using Directional and Signed Distance Functions"
+  journal="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024). Waikoloa, Hawaii, Jan. 04-08, 2024"
+  linktext="URL"
+  link="https://openaccess.thecvf.com/content/WACV2024/html/Yenamandra_FIRe_Fast_Inverse_Rendering_Using_Directional_and_Signed_Distance_Functions_WACV_2024_paper.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="808"
+  author="G. Zhang, Y. Zhang, K. Zhang and V. Tresp"
+  title="Can Vision-Language Models be a Good Guesser? Exploring VLMs for Times and Location Reasoning"
+  journal="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024). Waikoloa, Hawaii, Jan. 04-08, 2024"
+  linktext="URL"
+  link="https://openaccess.thecvf.com/content/WACV2024/html/Zhang_Can_Vision-Language_Models_Be_a_Good_Guesser_Exploring_VLMs_for_WACV_2024_paper.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="807"
+  author="S. Feuerriegel, J. Hartmann, C. Janiesch and P. Zschech"
+  title="Generative AI"
+  journal="Business and Information Systems Engineering 66.1 (Feb. 2024)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s12599-023-00834-7"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="806"
+  author="H. Boch, A. Fono and G. Kutyniok"
+  title="Mathematical Algorithm Design for Deep Learning under Societal and Judicial Constraints: The Algorithmic Transparency Requirement"
+  journal="Preprint at arXiv (Jan. 2024)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2401.10310"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="805"
+  author="C. Cipriani, M. Fornasier and A. Scagliotti"
+  title="From NeurODEs to AutoencODEs: a mean-field control framework for width-varying Neural Networks"
+  journal="European Journal of Applied Mathematics (2024). To be published"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2307.02279"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="804"
+  author="Z. S. Dunias, B. Van Calster, D. Timmerman, A.-L. Boulesteix and M. van Smeden"
+  title="A comparison of hyperparameter tuning procedures for clinical prediction models: A simulation study"
+  journal="Statistics in Medicine (Jan. 2024)"
+  linktext="DOI"
+  link="https://doi.org/10.1002/sim.9932"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="803"
+  author="K. Hechinger, X. Zhu and G. Kauermann"
+  title="Categorising the world into local climate zones: towards quantifying labelling uncertainty for machine learning models"
+  journal="Journal of the Royal Statistical Society. Series C (Applied Statistics) 73.1 (Jan. 2024)"
+  linktext="DOI"
+  link="https://doi.org//10.1093/jrsssc/qlad089"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="802"
+  author="E. Hüllermeier and R. Slowinski"
+  title="Preference learning and multiple criteria decision aiding: Differences, commonalities, and synergies -- Part I"
+  journal="4OR (Jan. 2024)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s10288-023-00560-6"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="801"
+  author="E. Hüllermeier and R. Slowinski"
+  title="Preference learning and multiple criteria decision aiding: Differences, commonalities, and synergies -- Part II"
+  journal="4OR (Jan. 2024)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s10288-023-00561-5"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="800"
+  author="L. Kreitner, J. C. Paetzold, N. Rauch, C. Chen, A. M. Hagag, A. E. Fayed, S. Sivaprasad, S. Rausch, J. Weichsel, B. H. Menze, M. Harders, B. Knier, D. Rückert and M. J. Menten"
+  title="Synthetic optical coherence tomography angiographs for detailed retinal vessel segmentation without human annotations"
+  journal="IEEE Transactions on Medical Imaging (Jan. 2024)"
+  linktext="DOI"
+  link="https://doi.org/ 10.1109/TMI.2024.3354408"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="799"
+  author="V. Lehmann, T. Zueger, M. Maritsch, M. Notter, S. Schallmoser, C. Bérubé, C. Albrecht, M. Kraus, S. Feuerriegel, E. Fleisch, T. Kowatsch, S. Lagger, M. Laimer, F. Wortmann and C. Stettler"
+  title="Machine Learning to Infer a Health State Using Biomedical Signals --- Detection of Hypoglycemia in People with Diabetes while Driving Real Cars"
+  journal="NEJM AI (Jan. 2024)"
+  linktext="DOI"
+  link="https://doi.org/10.1056/AIoa2300013"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="798"
+  author="M. M. Mandl, A. S. Becker-Pennrich, L. C. Hinske, S. Hoffmann and A.-L. Boulesteix"
+  title="Addressing researcher degrees of freedom through minP adjustment"
+  journal="Preprint at arXiv (Jan. 2024)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2401.11537"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="797"
+  author="T. Papamarkou, M. Skoularidou, L. Aitchison, J. Arbel, D. Dunson, M. Filippone, V. Fortuin, P. Hennig, A. Hubin, A. Immer, T. Karaletsos, M. E. Khan, A. Kristiadi, Y. Li, J. M. H. Lobato, S. Mandt, C. Nemeth, M. A. Osborne, K. Palla, T. G. J. Rudner, D. Rügamer, Y. W. Teh, M. Welling, A. G. Wilson and R. Zhang"
+  title="Position Paper: Bayesian Deep Learning in the Age of Large-Scale AI"
+  journal="Preprint at arXiv. Under Review (2024)"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="796"
+  author="E. Sommer, L. Wimmer, T. Papamarkou, L. Bothmann, B. Bischl and D. Rügamer"
+  title="Connecting the Dots: Is Mode Connectedness the Key to Feasible Sample-Based Inference in Bayesian Neural Networks?"
+  journal="Preprint at arXiv. Under review (2024)"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="795"
+  author="P. Wesp, B. M. Schachtner, K. Jeblick, J. Topalis, M. Weber, F. Fischer, R. Penning, J. Ricke, M. Ingrisch and B. O. Sabel"
+  title="Radiological age assessment based on clavicle ossification in CT: enhanced accuracy through deep learning"
+  journal="International Journal of Legal Medicine (Jan. 2024)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s00414-024-03167-6"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="794"
+  author="M. Wünsch, C. Sauer, P. Callahan, L. C. Hinske and A.-L. Boulesteix"
+  title="From RNA sequencing measurements to the final results: a practical guide to navigating the choices and uncertainties of gene set analysis"
+  journal="Wiley Interdisciplinary Reviews: Computational Statistics (2024). To be published"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2308.15171"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="793"
+  author="F. Xu, Y. Shi, P. Ebel, W. Yang and X. Zhu"
+  title="Multimodal and Multiresolution Data Fusion for High-Resolution Cloud Removal: A Novel Baseline and Benchmark"
+  journal="IEEE Transactions on Geoscience and Remote Sensing 62 (Jan. 2024)"
+  linktext="DOI"
+  link="https://doi.org/10.1109/TGRS.2023.3337845"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="792"
+  author="F. Zhang, Y. Shi, Z. Xiong and X. Zhu"
+  title="Few-Shot Object Detection in Remote Sensing: Lifting the Curse of Incompletely Annotated Novel Objects"
+  journal="IEEE Transactions on Geoscience and Remote Sensing 62 (Jan. 2024)"
+  linktext="DOI"
+  link="https://doi.org/10.1109/TGRS.2023.3347329"
+  linktext2=""
+  link2=""
+

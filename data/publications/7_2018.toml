@@ -1,0 +1,102 @@
+year=2018
+
+[[pubitem]]
+  no="10"
+  author="J. N. van Rijn, F. Pfisterer, J. Thomas, A. Muller, B. Bischl and J. Vanschoren"
+  title="Meta learning for defaults: Symbolic defaults"
+  journal="Workshop on Meta-Learning (MetaLearn 2018) at the 32nd Conference on Neural Information Processing Systems (NeurIPS 2018). Montréal, Canada, Dec. 03-08, 2018"
+  linktext="PDF"
+  link="https://ada.liacs.nl/papers/RijEtAl18c.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="9"
+  author="J. Minkwitz, F. Scheipl, E. Binder, C. Sander, U. Hegerl and H. Himmerich"
+  title="Generalised functional additive models for brain arousal state dynamics (Poster)"
+  journal="20th International Pharmaco-EEG Society for Preclinical and Clinical Electrophysiological Brain Research Meeting (IPEG 2018). Zurich, Switzerland, Nov. 21-25, 2018"
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="8"
+  author="G. Casalicchio, C. Molnar and B. Bischl"
+  title="Visualizing the feature importance for black box models"
+  journal="European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD 2018). Dublin, Ireland, Sep. 10-14, 2018"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-030-10925-7_40"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="7"
+  author="D. Kühn, P. Probst, J. Thomas and B. Bischl"
+  title="Automatic Exploration of Machine Learning Experiments on OpenML"
+  journal="Preprint at arXiv (2018)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/1806.10961"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="6"
+  author="M. Lotfollahi, F. A. Wolf and F. J. Theis"
+  title="Generative Modeling and Latent Space Arithmetics Predict Single-Cell Perturbation Response across Cell Types, Studies and Species"
+  journal="Preprint at bioRxiv (2018)"
+  linktext="DOI"
+  link="https://doi.org/10.1101/478503"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="5"
+  author="I. van Mechelen, A.-L. Boulesteix, R. Dangl, N. Dean, I. Guyon, C. Hennig, F. Leisch and D. Steinley"
+  title="Benchmarking in cluster analysis: A white paper"
+  journal="Preprint at arXiv (2018)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/1809.10496"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="4"
+  author="C. Molnar, G. Casalicchio and B. Bischl"
+  title="iml: An R package for interpretable machine learning"
+  journal="The Journal of Open Source Software 3.26 (2018)"
+  linktext="DOI"
+  link="https://doi.org/10.21105/joss.00786"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="3"
+  author="D. Rügamer, S. Brockhaus, K. Gentsch, K. Scherer and S. Greven"
+  title="Boosting factor-specific functional historical models for the detection of synchronization in bioelectrical signals"
+  journal="Journal of the Royal Statistical Society. Series C (Applied Statistics) 67.3 (2018)"
+  linktext="DOI"
+  link="https://doi.org/10.1111/rssc.12241"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="2"
+  author="D. Schalk, J. Thomas and B. Bischl"
+  title="compboost: Modular Framework for Component-wise Boosting"
+  journal="The Journal of Open Source Software 3.30 (2018)"
+  linktext="DOI"
+  link="https://doi.org/10.21105/joss.00967"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="1"
+  author="J. Thomas, S. Coors and B. Bischl"
+  title="Automatic gradient boosting"
+  journal="Preprint at arXiv (2018)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/1807.03873"
+  linktext2=""
+  link2=""
+

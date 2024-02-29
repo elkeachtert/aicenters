@@ -1,0 +1,644 @@
+[[phd]]
+name = "Becker"
+firstName = "Marc"
+title = ""
+image = "/images/phds/becker.png"
+contact = "https://www.slds.stat.uni-muenchen.de/people/becker/"
+funding = true
+piID = "bischl"
+
+[[phd]]
+name = "Binder"
+firstName = "Martin"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.slds.stat.uni-muenchen.de/people/binder/"
+position = "Coordinator for Open Source & Open Data"
+funding = true
+piID = "bischl"
+
+[[phd]]
+name = "Ewald"
+firstName = "Fiona"
+title = ""
+image = "/images/phds/ewald.png"
+contact = "https://www.slds.stat.uni-muenchen.de/people/ewald/"
+funding = true
+piID = "bischl"
+
+[[phd]]
+name = "Kolb"
+firstName = "Chris"
+title = ""
+image = "/images/phds/kolb.png"
+contact = "https://www.slds.stat.uni-muenchen.de/people/kolb/"
+funding = true
+piID = "bischl"
+
+[[phd]]
+name = "Lange"
+firstName = "Julian"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.en.ibe.med.uni-muenchen.de/mitarbeiter/mitarbeiter/julian-lange/index.html"
+funding = true
+piID = "boulesteix"
+
+[[phd]]
+name = "Wünsch"
+firstName = "Milena"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.en.ibe.med.uni-muenchen.de/mitarbeiter/mitarbeiter/wuensch-milena/index.html"
+funding = true
+piID = "boulesteix"
+
+[[phd]]
+name = "Geißler"
+firstName = "Dominique"
+title = ""
+image = "/images/phds/geissler.png"
+contact = "https://www.som.lmu.de/en/faculty/people-overview/contact-page/dominique-geissler-d4ad3b68.html"
+funding = true
+piID = "feuerriegel"
+
+[[phd]]
+name = "Hämmerl"
+firstName = "Katharina"
+title = ""
+image = "/images/phds/haemmerl.png"
+contact = "https://www.cis.lmu.de/~haemmerl/"
+funding = true
+piID = "fraser"
+
+[[phd]]
+name = "Shaker Ardakani"
+firstName = "Mohammad Hossein"
+title = ""
+image = "/images/phds/shaker.png"
+contact = "https://www.kiml.ifi.lmu.de/people/employees/shakerardakani/index.html"
+funding = true
+piID = "huellermeier"
+
+[[phd]]
+name = "Hanselle"
+firstName = "Jonas"
+title = ""
+image = "/images/phds/hanselle_j.png"
+contact = "https://www.kiml.ifi.lmu.de/people/employees/hanselle/index.html"
+funding = true
+piID = "huellermeier"
+
+[[phd]]
+name = "Margraf"
+firstName = "Valentin"
+title = ""
+image = "/images/phds/margraf_v.png"
+contact = "https://www.kiml.ifi.lmu.de/people/employees/margraf/index.html"
+funding = true
+piID = "huellermeier"
+
+[[phd]]
+name = "Dexl"
+firstName = "Jacob"
+title = ""
+image = "/images/phds/dexl.png"
+contact = "https://www.lmu-klinikum.de/radiologie/forschung/clinical-data-science/0e8a3ac188dad3f9?kumActiveTabs=8b43e192%401"
+funding = true
+piID = "ingrisch"
+
+[[phd]]
+name = "Fischer Abaigar"
+firstName = "Unai"
+title = ""
+image = "/images/phds/fischer_u.png"
+contact = "https://www.soda.statistik.uni-muenchen.de/people/employees/fischer/index.html"
+funding = true
+piID = "kreuter"
+
+[[phd]]
+name = "Fojtik"
+firstName = "Vit"
+title = ""
+image = "/images/phds/fojtik_v.png"
+contact = "https://www.ai.math.uni-muenchen.de/members/phd_students/vit-fojtik/index.html"
+funding = true
+piID = "kutyniok"
+
+[[phd]]
+name = "Matveev"
+firstName = "Maria"
+title = ""
+image = "/images/phds/matveev_m.png"
+contact = "https://www.ai.math.uni-muenchen.de/members/phd_students/maria_matveev/index.html"
+funding = true
+piID = "kutyniok"
+
+[[phd]]
+name = "Paolino"
+firstName = "Raffaele"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.ai.math.uni-muenchen.de/members/phd_students/raffaele/index.html"
+funding = true
+piID = "kutyniok"
+
+[[phd]]
+name = "Funk"
+firstName = "Henri"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.statistik.uni-muenchen.de/personen/mitarbeitende/funk/index.html"
+funding = true
+piID = "kuechenhoff"
+
+[[phd]]
+name = "Tran"
+firstName = "Viet"
+title = ""
+image = "/images/phds/tran.png"
+contact = "https://bio-datascience.github.io/members.html"
+funding = true
+piID = "mueller"
+
+[[phd]]
+name = "Palm"
+firstName = "Nicolai"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.statistik.uni-muenchen.de/personen/mitarbeitende/palm/index.html"
+funding = true
+piID = "nagler"
+
+[[phd]]
+name = "Ma"
+firstName = "Pingchuan"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://ommer-lab.com/people/"
+funding = true
+piID = "ommer"
+
+[[phd]]
+name = "Blaschke"
+firstName = "Verena"
+title = ""
+image = "/images/phds/blaschke_v.png"
+contact = "https://verenablaschke.github.io/"
+funding = true
+piID = "plank"
+
+[[phd]]
+name = "Mondorf"
+firstName = "Philipp"
+title = ""
+image = "/images/phds/mohndorf_p.png"
+contact = "https://pmmon.github.io"
+funding = true
+piID = "plank"
+
+[[phd]]
+name = "Sommer"
+firstName = "Emanuel"
+title = ""
+image = "/images/phds/sommer.png"
+contact = "https://datascience-lmu.github.io/website/#about"
+funding = true
+piID = "ruegamer"
+
+[[phd]]
+name = "Grootjen"
+firstName = "Jesse"
+title = ""
+image = "/images/phds/grootjen.png"
+contact = "https://www.um.informatik.uni-muenchen.de/personen/mitarbeiter/grootjen/index.html"
+funding = true
+piID = "schmidt"
+
+[[phd]]
+name = "Windl"
+firstName = "Maximiliane"
+title = ""
+image = "/images/phds/windl1.png"
+contact = "https://www.um.informatik.uni-muenchen.de/personen/mitarbeiter/windl/index.html"
+funding = true
+piID = "schmidt"
+
+[[phd]]
+name = "Haliburton"
+firstName = "Luke"
+title = ""
+image = "/images/phds/haliburton.png"
+contact = "https://www.um.informatik.uni-muenchen.de/personen/mitarbeiter/haliburton/index.html"
+position = "Entrepreneurship Training"
+funding = true
+piID = "schmidt"
+
+[[phd]]
+name = "Li"
+firstName = "Zongyue"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/mitarbeiter/li/index.html"
+funding = true
+piID = "schubert"
+
+[[phd]]
+name = "Lin"
+firstName = "Peiqin"
+title = ""
+image = "/images/phds/lin_peiqin.png"
+contact = "https://lpq29743.github.io"
+funding = true
+piID = "schuetze"
+
+[[phd]]
+name = "Köksal"
+firstName = "Abdullatif"
+title = ""
+image = "/images/phds/koeksal_a.png"
+contact = "https://akoksal.com"
+funding = true
+piID = "schuetze"
+
+[[phd]]
+name = "Jahn"
+firstName = "Philipp"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/mitarbeiter/jahn/index.html"
+funding = true
+piID = "seidl"
+
+[[phd]]
+name = "Gilhuber"
+firstName = "Sandra"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/mitarbeiter/gilhuber/index.html"
+funding = true
+piID = "seidl"
+
+[[phd]]
+name = "Liao"
+firstName = "Ruotong"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/mitarbeiter/liao/index.html"
+funding = true
+piID = "tresp"
+
+[[phd]]
+name = "Liu"
+firstName = "Tong"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/mitarbeiter/ma/index.html"
+funding = true
+piID = "tresp"
+
+[[phd]]
+name = "Gassert"
+firstName = "Philipp"
+title = ""
+image = "/images/phds/gassert.png"
+contact = "https://www.ce.cit.tum.de/cps/members/philipp-gassert-msc/"
+funding = true
+piID = "althoff"
+
+[[phd]]
+name = "Skarby"
+firstName = "Jacob"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.cit.tum.de/cit/school/personen/wissenschaftliches-personal/"
+funding = true
+piID = "bauer_u"
+
+[[phd]]
+name = "Khan"
+firstName = "Qadeer"
+title = ""
+image = "/images/phds/khan_q.png"
+contact = "https://cvg.cit.tum.de/members/khamuham"
+funding = true
+piID = "cremers"
+
+[[phd]]
+name = "Hartwig"
+firstName = "Regine"
+title = ""
+image = "/images/phds/hartwig_r.png"
+contact = "https://cvg.cit.tum.de/members/hreg"
+funding = true
+piID = "cremers"
+
+[[phd]]
+name = "Strieder"
+firstName = "David"
+title = ""
+image = "/images/phds/strieder_d.png"
+contact = "https://www.math.cit.tum.de/math/personen/wissenschaftliches-personal/david-strieder/"
+funding = true
+piID = "drton"
+
+[[phd]]
+name = "Heid"
+firstName = "Pascal"
+title = ""
+image = "/images/phds/heid_p.png"
+contact = "https://www.math.cit.tum.de/math/personen/wissenschaftliches-personal/pascal-heid/"
+funding = true
+piID = "fornasier"
+
+[[phd]]
+name = "Scagliotti"
+firstName = "Alessandro"
+title = ""
+image = "/images/phds/scagliotti_a.png"
+contact = "https://www.math.cit.tum.de/math/personen/wissenschaftliches-personal/alessandro-scagliotti/"
+funding = true
+piID = "fornasier"
+
+[[phd]]
+name = "Tomaz da Silva"
+firstName = "Pedro"
+title = ""
+image = "/images/phds/tomaz_p.png"
+contact = "https://www.cs.cit.tum.de/cmm/members/pedro-tomaz-da-silva/"
+funding = true
+piID = "gagneur"
+
+[[phd]]
+name = "Kollovieh"
+firstName = "Marcel"
+title = ""
+image = "/images/phds/kollovieh_m.png"
+contact = "https://www.cs.cit.tum.de/daml/team/marcel-kollovieh/"
+funding = true
+piID = "guennemann"
+
+[[phd]]
+name = "Mansour"
+firstName = "Yousef"
+title = ""
+image = "/images/phds/mansour_y.png"
+contact = "https://www.ce.cit.tum.de/mli/people/youssef-mansour/"
+funding = true
+piID = "heckel"
+
+[[phd]]
+name = "Laus"
+firstName = "Hannah"
+title = ""
+image = "/images/phds/laus_h.png"
+contact = "https://www.math.cit.tum.de/math/personen/wissenschaftliches-personal/hannah-laus/"
+funding = true
+piID = "krahmer"
+
+[[phd]]
+name = "Papatheodorou"
+firstName = "Sotirios"
+title = ""
+image = "/images/phds/papatheodorou_s.png"
+contact = "https://srl.cit.tum.de/members/psot"
+funding = true
+piID = "leutenegger"
+
+[[phd]]
+name = "Farshad"
+firstName = "Azade"
+title = ""
+image = "/images/phds/farshad_a.png"
+contact = "https://www.cs.cit.tum.de/camp/members/azade-farshad/"
+funding = true
+piID = "navab"
+
+[[phd]]
+name = "Burov"
+firstName = "Andrei"
+title = ""
+image = "/images/phds/burov_a.png"
+contact = "https://niessnerlab.org/members/andrei_burov/profile.html"
+funding = true
+piID = "niessner"
+
+[[phd]]
+name = "Aneja"
+firstName = "Shivangi"
+title = ""
+image = "/images/phds/aneja_s.png"
+contact = "https://niessnerlab.org/members/shivangi_aneja/profile.html"
+funding = true
+piID = "niessner"
+
+[[phd]]
+name = "Stolt Ansó"
+firstName = "Nil"
+title = ""
+image = "/images/phds/stolt_anso_n.png"
+contact = "http://nilstoltanso.me/"
+funding = true
+piID = "rueckert"
+
+[[phd]]
+name = "Lux"
+firstName = "Laurin"
+title = ""
+image = "/images/phds/lux_l.png"
+contact = "https://aim-lab.io/author/laurin-lux/"
+funding = true
+piID = "rueckert"
+
+[[phd]]
+name = "Menten"
+firstName = "Martin"
+title = ""
+image = "/images/phds/menten_m.png"
+contact = "https://aim-lab.io/author/martin-menten/"
+funding = true
+piID = "rueckert"
+
+[[phd]]
+name = "Bubeck"
+firstName = "Niklas"
+title = ""
+image = "/images/phds/bubeck_n.png"
+contact = "https://www.cit.tum.de/cit/school/personen/wissenschaftliches-personal/"
+funding = true
+piID = "rueckert"
+
+[[phd]]
+name = "Reithmeir"
+firstName = "Anna"
+title = ""
+image = "/images/phds/reithmeir_a.png"
+contact = "https://compai-lab.github.io/author/anna-reithmeir/"
+funding = true
+piID = "schnabel"
+
+[[phd]]
+name = "Li"
+firstName = "Jun"
+title = ""
+image = "/images/phds/li_jun.png"
+contact = "https://compai-lab.github.io/author/jun-li/"
+funding = true
+piID = "schnabel"
+
+[[phd]]
+name = "Schaar"
+firstName = "Anna"
+title = ""
+image = "/images/phds/schaar_a.png"
+contact = "https://www.cit.tum.de/cit/school/personen/wissenschaftliches-personal/"
+funding = true
+piID = "theis"
+
+[[phd]]
+name = "Hetzel"
+firstName = "Leon"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.cit.tum.de/cit/school/personen/wissenschaftliches-personal/"
+funding = true
+piID = "theis"
+
+[[phd]]
+name = "Richter"
+firstName = "Till"
+title = ""
+image = "/images/phds/richter_t.png"
+contact = "https://www.helmholtz-munich.de/en/icb/research-groups/theis-lab"
+funding = true
+piID = "theis"
+
+[[phd]]
+name = "Weiler"
+firstName = "Philipp"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.cit.tum.de/cit/school/personen/wissenschaftliches-personal/"
+funding = true
+piID = "theis"
+
+[[phd]]
+name = "Köhler"
+firstName = "Felix"
+title = ""
+image = "/images/phds/koehler_f.png"
+contact = "https://ge.in.tum.de/about/"
+funding = true
+piID = "thuerey"
+
+[[phd]]
+name = "Li"
+firstName = "Yitong"
+title = ""
+image = "/images/phds/li_yitong.png"
+contact = "https://ai-med.de/people/yitong-li/"
+funding = true
+piID = "wachinger"
+
+[[phd]]
+name = "Höhlein"
+firstName = "Kevin"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.cs.cit.tum.de/cg/people/hoehlein/"
+funding = true
+piID = "westermann"
+
+[[phd]]
+name = "Obadic"
+firstName = "Ivica"
+title = ""
+image = "/images/phds/obadic_i.png"
+contact = "https://www.asg.ed.tum.de/sipeo/team/ivica-obadic/"
+funding = true
+piID = "zhu"
+
+[[phd]]
+name = "Bai"
+firstName = "Shanshan"
+title = ""
+image = "/images/phds/nn.png"
+contact = "https://www.asg.ed.tum.de/sipeo/team/shanshan-bai/"
+funding = true
+piID = "zhu"
+
+[[postdoc]]
+name = "Bender"
+firstName = "Andreas"
+title = "Dr."
+image = "/images/phds/bender.png"
+contact = "https://www.slds.stat.uni-muenchen.de/people/bender/"
+position = "Coordinator for ML Consulting"
+funding = true
+piID = "bischl"
+
+[[postdoc]]
+name = "Rezaei"
+firstName = "Mina"
+title = "Dr."
+image = "/images/phds/rezaei.png"
+contact = "https://www.slds.stat.uni-muenchen.de/people/minar/"
+position = "Education Coordination"
+funding = true
+piID = "bischl"
+
+[[postdoc]]
+name = "Herrmann"
+firstName = "Moritz"
+title = "Dr."
+image = "/images/phds/herrmann.png"
+contact = "https://www.ibe.med.uni-muenchen.de/mitarbeiter/mitarbeiter/herrmann_moritz/index.html"
+position = "Coordinator for Reproducibility & Open Science"
+funding = true
+piID = "boulesteix"
+
+[[postdoc]]
+name = "Wever"
+firstName = "Marcel"
+title = "Dr."
+image = "/images/phds/wever_m.png"
+contact = "https://www.kiml.ifi.lmu.de/people/postdocs/wever/index.html"
+position = "Education Coordination"
+funding = true
+piID = "huellermeier"
+
+[[postdoc]]
+name = "Ma"
+firstName = "Yunpu"
+title = "Dr."
+image = "/images/phds/ma_yunpu.png"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/mitarbeiter/ma/index.html"
+funding = true
+piID = "seidl"
+
+[[postdoc]]
+name = "Geldhauser"
+firstName = "Carina"
+title = "Dr."
+image = "/images/phds/geldhauser_c.png"
+contact = "https://www.math.cit.tum.de/math/personen/wissenschaftliches-personal/carina-geldhauser/"
+funding = true
+piID = "fornasier"
+
+[[postdoc]]
+name = "Chou"
+firstName = "Hung-Hsu"
+title = "Dr."
+image = "/images/phds/chou_h.png"
+contact = "https://sites.google.com/nyu.edu/hung-hsuchou/home"
+funding = true
+piID = "krahmer"
+
+[[postdoc]]
+name = "Ghahremani"
+firstName = "Morteza"
+title = "Dr."
+image = "/images/phds/ghahremani_m.png"
+contact = "https://ai-med.de/people/morteza-ghahremani/"
+funding = true
+piID = "wachinger"

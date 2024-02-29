@@ -1,0 +1,2512 @@
+year=2022
+
+[[pubitem]]
+  no="551"
+  author="P. Mummoju, A. Wolff, M. Perdacher, C. Plant and C. Böhm"
+  title="Enhancing k-Means Algorithm with Tensor Processing Unit"
+  journal="IEEE International Conference on Big Data (IEEE BigData 2022). Osaka, Japan, Dec. 17-20, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/BigData55660.2022.10020427"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="550"
+  author="J. Goschenhofer, P. Ragupathy, C. Heumann, B. Bischl and M. Aßenmacher"
+  title="CC-Top: Constrained Clustering for Dynamic Topic Discovery"
+  journal="1st Workshop on Ever Evolving NLP (EvoNLP 2022). Abu Dhabi, United Arab Emirates, Dec. 07, 2022"
+  linktext="URL"
+  link="https://aclanthology.org/2022.evonlp-1.5/"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="549"
+  author="S. Legler, T. Janjic, M. H. Shaker and E. Hüllermeier"
+  title="Machine learning for estimating parameters of a convective-scale model: A comparison of neural networks and random forests"
+  journal="32nd Workshop of Computational Intelligence of the VDI/VDE-Gesellschaft für Mess- und Automatisierungstechnik (GMA). Berlin, Germany, Dec. 01-02, 2022"
+  linktext="PDF"
+  link="https://publikationen.bibliothek.kit.edu/1000151141"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="548"
+  author="W. Durani, D. Mautz, C. Plant and C. Böhm"
+  title="DBHD: Density-based clustering for highly varying density"
+  journal="22nd IEEE International Conference on Data Mining (ICDM 2022). Orlando, FL, USA, Nov. 30-Dec. 02, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/ICDM54844.2022.00108"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="547"
+  author="S. Gilhuber, P. Jahn, Y. Ma and T. Seidl"
+  title="Verips: Verified Pseudo-label Selection for Deep Active Learning"
+  journal="22nd IEEE International Conference on Data Mining (ICDM 2022). Orlando, FL, USA, Nov. 30-Dec. 02, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/ICDM54844.2022.00113"
+  linktext2="GitHub"
+  link2="https://github.com/lmu-dbs/VERIPS"
+
+[[pubitem]]
+  no="546"
+  author="L. Miklautz, M. Teuffenbach, P. Weber, R. Perjuci, W. Durani, C. Böhm and C. Plant"
+  title="Deep Clustering With Consensus Representations"
+  journal="22nd IEEE International Conference on Data Mining (ICDM 2022). Orlando, FL, USA, Nov. 30-Dec. 02, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/ICDM54844.2022.00141"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="545"
+  author="M. Rezaei, E. Dorigatti, D. Rügamer and B. Bischl"
+  title="Learning Statistical Representation with Joint Deep Embedded Clustering"
+  journal="IEEE International Conference on Data Mining Workshops (ICDMW 2022). Orlando, FL, USA, Nov. 30-Dec. 02, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/ICDMW58026.2022.00016"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="544"
+  author="N. Strauss, M. Berrendorf, T. Haider and M. Schubert"
+  title="A Comparison of Ambulance Redeployment Systems on Real-World Data"
+  journal="IEEE International Conference on Data Mining Workshops (ICDMW 2022). Orlando, FL, USA, Nov. 30-Dec. 02, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/ICDMW58026.2022.00010"
+  linktext2="GitHub"
+  link2="https://anonymous.4open.science/r/ambusim-5238/README.md"
+
+[[pubitem]]
+  no="543"
+  author="J. Ullerich, M. Windl, A. Bulling and S. Mayer"
+  title="ThumbPitch: Enriching Thumb Interaction on Mobile Touchscreens using Deep Learning"
+  journal="33rd Australian Conference on Human-Computer Interaction (OZCHI 2022). Canberra, NSW, Australia, Nov. 29-Dec. 02, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3572921.3572925"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="542"
+  author="V. Bengs, E. Hüllermeier and W. Waegeman"
+  title="Pitfalls of Epistemic Uncertainty Quantification through Loss Minimisation"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://proceedings.neurips.cc/paper_files/paper/2022/file/bc1d640f841f752c689aae20b31198c1-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="541"
+  author="A. Blattmann, R. Rombach, K. Oktay and B. Ommer"
+  title="Retrieval-Augmented Diffusion Models"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://proceedings.neurips.cc/paper_files/paper/2022/file/62868cc2fc1eb5cdf321d05b4b88510c-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="540"
+  author="J. Brandt, V. Bengs, B. Haddenhorst and E. Hüllermeier"
+  title="Finding optimal arms in non-stochastic combinatorial bandits with semi-bandit feedback and finite budget"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://proceedings.neurips.cc/paper_files/paper/2022/file/820e95997d050178323230e316897c38-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="539"
+  author="L. Hetzel, S. Boehm, N. Kilbertus, S. Günnemann, M. Lotfollahi and F. J. Theis"
+  title="Predicting Cellular Responses to Novel Drug Perturbations at a Single-Cell Resolution"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://proceedings.neurips.cc/paper_files/paper/2022/file/aa933b5abc1be30baece1d230ec575a7-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="538"
+  author="P. Holl, V. Koltun and N. Thuerey"
+  title="Scale-invariant Learning by Physics Inversion"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://proceedings.neurips.cc/paper_files/paper/2022/file/240cc9ac4789351653d13cfcba4ee85c-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="537"
+  author="H. H.-H. Hsu, Y. Shen and D. Cremers"
+  title="A Graph Is More Than Its Nodes: Towards Structured Uncertainty-Aware Learning on Graphs"
+  journal="Workshop on New Frontiers in Graph Learning at the 36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="URL"
+  link="https://openreview.net/forum?id=_4f6IaxMJeC"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="536"
+  author="H. H.-H. Hsu, Y. Shen, C. Tomani and D. Cremers"
+  title="What Makes Graph Neural Networks Miscalibrated?"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://papers.nips.cc/paper_files/paper/2022/file/5975754c7650dfee0682e06e1fec0522-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="535"
+  author="N. Hurmer, X.-Y. To, M. Binder, H. A. Gündüz, P. C. Münch, R. Mreches, A. C. McHardy, B. Bischl and M. Rezaei"
+  title="Transformer Model for Genome Sequence Analysis"
+  journal="Workshop on Learning Meaningful Representations of Life (LMRL 2022) at the 36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="URL"
+  link="https://openreview.net/forum?id=xwn3ywFknri"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="534"
+  author="P. Kaiser, D. Rügamer and C. Kern"
+  title="Uncertainty as a key to fair data-driven decision making"
+  journal="Workshop on Trustworthy and Socially Responsible Machine Learning (TSRML 2022) at the 36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="URL"
+  link="https://openreview.net/forum?id=8DXj-ze0x_s"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="533"
+  author="F. Mujkanovic, S. Geisler, S. Günnemann and A. Bojchevski"
+  title="Are Defenses for Graph Neural Networks Robust?"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://proceedings.neurips.cc/paper_files/paper/2022/file/3ac904a31f9141444009777abef2ed8e-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="532"
+  author="M. Ozgur Turkoglu, A. Becker, H. A. Gündüz, M. Rezaei, B. Bischl, R. Caye Daudt, S. D'Aronco, J. D. Wegner and K. Schindler"
+  title="FiLM-Ensemble: Probabilistic Deep Learning via Feature-wise Linear Modulation"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://proceedings.neurips.cc/paper_files/paper/2022/file/8bd31288ad8e9a31d519fdeede7ee47d-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="531"
+  author="Y. Scholten, J. Schuchardt, S. Geisler, A. Bojchevski and S. Günnemann"
+  title="Randomized Message-Interception Smoothing: Gray-box Certificates for Graph Neural Networks"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://proceedings.neurips.cc/paper_files/paper/2022/file/d66d8164cfbf012cac2866edbb375035-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="530"
+  author="J. Schuchardt and S. Günnemann"
+  title="Invariance-Aware Randomized Smoothing Certificates"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://proceedings.neurips.cc/paper_files/paper/2022/file/ddd45979547a35db2471e69cbf3bca54-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="529"
+  author="Y. Shen and D. Cremers"
+  title="Deep Combinatorial Aggregation"
+  journal="36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="PDF"
+  link="https://papers.nips.cc/paper_files/paper/2022/file/d0724f5d6108517c3eab35f77f156967-Paper-Conference.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="528"
+  author="I. Ziegler, B. Ma, E. Nie, B. Bischl, D. Rügamer, B. Schubert and E. Dorigatti"
+  title="What cleaves? Is proteasomal cleavage prediction reaching a ceiling?"
+  journal="Workshop on Learning Meaningful Representations of Life (LMRL 2022) at the 36th Conference on Neural Information Processing Systems (NeurIPS 2022). New Orleans, LA, USA, Nov. 28-Dec. 09, 2022"
+  linktext="URL"
+  link="https://openreview.net/forum?id=bUyk2atqXqt"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="527"
+  author="A. Farshad, Y. Yeganeh, H. Dhamo, F. Tombari and N. Navab"
+  title="DisPositioNet: Disentangled Pose and Identity in Semantic Image Manipulation"
+  journal="33rd British Machine Vision Conference (BMVC 2022). London, UK, Nov. 21-24, 2022"
+  linktext="URL"
+  link="https://bmvc2022.mpi-inf.mpg.de/0340.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="526"
+  author="M. Windl, A. Hiesinger, R. Welsch, A. Schmidt and S. S. Feger"
+  title="SaferHome: Interactive Physical and Digital Smart Home Dashboards for Communicating Privacy Assessments to Owners and Bystanders"
+  journal="ACM Interactive Surfaces and Spaces Conference (ISS 2022). Wellington, New Zealand, Nov. 20-23, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3567739"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="525"
+  author="A. Campagner, J. Lienen, E. Hüllermeier and D. Ciucci"
+  title="Scikit-Weak: A Python Library for Weakly Supervised Machine Learning"
+  journal="International Joint Conference on Rough Sets (IJCRS 2022). Suzhou, China, Nov. 11-14, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-21244-4_5"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="524"
+  author="J. Baan, W. Aziz, B. Plank and R. Fernandez"
+  title="Stop Measuring Calibration When Humans Disagree"
+  journal="Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="URL"
+  link="https://aclanthology.org/2022.emnlp-main.124/"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="523"
+  author="E. Bassignana, M. Müller-Eberstein, M. Zhang and B. Plank"
+  title="Evidence > Intuition: Transferability Estimation for Encoder Selection"
+  journal="Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="URL"
+  link="https://aclanthology.org/2022.emnlp-main.283/"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="522"
+  author="E. Bassignana and B. Plank"
+  title="CrossRE: A Cross-Domain Dataset for Relation Extraction"
+  journal="Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="URL"
+  link="https://aclanthology.org/2022.findings-emnlp.263/"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="521"
+  author="V. Hangya, H. S. Saadi and A. Fraser"
+  title="Improving Low-Resource Languages in Pre-Trained Multilingual Language Models"
+  journal="Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.emnlp-main.822"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="520"
+  author="A. Imani, S. Severini, M. J. Sabet, F. Yvon and H. Schütze"
+  title="Graph-Based Multilingual Label Propagation for Low-Resource Part-of-Speech Tagging"
+  journal="Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="URL"
+  link="https://aclanthology.org/2022.emnlp-main.102/"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="519"
+  author="W. Lai, A. Chronopoulou and A. Fraser"
+  title="m4 Adapter: Multilingual Multi-Domain Adaptation for Machine Translation with a Meta-Adapter"
+  journal="Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.findings-emnlp.315"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="518"
+  author="M. Müller-Eberstein, R. van der Goot and B. Plank"
+  title="Spectral Probing"
+  journal="Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="URL"
+  link="https://aclanthology.org/2022.emnlp-main.527"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="517"
+  author="B. Plank"
+  title="The 'Problem' of Human Label Variation: On Ground Truth in Data, Modeling and Evaluation"
+  journal="Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="URL"
+  link="https://aclanthology.org/2022.emnlp-main.731"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="516"
+  author="H. S. Saadi, V. Hangya, T. Eder and A. Fraser"
+  title="Comparative Analysis of Cross-lingual Contextualized Word Embeddings"
+  journal="2nd Workshop on Multi-lingual Representation Learning (MRL 2022) at the Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.mrl-1.6"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="515"
+  author="D. Ulmer, E. Bassignana, M. Müller-Eberstein, D. Varab, M. Zhang, R. van der Goot, C. Hardmeier and B. Plank"
+  title="Experimental Standards for Deep Learning in Natural Language Processing Research"
+  journal="Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.findings-emnlp.196"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="514"
+  author="L. Weissweiler, V. Hofmann, A. Köksal and H. Schütze"
+  title="The better your Syntax, the better your Semantics? Probing Pretrained Language Models for the English Comparative Correlative"
+  journal="Conference on Empirical Methods in Natural Language Processing (EMNLP 2022). Abu Dhabi, United Arab Emirates, Nov. 07-11, 2022"
+  linktext="URL"
+  link="https://aclanthology.org/2022.emnlp-main.746/"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="513"
+  author="Z. Ding, J. Wu, B. He, Y. Ma, Z. Han and V. Tresp"
+  title="Few-Shot Inductive Learning on Temporal Knowledge Graphs using Concept-Aware Information"
+  journal="4th Conference on Automated Knowledge Base Construction (AKBC 2022). London, UK, Nov. 03-05, 2022"
+  linktext="PDF"
+  link="https://www.akbc.ws/2022/assets/pdfs/6_few_shot_inductive_learning_on.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="512"
+  author="M. Bernhard and M. Schubert"
+  title="Robust Object Detection in Remote Sensing Imagery with Noisy and Sparse Geo-Annotations"
+  journal="30th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (SIGSPATIAL 2022). Seattle, WA, USA, Nov. 01-04, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3557915.3560959"
+  linktext2="GitHub"
+  link2="https://github.com/mxbh/robust_object_detection"
+
+[[pubitem]]
+  no="511"
+  author="A. Lohrer, J. J. Binder and P. Kröger"
+  title="Group Anomaly Detection for Spatio-Temporal Collective Behaviour Scenarios in Smart Cities"
+  journal="15th International Workshop on Computational Transportation Science (IWCTS 2022) at the 30th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (SIGSPATIAL 2022). Seattle, WA, USA, Nov. 01-04, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3557991.3567801"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="510"
+  author="L. Rottkamp, N. Strauss and M. Schubert"
+  title="Efficient On-Street Parking Sensor Placement"
+  journal="15th International Workshop on Computational Transportation Science (IWCTS 2022) at the 30th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems (SIGSPATIAL 2022). Seattle, WA, USA, Nov. 01-04, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3557991.3567796"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="509"
+  author="M. Gladkova, N. Korobov, N. Demmel, A. Ošep, L. Leal-Taixé and D. Cremers"
+  title="DirectTracker: 3D Multi-Object Tracking Using Direct Image Alignment and Photometric Bundle Adjustment"
+  journal="IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022). Kyoto, Japan, Oct. 23-27, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/IROS47612.2022.9981260"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="508"
+  author="A. Kim, G. Brasó, A. Ošep and L. Leal-Taixé"
+  title="PolarMOT: How Far Can Geometric Relations Take us in 3D Multi-object Tracking?"
+  journal="17th European Conference on Computer Vision (ECCV 2022). Tel Aviv, Israel, Oct. 23-27, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-20047-2_3"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="507"
+  author="L. Koestler, D. Grittner, M. Moeller, D. Cremers and Z. Lähner"
+  title="Intrinsic Neural Fields: Learning Functions on Manifolds"
+  journal="17th European Conference on Computer Vision (ECCV 2022). Tel Aviv, Israel, Oct. 23-27, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-20086-1_36"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="506"
+  author="R. Rombach, A. Blattmann and B. Ommer"
+  title="Text-Guided Synthesis of Artistic Images with Retrieval-Augmented Diffusion Models"
+  journal="Workshop Vision for Art (VISART VI 2022) at the 17th European Conference on Computer Vision (ECCV 2022). Tel Aviv, Israel, Oct. 23-27, 2022"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2207.13038"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="505"
+  author="S. Shit, R. Koner, B. Wittmann, J. Paetzold, I. Ezhov, H. Li, J. Pan, S. Sharifzadeh, G. Kaissis, V. Tresp and B. Menze"
+  title="Relationformer: A Unified Framework for Image-to-Graph Generation"
+  journal="17th European Conference on Computer Vision (ECCV 2022). Tel Aviv, Israel, Oct. 23-27, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-19836-6_24"
+  linktext2="GitHub"
+  link2="https://github.com/suprosanna/relationformer"
+
+[[pubitem]]
+  no="504"
+  author="C. Tomani, D. Cremers and F. Buettner"
+  title="Parameterized Temperature Scaling for Boosting the Expressive Power in Post-Hoc Uncertainty Calibration"
+  journal="17th European Conference on Computer Vision (ECCV 2022). Tel Aviv, Israel, Oct. 23-27, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-19778-9_32"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="503"
+  author="Q. Zhou, S. Agostinho, A. Ošep and L. Leal-Taixé"
+  title="Is Geometry Enough for Matching in Visual Localization?"
+  journal="17th European Conference on Computer Vision (ECCV 2022). Tel Aviv, Israel, Oct. 23-27, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-20080-9_24"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="502"
+  author="D. Das, Q. Khan and D. Cremers"
+  title="Ventriloquist-Net: Leveraging Speech Cues for Emotive Talking Head Generation"
+  journal="IEEE International Conference on Image Processing (ICIP 2022). Bordeaux, France, Oct. 16-19, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/ICIP46576.2022.9897657"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="501"
+  author="C. Zelenka, A. Lohrer, M. Bayer and P. Kröger"
+  title="AI4EO Hyperview: A SpectralNet3D and RNNPlus Approach for Sustainable Soil Parameter Estimation on Hyperspectral Image Data"
+  journal="IEEE International Conference on Image Processing (ICIP 2022). Bordeaux, France, Oct. 16-19, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/ICIP46576.2022.9897889"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="500"
+  author="F. Ott, D. Rügamer, L. Heublein, B. Bischl and C. Mutschler"
+  title="Domain Adaptation for Time-Series Classification to Mitigate Covariate Shift"
+  journal="30th ACM International Conference on Multimedia (MM 2022). Lisbon, Portugal, Oct. 10-14, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3503161.3548167"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="499"
+  author="M. Windl and S. Mayer"
+  title="The Skewed Privacy Concerns of Bystanders in Smart Environments"
+  journal="ACM International Conference on Mobile Human-Computer Interaction (MobileHCI 2022). Vancouver, Canada, Sep. 28-Oct. 01, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3546719"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="498"
+  author="D. Deng, F. Karl, F. Hutter, B. Bischl and M. Lindauer"
+  title="Efficient Automated Deep Learning for Time Series Forecasting"
+  journal="European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD 2022). Grenoble, France, Sep. 19-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-26409-2_40"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="497"
+  author="C. Frey, Y. Ma and M. Schubert"
+  title="SEA: Graph Shell Attention in Graph Neural Networks"
+  journal="European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD 2022). Grenoble, France, Sep. 19-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-26390-3_20"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="496"
+  author="S. Gilhuber, M. Berrendorf, Y. Ma and T. Seidl"
+  title="Accelerating Diversity Sampling for Deep Active Learning By Low-Dimensional Representations"
+  journal="6th International Workshop on Interactive Adaptive Learning (IAL 2022) co-located with the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD 2022). Grenoble, France, Sep. 19-22, 2022"
+  linktext="PDF"
+  link="https://ceur-ws.org/Vol-3259/ialatecml_paper4.pdf"
+  linktext2="GitHub"
+  link2="https://github.com/sobermeier/low-dim-div-sampling"
+
+[[pubitem]]
+  no="495"
+  author="D. Rügamer, A. Bender, S. Wiegrebe, D. Racek, B. Bischl, C. L. Müller and C. Stachl"
+  title="Factorized Structured Regression for Large-Scale Varying Coefficient Models"
+  journal="European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD 2022). Grenoble, France, Sep. 19-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-26419-1_2"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="494"
+  author="N. Strauß, D. Winkel, M. Berrendorf and M. Schubert"
+  title="Reinforcement Learning for Multi-Agent Stochastic Resource Collection"
+  journal="European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD 2022). Grenoble, France, Sep. 19-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-26412-2_13"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="493"
+  author="D. Winkel, N. Strauß, M. Schubert and T. Seidl"
+  title="Risk-Aware Reinforcement Learning for Multi-Period Portfolio Selection"
+  journal="European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD 2022). Grenoble, France, Sep. 19-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-26422-1_12"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="492"
+  author="M. Wright and B. Ommer"
+  title="ArtFID: Quantitative Evaluation of Neural Style Transfer"
+  journal="German Conference on Pattern Recognition (DAGM-GCPR 2022). Konstanz, Germany, Sep. 19, 2022-22, 2021"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-16788-1_34"
+  linktext2="GitHub"
+  link2="https://github.com/matthias-wright/art-fid"
+
+[[pubitem]]
+  no="491"
+  author="P. Engstler, M. Keicher, D. Schinz, K. Mach, A. S. Gersing, S. C. Foreman, S. S. Goller, J. Weissinger, J. Rischewski, A.-S. Dietrich, B. Wiestler, J. S. Kirschke, A. Khakzar and N. Navab"
+  title="Interpretable Vertebral Fracture Diagnosis"
+  journal="Workshop on Interpretability of Machine Intelligence in Medical Image Computing (iMIMIC 2022) at the 25th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2022). Singapore, Sep. 18-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-17976-1_7"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="490"
+  author="A. Farshad, A. Makarevich, V. Belagiannis and N. Navab"
+  title="MetaMedSeg: Volumetric Meta-learning for Few-Shot Organ Segmentation"
+  journal="4th Workshop on Domain Adaptation and Representation Transfer (DART 2022) at the 25th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2022). Singapore, Sep. 18-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-16852-9_5"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="489"
+  author="A. Farshad, Y. Yeganeh, P. Gehlbach and N. Navab"
+  title="Y-Net: A Spatiospectral Dual-Encoder Network for Medical Image Segmentation"
+  journal="25th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2022). Singapore, Sep. 18-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-16434-7_56"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="488"
+  author="M. Narazani, I. Sarasua, S. Pölsterl, A. Lizarraga, I. Yakushev and C. Wachinger"
+  title="Is a PET All You Need? A Multi-modal Study for Alzheimer’s Disease Using 3D CNNs"
+  journal="25th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2022). Singapore, Sep. 18-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-16431-6_7"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="487"
+  author="I. Sarasua, S. Pölsterl and C. Wachinger"
+  title="CASHformer: Cognition Aware SHape Transformer for Longitudinal Analysis"
+  journal="25th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2022). Singapore, Sep. 18-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-16431-6_5"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="486"
+  author="T. Weber, M. Ingrisch, B. Bischl and D. Rügamer"
+  title="Implicit Embeddings via GAN Inversion for High Resolution Chest Radiographs"
+  journal="1st Workshop on Medical Applications with Disentanglements (MAD 2022) at the 25th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2022). Singapore, Sep. 18-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-25046-0_3"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="485"
+  author="Y. Yeganeh, A. Farshad, J. Boschmann, R. Gaus, M. Frantzen and N. Navab"
+  title="FedAP: Adaptive Personalization in Federated Learning for Non-IID Data"
+  journal="3rd Workshop on Distributed, Collaborative, and Federated Learning, and Affordable AI and Healthcare for Resource Diverse Global Health (DeCaF FAIR 2022) at the 25th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2022). Singapore, Sep. 18-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-18523-6_2"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="484"
+  author="D. Rößle, D. Cremers and T. Schön"
+  title="Perceiver Hopfield Pooling for Dynamic Multi-modal and Multi-instance Fusion"
+  journal="31st International Conference on Artificial Neural Networks (ICANN 2022). Bristol, UK, Sep. 06-09, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-15919-0_50"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="483"
+  author="E. Hohma, C. Frey, A. Beer and T. Seidl"
+  title="SCAR - Spectral Clustering Accelerated and Robustified"
+  journal="48th International Conference on Very Large Databases (VLDB 2022). Sydney, Australia (and hybrid), Sep. 05-09, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.14778/3551793.3551850"
+  linktext2="GitHub"
+  link2="https://github.com/SpectralClusteringAcceleratedRobust/SCAR"
+
+[[pubitem]]
+  no="482"
+  author="F. Lang, J. W. Grootjen, L. L. Chuang and T. Machulla"
+  title="IDeA: A Demonstration of a Mixed Reality System to Support Living with Central Field Loss"
+  journal="Mensch und Computer (MuC 2022). Darmstadt, Germany, Sep. 04-07, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3543758.3547521"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="481"
+  author="F. Ott, D. Rügamer, L. Heublein, B. Bischl and C. Mutschler"
+  title="Representation Learning for Tablet and Paper Domain Adaptation in favor of Online Handwriting Recognition"
+  journal="7th International Workshop on Multimodal pattern recognition of social signals in human computer interaction (MPRSS 2022) at the 26th International Conference on Pattern Recognition (ICPR 2022). Montreal, Canada, Aug. 21-25, 2022"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2301.06293"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="480"
+  author="C. Leiber, L. G. M. Bauer, M. Neumayr, C. Plant and C. Böhm"
+  title="The DipEncoder: Enforcing Multimodality in Autoencoders"
+  journal="28th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2022). Washington, DC, USA, Aug. 14-18, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3534678.3539407"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="479"
+  author="E. Hüllermeier, S. Destercke and M. H. Shaker"
+  title="Quantification of Credal Uncertainty in Machine Learning: A Critical Analysis and Empirical Comparison"
+  journal="38th Conference on Uncertainty in Artificial Intelligence (UAI 2022). Eindhoven, Netherlands, Aug. 02-04, 2022"
+  linktext="URL"
+  link="https://proceedings.mlr.press/v180/hullermeier22a.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="478"
+  author="T. Mortier, E. Hüllermeier, K. Dembczynski and W. Waegeman"
+  title="Set-valued prediction in hierarchical classification with constrained representation complexity"
+  journal="38th Conference on Uncertainty in Artificial Intelligence (UAI 2022). Eindhoven, Netherlands, Aug. 02-04, 2022"
+  linktext="URL"
+  link="https://proceedings.mlr.press/v180/mortier22a.html"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="477"
+  author="F. Pfisterer, L. Schneider,  Moosbauer, M. Binder and B. Bischl"
+  title="YAHPO Gym - Design Criteria and a new Multifidelity Benchmark for Hyperparameter Optimization"
+  journal="1st International Conference on Automated Machine Learning (AutoML 2022) co-located with the 39th International Conference on Machine Learning (ICML 2022). Baltimore, MD, USA, Jul. 25-27, 2022"
+  linktext="URL"
+  link="https://proceedings.mlr.press/v188/pfisterer22a"
+  linktext2="GitHub"
+  link2="https://github.com/slds-lmu/yahpo_gym"
+
+[[pubitem]]
+  no="476"
+  author="L. Schneider, F. Pfisterer, P. Kent, J. Branke, B. Bischl and J. Thomas"
+  title="Tackling neural architecture search with quality diversity optimization"
+  journal="1st International Conference on Automated Machine Learning (AutoML 2022) co-located with the 39th International Conference on Machine Learning (ICML 2022). Baltimore, MD, USA, Jul. 25-27, 2022"
+  linktext="URL"
+  link="https://proceedings.mlr.press/v188/schneider22a"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="475"
+  author="M. Ali, M. Berrendorf, M. Galkin, V. Thost, T. Ma, V. Tresp and J. Lehmann"
+  title="Improving Inductive Link Prediction Using Hyper-Relational Facts (Extended Abstract)"
+  journal="Best paper track at the 31st International Joint Conference on Artificial Intelligence and the 25th European Conference on Artificial Intelligence (IJCAI-ECAI 2022). Vienna, Austria, Jul. 23-29, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-030-88361-4_5"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="474"
+  author="A. Klaß, S. M. Lorenz, M. W. Lauer-Schmaltz, D. Rügamer, B. Bischl, C. Mutschler and F. Ott"
+  title="Uncertainty-aware Evaluation of Time-Series Classification for Online Handwriting Recognition with Domain Shift"
+  journal="Workshop on Spatio-Temporal Reasoning and Learning (STRL 2022) at the 31st International Joint Conference on Artificial Intelligence and the 25th European Conference on Artificial Intelligence (IJCAI-ECAI 2022). Vienna, Austria, Jul. 23-29, 2022"
+  linktext="URL"
+  link="https://ceur-ws.org/Vol-3190/"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="473"
+  author="E. Schede, J. Brandt, A. Tornede, M. Wever, V. Bengs, E. Hüllermeier and K. Tierney"
+  title="A Survey of Methods for Automated Algorithm Configuration"
+  journal="31st International Joint Conference on Artificial Intelligence and the 25th European Conference on Artificial Intelligence (IJCAI-ECAI 2022). Vienna, Austria, Jul. 23-29, 2022. Extended Abstract"
+  linktext="DOI"
+  link="https://doi.org/10.1613/jair.1.13676"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="472"
+  author="A. Hein, L. J. Meier, A. Buyx and K. Diepold"
+  title="A Fuzzy-Cognitive-Maps Approach to Decision-Making in Medical Ethics"
+  journal="IEEE International Conference on Fuzzy Systems (FUZZ-IEEE 2022). Padua, Italy, Jul. 18-23, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/FUZZ-IEEE55066.2022.9882615"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="471"
+  author="T. Liu, Y. Liu, M. Hildebrandt, M. Joblin, H. Li and V. Tresp"
+  title="On Calibration of Graph Neural Networks for Node Classification"
+  journal="International Joint Conference on Neural Networks (IJCNN 2022). Padua, Italy, Jul. 18-23, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/IJCNN55064.2022.9892866"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="470"
+  author="V. Bengs, A. Saha and E. Hüllermeier"
+  title="Stochastic Contextual Dueling Bandits under Linear Stochastic Transitivity Models"
+  journal="39th International Conference on Machine Learning (ICML 2022). Baltimore, MD, USA, Jul. 17-23, 2022"
+  linktext="URL"
+  link="https://proceedings.mlr.press/v162/bengs22a"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="469"
+  author="Y. Li, A. Khakzar, Y. Zhang, M. Sanisoglu, S. T. Kim, M. Rezaei, B. Bischl and N. Navab"
+  title="Analyzing the Effects of Handling Data Imbalance on Learned Features from Medical Images by Looking Into the Models"
+  journal="2nd Workshop on Interpretable Machine Learning in Healthcare (IMLH 2022) at the the 39th International Conference on Machine Learning (ICML 2022). Baltimore, MD, USA, Jul. 17-23, 2022"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2204.01729"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="468"
+  author="L. Hang, Q. Khan, V. Tresp and D. Cremers"
+  title="Biologically Inspired Neural Path Finding"
+  journal="15th International Conference on Brain Informatics (BI 2022). Padova, Italy, Jul. 15-15, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-15037-1_27"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="467"
+  author="A. Maronikolakis, P. Baader and H. Schütze"
+  title="Analyzing Hate Speech Data along Racial, Gender and Intersectional Axes"
+  journal="4th Workshop on Gender Bias in Natural Language Processing (GeBNLP 2022). Seattle, WA, USA, Jul. 15, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.gebnlp-1.1"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="466"
+  author="S. Yuan, A. Maronikolakis and H. Schütze"
+  title="Separating Hate Speech and Offensive Language Classes via Adversarial Debiasing"
+  journal="6th Workshop on Online Abuse and Harms (WOAH 2022). Seattle, WA, USA, Jul. 14, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.woah-1.1"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="465"
+  author="S. Dandl, F. Pfisterer and B. Bischl"
+  title="Multi-Objective Counterfactual Fairness"
+  journal="Genetic and Evolutionary Computation Conference (GECCO 2022). Boston, MA, USA, Jul. 09-13, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3520304.3528779"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="464"
+  author="L. Schneider, F. Pfisterer, J. Thomas and B. Bischl"
+  title="A Collection of Quality Diversity Optimization Problems Derived from Hyperparameter Optimization of Machine Learning Models"
+  journal="Genetic and Evolutionary Computation Conference (GECCO 2022). Boston, MA, USA, Jul. 09-13, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3520304.3534003"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="463"
+  author="Z. Liu, Y. Ma, M. Schubert, Y. Ouyang and Z. Xiong"
+  title="Multi-Modal Contrastive Pre-training for Recommendation"
+  journal="ACM International Conference on Multimedia Retrieval (ICMR 2022). Newark, NJ, USA, Jun. 27-30, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3512527.3531378"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="462"
+  author="S. Severini, V. Hangya, M. J. Sabet, A. Fraser and H. Schütze"
+  title="Don't Forget Cheap Training Signals Before Building Unsupervised Bilingual Word Embeddings"
+  journal="15th Workshop on Building and Using Comparable Corpora (BUCC 2022) at the 13th International Conference on Language Resources and Evaluation (LREC 2022). Marseille, France, Jun. 21-23, 2022"
+  linktext="URL"
+  link="https://aclanthology.org/2022.bucc-1.3/"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="461"
+  author="S. Severini, A. Imani, P. Dufter and H. Schütze"
+  title="Towards a Broad Coverage Named Entity Resource: A Data-Efficient Approach for Many Diverse Languages"
+  journal="13th International Conference on Language Resources and Evaluation (LREC 2022). Marseille, France, Jun. 21-23, 2022"
+  linktext="URL"
+  link="https://aclanthology.org/2022.lrec-1.417"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="460"
+  author="F. Bongratz, A.-M. Rickmann, S. Pölsterl and C. Wachinger"
+  title="Vox2cortex: fast explicit reconstruction of cortical surfaces from 3D MRI scans with geometric deep neural networks"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.02011"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="459"
+  author="C. Diller, T. Funkhouser and A. Dai"
+  title="Forecasting characteristic 3D poses of human actions"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.01545"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="458"
+  author="M. Eisenberger, A. Toker, L. Leal-Taixé, F. Bernard and D. Cremers"
+  title="A Unified Framework for Implicit Sinkhorn Differentiation"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.00059"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="457"
+  author="I. Elezi, Z. Yu, A. Anandkumar, L. Leal-Taixé and J. M. Alvarez"
+  title="Not All Labels Are Equal: Rationalizing The Labeling Costs for Training Object Detection"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.01409"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="456"
+  author="P. Grassal, M. Prinzler, T. Leistner, C. Rother, M. Nießner and J. Thies"
+  title="Neural Head Avatars from Monocular RGB Videos"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.01810"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="455"
+  author="A. Khakzar, P. Khorsandi, R. Nobahari and N. Navab"
+  title="Do Explanations Explain? Model Knows Best"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.01000"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="454"
+  author="M. Kolmet, Q. Zhou, A. Ošep and L. Leal-Taixé"
+  title="Text2Pos: Text-to-Point-Cloud Cross-Modal Localization"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.00657"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="453"
+  author="Y. Liu, I. E. Zulfikar, J. Luiten, A. Dave, D. Ramanan, B. Leibe, A. Ošep and L. Leal-Taixé"
+  title="Opening up Open World Tracking"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.01846"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="452"
+  author="T. Meinhardt, A. Kirillov, L. Leal-Taixé and C. Feichtenhofer"
+  title="Trackformer: Multi-object tracking with transformers"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.00864"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="451"
+  author="D. Muhle, L. Koestler, N. Demmel, F. Bernard and D. Cremers"
+  title="The Probabilistic Normal Epipolar Constraint for Frame-To-Frame Rotation Optimization under Uncertain Feature Positions"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.00186"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="450"
+  author="N. Peri, J. Luiten, M. Li, A. Ošep, L. Leal-Taixé and D. Ramanan"
+  title="Forecasting from LiDAR via Future Object Detection"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.01669"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="449"
+  author="P. Roetzer, P. Swoboda, D. Cremers and F. Bernard"
+  title="A Scalable Combinatorial Solver for Elastic Geometrically Consistent 3D Shape Matching"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.00052"
+  linktext2="GitHub"
+  link2="https://github.com/paul0noah/sm-comb"
+
+[[pubitem]]
+  no="448"
+  author="R. Rombach, A. Blattmann, D. Lorenz, P. Esser and B. Ommer"
+  title="High-Resolution Image Synthesis with Latent Diffusion Models"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.01042"
+  linktext2="GitHub"
+  link2="https://github.com/CompVis/latent-diffusion"
+
+[[pubitem]]
+  no="447"
+  author="C. Sommer, L. Sang, D. Schubert and D. Cremers"
+  title="Gradient-SDF: A Semi-Implicit Surface Representation for 3D Reconstruction"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.00618"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="446"
+  author="A. Toker, L. Kondmann, M. Weber, M. Eisenberger, A. Camero, J. Hu, A. P. Hoderlein, Ç. Şenaras, T. Davis, D. Cremers, G. Marchisio, X. Zhu and L. Leal-Taixé"
+  title="DynamicEarthNet: Daily Multi-Spectral Satellite Dataset for Semantic Change Segmentation"
+  journal="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). New Orleans, LA, USA, Jun. 19-24, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/CVPR52688.2022.02048"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="445"
+  author="V. Steinborn, P. Dufter, H. Jabbar and H. Schütze"
+  title="An Information-Theoretic Approach and Dataset for Probing Gender Stereotypes in Multilingual Masked Language Models"
+  journal="Findings of the Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2022). Seattle, WA, USA, Jun. 10-15, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.findings-naacl.69"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="444"
+  author="M. Zhao, F. Mi, Y. Wang, M. Li, X. Jiang, Q. Liu and H. Schütze"
+  title="LMTurk: Few-Shot Learners as Crowdsourcing Workers in a Language-Model-as-a-Service Framework"
+  journal="Findings of the Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2022). Seattle, WA, USA, Jun. 10-15, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.findings-naacl.51"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="443"
+  author="F. Müller, Q. Khan and D. Cremers"
+  title="Lateral Ego-Vehicle Control Without Supervision Using Point Clouds"
+  journal="3rd International Conference on Pattern Recognition and Artificial Intelligence (ICPRAI 2022). Paris, France, Jun. 01-03, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-09037-0_39"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="442"
+  author="L. Stumberg and D. Cremers"
+  title="DM-VIO: Delayed Marginalization Visual-Inertial Odometry"
+  journal="IEEE International Conference on Robotics and Automation (ICRA 2022). Philadelphia, PA, USA, May. 23-27, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/LRA.2021.3140129"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="441"
+  author="G. Fu, Z. Meng, Y. Ma, Z. Han, Z. Ding, M. Schubert and R. Wattenhofer"
+  title="TempCaps: A Capsule Network-based Embedding Model for Temporal Knowledge Graph Completion"
+  journal="6th ACL Workshop on Structured Prediction for NLP (SPNLP 2022) at the In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (ACL 2022). Dublin, Ireland, May. 22-27, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.spnlp-1.3"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="440"
+  author="A. Maronikolakis, A. Wisiorek, L. Nann, H. Jabbar, S. Udupa and H. Schütze"
+  title="Listening to Affected Communities to Define Extreme Speech: Dataset and Experiments"
+  journal="Findings of the 60th Annual Meeting of the Association for Computational Linguistics (ACL 2022). Dublin, Ireland, May. 22-27, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.findings-acl.87"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="439"
+  author="L. Weissweiler, V. Hofmann, M. Sabet and H. Schütze"
+  title="CaMEL: Case Marker Extraction without Labels"
+  journal="Dublin, Ireland. Dublin, Ireland, May. 22-27, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.18653/v1/2022.acl-long.377"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="438"
+  author="P. Kopper, S. Wiegrebe, B. Bischl, A. Bender and D. Rügamer"
+  title="DeepPAMM: Deep Piecewise Exponential Additive Mixed Models for Complex Hazard Structures in Survival Analysis"
+  journal="26th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2022). Chengdu, China, May. 16-19, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-05936-0_20"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="437"
+  author="M. Windl, S. S. Feger, L. Zijlstra, A. Schmidt and P. W. Wozniak"
+  title="‘It Is Not Always Discovery Time’: Four Pragmatic Approaches in Designing AI Systems"
+  journal="Conference on Human Factors in Computing Systems (CHI 2022). New Orleans, LA, USA, Apr. 30-May. 05, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3491102.3501943"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="436"
+  author="M. Windl, N. Henze, A. Schmidt and S. S. Feger"
+  title="Automating Contextual Privacy Policies: Design and Evaluation of a Production Tool for Digital Consumer Privacy Awareness"
+  journal="Conference on Human Factors in Computing Systems (CHI 2022). New Orleans, LA, USA, Apr. 30-May. 05, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1145/3491102.3517688"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="435"
+  author="C. Leiber, D. Mautz, C. Plant and C. Böhm"
+  title="Automatic Parameter Selection for Non-Redundant Clustering"
+  journal="SIAM International Conference on Data Mining  (SDM 2022). Virtual, Apr. 28-30, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1137/1.9781611977172.26"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="434"
+  author="D. Alivanistos, M. Berrendorf, M. Cochez and M. Galkin"
+  title="Query Embedding on Hyper-Relational Knowledge Graphs"
+  journal="10th International Conference on Learning Representations (ICLR 2022). Virtual, Apr. 25-29, 2022"
+  linktext="URL"
+  link="https://iclr.cc/virtual/2022/poster/6321"
+  linktext2="GitHub"
+  link2="https://github.com/DimitrisAlivas/StarQE"
+
+[[pubitem]]
+  no="433"
+  author="M. Galkin, M. Berrendorf and C. T. Hoyt"
+  title="An Open Challenge for Inductive Link Prediction on Knowledge Graphs"
+  journal="Workshop on Graph Learning Benchmarks (GLB 2022) at the International World Wide Web Conference (WWW 2022). Virtual, Apr. 22-29, 2022"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2203.01520"
+  linktext2="GitHub"
+  link2="https://github.com/pykeen/ilpc2022"
+
+[[pubitem]]
+  no="432"
+  author="C. T. Hoyt, M. Berrendorf, M. Gaklin, V. Tresp and B. M. Gyori"
+  title="A Unified Framework for Rank-based Evaluation Metrics for Link Prediction in Knowledge Graphs"
+  journal="Workshop on Graph Learning Benchmarks (GLB 2022) at the International World Wide Web Conference (WWW 2022). Virtual, Apr. 22-29, 2022"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2203.07544"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="431"
+  author="M. Fornasier, T. Klock and K. Riedl"
+  title="Convergence of Anisotropic Consensus-Based Optimization in Mean-Field Law"
+  journal="25th European Conference on the Applications of Evolutionary Computation (EvoApplications 2022), Held as Part of EvoStar 2022. Madrid, Spain, Apr. 20-22, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-031-02462-7_46"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="430"
+  author="A. Markham, R. Das and M. Grosse-Wentrup"
+  title="A Distance Covariance-based Kernel for Nonlinear Causal Clustering in Heterogeneous Populations"
+  journal="1st Conference on Causal Learning and Reasoning (CLeaR 2022). Eureka, CA, USA, Apr. 11-13, 2022"
+  linktext="PDF"
+  link="https://proceedings.mlr.press/v177/markham22a/markham22a.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="429"
+  author="J. Herbinger, B. Bischl and G. Casalicchio"
+  title="REPID: Regional Effect Plots with implicit Interaction Detection"
+  journal="25th International Conference on Artificial Intelligence and Statistics (AISTATS 2022). Virtual, Mar. 28-30, 2022"
+  linktext="URL"
+  link="https://proceedings.mlr.press/v151/herbinger22a"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="428"
+  author="S. Malich, S. Bähr, G. C. Haas, F. Keusch, F. Kreuter and M. Trappmann"
+  title="Methodische Herausforderungen bei der Aufbereitung und Auswertung von Smartphone-Daten zur Messung sozialer Interaktion"
+  journal="Frühjahrstagung 2022 der Sektion „Methoden der empirischen Sozialforschung“ der Deutschen Gesellschaft für Soziologie (DGS): Potentiale und Herausforderungen von digitalen Verhaltensdaten in der empirischen Sozialforschung. Virtual, Mar. 25, 2022"
+  linktext="PDF"
+  link="https://www.gesis.org/fileadmin/upload/GESIS_Panel/DGS_Frühjahrstagung/1-2-5_malich_methodische-herausforderungen-bei-der-aufbereitung-und-auswertung-von-smartphone-daten-zur-messung-sozialer-interaktion.pdf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="427"
+  author="Y. Liu, Y. Ma, M. Hildebrandt, M. Joblin and V. Tresp"
+  title="TLogic: Temporal logical rules for explainable link forecasting on temporal knowledge graphs"
+  journal="36th Conference on Artificial Intelligence (AAAI 2022). Virtual, Feb. 22-Mar. 01, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1609/aaai.v36i4.20330"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="426"
+  author="S. Sharifzadeh, S. M. Baharlou, M. Schmitt, H. Schütze and V. Tresp"
+  title="Improving Scene Graph Classification by Exploiting Knowledge from Texts"
+  journal="36th Conference on Artificial Intelligence (AAAI 2022). Virtual, Feb. 22-Mar. 01, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1609/aaai.v36i2.20116"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="425"
+  author="Z. Ye, T. Yenamandra, F. Bernard and D. Cremers"
+  title="Joint Deep Multi-Graph Matching and 3D Geometry Learning from Inhomogeneous 2D Image Collections"
+  journal="36th Conference on Artificial Intelligence (AAAI 2022). Virtual, Feb. 22-Mar. 01, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1609/aaai.v36i3.20220"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="424"
+  author="F. Ott, D. Rügamer, L. Heublein, B. Bischl and C. Mutschler"
+  title="Joint Classification and Trajectory Regression of Online Handwriting Using a Multi-Task Learning Approach"
+  journal="IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2022). Waikoloa, Hawaii, Jan. 04-08, 2022"
+  linktext="DOI"
+  link="https://doi.org/10.1109/WACV51458.2022.00131"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="423"
+  author="V. Bauer, D. Harhoff and G. Kauermann"
+  title="A smooth dynamic network model for patent collaboration data"
+  journal="Advances in Statistical Analysis 106 (Mar. 2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s10182-021-00393-w"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="422"
+  author="G. Palla, H. Spitzer, M. Klein, D. Fischer, A. C. Schaar, L. B. Kuemmerle, S. Rybakov, I. L. Ibarra, O. Holmberg, I. Virshup, M. Lotfollahi, S. Richter and F. J. Theis"
+  title="Squidpy: a scalable framework for spatial omics analysis"
+  journal="Nature Methods 19 (Feb. 2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1038/s41592-021-01358-2"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="421"
+  author="Q. Au, J. Herbinger, C. Stachl, B. Bischl and G. Casalicchio"
+  title="Grouped Feature Importance and Combined Features Effect Plot"
+  journal="Data Mining and Knowledge Discovery (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s10618-022-00840-5"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="420"
+  author="R. Bach and F. Kreuter"
+  title="Big Data in einer digitalisierten, datengestützten Demokratie"
+  journal="Demokratie und Öffentlichkeit im 21. Jahrhundert – zur Macht des Digitalen (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.5771/9783748932741-127"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="419"
+  author="S. Bahmani, O. Hahn, E. Zamfir, N. Araslanov, D. Cremers and S. Roth"
+  title="Semantic Self-adaptation: Enhancing Generalization with a Single Sample"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2208.05788"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="418"
+  author="S. Bähr, G.-C. Haas, F. Keusch, F. Kreuter and M. Trappmann"
+  title="Missing Data and Other Measurement Quality Issues in Mobile Geolocation Sensor Data"
+  journal="Social Science Computer Review 40.1 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1177/0894439320944118"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="417"
+  author="A. Balogh, A. Harman and F. Kreuter"
+  title="Real-Time Analysis of Predictors of COVID-19 Infection Spread in Countries in the European Union Through a New Tool"
+  journal="International Journal of Public Health 67 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.3389/ijph.2022.1604974"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="416"
+  author="A. Bauer, M. Weigert and H. Jalal"
+  title="APCtools: Descriptive and Model-based Age-Period-Cohort Analysis"
+  journal="The Journal of Open Source Software 7.73 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.21105/joss.04056"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="415"
+  author="G. Beaudry, O. Drouin, J. Gravel, A. Smyrnova, A. Bender, M. Orri, M.-C. Geoffroy and N. "
+  title="A comparative analysis of pediatric mental health-related emergency department utilization in Montréal, Canada, before and during the COVID-19 pandemic"
+  journal="Annals of General Psychiatry 17 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1186/s12991-022-00398-y"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="414"
+  author="A. S. Becker-Pennrich, M. M. Mandl, C. Rieder, D. J. Hoechter, K. Dietz, B. P. Geisler, A.-L- Boulesteix, R. Tomasi and L. C. Hinske"
+  title="Comparing supervised machine learning algorithms for the prediction of partial arterial pressure of oxygen during craniotomy"
+  journal="Preprint at medRxiv (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1101/2022.06.07.22275483"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="413"
+  author="U. Berger, C. Fritz and G. Kauermann"
+  title="Reihentestungen an Schulen können die Dunkelziffer von COVID-19 Infektionen unter Schülern signifikant senken"
+  journal="Das Gesundheitswesen 84.06 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1055/a-1813-9778"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="412"
+  author="L. Bothmann, K. Peters and B. Bischl"
+  title="What Is Fairness? Implications For FairML"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2205.09622"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="411"
+  author="G. Brasó, O. Cetintas and L. Leal-Taixé"
+  title="Multi-Object Tracking and Segmentation Via Neural Message Passing"
+  journal="International Journal of Computer Vision 130.12 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s11263-022-01678-6"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="410"
+  author="C. Brunner, A. Duensing, C. Schröder, M. Mittermair, V. Golkov, M. Pollanka, D. Cremers and R. Kienberger"
+  title="Deep Learning in Attosecond Metrology"
+  journal="Optics Express 30.9 (2022). Editor's Pick"
+  linktext="DOI"
+  link="https://doi.org/10.1364/OE.452108"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="409"
+  author="M. Brunner, P. Heid, M. Innerberger, A. Miraci, D. Praetorius and J. Streitberger"
+  title="Adaptive FEM with quasi-optimal overall cost for nonsymmetric linear elliptic PDEs"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2212.00353"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="408"
+  author="A. Caelles, T. Meinhardt, G. Brasó and L. Leal-Taixé"
+  title="DeVIS: Making Deformable Transformers Work for Video Instance Segmentation"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2207.11103"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="407"
+  author="Q. Cheng, N. Zeller and D. Cremers"
+  title="Vision-based Large-scale 3D Semantic Mapping for Autonomous Driving Applications"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2203.01087"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="406"
+  author="S. Dandl, A. Bender and T. Hothorn"
+  title="Heterogeneous Treatment Effect Estimation for Observational Data using Model-based Forests"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2210.02836"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="405"
+  author="S. Dandl, T. Hothorn, H. Seibold, E. Sverdrup, S. Wager and A. Zeileis"
+  title="What Makes Forest-Based Heterogeneous Treatment Effect Estimators Work?"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2206.10323"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="404"
+  author="P. Dendorfer, V. Yugay, A. Ošep and L. Leal-Taixé"
+  title="Quo Vadis: Is Trajectory Forecasting the Key Towards Long-Term Multi-Object Tracking?"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2210.07681"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="403"
+  author="G. De Nicola, B. Sischka and G. Kauermann"
+  title="Mixture Models and Networks: The Stochastic Block Model"
+  journal="Statistical Modelling 22.1-2 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1177/1471082X211033169"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="402"
+  author="Z. Ding, R. Qi, Z. Li, B. He, J. Wu, Y. Ma, Z. Meng, Z. Han and V. Tresp"
+  title="Forecasting Question Answering over Temporal Knowledge Graphs"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2208.06501"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="401"
+  author="E. Dorigatti, B. Bischl and B. Schubert"
+  title="Improved proteasomal cleavage prediction with positive-unlabeled learning"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2209.07527"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="400"
+  author="E. Dorigatti, J. Goschenhofer, B. Schubert, M. Rezaei and B. Bischl"
+  title="Positive-Unlabeled Learning with Uncertainty-aware Pseudo-label Selection"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2201.13192"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="399"
+  author="E. Dorigatti, J. Schweisthal, B. Bischl and M. Rezaei"
+  title="Robust and Efficient Imbalanced Positive-Unlabeled Learning with Self-supervision"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2209.02459"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="398"
+  author="I. Elezi, J. Seidenschwarz, L. Wagner, S. Vascon, A. Torcinovich, M. Pelillo and L. Leal-Taixé"
+  title="The Group Loss++: A deeper look into group loss for deep metric learning"
+  journal="IEEE Transactions on Pattern Analysis and Machine Intelligence (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1109/TPAMI.2022.3163846"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="397"
+  author="Z. A. Farsani and V. J. Schmid"
+  title="Modified Maximum Entropy Method and Estimating the AIF via DCE-MRI Data Analysis"
+  journal="Entropy 24.2 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.3390/e24020155"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="396"
+  author="B. Felderer, A. Birg and F. Kreuter"
+  title="Paradaten"
+  journal="Handbuch Methoden der empirischen Sozialforschung (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/978-3-531-18939-0_25"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="395"
+  author="A. Fernández-Fontelo, F. Henninger, P. J. Kieslich, F. Kreuter and S. Greven"
+  title="Classification ensembles for multivariate functional data with application to mouse movements in web surveys"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2205.13380"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="394"
+  author="A. Fiske, S. McLennan and A. Buyx"
+  title="Qualitative Evidence for Concern: Digital Health Technologies and the COVID-19 Pandemic"
+  journal="AJOB Neuroscience 13.3 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1080/21507740.2022.2082587"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="393"
+  author="V. Fomenko, I. Elezi, D. Ramanan, L. Leal-Taixé and A. Ošep"
+  title="Learning to Discover and Detect Objects"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2210.10774"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="392"
+  author="M. Fornasier, H. Huang, L. Pareschi and P. Sünnen"
+  title="Anisotropic Diffusion in Consensus-Based Optimization on the Sphere"
+  journal="SIAM Journal on Optimization 32.3 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1137/21M140941X"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="391"
+  author="M. Fornasier, T. Klock and K. Riedl"
+  title="Consensus-based optimization methods converge globally"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2103.15130"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="390"
+  author="R. Foygel Barber, M. Drton, N. Sturma and L. Weihs"
+  title="Half-trek criterion for identifiability of latent variable models"
+  journal="Annals of Statistics 50.6 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1214/22-AOS2221"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="389"
+  author="T. Freiesleben, G. König, C. Molnar and A. Tejero-Cantero"
+  title="Scientific inference with interpretable machine learning: Analyzing models to learn about real-world phenomena"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2206.05487"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="388"
+  author="C. Frey and M. Schubert"
+  title="V-Coder: Adaptive AutoEncoder for Semantic Disclosure in Knowledge Graphs"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2208.01735"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="387"
+  author="C. Fritz, G. De Nicola, F. Günther, D. Rügamer, M. Rave, M. Schneble, A. Bender, M. Weigert, R. Brinks, A. Hoyer, U. Berger, H Küchenhoff and G. Kauermann"
+  title="Challenges in Interpreting Epidemiological Surveillance Data – Experiences from Germany"
+  journal="Journal of Computational and Graphical Statistics (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1080/10618600.2022.2126482"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="386"
+  author="C. Fritz, G. De Nicola, M. Rave, M. Weigert, Y. Khazaei, U. Berger, H. Küchenhoff and G. Kauermann"
+  title="Statistical modelling of COVID-19 data: Putting generalized additive models to work"
+  journal="Statistical Modelling (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1177/1471082x221124628"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="385"
+  author="C. Fritz, E. Dorigatti and D. Rügamer"
+  title="Combining Graph Neural Networks and Spatio-temporal Disease Models to Predict COVID-19 Cases in Germany"
+  journal="Scientific Reports 12.3930 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1038/s41598-022-07757-5"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="384"
+  author="C. Fritz and G. Kauermann"
+  title="On the Interplay of Regional Mobility, Social Connectedness, and the Spread of COVID-19 in Germany"
+  journal="Journal of the Royal Statistical Society. Series A (Statistics in Society) 185.1 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1111/rssa.12753"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="383"
+  author="C. Fritz, M. Mehrl, P. W. Thurner and G. Kauermann"
+  title="All that Glitters is not Gold: Relational Events Models with Spurious Events"
+  journal="Network Science (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1017/nws.2022.22"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="382"
+  author="M. Fromm"
+  title="Machine learning driven argument mining"
+  journal=""
+  linktext="DOI"
+  link="https://doi.org/10.5282/edoc.30424"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="381"
+  author="M. Fromm, M. Berrendorf, J. Reiml, I. Mayerhofer, S. Bhargava, E. Faerman and T. Seidl"
+  title="Towards a Holistic View on Argument Quality Prediction"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2205.09803"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="380"
+  author="V. Gangadharan, H. Zheng, F. J. Taberner, J. Landry, T. A. Nees, J. Pistolic, N. Agarwal, D. Männich, V. Benes, M. Helmstaedter, B. Ommer, S. G. Lechner, T. Kuner and R. Kuner"
+  title="Neuropathic pain caused by miswiring and abnormal end organ targeting"
+  journal="Nature 606 (2022)"
+  linktext="URL"
+  link="https://www.nature.com/articles/s41586-022-04777-z"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="379"
+  author="C. Geldhauser, J. Liljegren and P. Nordqvist"
+  title="All's well that FID's well? Result quality and metric scores in GAN models for lip-sychronization tasks"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2212.13810"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="378"
+  author="F. Gerdon, R. L. Bach, C. Kern and F. Kreuter"
+  title="Social impacts of algorithmic decision-making: A research agenda for the social sciences"
+  journal="Big Data and Society 9.1 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1177/20539517221089305"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="377"
+  author="P. Gijsbers, M. L. P. Bueno, S. Coors, E. LeDell, S. Poirier, J. Thomas, B. Bischl and J. Vanschoren"
+  title="AMLB: an AutoML Benchmark"
+  journal="Journal of Machine Learning Research (accepted) (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2207.12560"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="376"
+  author="J. Goldsmith and F. Scheipl"
+  title="tf: S3 classes and methods for tidy functional data. R package"
+  journal="2022"
+  linktext="GitHub"
+  link="https://github.com/tidyfun/tf"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="375"
+  author="J. Goldsmith and F. Scheipl"
+  title="tidyfun: Clean, wholesome, tidy fun with functional data in R. R package"
+  journal="2022"
+  linktext="GitHub"
+  link="https://github.com/tidyfun/tidyfun"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="374"
+  author="F. Günther, S. Einhauser, D. Peterhoff, S. Wiegrebe, H. H. Niller, S. Beileke, P. Steininger, R. Burkhardt, H. Küchenhoff, O. Gefeller, K. Überla, I. M. Heid and R. Wagner"
+  title="Higher Infection Risk among Health Care Workers and Lower Risk among Smokers Persistent across SARS-CoV-2 Waves–Longitudinal Results from the Population-Based TiKoCo Seroprevalence Study"
+  journal="International Journal of Environmental Research and Public Health 19.24 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.3390/ijerph192416996"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="373"
+  author="T. Hannan, R. Koner, J. Kobold and M. Schubert"
+  title="Box Supervised Video Segmentation Proposal Network"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2202.07025"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="372"
+  author="W. Hartl, P. Kopper, A. Bender, F. Scheipl, A. G. Day, G. Elke and H. "
+  title="Protein intake and outcome of critically ill patients: analysis of a large international database using piece-wise exponential additive mixed models"
+  journal="Critical Care 26.7 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1186/s13054-021-03870-5"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="371"
+  author="F. Henninger, P. J. Kieslich, A. Fernández-Fontelo, S. Greven and F. Kreuter"
+  title="Privacy attitudes toward mouse-tracking paradata collection"
+  journal="Preprint at SocArXiv (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.31235/osf.io/6weqx"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="370"
+  author="M. Herrmann"
+  title="Towards more reliable machine learning: conceptual insights and practical approaches for unsupervised manifold learning and supervised benchmark studies"
+  journal=""
+  linktext="DOI"
+  link="https://doi.org/10.5282/edoc.30789"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="369"
+  author="M. Herrmann, D. Kazempour, F. Scheipl and P. Kröger"
+  title="Enhancing cluster analysis via topological manifold learning"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2207.00510"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="368"
+  author="F. Hofherr, L. Koestler, F. Bernard and D. Cremers"
+  title="Neural Implicit Representations for Physical Parameter Inference from a Single Video"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2204.14030"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="367"
+  author="R. Hornung and A.-L. Boulesteix"
+  title="Interaction Forests: Identifying and exploiting interpretable quantitative and qualitative interaction effects"
+  journal="Computational Statistics and Data Analysis 171.107460 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1016/j.csda.2022.107460"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="366"
+  author="H. Huang, J. Qiu and K. Riedl"
+  title="Consensus-Based Optimization for Saddle Point Problems"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2212.12334"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="365"
+  author="E. Hüllermeier, M. Wever, E. L. Mencica, J. Fürnkranz and M. Rapp"
+  title="A flexible class of dependence-aware multi-label loss functions"
+  journal="Machine Learning 111.2 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s10994-021-06107-2"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="364"
+  author="M. Keicher, K. Mullakaeva, T. Czempiel, K. Mach, A. Khakzar and N. Navab"
+  title="Few-shot Structured Radiology Report Generation Using Natural Language Prompts"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2203.15723"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="363"
+  author="C. Kern, F. Gerdon, R. L. Bach, F. Keusch and F. Kreuter"
+  title="Humans versus machines: Who is perceived to decide fairer? Experimental evidence on attitudes toward automated decision-making"
+  journal="Patterns 3.10 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1016/j.patter.2022.100591"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="362"
+  author="F. Keusch, S. Bähr, G.-C. Haas, F. Kreuter, M. Trappmann and S. Eckman"
+  title="Non-participation in smartphone data collection using research apps"
+  journal="Journal of the Royal Statistical Society. Series A (Statistics in Society) (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1111/rssa.12827"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="361"
+  author="S. Kevork and G. Kauermann"
+  title="Bipartite Exponential Random Graph Models with Nodal Random Effects"
+  journal="Social Networks 70 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1016/j.socnet.2021.11.002"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="360"
+  author="S. Kevork and G. Kauermann"
+  title="Iterative Estimation of Mixed Exponential Random Graph Models with Nodal Random Effects"
+  journal="Network Science 9.4 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1017/nws.2021.22"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="359"
+  author="M. P. Kim, C. Kern, S. Goldwasser, F. Kreuter and O. Reingold"
+  title="Universal adaptability: Target-independent inference that competes with propensity scoring"
+  journal="Proceedings of the National Academy of Sciences 119.4 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1073/pnas.2108097119"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="358"
+  author="S. Klenk, L. Koestler, D. Scaramuzza and D. Cremers"
+  title="E-NeRF: Neural Radiance Fields from a Moving Event Camera"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2208.11300"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="357"
+  author="P. Kocsis, P. Súkenı́k, G. Brasó, M. Nießner, L. Leal-Taixé and I. Elezi"
+  title="The Unreasonable Effectiveness of Fully-Connected Layers for Low-Data Regimes"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2210.05657"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="356"
+  author="L. Kook, P. F. M. Baumann, O. Dürr, B. Sick and D. Rügamer"
+  title="Estimating Conditional Distributions with Neural Networks using R package deeptrafo"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2211.13665"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="355"
+  author="L. Krombholz"
+  title="Multi-View Spectral Clustering on Single-View Data - Grouping High-Dimensional Representations of 3D Objects"
+  journal=""
+  linktext=""
+  link=""
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="354"
+  author="M. Kuppler, C. Kern, R. L. Bach and F. Kreuter"
+  title="From fair predictions to just decisions? Conceptualizing algorithmic fairness and distributive justice in the context of data-driven decision-making"
+  journal="Frontiers in Sociology 7 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.3389/fsoc.2022.883999"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="353"
+  author="J. Lane, B. Kim, F. Kreuter and A. Nunez"
+  title="The Value of Science: Special Theme"
+  journal="Harvard Data Science Review 4.2 (2022)"
+  linktext="URL"
+  link="https://hdsr.mitpress.mit.edu/pub/4zjxu63p"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="352"
+  author="M. Lange, V. Bergen, M. Klein, M. Setty, B. Reuter, M. Bakhti, H. Lickert, M. Ansari, J. Schniering, H. B. Schiller, D. Pe’er and F. J. Theis"
+  title="CellRank for directed single-cell fate mapping"
+  journal="Nature Methods 19.2 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1038/s41592-021-01346-6"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="351"
+  author="Y. Liu, S. Yan, L. Leal-Taixé, J. Hays and D. Ramanan"
+  title="Soft Augmentation for Image Classification"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2211.04625"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="350"
+  author="M. Lotfollahi, M. Naghipourfar, M. D. Luecken, M. Khajavi, M. Büttner, M. Wagenstetter, Ž. Avsec, A. Gayoso, N. Yosef, M. Interlandi, S. Rybakov, A. V. Misharin and F. J. "
+  title="Mapping single-cell data to reference atlases by transfer learning"
+  journal="Nature Biotechnology 40 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1038/s41587-021-01001-7"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="349"
+  author="S. McLennan, A. Meyer, K. Schreyer and A. Buyx"
+  title="German medical students´ views regarding artificial intelligence in medicine: A cross-sectional survey"
+  journal="PLOS Digital Health (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1371/journal.pdig.0000114"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="348"
+  author="L. J. Meier, A. Hein, K. Diepold and A. Buyx"
+  title="Clinical Ethics – To Compute, or Not to Compute?"
+  journal="American Journal of Bioethics 22.12 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1080/15265161.2022.2127970"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="347"
+  author="T. Milbich, K. Roth, B. Brattoli and B. Ommer"
+  title="Sharing Matters for Generalization in Deep Metric Learning"
+  journal="IEEE Transactions on Pattern Analysis and Machine Intelligence 44.1 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1109/TPAMI.2020.3009620"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="346"
+  author="M. Mittermeier, M. Weigert, D. Rügamer, H. Küchenhoff and R. Ludwig"
+  title="A deep learning based classification of atmospheric circulation types over Europe: projection of future changes in a CMIP6 large ensemble"
+  journal="Environmental Research Letters 17 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1088/1748-9326/ac8068"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="345"
+  author="M. Mittermeier, M. Weigert, D. Rügamer, H. Küchenhoff and R. Ludwig"
+  title="DeepECT: The Deep Embedded Cluster Tree"
+  journal="Environmental Research Letters 17.8 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1088/1748-9326/ac8068"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="344"
+  author="J. Moosbauer, M. Binder, L. Schneider, F. Pfisterer, M. Becker, M. Lang, L. Kotthoff and B. Bischl"
+  title="Automated Benchmark-Driven Design and Explanation of Hyperparameter Optimizers"
+  journal="IEEE Transactions on Evolutionary Computation 26.6 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1109/TEVC.2022.3211336"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="343"
+  author="J. Moosbauer, G. Casalicchio, M. Lindauer and B. Bischl"
+  title="Enhancing Explainability of Hyperparameter Optimization via Bayesian Algorithm Execution"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2206.05447"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="342"
+  author="V. Nguyen, M. H. Shaker and E. Hüllermeier"
+  title="How to measure uncertainty in uncertainty sampling for active learning"
+  journal="Machine Learning 111.1 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s10994-021-06003-9"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="341"
+  author="C. Nießl, M. Herrmann, C. Wiedemann, G. Casalicchio and A.-L. Boulesteix"
+  title="Over-optimism in benchmark studies and the multiplicity of design and analysis options when interpreting their results"
+  journal="Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery 12.2 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1002/widm.1441"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="340"
+  author="C. D. Nordeck, K. E. Riehm, E. J. Smail, C. Holingue, J. C. Kane, R. M. Johnson, C. B. Veldhuis, L. G. Kalb, E. A. Stuart, F. Kreuter and J. Thrul"
+  title="Changes in drinking days among United States adults during the COVID-19 pandemic"
+  journal="Addiction 117.2 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1111/add.15622"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="339"
+  author="Z. Nurlanov, D. Cremers and F. Bernard"
+  title="Efficient and Flexible Sublabel-Accurate Energy Minimization"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2206.09596"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="338"
+  author="I. Obadic, R. Roscher, D. A. Oliveira and X. Zhu"
+  title="Exploring Self-Attention for Crop-type Classification Explainability"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2210.13167"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="337"
+  author="F. Ott, N. L. Raichur, D. Rügamer, T. Feigl, H. Neumann, B. Bischl and C. Mutschler"
+  title="Benchmarking Visual-Inertial Deep Multimodal Fusion for Relative Pose Regression and Odometry-aided Absolute Pose Regression"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2208.00919"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="336"
+  author="F. Ott, D. Rügamer, L. Heublein, T. Hamann, J. Barth, B. Bischl and C. Mutschler"
+  title="Benchmarking online sequence-to-sequence and character-based handwriting recognition from IMU-enhanced pens"
+  journal="International Journal on Document Analysis and Recognition 25.4 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s10032-022-00415-6"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="335"
+  author="S. Pölsterl, C. Wachinger, Alzheimer's Disease Neuroimaging Initiative Alzheimer's Disease Neuroimaging Initiative and Japanese Alzheimer's Disease Neuroimaging Initiative Japanese Alzheimer's Disease Neuroimaging Initiative"
+  title="Identification of causal effects of neuroanatomy on cognitive decline requires modeling unobserved confounders"
+  journal="Alzheimer's and Dementia (2022)"
+  linktext="DOI"
+  link="https://doi.org/https://doi.org/10.1002/alz.12825"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="334"
+  author="E. Pretzsch, V. Heinemann, S. Stintzing, A. Bender, S. Chen, J. W. Holch, F. O. Hofmann, H. Ren, F. Küchenhoff, J. Werner and  Angele"
+  title="EMT-Related Genes Have No Prognostic Relevance in Metastatic Colorectal Cancer as Opposed to Stage II/III: Analysis of the Randomised, Phase III Trial FIRE-3 (AIO KRK 0306; FIRE-3)"
+  journal="Cancers 14.22 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.3390/cancers14225596"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="333"
+  author="J. Ramjith, A. Bender, K. C. B. Roes and M. A. Jonker"
+  title="Recurrent events analysis with piece-wise exponential additive mixed models"
+  journal="Statistical Modelling (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1177/1471082X221117612"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="332"
+  author="K. Rath, D. Rügamer, B. Bischl, U. von Toussaint, C. Rea, A. Maris, R. Granetz and C. Albert"
+  title="Data augmentation for disruption prediction via robust surrogate models"
+  journal="Journal of Plasma Physics 88.5 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1017/S0022377822000769"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="331"
+  author="K. E. Riehm, E. Badillo Goicoechea, F. M. Wang, E. Kim, L. R. Aldridge, C. P. Lupton-Smith, R. Presskreischer, T. H. Chang, S. LaRocca, F. Kreuter and E. A. Stuart"
+  title="Association of Non-Pharmaceutical Interventions to Reduce the Spread of SARS-CoV-2 With Anxiety and Depressive Symptoms: A Multi-National Study of 43 Countries"
+  journal="International Journal of Public Health 67 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.3389/ijph.2022.1604430"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="330"
+  author="D. Rügamer"
+  title="Additive Higher-Order Factorization Machines"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2205.14515"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="329"
+  author="Weiss, S., Hermüller, P. and Westermann, R."
+  title="Fast Neural Representations for Direct Volume Rendering"
+  journal="Computer Graphics Forum 41.6 (2022)"
+  linktext="DOI"
+  link="https://doi.org/https://doi.org/10.1111/cgf.14578"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="328"
+  author="J. A. Salomon, A. Reinhart, A. Bilinski, E. J. Chua, W. La Motte-Kerr, M. M. Rönn, M. B. Reitsma, K. A. Morris, S. LaRocca, T. H. Farag, F. Kreuter, R. Rosenfeld and R. J. Tibshirani"
+  title="The US COVID-19 Trends and Impact Survey: Continuous real-time measurement of COVID-19 symptoms, risks, protective behaviors, testing, and vaccination"
+  journal="Proceedings of the National Academy of Sciences 118.51 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1073/pnas.2111454118"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="327"
+  author="L. Sang, B. Haefner, X. Zuo and D. Cremers"
+  title="High-Quality RGB-D Reconstruction via Multi-View Uncalibrated Photometric Stereo and Gradient-SDF"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2210.12202"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="326"
+  author="A. Saroha, M. Eisenberger, T. Yenamandra and D. Cremers"
+  title="Implicit Shape Completion via Adversarial Shape Priors"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2204.10060"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="325"
+  author="A. Scagliotti and P. Colli Franzone"
+  title="Accelerated subgradient methods"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2302.12105"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="324"
+  author="D. Schalk, B. Bischl and D. Rügamer"
+  title="Privacy-Preserving and Lossless Distributed Estimation of High-Dimensional Generalized Additive Mixed Models"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2210.07723"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="323"
+  author="D. Schalk, V. S. Hoffmann, B. Bischl and U. Mansmann"
+  title="Distributed non-disclosive validation of predictive models by a modified ROC-GLM"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2203.10828"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="322"
+  author="E. Schede, J. Brandt, A. Tornede, M. Wever, V. Bengs, E. Hüllermeier and K. Tierney"
+  title="A Survey of Methods for Automated Algorithm Configuration"
+  journal="Journal of Artificial Intelligence Research 75 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1613/jair.1.13676"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="321"
+  author="P. Schiele, C. Berninger and D. David"
+  title="ARMA Cell: A Modular and Effective Approach for Neural Autoregressive Modeling"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2208.14919"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="320"
+  author="M. Schleiss, F. Rouatbi and D. Cremers"
+  title="VPAIR--Aerial Visual Place Recognition and Localization in Large-scale Outdoor Environments"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2205.11567"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="319"
+  author="M. Schneble and G. Kauermann"
+  title="Intensity Estimation on Geometric Networks with Penalized Splines"
+  journal="Annals of Applied Statistics (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1214/21-AOAS1522"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="318"
+  author="L. Schneider, L. Schäpermeier, R. P. Prager, B. Bischl, H. Trautmann and P. Kerschke"
+  title="HPO X ELA: Investigating Hyperparameter Optimization Landscapes by Means of Exploratory Landscape Analysis"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2208.00220"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="317"
+  author="C. A. Scholbeck, G. Casalicchio, C. Molnar, B. Bischl and C. Heumann"
+  title="Marginal Effects for Non-Linear Prediction Functions"
+  journal="Under review (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2201.08837"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="316"
+  author="H. Silber, F. Gerdon, R. Bach, C. Kern, F. Keusch and F. Kreuter"
+  title="A Pre-registered Vignette Experiment on Determinants of Health Data Sharing Behavior: Willingness to Donate Sensor Data, Medical Records, and Biomarkers"
+  journal="Politics and the Life Sciences (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1017/pls.2022.15"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="315"
+  author="H. Silber, F. Gerdon, R. Bach, C. Kern, F. Keusch and F. Kreuter"
+  title="Dataset and Codebook for: 'A Pre-registered Vignette Experiment on Determinants of Health Data Sharing Behavior: Willingness to Donate Sensor Data, Medical Records, and Biomarkers'"
+  journal="PsychArchives (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.23668/psycharchives.7058"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="314"
+  author="B. Sischka and G. Kauermann"
+  title="EM-Based Smooth Graphon Estimation Using MCMC and Spline-Based Approaches"
+  journal="Social Networks 68 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1016/j.socnet.2021.08.007"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="313"
+  author="M. van Smeden, G. Heinze, B. Van Calster, F. W. Asselbergs, P. E. Vardas, N. Bruining, P. de Jaegere, J. H. Moore, S. Denaxas, A.-L. Boulesteix and K. G. M. Moons"
+  title="Critical appraisal of artificial intelligence-based prediction models for cardiovascular disease"
+  journal="European Heart Journal (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1093/eurheartj/ehac238"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="312"
+  author="R. Sonabend, A. Bender and S. Vollmer"
+  title="Avoiding C-hacking when evaluating survival distribution predictions with discrimination measures"
+  journal="Bioinformatics 38.17 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1093/bioinformatics/btac451"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="311"
+  author="D. Strieder and M. Drton"
+  title="On the choice of the splitting ratio for the split likelihood ratio test"
+  journal="Electronic Journal of Statistics 16.2 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1214/22-EJS2099"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="310"
+  author="H. Sun, F. G. Conrad and F. Kreuter"
+  title="The Carryover Effects of Preceding Interviewer–Respondent Interaction on Responses in Audio Computer-Assisted Self-Interviewing (ACASI)"
+  journal="Journal of Survey Statistics and Methodology 10.2 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1093/jssam/smaa019"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="309"
+  author="C. Tomani and D. Cremers"
+  title="Challenger: Training with Attribution Maps"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2205.15094"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="308"
+  author="M. Trappmann, G.-C. Haas, S. Malich, F. Keusch, S. Bähr, F. Kreuter and S. Schwarz"
+  title="Augmenting survey data with digital trace data: Is there a threat to panel retention?"
+  journal="Journal of Survey Statistics and Methodology (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1093/jssam/smac023"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="307"
+  author="T. Ullmann, A. Beer, M. Hünemörder, T. Seidl and A.-L. Boulesteix"
+  title="Over-optimistic evaluation and reporting of novel cluster algorithms: An illustrative study"
+  journal="Advances in Data Analysis and Classification (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s11634-022-00496-5"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="306"
+  author="T. Ullmann, C. Hennig and A.-L. Boulesteix"
+  title="Validation of cluster analysis results on validation data: A systematic framework"
+  journal="Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery 12.3 (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1002/widm.1444"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="305"
+  author="R. Valliant, J. A. Dever, F. Kreuter and M. R. Valliant"
+  title="Package ‘PracTools’"
+  journal="2022"
+  linktext="URL"
+  link="https://cran.r-project.org/web/packages/PracTools"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="304"
+  author="S. Weber, N. Demmel, T. Chon Chan and D. Cremers"
+  title="Power Bundle Adjustment for Large-Scale 3D Reconstruction"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2204.12834"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="303"
+  author="Z. Ye, B. Haefner, Y. Quéau, T. Möllenhoff and D. Cremers"
+  title="A Cutting-Plane Method for Sublabel-Accurate Relaxation of Problems with Product Label Spaces"
+  journal="International Journal of Computer Vision (2022)"
+  linktext="DOI"
+  link="https://doi.org/10.1007/s11263-022-01704-7"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="302"
+  author="Y. Yeganeh, A. Farshad and N. Navab"
+  title="Shape-Aware Masking for Inpainting in Medical Imaging"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2207.05787"
+  linktext2=""
+  link2=""
+
+[[pubitem]]
+  no="301"
+  author="S.-F. Zheng, JE. Nam, E. Dorigatti, B. Bischl, S. Azizi and M. Rezaei"
+  title="Joint Debiased Representation and Image Clustering Learning with Self-Supervision"
+  journal="Preprint at arXiv (2022)"
+  linktext="arXiv"
+  link="https://arxiv.org/abs/2209.06941"
+  linktext2=""
+  link2=""
+
