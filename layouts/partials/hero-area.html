@@ -14,61 +14,11 @@
 				</p>
 			</div>
 		</div>
-	
-		{{"<!-- MCML in numbers Start -->" | safeHTML}}		
-		<div class="row pt-5 pb-5">
-			{{"<!-- Number PIs -->" | safeHTML}}
-			<div class="col-xl-3 col-md-4 col-sm-12 col-xs-12">
-				{{ $pis := .Site.Data.pis.pi | len -}}
-				{{ $pis = math.Add $pis (.Site.Data.pis.senior | len ) -}}
-				{{ $pis = math.Add $pis (.Site.Data.pis.affil | len ) -}}
-				{{ $pis = math.Sub $pis (math.Mod $pis 10) }} 
-				<img class="numbers-img" width="100" height="100" src="/images/pictograms/pis.png" alt="PIs at MCML">
-				<p>
-					<span style="font-weight: 600; font-size: 60px; line-height:1.1;">&asymp;
-						<span class="counter" data-target="{{ $pis }}"></span>
-					</span>
-					<br>Principal Investigators
-				</p>
-			</div>
-			{{"<!-- Number PhDs -->" | safeHTML}}
-			<div class="col-xl-3 col-md-4 col-sm-12 col-xs-12">
-				{{ $phds := .Site.Data.fundedPhds.phd | len -}}
-				{{ $phds = math.Add $phds (.Site.Data.fundedPhds.postdoc | len) -}}
-				{{ $phds = math.Add $phds (.Site.Data.affiliatedPhds.phd | len) -}}
-				{{ $phds = math.Add $phds (.Site.Data.affiliatedPhds.w1 | len) -}}
-				{{ $phds = math.Add $phds (.Site.Data.affiliatedPhds.postdoc | len) -}}
-				{{ $phds = math.Sub $phds (math.Mod $phds 10) }} 
-				<img class="numbers-img" width="100" height="100" src="/images/pictograms/students.png" alt="Junior Members at MCML">
-				<p>
-					<span style="font-weight: 600; font-size: 60px; line-height:1.1;">
-						<span class="counter" data-target="{{ $phds }}"></span>+
-					</span>
-					<br>Junior Members
-				</p>
-			</div>
-			{{"<!-- Number Publications -->" | safeHTML}}
-			<div class="col-xl-3 col-md-4 col-sm-12 col-xs-12">
-				{{ $pubs := 0 -}}
-				{{ range $.Site.Data.publications -}}
-					{{ $pubs = math.Add $pubs (.pubitem | len) -}}
-				{{ end -}}
-				{{ $pubs = math.Sub $pubs (math.Mod $pubs 10) }} 
-				<img class="numbers-img" width="100" height="100" src="/images/pictograms/publications.png" alt="Publications of MCML">
-				<p>
-					<span style="font-weight: 600; font-size: 60px; line-height:1.1;">
-						<span class="counter" data-target="{{ $pubs }}"></span>+
-					</span>
-					<br>Publications
-				</p>
-			</div>
-		</div>
-		{{"<!-- MCML in numbers End -->" | safeHTML}}
 			
 		{{"<!-- Vision Start -->" | safeHTML}}
 		<div class="row mt-5">
 			<div class="col col-12 col-lg-3 pe-lg-4 txtTwoCol">
-				<h2>Who we are</h2>
+				<h2>Prof. Dr. Thomas Seidl</h2>
 			</div>
 			<div class="col col-12 col-lg-6 txtTwoCol">		
 				<p class="p-l">
