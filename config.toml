@@ -1,6 +1,6 @@
 baseURL = "https://mcml.ai"
 languageCode = "en"
-title = "MCML - Munich Center for Machine Learning"
+title = "Data Mining Lab @LMU"
 description = "The MCML is a top place for AI and ML research in Europe. We attract the most promising researchers from all career levels to our center and transfer innovations and AI potential to industry and society."
 paginate = 3
 
