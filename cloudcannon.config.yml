@@ -1,0 +1,1540 @@
+co_snippets_imports:
+  hugo: false
+paths:
+  data: data
+  collections: content
+  includes: layouts
+  layouts: layouts
+  static: static
+  uploads: static/images
+  source: ''
+  archetypes: archetypes
+  assets: assets
+  content: content
+  pages: content
+  publish: public
+  config: ''
+collections_config:
+  sections:
+    path: content
+    output: true
+    filter: strict
+    parse_branch_index: true
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    _inputs:
+      bgImg: 
+        type: image
+        comment: "Background image used für small devices"
+        hidden: true
+      video: 
+        type: image
+        comment: "Background video used für medium and large devices"
+        hidden: true
+      sectionlinks:
+        hidden: true
+      opac:
+        hidden: true
+      titleImg:
+        hidden: true
+      layout:
+        hidden: true
+      title: 
+        type: text
+        comment: "Title of the page (used for seo)"
+      shorttitle: 
+        type: text
+        comment: "<h1> at top of the page (if empty title is used)"
+  events:
+    path: content/events
+    output: true
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schema: event
+    create:
+      path: '{date|year}-{date|month}-{date|day}-{slug}/index.md'
+      _inputs:
+        date:
+          comment: Use the event date here
+        slug:
+          comment: This is used for your directory name
+    schemas:
+      event:
+        path: schemas/event.md
+    _inputs:  
+      layout: 
+        hidden: true
+        default: eventitem
+      eventType: 
+        type: textarea
+        comment: "Type of the event (appears above the title, e.g. Workshop, Lecture Series, ..."
+      title: 
+        type: textarea
+        comment: "Title of event (<h1>)"
+      subtitle: 
+        type: textarea
+        comment: "Subtitle of event (<h2>)"
+      location: 
+        type: textarea
+        comment: "Location of event"
+      teaser: 
+        type: html
+        comment: "Teaser text (appears in event overview)"  
+        options:
+          bold: true
+          italic: true
+          format: p 
+          subscript: true
+          superscript: true
+          link: true
+          styles: /css/editor.css
+      img: 
+        type: image
+        comment: "Teaser image"
+      copyright: 
+        type: text
+        comment: "Copyright for teaser image"
+      link:
+        hidden: internal
+        comment: "External link to event"
+      zoom:
+        type: url
+        comment: "Zoom link (optional)"
+        optional: true
+      tags:
+        type: array
+        comment: "Only te first tag is used for related events"
+      tags[*]:
+        type: select
+        options:
+          values:
+            - stat-colloquium
+            - exhibition
+            - summer-school
+            - conference
+            - munich-ai-lectures
+            - workshop
+            - round-table
+            - som-ai
+            - symposium
+            - ceremony
+            - lecture
+            - hci-lab
+            - panel
+      speakers:
+        type: array
+        comment: "Speakers (each with name and affiliation)"
+        options:
+          structures: _structures.speakers
+          preview:
+            text:
+              - key: name
+            subtext:
+              - key: affiliation
+      moderators:
+        type: array
+        comment: "Moderators (each with name and affiliation)"
+        options:
+          structures: _structures.speakers
+          preview:
+            text:
+              - key: name
+            subtext:
+              - key: affiliation
+      organizers:
+        type: array
+        comment: "Organizers (each with name and affiliation)"
+        options:
+          structures: _structures.speakers
+          preview:
+            text:
+              - key: name
+            subtext:
+              - key: affiliation
+  news-intern:
+    path: content/news/intern
+    output: true
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schema: news-intern
+    create:
+      path: '{date|year}-{date|month}-{date|day}-{slug}/index.md'
+      _inputs:
+        date:
+          comment: Use the publishing date here
+        slug:
+          comment: This is used for your directory name
+    schemas:
+      news-intern:
+        path: schemas/news-intern.md
+    _inputs:  
+      title: 
+        type: textarea
+        comment: "Title of news item (<h1> at top of the page)"
+      subtitle: 
+        type: textarea
+        comment: "Subtitle of news item (<h2> next to image)"
+      teaser: 
+        type: html
+        comment: "Teaser text (appears in news overview)"  
+        options:
+          bold: true
+          italic: true
+          format: p 
+          subscript: true
+          superscript: true
+          link: true
+          styles: /css/editor.css
+      img: 
+        type: image
+        comment: "Teaser image"
+      copyright: 
+        type: text
+        comment: "Copyright for teaser image"
+      link:
+        hidden: internal
+        comment: "External link to news item"
+      internal:
+        default: true
+        comment: "internal news, i.e. news with own content"
+      date:
+        type: date
+        comment: "Publishing date"
+      tags:
+        type: array
+        comment: "Only te first tag is used for related news"
+      tags[*]:
+        type: select
+        options:
+          values:
+            - event
+            - press
+            - award
+            - podcast
+            - training
+            - conference
+            - jobs
+            - research
+            - dssg
+  news-extern:
+    path: content/news/extern
+    output: true
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schema: news-extern
+    uploads: '[base_path]'
+    create:
+      path: '{date|year}-{date|month}-{date|day}-{slug}/index.md'
+      _inputs:
+        date:
+          comment: Use the publishing date here
+        slug:
+          comment: This is used for your directory name
+    schemas:
+      news-extern:
+        path: schemas/news-extern.md
+    _inputs:  
+      title: 
+        type: textarea
+        comment: "Title of news item (<h1> at top of the page)"
+      subtitle: 
+        type: textarea
+        comment: "Subtitle of news item (<h2> next to image)"
+      teaser: 
+        type: html
+        comment: "Teaser text (appears in news overview)"  
+        options:
+          bold: true
+          italic: true
+          format: p 
+          subscript: true
+          superscript: true
+          link: true
+          styles: /css/editor.css
+      img: 
+        type: image
+        comment: "Teaser image"
+      copyright: 
+        type: text
+        comment: "Copyright for teaser image"
+      link:
+        hidden: internal
+        comment: "External link to news item"
+      internal:
+        default: false
+        comment: "internal news, i.e. news with own content"
+      date:
+        type: date
+        comment: "Publishing date"
+      tags:
+        type: array
+        comment: "Only te first tag is used for related news"
+      tags[*]:
+        type: select
+        options:
+          values:
+            - event
+            - press
+            - award
+            - podcast
+            - training
+            - conference
+            - jobs
+            - research
+            - dssg
+  funding:
+    path: content/opportunities/funding
+    output: true
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schema: funding
+    uploads: '[base_path]'
+    create:
+      path: '{slug}{date|year}/index.md'
+      _inputs:
+        date:
+          comment: Use the deadline date here
+        slug:
+          comment: This is used for your directory name (e.g. phd, dssg, ...)
+    schemas:
+      funding:
+        path: schemas/funding.md
+    _inputs:  
+      title: 
+        type: textarea
+        comment: "Title of funding subject (<h1> at top of the page)"
+      subtitle: 
+        type: textarea
+        comment: "Subtitle of funding subject (<h2> next to image)"
+      img: 
+        type: image
+        comment: "Teaser image"
+      copyright: 
+        type: text
+        comment: "Copyright for teaser image"
+      caption: 
+        type: text
+        comment: "Caption for teaser image"
+      deadline:
+        type: date
+        comment: "Deadline date"
+  
+  data:
+    path: data
+    output: false
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    _inputs:
+      bio: 
+        type: html
+        optional: true
+        options:
+          format: p 
+      contact: 
+        type: url
+      mail: 
+        type: email
+      title:
+        type: select
+        options:
+          values:
+            - Prof. Dr.
+            - Dr.
+            - PD Dr.
+      uni:
+        type: select
+        options:
+          values:
+            - LMU
+            - TUM
+            - Helmholtz AI
+      subarea:
+        type: select
+        options:
+          values:
+            - A1
+            - A2
+            - A3
+            - B1
+            - B2
+            - B3
+            - C1
+            - C2
+            - C3
+            - C4
+            - C5
+      director:
+        type: checkbox
+        default: false
+        optional: true
+      strategyBoard:
+        type: checkbox
+        default: false
+        optional: true
+      funding:
+        type: checkbox
+        default: true
+        optional: true
+        
+
+_inputs: 
+  description: 
+    type: textarea
+    comment: "Description of the page (used for seo). Max. 150 characters!"
+  
+  manager:
+    type: array
+    comment: "Managers in MCML"
+    options:
+      structures: _structures.manager
+  pi:
+    type: array
+    comment: "PIs in MCML"
+    options:
+      structures: _structures.pi
+      
+  affil:
+    type: array
+    comment: "Affiliated Senior Researchers in MCML"
+    options:
+      structures: _structures.pi
+      
+  senior:
+    type: array
+    comment: "Senior Researchers in MCML"
+    options:
+      structures: _structures.pi
+      
+  abmember:
+    type: array
+    comment: "Advisory Board members in MCML"
+    options:
+      structures: _structures.ab
+  
+  phd:
+    type: array
+    comment: "Junior members in MCML"
+    options:
+      structures: _structures.phd
+      
+  eventDate:
+    type: object
+    options:
+      preview:
+        text: "Event Date"
+        icon: date_range
+        metadata: 
+        - text: 
+          - key: start
+          icon: today
+        - text: 
+          - key: end
+          icon: today
+        - text: "All Day Event"
+        - text: 
+          - key: allDay
+          icon: radio_button_checked
+    eventDate.start:
+      type: datetime
+    eventDate.end:
+      type: datetime
+    eventDate.allDay:
+      comment: "All-day event (no time will be displayed)"
+      type: checkbox
+        
+_select_data: {}
+_structures: 
+  speakers:
+    values:
+      - value:
+          name: 
+          affiliation: 
+  manager:
+    values:
+      - value:
+          name: 
+          firstName:
+          title:
+          image:
+          position:
+          uni:
+          contact:
+          mail:
+          bio:
+        preview:
+          text:
+            - key: name
+          subtext:
+            - key: firstName
+          image:
+            - key: image
+          icon: person  
+          metadata:  
+          - text: 
+            - key: position
+          - text: 
+            - key: uni
+  pi:
+    values:
+      - value:
+          name: 
+          firstName:
+          title:
+          image:
+          uni:
+          affiliation:
+          contact:
+          bio:
+          subarea:
+          director:
+          strategyBoard:
+          id:
+        preview:
+          text:
+            - key: name
+          subtext:
+            - key: firstName
+          image:
+            - key: image
+          icon: person  
+          metadata:  
+          - text: 
+            - key: subarea
+          - text: 
+            - key: uni
+            
+  phd:
+    values:
+      - value:
+          name: 
+          firstName:
+          title:
+          image:
+          contact:
+          position:
+          funding:
+          piID:
+        preview:
+          text:
+            - key: name
+          subtext:
+            - key: firstName
+          image:
+            - key: image
+          icon: person  
+          metadata:  
+          - text: 
+            - key: piID
+            
+  ab:
+    values:
+      - value:
+          name: 
+          firstName:
+          title:
+          image:
+          uni:
+          affiliation:
+          contact:
+          bio:
+        preview:
+          text:
+            - key: name
+          subtext:
+            - key: firstName
+          image:
+            - key: image
+          icon: person  
+          metadata:  
+          - text: 
+            - key: uni
+_editables:
+  text:
+    italic: true
+  block:
+    format: p h3
+    undo: true
+    redo: true
+  content:
+    blockquote: false
+    bold: true
+    format: p h2 h3 h4 h5 h6 div
+    italic: true
+    strike: true
+    subscript: true
+    superscript: true
+    underline: true
+    link: true
+    bulletedlist: true
+    indent: true
+    numberedlist: false
+    outdent: true
+    code: true
+    embed: true
+    horizontalrule: true
+    image: true
+    table: true
+    undo: true
+    redo: true
+    removeformat: true
+    copyformatting: true
+    styles: /css/editor.css
+    left: align-left
+    center: align-center
+    right: align-right
+    justify: align-justify
+    image_size_attributes: true
+    snippet: true
+data_config: true
+editor:
+  default_path:
+timezone: Etc/UTC
+
+_snippets:
+  hugo_announcement:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: "Announcement"
+      metadata:
+        - text: "We are happy to announce that MCML researchers are represented with the following papers at"
+        - text:
+          - key: conference
+          - "Conference"
+    picker_preview:
+      gallery:
+        image: /examples/announcement.png
+        text: "Announcement"
+    definitions:
+      shortcode_name: announcement
+      named_args:
+        - source_key: conf
+          editor_key: conference
+          type: string
+        - source_key: conflink
+          editor_key: conferenceLink
+          type: string
+      _inputs:
+        conference:
+          type: text
+          comment: "Conference abbreviation, e.g. CVPR 2023"
+        conferenceLink:
+          type: url
+        
+  hugo_contribution:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "Published paper (or article)"
+      metadata:
+        - text:
+          - key: title
+          - "Title"
+        - text:
+          - key: author  
+          - "Authors"
+        - text:
+          - key: link
+          - "Link"
+    picker_preview:
+      gallery:
+        image: /examples/contribution.png
+        text: "Published paper (or article)"
+    definitions:
+      shortcode_name: contribution
+      named_args:
+        - editor_key: title
+          type: string
+        - editor_key: author
+          type: string
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: linktext
+          type: string
+          optional: true
+    _inputs:
+      title:
+        type: textarea
+        comment: "Title od the paper"
+      author:
+        type: textarea
+      link:
+        type: url  
+      linktext:
+        type: text
+        comment: "e.g. DOI, PDF, URL, arXiv"
+          
+  hugo_teaser:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: "Teaser for section pages"
+      metadata:
+        - text:
+          - key: text
+    picker_preview:
+      gallery:
+        image: /examples/teaser.png
+        text: "Teaser for section pages"
+    definitions:
+      shortcode_name: teaser
+      named_args:
+        - editor_key: text
+          source_key: txt
+          type: string
+    _inputs:
+      text:
+        type: html
+        options: 
+          bold: true
+          link: true
+          bulletedlist: true
+          indent: true
+          undo: true
+          redo: true
+          
+  hugo_quoteRight:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: image
+      image: 
+        key: img
+      text: 
+        - key: quote
+        - "Quote"
+      metadata:
+        - text:
+          - key: name
+        - text:
+          - key: position
+        - text:
+          - key: size
+    picker_preview:
+      gallery:
+        image: /examples/quote.png
+        text: "Quote"
+    definitions:
+      shortcode_name: quoteRight
+      named_args:
+        - editor_key: name
+          type: string
+        - editor_key: position
+          type: string
+        - editor_key: quote
+          type: string
+        - editor_key: img
+          type: string
+        - editor_key: copyright
+          type: string
+          optional: true
+        - editor_key: size
+          type: string
+          optional: true
+    _inputs:
+      name:
+        type: text
+      position:
+        type: text
+        comment: "e.g. MCML Director"
+      quote:
+        type: textarea
+      img:
+        type: image
+        comment: ""
+      copyright:
+        type: text
+        comment: ""
+      size:
+        type: select
+        comment: "small or big (default big)"
+        options:
+          values:
+            - small
+            - big
+          
+  hugo_txtTwoCol:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: 
+      - key: title
+      - "Text Two Colums (h2 Title)"
+      subtext: 
+        - key: text
+        - "(left column title h2, right column text)"
+    picker_preview:
+      gallery:
+        image: /examples/txtTwoColh2.png
+        text: "Text Two Colums (h2 Title)"
+    definitions:
+      shortcode_name: txtTwoCol
+      named_args:
+        - editor_key: title
+          type: string
+        - editor_key: text
+          source_key: txt1
+          type: string
+    _inputs:
+      title:
+        type: textarea
+        comment: "appears left in <h2>"
+      text:
+        type: html
+        comment: "appears right in large font"
+        options:
+          bold: true
+          format: p h3 h4 h5 h6
+          subscript: true
+          superscript: true
+          bulletedlist: true
+          indent: true
+          horizontalrule: true
+          link: true
+  
+  hugo_txtTwoCol-lg:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: image
+      image:
+        - key: img
+      text: 
+        - key: title
+        - "Text Two Colums (h3 title, large font)"
+      subtext: 
+        - key: text
+        - "left column title h3, right column image (optional), text and button with link (optional)"
+      metadata:  
+        - icon: east
+          text: 
+            - key: linktext
+            - "Learn more"
+        - text: 
+            - key: link
+            - "no link"
+    picker_preview:
+      gallery:
+        image: /examples/txtTwoColh3-lg.png
+        text: "Text Two Colums (h3 Title, large Font)"      
+    definitions:
+      shortcode_name: txtTwoCol-lg
+      named_args:
+        - editor_key: title
+          type: string
+        - editor_key: text
+          source_key: txt1
+          type: string
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: linktext
+          type: string
+          optional: true
+        - editor_key: img
+          type: string
+          optional: true
+    _inputs:
+      title:
+        type: textarea
+        comment: "appears left in <h3>"
+      text:
+        type: html
+        comment: "appears right in large font"
+        options:
+          bold: true
+          format: p h4 h5 h6
+          subscript: true
+          superscript: true
+          bulletedlist: true
+          indent: true
+          horizontalrule: true
+          link: true
+      link:
+        type: url
+        comment: "link for linked button (appears right at the end - optional)"
+      linktext:
+        type: text
+        comment: "text for linked button (optional, default is 'Learn More')"
+      img:
+        type: image
+        comment: "appears right before text (optional)"
+        
+  hugo_txtTwoCol-md:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: image
+      image:
+        - key: img
+      text: 
+        - key: title
+        - "Text Two Colums (h3 title, normal font)"
+      subtext: 
+        - key: text
+        - "left column title h3, right column image (optional), text and button with link (optional)"
+      metadata:  
+        - icon: east
+          text: 
+            - key: linktext
+            - "no linktext"
+        - text: 
+            - key: link
+            - "no link"
+    picker_preview:
+      gallery:
+        image: /examples/txtTwoColh3.png
+        text: "Text Two Colums (h3 Title, normal Font)"
+    definitions:
+      shortcode_name: txtTwoCol-md
+      named_args:
+        - editor_key: title
+          type: string
+        - editor_key: text
+          source_key: txt1
+          type: string
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: linktext
+          type: string
+          optional: true
+        - editor_key: img
+          type: string
+          optional: true
+    _inputs:
+      title:
+        type: textarea
+        comment: "appears left in <h3>"
+      text:
+        type: html
+        comment: "appears right in normal font"
+        options:
+          bold: true
+          format: p h4 h5 h6
+          subscript: true
+          superscript: true
+          bulletedlist: true
+          indent: true
+          horizontalrule: true
+          link: true
+          styles: /css/editor.css
+      link:
+        type: url
+        comment: "link for linked button (appears right at the end - optional)"
+      linktext:
+        type: text
+        comment: "text for linked button (optional, default is 'Learn More')"
+      img:
+        type: image
+        comment: "appears right before text (optional)"
+            
+  hugo_imgFloat:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: image
+      image: 
+        - key: img
+      text: 
+        -  "Floating Image"
+      subtext: 
+        - key: img
+      metadata:
+        - text:
+          - key: float
+          - "left (default)"
+        - text:
+          - key: size
+          - "normal size (default)"
+    picker_preview:
+      gallery:
+        image: /examples/floatingImage.png
+        text:  "Floating Image"
+    definitions:
+      shortcode_name: img-float
+      named_args:
+        - source_key: src
+          editor_key: img
+          type: string
+        - editor_key: caption
+          type: string
+          optional: true
+        - editor_key: copyright
+          type: string
+          optional: true
+        - editor_key: alt
+          type: string
+        - editor_key: float
+          type: string
+          default: left
+        - editor_key: size
+          type: string
+          default: normal
+    _inputs:
+      img:
+        type: image
+        comment: "Floating image"
+      copyright:
+        type: text
+        comment: ""
+      float:
+        type: select
+        comment: "Image position (default left)"
+        options:
+          values:
+            - left
+            - right
+      size:
+        type: select
+        comment: "Image size (default normal)"
+        options:
+          values:
+            - normal
+            - small
+            
+  hugo_learnMoreBtn:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: east
+      text: 
+      - key: text
+      - "Learn More Button (with optional text)"
+      metadata:
+        - text:
+          - key: link
+        - text:
+          - key: size
+          - "medium (default)"
+    picker_preview:
+      gallery:
+        image: /examples/learnMore.png
+        text: "Learn More Button (with optional text)"
+    definitions:
+      shortcode_name: learnMoreBtn
+      named_args:
+        - editor_key: link
+          type: string
+        - editor_key: text
+          type: string
+          optional: true
+          default: Learn More
+        - editor_key: size
+          optional: true
+          default: medium
+    _inputs:
+      link:
+        comment: ""
+      text:
+        comment: "Text to appear on the button (if empty 'Learn more')"
+      size:
+        comment: "Size of the button (default: medium)"
+        type: select
+        options:
+          values:
+            - medium
+            - small
+
+  hugo_gallery:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "Gallery of three images"
+      metadata:
+        - icon: image
+          text: 
+            - key: text1
+            - "img1"
+          image:
+            key: img1
+        - icon: image
+          text:
+          - key: text2
+          - "img2"
+          image:
+            key: img2
+        - icon: image
+          text:
+          - key: text3
+          - "img3"
+          image:
+            - key: img3
+    picker_preview:
+      gallery:
+        image: /examples/galleryThree.png
+        text: "Gallery of three images"
+    definitions:
+      shortcode_name: gallery
+      named_args:
+        - editor_key: img1
+          type: string
+        - editor_key: imgAlt1
+          type: string
+        - editor_key: copyright1
+          type: string
+          optional: true
+        - editor_key: caption1
+          type: string
+          optional: true
+        - editor_key: text1
+          type: string
+          optional: true
+        - editor_key: img2
+          type: string
+        - editor_key: imgAlt2
+          type: string
+        - editor_key: copyright2
+          type: string
+          optional: true
+        - editor_key: caption2
+          type: string
+          optional: true
+        - editor_key: text2
+          type: string
+          optional: true
+        - editor_key: img3
+          type: string
+        - editor_key: imgAlt3
+          type: string
+        - editor_key: copyright3
+          type: string
+          optional: true
+        - editor_key: caption3
+          type: string
+          optional: true
+        - editor_key: text3
+          type: string  
+          optional: true
+    _inputs:
+      img1:
+        type: image
+      text1:
+        type: textarea
+      img2:
+        type: image
+      text2:
+        type: textarea
+      img3:
+        type: image
+      text3:
+        type: textarea
+        
+  hugo_galleryFour:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "Gallery of four images"
+      metadata:
+        - icon: image
+          text: 
+            - key: text1
+            - "img1"
+          image:
+            - key: img1
+        - icon: image
+          text:
+          - key: text2
+          - "img2"
+          image:
+            - key: img2
+        - icon: image
+          text:
+          - key: text3
+          - "img3"
+          image:
+            - key: img3
+        - icon: image
+          text: 
+          - key: text4
+          - "img4"
+          image:
+            - key: img4
+    picker_preview:
+      gallery:
+        image: /examples/galleryFour.png
+        text: "Gallery of four images"
+    definitions:
+      shortcode_name: galleryFour
+      named_args:
+        - editor_key: img1
+          type: string
+        - editor_key: imgAlt1
+          type: string
+        - editor_key: copyright1
+          type: string
+          optional: true
+        - editor_key: caption1
+          type: string
+          optional: true
+        - editor_key: text1
+          type: string
+          optional: true
+        - editor_key: img2
+          type: string
+        - editor_key: imgAlt2
+          type: string
+        - editor_key: copyright2
+          type: string
+          optional: true
+        - editor_key: caption2
+          type: string
+          optional: true
+        - editor_key: text2
+          type: string
+          optional: true
+        - editor_key: img3
+          type: string
+        - editor_key: imgAlt3
+          type: string
+        - editor_key: copyright3
+          type: string
+          optional: true
+        - editor_key: caption3
+          type: string
+          optional: true
+        - editor_key: text3
+          type: string  
+          optional: true
+        - editor_key: img4
+          type: string
+        - editor_key: imgAlt4
+          type: string
+        - editor_key: copyright4
+          type: string
+          optional: true
+        - editor_key: caption4
+          type: string
+          optional: true
+        - editor_key: text4
+          type: string  
+          optional: true
+    _inputs:
+      img1:
+        type: image
+      text1:
+        type: textarea
+      img2:
+        type: image
+      text2:
+        type: textarea
+      img3:
+        type: image
+      text3:
+        type: textarea
+      img4:
+        type: image
+      text4:
+        type: textarea
+        
+  hugo_gallery-slider:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "Gallery slider"
+      subtext:
+        key: dir
+      metadata:
+        - text:
+            key: orientation
+    picker_preview:
+      gallery:
+        image: /examples/gallerySlider.png
+        text: "Gallery slider"
+    definitions:
+      shortcode_name: gallery-slider
+      named_args:
+        - editor_key: dir
+          type: string
+        - editor_key: copyright
+          type: string
+          optional: true
+        - editor_key: orientation
+          type: string
+          default: landscape
+    _inputs:
+      dir:
+        type: file
+        comment: "Directory of the images to be shwon (please edit directory in source editor - you can only choose files here!)"
+      copyright: 
+        type: text
+        comment: "Copyright for images"
+      orientation:
+        type: select
+        comment: "Orientation of the slider (default: landscape)"
+        options:
+          values:
+            - landscape
+            - portrait
+        
+  hugo_clear-float:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: "Clear float"
+    picker_preview:
+      gallery:
+        text: "Clear float"
+    definitions:
+      shortcode_name: clearFloat
+  hugo_listTransferByPos:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: image
+      text: "List Transfer Position"
+      metadata:
+        - text:
+          - key: abbreviation
+    definitions:
+      shortcode_name: listTransferByPos
+      named_args:
+        - source_key: posabbr
+          editor_key: abbreviation
+          type: string
+    _inputs:
+      abbreviation:
+        type: select
+        comment: "Type of Transfer Position"
+        options:
+          values:
+            - industry
+            - ml
+            - innolab
+            - open science
+            - open source
+            - education
+            - entrepreneur
+  
+  hugo_listPIs:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "List PIs by Research Area"
+      metadata:
+        - text:
+          - key: subarea
+          - "all"
+    definitions:
+      shortcode_name: listPIs
+      named_args:
+        - editor_key: subarea
+          type: string
+          optional: true
+    _inputs:
+      subarea:
+        type: text
+        comment: "e.g. A1, B3, C2, ... empty will return all"
+        
+  hugo_listDirectors:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "List Directors"
+    definitions:
+      shortcode_name: listDirectors
+      
+  hugo_listStrategyBoard:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "List Strategy Board"
+    definitions:
+      shortcode_name: listStrategyBoard
+      
+  hugo_listAdvisoryBoard:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "List Advisory Board"
+    definitions:
+      shortcode_name: listAdvisoryBoard
+      
+  hugo_listManagement:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "List Management"
+    definitions:
+      shortcode_name: listManagement
+      
+  hugo_listPublications:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "List publications"
+    definitions:
+      shortcode_name: listPublications
+      
+  hugo_listSoftware:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "List software"
+    definitions:
+      shortcode_name: listSoftware
+      
+  hugo_txtTwoColPartner:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: 
+        - key: title
+        - "List Partner (with text and title)"
+      metadata:
+        - text:
+          - key: text
+        - text:
+          - key: type
+    definitions:
+      shortcode_name: txtTwoColPartner
+      named_args:
+        - editor_key: title
+          type: string
+        - editor_key: text
+          source_key: txt1
+          type: string
+        - editor_key: type
+          type: string
+    _inputs:
+      title:
+        type: text
+        comment: "appears left in <h2>"
+      text:
+        type: html
+        comment: "appears right in large font"
+      type:
+        type: select
+        comment: "Type of partner"
+        options:
+          values:
+            - institutional
+            - academic
+            - ecosystem
+            - industry
+            
+  hugo_txtTwoColTransfer:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: image
+      text: 
+        - key: title
+        - "List Transfer Positions with text"
+      subtext: "(left column title, right column text and images)"
+      metadata:
+        - text:
+          - key: text
+        - text:
+          - key: abbreviation
+    definitions:
+      shortcode_name: txtTwoColTransfer
+      named_args:
+        - editor_key: title
+          type: string
+        - source_key: txt1
+          editor_key: text
+          type: string
+        - source_key: posabbr
+          editor_key: abbreviation
+          type: string
+    _inputs:
+      title:
+        type: text
+        comment: "appears left in <h2>"
+      text:
+        type: html
+        comment: "appears right in large font"
+      abbreviation:
+        type: select
+        comment: "Type of Transfer Position"
+        options:
+          values:
+            - industry
+            - ml
+            - innolab
+            - open science
+            - open source
+            - education
+            - entrepreneur
+      
+  hugo_comment:
+    template: hugo_paired_shortcode_positional_args
+    inline: false
+    preview:
+      icon: comment
+      text: "Comment"
+    definitions:
+      shortcode_name: comment
+      content_key: inner_text
+    _inputs:
+      inner_text: 
+        type: textarea
+        comment: This text will be in comment tags
+        
+  hugo_agenda:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: "Agenda row"
+      metadata:
+        - text:
+          - key: time
+        - text:
+          - key: name
+        - text:
+          - key: title
+    picker_preview:
+      gallery:
+        image: 
+        text: "Agenda row"
+    definitions:
+      shortcode_name: agenda
+      named_args:
+        - editor_key: time
+          type: string
+        - editor_key: name
+          type: string
+        - editor_key: title
+          type: string
+    _inputs:
+      time:
+        type: text
+        
+manager:
+  preview:
+    icon: image
+    text:
+      - key: name
+    subtext:
+      - key: position
+        
+    
+        
+        
+  
