@@ -1,0 +1,53 @@
+{{ $paginator := .Paginator -}}
+
+{{ if gt $paginator.TotalPages 1 -}}
+<nav aria-label="Page navigation" class="w-100 ps-1 pe-1">
+	<ul class="pagination justify-content-end pagination-lg1">
+
+		<!-- First page. -->
+    	<li class="page-item">
+			{{ if ne $paginator.PageNumber $paginator.TotalPages -}}
+			<a class="page-link" href="{{ $paginator.Last.URL }}#events" style="padding-bottom: 8px;">
+			{{ else -}}
+			<a class="page-link disabled" style="padding-bottom: 8px;">
+			{{ end -}}	
+				<i class="fas fa-angles-left"></i>
+			</a>
+		</li>
+		
+    	<!-- Previous page. -->
+		<li class="page-item">
+			{{ if $paginator.HasNext -}}
+			<a class="page-link" href="{{ $paginator.Next.URL }}#events" style="padding-bottom: 8px;">
+			{{ else -}}
+			<a class="page-link disabled" style="padding-bottom: 8px;">
+			{{ end -}}	
+				<i class="fas fa-arrow-left"></i>
+			</a>
+		</li>
+		
+		<!-- Next page. -->
+		<li class="page-item">
+			{{ if $paginator.HasPrev -}}
+			<a class="page-link" href="{{ $paginator.Prev.URL }}#events" style="padding-bottom: 8px;">
+			{{ else -}}
+			<a class="page-link disabled" style="padding-bottom: 8px;">
+			{{ end -}}	
+				<i class="fas fa-arrow-right"></i>
+			</a>
+		</li>
+		
+		<!-- Last page. -->
+		<li class="page-item">
+			{{ if ne $paginator.PageNumber 1 -}}
+			<a class="page-link" href="{{ $paginator.First.URL }}#events" style="padding-bottom: 8px;">
+			{{ else -}}
+			<a class="page-link disabled" style="padding-bottom: 8px;">
+			{{ end -}}
+				<i class="fas fa-angles-right"></i>
+			</a>
+		</li>
+	</ul>
+<!-- </nav> -->
+</nav>
+{{ end -}}

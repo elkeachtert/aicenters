@@ -1,0 +1,44 @@
+{{ $truncate := .Scratch.Get "truncate" -}}
+{{ if not $truncate -}}
+{{ $truncate = 350 -}}
+{{ end -}}
+<div class="card card-news h-100 b-none">
+	<a href="{{ .Permalink }}" aria-label="Read more about {{ .Params.title }}" class="stretched-link"></a>
+	<div class="card-body pr-3 pl-3 pt-3 pb-0">
+		<div class="row">
+			<div class="col-12 col-lg-4 col-xxl-4">
+				<img src="{{ .Params.img }}" alt="Link to {{ .Params.title }}" width="300" height="200" class="img-100">
+				{{ if .Params.copyright -}}
+				<p class="copyright">&#169;{{ .Params.copyright}}</p>
+				{{ else -}}
+				<p class="copyright">&nbsp;</p>
+				{{ end -}}
+			</div>
+			<div class="col-12 col-lg-8 col-xxl-8">
+				<p class="card-title p-s">{{ .Date.Format "02.01.2006" }}</p>
+				{{ if .Params.deadline -}}
+				{{ $deadline := time.Format "02.01.2006" .Params.deadline -}}
+				<p class="card-title p-s">Deadline: {{ $deadline }}</p>
+				{{ end -}}
+				
+				{{ if eq (.Scratch.Get "hero") true -}}
+				<h3 class="card-title">{{ .Title }}</h3>
+				{{ else -}}
+				<h2 class="h3 card-title">{{ .Title }}</h2>
+				{{ end -}}
+				
+				{{ if .Params.subtitle -}}
+				{{ if eq ($.Scratch.Get "hero") true -}}
+				<h4 class="card-title">{{ .Params.subtitle | markdownify }} </h4>
+				{{ else -}}
+				<h3 class="h4 card-title">{{ .Params.subtitle | markdownify }} </h3>
+				{{ end -}}
+				{{ end -}}
+				
+				<p class="card-text">{{ partial "myMarkdownify" (dict "txt" .Params.teaser "truncate" $truncate ) }}</p>
+				{{ $code := partial "learnMore" (dict "link" .Permalink "size" "small" "margin" "3" "text" "Read more") -}}
+				{{ partial "file" (dict "code" $code "indent" 2) }}
+			</div>
+		</div>
+	</div>
+</div>

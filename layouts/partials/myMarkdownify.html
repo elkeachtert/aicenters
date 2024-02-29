@@ -1,0 +1,31 @@
+{{ $txt := .txt | markdownify -}}
+
+{{ if .truncate -}}
+	{{ $txt = $txt | truncate .truncate -}}
+	{{ $txt = $txt | markdownify -}}
+
+	{{ $txt = replace $txt "<p>" "" -}} 
+	{{ $txt = replace $txt "</p>" " " -}} 
+	{{ $txt = $txt | markdownify -}}
+	{{ if .p -}}
+	<p class="{{ .p }}">{{ $txt }}</p>
+	{{ else -}}
+	<p>{{ $txt }}</p>
+	{{ end -}}
+
+{{ else -}}
+    {{ if ( and (strings.HasPrefix $txt "<") (strings.HasSuffix $txt ">") ) -}}
+	{{ $txt }}
+	
+	{{ else if not ( strings.HasPrefix $txt "<p>" ) -}}
+		{{ if .p -}}
+		<p class="{{ .p }}">{{ $txt }}</p>
+		{{ else -}}
+		<p>{{ $txt }}</p>
+		{{ end -}}
+	{{ else if not ( strings.HasSuffix $txt "</p>" ) -}}
+    	{{ $txt }}</p>
+  	{{ else -}}
+	  	{{ $txt }}
+	{{ end -}}
+{{ end -}}

@@ -1,0 +1,222 @@
+{{"<!-- Hero Area Start -->" | safeHTML}}
+<section class="list-content">
+	<div class="container-fluid hero-area">
+		<video class="background-video" autoplay playsinline muted loop>
+			<source src="/images/background/hero.mp4" type="video/mp4">
+		</video>
+		
+		<div class="row mt-4" >
+			<div class="col-xl-9 col-lg-12 mt-5">
+				<img class="img-40 mt-4 mb-5" src="/images/MCML_Logo_os.png" width="1460" height="217" alt="MCML Logo">
+				<h1>{{ .Site.Params.hero.title }}</h1>
+				<p class="p-xl mt-5">
+					{{ .Site.Params.hero.subtitle }}
+				</p>
+			</div>
+		</div>
+	
+		{{"<!-- MCML in numbers Start -->" | safeHTML}}		
+		<div class="row pt-5 pb-5">
+			{{"<!-- Number PIs -->" | safeHTML}}
+			<div class="col-xl-3 col-md-4 col-sm-12 col-xs-12">
+				{{ $pis := .Site.Data.pis.pi | len -}}
+				{{ $pis = math.Add $pis (.Site.Data.pis.senior | len ) -}}
+				{{ $pis = math.Add $pis (.Site.Data.pis.affil | len ) -}}
+				{{ $pis = math.Sub $pis (math.Mod $pis 10) }} 
+				<img class="numbers-img" width="100" height="100" src="/images/pictograms/pis.png" alt="PIs at MCML">
+				<p>
+					<span style="font-weight: 600; font-size: 60px; line-height:1.1;">&asymp;
+						<span class="counter" data-target="{{ $pis }}"></span>
+					</span>
+					<br>Principal Investigators
+				</p>
+			</div>
+			{{"<!-- Number PhDs -->" | safeHTML}}
+			<div class="col-xl-3 col-md-4 col-sm-12 col-xs-12">
+				{{ $phds := .Site.Data.fundedPhds.phd | len -}}
+				{{ $phds = math.Add $phds (.Site.Data.fundedPhds.postdoc | len) -}}
+				{{ $phds = math.Add $phds (.Site.Data.affiliatedPhds.phd | len) -}}
+				{{ $phds = math.Add $phds (.Site.Data.affiliatedPhds.w1 | len) -}}
+				{{ $phds = math.Add $phds (.Site.Data.affiliatedPhds.postdoc | len) -}}
+				{{ $phds = math.Sub $phds (math.Mod $phds 10) }} 
+				<img class="numbers-img" width="100" height="100" src="/images/pictograms/students.png" alt="Junior Members at MCML">
+				<p>
+					<span style="font-weight: 600; font-size: 60px; line-height:1.1;">
+						<span class="counter" data-target="{{ $phds }}"></span>+
+					</span>
+					<br>Junior Members
+				</p>
+			</div>
+			{{"<!-- Number Publications -->" | safeHTML}}
+			<div class="col-xl-3 col-md-4 col-sm-12 col-xs-12">
+				{{ $pubs := 0 -}}
+				{{ range $.Site.Data.publications -}}
+					{{ $pubs = math.Add $pubs (.pubitem | len) -}}
+				{{ end -}}
+				{{ $pubs = math.Sub $pubs (math.Mod $pubs 10) }} 
+				<img class="numbers-img" width="100" height="100" src="/images/pictograms/publications.png" alt="Publications of MCML">
+				<p>
+					<span style="font-weight: 600; font-size: 60px; line-height:1.1;">
+						<span class="counter" data-target="{{ $pubs }}"></span>+
+					</span>
+					<br>Publications
+				</p>
+			</div>
+		</div>
+		{{"<!-- MCML in numbers End -->" | safeHTML}}
+			
+		{{"<!-- Vision Start -->" | safeHTML}}
+		<div class="row mt-5">
+			<div class="col col-12 col-lg-3 pe-lg-4 txtTwoCol">
+				<h2>Who we are</h2>
+			</div>
+			<div class="col col-12 col-lg-6 txtTwoCol">		
+				<p class="p-l">
+					{{ .Site.Params.hero.description }} <br>
+				</p>	
+			</div>
+		</div>
+
+		<div class="row mt-5 mb-5">
+			<div class="col col-12 col-lg-3 pe-lg-4 txtTwoCol">
+				<h2>Our Vision</h2>
+			</div>
+			<div class="col col-12 col-lg-6 txtTwoCol">		
+				<p class="p-l">
+					{{ .Site.Params.hero.vision }}
+				</p>
+				{{ $code := partial "learnMore" (dict "link" "about/") -}}
+				{{ partial "file" (dict "code" $code "indent" 4) }}
+			</div>
+		</div>
+		{{"<!-- Vision End -->" | safeHTML}}	
+	</div>
+</section>
+{{"<!-- Hero Area End -->" | safeHTML}}
+
+
+{{ $opportunities := where .Site.RegularPages "Section" "opportunities" -}}
+{{ $calls := where $opportunities "Params.callOpen" "eq" true }}
+{{ if $calls -}}
+{{"<!-- Latest Calls Start -->" | safeHTML}}	
+<section class="list-content" style="background: url('/images/background/sections/bg-mask-top-white.webp') #ceff58; background-repeat: no-repeat;">	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3">
+				<div class="card card-news bg-black ratio ratio-1x1 p-2 b-none">
+			    	<div class="p-3">
+						<h2>Current Calls</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<div class="row">	
+			{{ range $calls -}}
+			<div class="col-12 mb-4">
+				{{ .Scratch.Set "hero" true -}}
+				{{ $code := partial "cardShortNews" . -}}
+				{{ partial "file" (dict "code" $code "indent" 4) }}
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</section>	
+{{- end }}
+
+{{"<!-- Latest Calls End -->" | safeHTML}}
+
+{{"<!-- Latest News Start -->" | safeHTML}}		
+<section class="list-content" style="background: url('/images/background/sections/bg-mask-top-white.webp') #ceff58 left top; background-repeat: no-repeat;"> 
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3">
+				<div class="card card-news bg-black ratio ratio-1x1 p-2 b-none">
+				    <div class="p-3">
+						<h2>Latest News</h2>
+						<i class="pt-3 fas fa-arrow-right"></i><a class="white" href="/news/">&nbsp;All News</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">	
+			{{ $news := where .Site.RegularPages "Section" "news" -}}
+			{{ range first 3 $news -}}	
+			<div class="col-12 mb-4">
+				{{ .Scratch.Set "truncate" "250" -}}
+				{{ .Scratch.Set "hero" true -}}
+				{{ $code := partial "cardShortNews" . -}}
+				{{ partial "file" (dict "code" $code "indent" 5) }}
+			</div>
+			{{ end -}}
+		</div>
+		<div class="row">
+			<div class="col d-flex justify-content-end align-items-end">
+				{{ $code := partial "learnMore" (dict "link" "/news/" "size" "medium" "text" "All news" "margin" "0") -}}
+				{{ partial "file" (dict "code" $code "indent" 4) }}
+			</div>
+		</div>
+	</div>
+</section>
+{{"<!-- Latest News End -->" | safeHTML}}		
+					
+{{"<!-- Upcoming Events Start -->" | safeHTML}}	
+{{ $events := (sort (where site.RegularPages "Section" "events") ".Params.eventDate.start" "desc") -}}
+{{ $futureEvents := slice -}}
+{{ range $events -}}
+	{{ if ge (time.AsTime .Params.eventDate.end) now -}}
+    	{{ $futureEvents = $futureEvents | append . -}}
+	{{ else -}}
+		{{ break -}}
+	{{ end -}}
+{{ end -}}
+
+<section class="list-content" style="background: url('/images/background/sections/bg-mask-top-white.webp') #ceff58 left top; background-repeat: no-repeat;"> 
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3">
+				<div class="card card-news bg-black ratio ratio-1x1 p-2">
+				    <div class="p-3">
+						<h2>Next Events</h2>
+						<i class="pt-3 fas fa-arrow-right"></i><a class="white" href="/events/">&nbsp;All Events</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">	
+			{{ range first 3 $futureEvents.Reverse -}}
+			<div class="col-12 mb-4">
+				{{ .Scratch.Set "truncate" "250" -}}
+				{{ .Scratch.Set "hero" true -}}
+				{{ partial "cardShortEvent" . -}}
+			</div>
+			{{ end -}}
+		</div>
+		<div class="row">
+			<div class="col d-flex justify-content-end align-items-end">
+				{{ $code := partial "learnMore" (dict "link" "/events/" "size" "medium" "text" "All events" "margin" "0") -}}
+				{{ partial "file" (dict "code" $code "indent" 4) }}
+			</div>
+		</div>
+	</div>
+</section>
+{{"<!-- Upcoming Events End -->" | safeHTML}}	
+
+<script src="{{"js/jquery-3.7.1.min.js" | absURL}}"></script>
+<script>
+	const counters = document.querySelectorAll(".counter");
+
+	counters.forEach((counter) => {
+		counter.innerText = "0";
+		const updateCounter = () => {
+			const target = +counter.getAttribute("data-target");
+			const count = +counter.innerText;
+			const increment = target / 50;
+			if (count < target) {
+				counter.innerText = `${Math.ceil(count + increment)}`;
+				setTimeout(updateCounter, 150);
+			} else counter.innerText = target;
+		};
+		updateCounter();
+	});
+</script>

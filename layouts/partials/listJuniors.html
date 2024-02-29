@@ -1,0 +1,108 @@
+{{ $subarea := .subarea -}}
+{{- $scratch := newScratch }}
+
+{{ if .pi -}}
+	{{ $pi := .pi -}}
+	{{ range where site.Data.pis.pi ".id" $pi -}}
+		{{ $scratch.SetInMap "pis" .id . -}}
+	{{ end -}}
+{{ else if .subarea -}}
+	{{ range where site.Data.pis.pi "subarea" $subarea -}}
+		{{ $scratch.SetInMap "pis" .id . -}}
+	{{ end -}}
+	{{ range where site.Data.pis.senior "subarea" $subarea -}}
+		{{ $scratch.SetInMap "pis" .id . -}}
+	{{ end -}}
+	{{ range where site.Data.pis.affil "subarea" $subarea -}}
+		{{ $scratch.SetInMap "pis" .id . -}}
+	{{ end -}}
+{{ else -}}
+	{{ range site.Data.pis.pi -}}
+		{{ $scratch.SetInMap "pis" .id . -}}
+	{{ end -}}
+	{{ range site.Data.pis.senior -}}
+		{{ $scratch.SetInMap "pis" .id . -}}
+	{{ end -}}
+	{{ range site.Data.pis.affil -}}
+		{{ $scratch.SetInMap "pis" .id . -}}
+	{{ end -}}
+{{ end -}}
+
+{{ $w1 := slice -}}
+{{ $postdocs := slice -}}
+{{ $phds := slice -}}
+{{- $piMap := $scratch.Get "pis" -}}	
+
+{{ range site.Data.fundedPhds.w1 -}}
+	{{ $pi := index $piMap .piID -}}
+	{{ if $pi -}}
+		{{ $w1 = $w1 | append (dict "pi" .pi "title" .title "firstName" .firstName "name" .name "contact" .contact "image" .image "subarea" $pi.subarea "uni" $pi.uni "affiliation" $pi.affiliation "phdPosition" .position ) -}}
+	{{ end -}}
+{{ end -}}
+
+{{ range site.Data.fundedPhds.postdoc -}}
+	{{ $pi := index $piMap .piID -}}
+	{{ if $pi -}}
+		{{ $postdocs = $postdocs | append (dict "pi" .pi "title" .title "firstName" .firstName "name" .name "contact" .contact "image" .image "subarea" $pi.subarea "uni" $pi.uni "affiliation" $pi.affiliation "phdPosition" .position ) -}}
+	{{ end -}}
+{{ end -}}
+
+{{ range site.Data.fundedPhds.phd -}}
+	{{ $pi := index $piMap .piID -}}
+	{{ if $pi -}}
+		{{ $phds = $phds | append (dict "pi" .pi "title" .title "firstName" .firstName "name" .name "contact" .contact "image" .image "subarea" $pi.subarea "uni" $pi.uni "affiliation" $pi.affiliation "phdPosition" .position ) -}}
+	{{ end -}}
+{{ end -}}
+
+
+{{ range site.Data.affiliatedPhds.w1 -}}
+	{{ $pi := index $piMap .piID -}}
+	{{ if $pi -}}
+		{{ $w1 = $w1 | append (dict "pi" .pi "title" .title "firstName" .firstName "name" .name "contact" .contact "image" .image "subarea" $pi.subarea "uni" $pi.uni "affiliation" $pi.affiliation "phdPosition" .position ) -}}
+	{{ end -}}
+{{ end -}}
+
+{{ range site.Data.affiliatedPhds.postdoc -}}
+	{{ $pi := index $piMap .piID -}}
+	{{ if $pi -}}
+		{{ $postdocs = $postdocs | append (dict "pi" .pi "title" .title "firstName" .firstName "name" .name "contact" .contact "image" .image "subarea" $pi.subarea "uni" $pi.uni "affiliation" $pi.affiliation "phdPosition" .position ) -}}
+	{{ end -}}
+{{ end -}}
+
+{{ range site.Data.affiliatedPhds.phd -}}
+	{{ $pi := index $piMap .piID -}}
+	{{ if $pi -}}
+	  {{ if .uni -}}
+	    {{ $phds = $phds | append (dict "pi" .pi "title" .title "firstName" .firstName "name" .name "contact" .contact "image" .image "subarea" $pi.subarea "uni" .uni "affiliation" $pi.affiliation "phdPosition" .position ) -}}
+	  {{ else -}}
+	    {{ $phds = $phds | append (dict "pi" .pi "title" .title "firstName" .firstName "name" .name "contact" .contact "image" .image "subarea" $pi.subarea "uni" $pi.uni "affiliation" $pi.affiliation "phdPosition" .position ) -}}
+		{{ end -}}
+	{{ end -}}
+{{ end -}}
+
+{{ $w1 = sort $w1 "firstName" -}}
+{{ $postdocs = sort $postdocs "firstName" -}}
+{{ $phds = sort $phds "firstName" -}}
+
+<div id="phds" class="row g-3 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-5 mt-5">
+	<div class="col-12 justify-content-end" style="text-align: right">
+		{{ partial "learnMore" (dict "link" "/team/phdssubarea/#phds" "size" "medium" "text" "Sort by Research Area" "margin" "0") -}}	
+	</div>
+	<div class="col-12">
+		<h2 class="h3">Junior Professors and PostDocs</h2>
+	</div>
+	{{ range sort $w1 "name" -}}
+		{{ partial "cardMember" . -}}
+	{{ end -}}
+	
+	{{ range sort $postdocs "name" -}}
+		{{ partial "cardMember" . -}}
+	{{ end -}}
+	
+	<div class="col-12">
+		<h2 class="h3">PhD Students</h2>
+	</div>
+	{{ range sort $phds "name" -}}
+		{{ partial "cardMember" . -}}
+	{{ end -}}
+</div>

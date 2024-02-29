@@ -1,0 +1,91 @@
+{{ if not .Params.eventDate -}}
+{{ errorf "The event %q requires a eventDate parameter." .Permalink }}
+{{ end -}}
+
+{{ if not .Params.eventDate.start -}}
+{{ errorf "The event %q requires a eventDate start parameter." .Permalink }}
+{{ end -}}
+
+{{ if not .Params.eventDate.end -}}
+{{ errorf "The event %q requires a eventDate end parameter." .Permalink }}
+{{ end -}}
+
+{{ $truncate := .Scratch.Get "truncate" -}}
+{{ if not $truncate -}}
+{{ $truncate = 350 -}}
+{{ end -}}
+
+{{ $startDate := .Params.eventDate.start -}}
+{{ $endDate := .Params.eventDate.end -}}
+{{ $start := time.Format "Jan 02" $startDate -}}
+{{ $end := time.Format "Jan 02" $endDate -}}
+{{ $starttime := $startDate | time.Format ":time_short" -}}
+{{ $endtime := $endDate | time.Format ":time_short" -}}
+
+<div class="card h-100 b-none card-news">
+	<a href="{{ .Permalink }}" class="stretched-link" aria-label="Read more about {{ .Params.title }}"></a>
+	
+	<div class="row g-0 pr-3 pl-3 pt-3">
+		<div class="card-body col-12 col-lg-4 pt-0 pb-0">	
+			{{ partial "eventDate" (dict "startDate" $startDate "endDate" $endDate "format" "en") }}		
+			<img src="{{ .Params.img }}" alt="Link to {{ .Params.title }}" width="300" height="200" class="img-100 ms-3 pe-3 ps-3 pt-3">
+			{{ if .Params.copyright -}}<p class="copyright ms-3 pe-3 ps-3">&#169;{{ .Params.copyright}}</p>
+			{{ else -}}<p class="copyright ms-3 pe-3 ps-3">&nbsp;</p>
+			{{ end -}}
+		</div>
+		<div class="card-body col-12 col-lg-8">
+			<p class="p-s mb-1 gray">
+				{{ .Params.eventType }} &nbsp;&bull;&nbsp; 
+				{{ partial "eventDate" (dict "startDate" $startDate "endDate" $endDate ) }} &nbsp;&bull;&nbsp;	
+				{{ .Params.location }}
+			</p>
+			{{ if not .Params.eventDate.allDay -}}
+			<p class="p-s gray">
+				<i class="fa-solid fa-clock"></i> {{ $starttime }} - {{ $endtime }} 
+			</p>
+			{{ end -}}
+			
+			{{ if eq ($.Scratch.Get "hero") true -}}
+			<h3 class="mt-3 card-title">{{ .Params.Title }}</h3>
+			{{ else -}}
+			<h2 class="h3 mt-3 card-title">{{ .Params.Title }}</h2>
+			{{ end -}}
+			
+			{{ if .Params.subtitle -}}
+			{{ if eq ($.Scratch.Get "hero") true -}}
+			<h4 class="mt-3 card-title">{{ .Params.subtitle }}</h4>
+			{{ else -}}
+			<h3 class="h4 card-title">{{ .Params.subtitle | markdownify }} </h3>
+			{{ end -}}
+			
+			{{ else if .Params.speakers -}}
+			{{ $index := 1 -}}
+			{{ $len := .Params.speakers | len -}}
+			{{ if eq ($.Scratch.Get "hero") true -}}
+			<h4 class="card-title">
+				{{ range .Params.speakers -}}
+				{{ .name }}, {{ .affiliation}}
+				{{ if lt $index $len -}}<br>{{ end -}}
+				{{ $index = add $index 1 -}}
+				{{ end -}}
+			</h4>
+			{{ else -}}
+			<h3 class="h4 card-title">
+				{{ range .Params.speakers -}}
+				{{ .name }}, {{ .affiliation}}
+				{{ if lt $index $len -}}<br>{{ end -}}
+				{{ $index = add $index 1 -}}
+				{{ end -}}
+			</h3>
+			{{ end -}}
+			{{ end -}}
+			
+			<p class="card-text">{{ partial "myMarkdownify" (dict "txt" .Params.teaser "truncate" $truncate  ) }}</p>
+						
+			{{ partial "learnMore" (dict "link" .Permalink "size" "small" "margin" "3" "text" "Read more") -}}
+		</div>
+	</div>
+</div>
+
+	
+
