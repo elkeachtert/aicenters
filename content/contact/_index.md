@@ -7,9 +7,7 @@ bgImg: /images/background/about.webp
 video: /images/background/videos/about
 opac: 'true'
 ---
-{{< teaser txt="<p>Are you interested in working with us, either as a researcher or in form of an industry or research cooperation?</p><p>Do you see valuable use-cases for Machine Learning in your company?</p><p>Are you a journalist reporting on the future of Machine Learning and Artificial Intelligence?</p><p>In case you are a student interested in working with us, please contact the relevant PI directly.</p><p><strong>We look forward to hear from you!</strong></p>" >}}
-
-
+{{< teaser txt="<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p><p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><p><strong>We look forward to hear from you!</strong></p>" >}}
 
 {{< txtTwoCol title="Get in touch with us!" txt1="<p>Ludwig-Maximilians-Universität MünchenInstitut für InformatikLehrstuhl für Datenbanksysteme und Data MiningOettingenstraße 6780538 München, Germany</p><p><strong>Phone:</strong>&nbsp;+49 89 2180-9190<strong>Fax:</strong>&nbsp; &nbsp;&nbsp; +49 89 2180-9192</p><p><strong>Office:</strong>&nbsp;<a target=\"_blank\" href=\"https://www.dbs.ifi.lmu.de/cms/personen/sekretariat/grienberger/index.html\">Susanne Grienberger</a></p>" >}}
 
