@@ -11,5 +11,5 @@ opac: 'true'
 
 {{< txtTwoColContact 
 	title="Get in touch with us!" 
-	txt1=`<p><a href="https://www.lmu.de/en/index.html">Ludwig-Maximilians-Universität München</a><br />Geschwister-Scholl-Platz 1<br />80539 München<br />Germany</p><p><a href="https://www.tum.de/">Technische Universität München</a><br />Arcisstraße 21<br />80333 München<br />Germany</p>`
+	txt=`<p><a href="https://www.lmu.de/en/index.html">Ludwig-Maximilians-Universität München</a><br />Geschwister-Scholl-Platz 1<br />80539 München<br />Germany</p><p><a href="https://www.tum.de/">Technische Universität München</a><br />Arcisstraße 21<br />80333 München<br />Germany</p>`
 	contact="contact@mcml.ai" mailtxt="Coordinators of MCML" >}}
