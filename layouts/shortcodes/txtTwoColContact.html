@@ -4,16 +4,6 @@
 	</div>
 	<div class="col col-12 col-lg-8 txtTwoCol">
 		<p class="bold"><a href="mailto:{{ .Get "contact" }}"><i class="fa-solid fa-envelope fa-2x"></i>&nbsp;{{ .Get "mailtxt" }}</a></p>		
-		{{ partial "myMarkdownify" (dict "txt" (.Get "txt1")) }}
-	</div>
-</div>
-<div class="row mb-lg-5 mt-lg-5">
-	<div class="col col-12 col-lg-4 pe-lg-4 txtTwoCol">			
-		<h2>Directors</h2>
-	</div>
-	<div class="col col-12 col-lg-8 txtTwoCol">
-		{{ range sort (where .Site.Data.pis.pi ".director" true) "name" -}}
-		<p><a href="{{ .contact }}">{{ .title}} {{ .firstName }} {{ .name }}</a><br>{{ .affiliation }}, {{ .uni }}</p>	
-    	{{ end -}}
+		{{ partial "myMarkdownify" (dict "txt" (.Get "txt")) }}
 	</div>
 </div>
