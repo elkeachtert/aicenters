@@ -1,0 +1,21 @@
+<h2>Professors</h2>
+<div class="row g-3 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-5">
+{{- range (where .Site.Data.members.member ".professor" true) }}
+	{{ partial "cardMember" . -}}	
+{{ end -}}
+</div>
+
+<h2>Office</h2>
+<div class="row g-3 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-5">
+
+{{- range sort (where .Site.Data.members.member ".office" true) "name" }}
+	{{ partial "cardMember" . -}}	
+{{ end -}}
+</div>
+
+<h2>Scientists</h2>
+<div class="row g-3 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-5">
+{{- range sort (where .Site.Data.members.member ".scientist" true) "name" }}
+	{{ partial "cardMember" . -}}	
+{{ end -}}
+</div>

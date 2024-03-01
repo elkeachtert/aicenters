@@ -1,8 +1,9 @@
-[[chair]]
+[[member]]
 name = "Seidl"
 firstName = "Thomas"
 title = "Prof. Dr."
 image = "/images/pis/seidl.webp"
+position = "Head of group"
 contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/seidl/index.html"
 bio = '''<p>is professor for Computer Science and head of the Database Systems and Data Mining Chair at LMU Munich.</p> 
        <p>His fundamental research on data mining and database technologies with application domains in engineering, 
@@ -11,3 +12,137 @@ bio = '''<p>is professor for Computer Science and head of the Database Systems a
 	   the Munich School of Data Science @Helmholtz, TUM and LMU (MuDS) and of the Elite Master program in Data Science at LMU.</p>
 	   <p>MCML Director, spokeperson, LRZ Director, KI-Rat, etc…</p>'''
 id = "seidl"
+professor = true
+chair = true
+
+[[member]]
+name = "Schubert"
+firstName = "Matthias"
+title = "Prof. Dr."
+image = "/images/pis/schubert.webp"
+position = "Apl. professor"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/schubert/index.html"
+id = "schubert"
+professor = true
+
+[[member]]
+name = "Tresp"
+firstName = "Volker"
+title = "Prof. Dr."
+image = "/images/pis/tresp.webp"
+position = "Guest professor for Machine Learning"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/tresp/index.html"
+id = "tresp"
+professor = true
+
+[[member]]
+name = "Kriegel"
+firstName = "Hans-Peter"
+title = "Prof. Dr."
+image = "/images/phds/nn.png"
+position = "Former head of group"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/tresp/index.html"
+id = "tresp"
+professor = true
+
+[[member]]
+name = "Grienberger"
+firstName = "Susanne"
+title = ""
+position = "Assistant"
+image = "/images/phds/nn.png"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/tresp/index.html"
+id = "grienberger"
+office = true
+
+[[member]]
+name = "Achtert"
+firstName = "Elke"
+title = "Dr."
+image = "/images/management/achtert.webp"
+position = "General Manager MCML"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/mitarbeiter/achtert/index.html"
+mail = "contact@mcml.ai"
+bio = "<p>is General Manager of the MCML at LMU Munich.</p><p>Together with her colleagues, she is mainly responsible for the administrative management of all activities of the center and is the central contact person for all scientists and institutions involved. She studied Informatics at LMU Munich and subsequently received her PhD there. Before joining MCML, she was coordinator of the ArcheoBioCenter at LMU Munich for many years.</p>"
+scientist = true
+
+[[member]]
+name = "Albrecht"
+firstName = "Verena"
+image = "/images/management/albrecht.webp"
+position = "Science Communication Coordinator MCML"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/mitarbeiter/albrecht/index.html"
+mail = "contact@mcml.ai"
+bio = "<p>is Science Manager for Communication at MCML.</p><p>She is the central contact person for all PR activities and public relations of MCML. She received her MSc in Consumer Science at TU Munich. Before joining MCML, she worked at a communications agency, where she gained professional know-how as well as practical experience with the entire range of PR instruments.</p>"
+scientist = true
+
+[[member]]
+name = "Meier"
+firstName = "Thomas"
+title = "Dr."
+image = "/images/management/meier.webp"
+position = "Science Manager Collaborations MCML"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/mitarbeiter/meier/index.html"
+mail = "contact@mcml.ai"
+bio = "<p>is Science Manager for Collaborations at MCML.</p><p>Please contact him anytime for inquiries on collaborations with MCML. He studied Philosophy at the University of Zacatecas in Mexico and Philosophy and Linguistics at LMU Munich and received his PhD at the Munich Center for Mathematical Philosophy at LMU Munich. Besides MCML, he teaches BA-courses on the Philosophy of Science, Epistemology, Philosophy of Language, and Analytic Philosophy.</p>"
+scientist = true
+
+[[member]]
+name = "Mustermann"
+firstName = "Max"
+title = ""
+image = "/images/phds/nn.png"
+position = "Research Assistant"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/tresp/index.html"
+id = "grienberger"
+scientist = true
+
+[[member]]
+name = "Mustermann"
+firstName = "Max"
+title = ""
+image = "/images/phds/nn.png"
+position = "Research Assistant"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/tresp/index.html"
+id = "grienberger"
+scientist = true
+
+[[member]]
+name = "Mustermann"
+firstName = "Max"
+title = ""
+image = "/images/phds/nn.png"
+position = "Research Assistant"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/tresp/index.html"
+id = "grienberger"
+scientist = true
+
+[[member]]
+name = "Mustermann"
+firstName = "Max"
+title = ""
+image = "/images/phds/nn.png"
+position = "Research Assistant"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/tresp/index.html"
+id = "grienberger"
+scientist = true
+
+[[member]]
+name = "Mustermann"
+firstName = "Max"
+title = ""
+image = "/images/phds/nn.png"
+position = "Research Assistant"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/tresp/index.html"
+id = "grienberger"
+scientist = true
+
+[[member]]
+name = "Doe"
+firstName = "Jane"
+title = ""
+image = "/images/phds/nn.png"
+position = "Research Assistant"
+contact = "https://www.dbs.ifi.lmu.de/cms/personen/professoren/tresp/index.html"
+id = "grienberger"
+scientist = true

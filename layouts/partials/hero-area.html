@@ -15,7 +15,7 @@
 		{{"<!-- Vision Start -->" | safeHTML}}
 		<div class="row mt-5">
 			<div class="col col-12">
-				{{ range sort (.Site.Data.members.chair) "name" -}}
+				{{ range sort (where .Site.Data.members.member ".chair" true) "name" -}}
 					{{ partial "cardTeam" . -}}	
 				{{ end -}}
 			</div>

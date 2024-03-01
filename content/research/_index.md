@@ -1,7 +1,7 @@
 ---
 draft: false
 title: MCML - Research at the Munich Center for Machine Learning
-shorttitle: Research Activities
+shorttitle: Research Activities at<br>DAT<span class="green">A</span> M<span class="green">I</span>NING LAB
 description: >-
   Our research foci are divided into (A ) Foundations of Machine Learning, (B)
   Perception, Vision, and Natural Language Processing, (C) Domain­-specific
@@ -14,17 +14,24 @@ bgImg: /images/background/research.webp
 video: /images/background/videos/research
 ---
 {{< teaser txt = `
-<p>The research of MCML is concentrated in three main areas.</p>
-<p><a href="/research/areaa/">A | Foundations of ML</a> serves as the groundwork for methodological advancements in ML.</p>
-<p><a href="/research/areab/">B | Perception, Vision, and NLP</a> forms a dynamic research domain at the intersection of computer science and cognitive sciences.</p>
-<p><a href="/research/areac/">C | Domain-Specific ML</a> facilitates the development of ML methods to address application-specific and socially significant issues, working closely with the other two areas.</p>`
+<p>Examples for our research areas include the following topics:</p>
+<ul>
+<p><li>Clustering</li></p>
+<p><li>Process Mining</li></p>
+<p><li>Remote Sensing & Imaging</li></p>
+<p><li>Graph Machine Learning</li></p>
+<p><li>Machine Learning with limited labeled data</li></p>
+<p><li>(Deep) Reinforcement Learning</li></p>
+<p><li>Machine Learning with Knowledge Basis</li></p>
+<p><li>Semi-/Supervised Natural-Language-Processing</li></p>
+</ul>`
 >}}
 
-{{< quoteRight name     = "Prof. Daniel Rückert" 
+{{< quoteRight name     = "Prof. Thomas Seidl" 
                position = "Director" 
 			   border   = "none"
 			   quote    = "Munich is a unique location with excellent science and strong industry and, in particular, with many areas of application for AI, such as medicine. MCML provides new impetus for science in Munich." 
-			   img      = "/images/pis/rueckert.webp"
+			   img      = "/images/pis/seidl.webp"
 >}}
 
 
