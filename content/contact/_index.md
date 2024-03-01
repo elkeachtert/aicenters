@@ -3,8 +3,8 @@ draft: false
 title: Data Mining Lab @ LMU - Contact
 shorttitle: Contact
 description: Contact details of the Data Mining Lab @ LMU
-bgImg: /images/background/about.webp
-video: /images/background/videos/about
+bgImg:
+video:
 opac: 'true'
 ---
 {{< teaser txt="<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p><p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><p><strong>We look forward to hear from you!</strong></p>" >}}
