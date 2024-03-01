@@ -59,158 +59,90 @@ unsafe="true"
 [params.navigation]
 	home  = "Home"
     logo = "images/dmlab.png"
-	
-	# About #
-    [[params.navigation.entry]]
-	  id     = "about"
-	  linkto = "/about/"
-	  name = "About"
-	  hasChildren = "true"
-
-	#[[params.navigation.subentry]]
-	  #parent = "about"
-	  #linkto = "/team/"
-	  #name = "Team"
-    [[params.navigation.subentry]]
-	  parent = "about"
-	  linkto = "/about/collaborations/"
-	  name = "Collaborations"
-    [[params.navigation.subentry]]
-	  parent = "about"
-	  linkto = "/about/transfer/"
-	  name = "Transfer"
-    [[params.navigation.subentry]]
-	  parent = "about"
-	  name  = "Contact"
-	  linkto = "/contact/"
 	  
-	# People  
+	# Team  
     [[params.navigation.entry]]
-	  id = "people"
-	  name = "People"
+	  id = "team"
+	  name = "Team"
 	  linkto = "/team/"
 	  hasChildren = "true"
 	
 	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/directors/"
-	  name = "Directors"
+	  parent = "team"
+	  linkto = "/team/professors/"
+	  name = "Professors"
 	
 	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/management/"
-	  name = "Management" 
-	  divider = true
+	  parent = "team"
+	  linkto = "/team/office/"
+	  name = "Office" 
+	  #divider = true
 	  
 	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/pis/"
-	  name = "Principal Investigators"
+	  parent = "team"
+	  linkto = "/team/scientists/"
+	  name = "Scientists"
+
 	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/phds/"
-	  name = "Junior Members"
-	  divider = true
-	  
-	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/strategyboard/"
-	  name = "Strategy Board"
-	
-	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/advisoryboard/"
-	  name = "Advisory Board"
+	  parent = "team"
+	  linkto = "/team/alumni/"
+	  name = "Alumni"
+
+
+	# Studies #  
+    [[params.navigation.entry]]
+	  id = "studies"
+	  name = "Studies"
+	  linkto = "/studies/"
+	  hasChildren = "false"
 	
 	# Research #  
     [[params.navigation.entry]]
 	  id = "research"
 	  name = "Research"
 	  linkto = "/research/"
-	  hasChildren = "true"
+	  hasChildren = "false"
 	
-	[[params.navigation.subentry]]
-	  parent = "research"
-	  linkto = "/research/areaa/"
-	  name = "A | Foundations of ML"
-    [[params.navigation.subentry]]
-	  parent = "research"
-	  linkto = "/research/areab/"
-	  name = "B | Perception, Vision and NLP"
-    [[params.navigation.subentry]]
-	  parent = "research"
-	  linkto = "/research/areac/"
-	  name = "C | Domain-specific ML"    
-	[[params.navigation.subentry]]
-	  parent = "research"
-	  linkto = "/publications/"
-	  name = "Publications"	
-	[[params.navigation.subentry]]
-	  parent = "research"
-	  linkto = "/publications/software/"
-	  name = "Software"
-	  
-	# Opportunities #    
-	[[params.navigation.entry]]
-	  id = "opportunities"
-	  name = "Opportunities"
-	  linkto = "/opportunities/"	
-	  hasChildren = "true"  
-	  
-	[[params.navigation.subentry]]
-	  parent = "opportunities"
-	  linkto = "/opportunities/funding/"
-	  name = "Funding Programs"
-	[[params.navigation.subentry]]
-	  parent = "opportunities"
-	  linkto = "/opportunities/education/"
-	  name = "Education Programs"
-	[[params.navigation.subentry]]
-	  parent = "opportunities"
-	  linkto = "/opportunities/training/"
-	  name = "Professional Training"
-	[[params.navigation.subentry]]
-	  parent = "opportunities"
-	  linkto = "/opportunities/jobs/"
-	  name = "Jobs"
-	  
+#	[[params.navigation.subentry]]
+#	  parent = "research"
+#	  linkto = "/research/areaa/"
+#	  name = "A | Foundations of ML"
+
     [[params.navigation.entry]]
   	  id = "news"
   	  name = "News"
   	  linkto = "/news/"
+
+	  
+	# Jobs #    
+	[[params.navigation.entry]]
+	  id = "jobs"
+	  name = "Jobs"
+	  linkto = "/opportunities/"	
+	  hasChildren = "false"  
+	  
+#	[[params.navigation.subentry]]
+#	  parent = "opportunities"
+#	  linkto = "/opportunities/funding/"
+#	  name = "Funding Programs"
+#	[[params.navigation.subentry]]
+#	  parent = "opportunities"
+#	  linkto = "/opportunities/education/"
+#	  name = "Education Programs"
+#	[[params.navigation.subentry]]
+#	  parent = "opportunities"
+#	  linkto = "/opportunities/training/"
+#	  name = "Professional Training"
+#	[[params.navigation.subentry]]
+#	  parent = "opportunities"
+#	  linkto = "/opportunities/jobs/"
+#	  name = "Jobs"
+
     [[params.navigation.entry]]
-	  id = "events"
-	  name = "Events"
-	  linkto = "/events/"
-  
-# LWDA Navigation
-[params.lwda2021_navigation]
-    home  = "LWDA Home"
-	linkto = "/lwda2021/"
-	
-	[[params.lwda2021_navigation.entry]]
-    name  = "Attending"
-    linkto = "/lwda2021/attending/"
-	
-	[[params.lwda2021_navigation.entry]]
-    name  = "Call for Papers"
-    linkto = "/lwda2021/cfp/"
-	
-	[[params.lwda2021_navigation.entry]]
-    name  = "History"
-    linkto = "/lwda2021/history/"
-	
-	[[params.lwda2021_navigation.entry]]
-    name  = "Organization"
-    linkto = "/lwda2021/organization/"
-    
-	[[params.lwda2021_navigation.entry]]
-    name  = "Program"
-    linkto = "/lwda2021/program/"
-	
-	[[params.lwda2021_navigation.entry]]
-    name  = "MCML"
-    linkto = "/"
+  	  id = "contact"
+  	  name = "Contact"
+  	  linkto = "/contact/"
+	  
 	
 # ----------------------------------------------------------------------------------------
 # Hero Area (Big Picture)

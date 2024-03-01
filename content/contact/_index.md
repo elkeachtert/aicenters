@@ -1,8 +1,8 @@
 ---
 draft: false
-title: MCML - Contact
+title: Data Mining Lab @ LMU - Contact
 shorttitle: Contact
-description: Contact details of the Munich Center for Machine Learning.
+description: Contact details of the Data Mining Lab @ LMU
 bgImg: /images/background/about.webp
 video: /images/background/videos/about
 opac: 'true'
