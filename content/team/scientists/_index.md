@@ -21,6 +21,6 @@ navname: Junior Members
 <p>Get to know the junior members of the Munich Center for Machine Learning.</p>
 <p>Our PostDocs and PhD students form a dynamic cohort of emerging talents pushing the boundaries of artificial intelligence. Their dedicated contributions and focused research form the foundation of our community.</p>` >}}
 
-{{< listJuniors order="name" >}}
+< listJuniors order="name" >
 
 <p class="copyright">&copy;all images: LMU | TUM </p>
