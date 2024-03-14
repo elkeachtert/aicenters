@@ -22,4 +22,4 @@ navname: "Junior Members"
 <p>Our PostDocs and PhD students form a dynamic cohort of emerging talents pushing the boundaries of artificial intelligence. Their dedicated contributions and focused research form the foundation of our community.</p>`
 >}}
 
-{{< listJuniors order="subarea" >}}
+< listJuniors order="subarea" >
