@@ -46,6 +46,11 @@
 	background-color: var(--mcmlblack);
 	color: white;
 }
+
+.bg-lgray {
+	background-color: var(--mcmlgray);
+}
+
 .bg-white-opac {
 	background-color: rgba(255, 255, 255, 0.3);;
 }
