@@ -20,7 +20,7 @@ opac: 'true'
 <p>The Management Team at MCML is responsible for the operational efficiency of the Center. They work diligently to ensure that MCML runs smoothly and efficiently, and that researchers and other staff have the resources they need to carry out their work.</p>`
 >}}
 
-{{< listManagement >}}
+<!--{{< listManagement >}}-->
 
 <p class="copyright">&copy;all images: LMU | TUM</p>
 
