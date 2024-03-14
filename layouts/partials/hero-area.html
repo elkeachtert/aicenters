@@ -12,7 +12,7 @@
 			</div>
 		</div>
 			
-		{{"<!-- Vision Start -->" | safeHTML}}
+		{{"<!-- Chair Start -->" | safeHTML}}
 		<div class="row mt-5">
 			<div class="col col-12">
 				{{ range sort (where .Site.Data.members.member ".chair" true) "name" -}}
@@ -22,7 +22,9 @@
 		</div>
 	</div>
 </section>
-{{"<!-- Hero Area End -->" | safeHTML}}
+{{"<!-- Chair Area End -->" | safeHTML}}
+
+{{ partial "sectionCards" (dict "sectionLinks" (slice "research" "opportunities" "collaborations" "transfer" "team" "publications") "opac" "false" ) }}
 
 {{"<!-- Latest News Start -->" | safeHTML}}		
 <section class="list-content" style="background: url('/images/background/sections/bg-mask-top-white.webp') #00883a left top; background-repeat: no-repeat;"> 
