@@ -1,21 +1,23 @@
+[[card]]
+type   = "team"
+title  = "Team" 
 img    = "/images/opportunities/education2.jpg"
 copyright = "MCML"
 link   = "/team/" 
-text   = "Our team at is a dynamic and highly motivated group consisting of international experts in the fields of AI  and ML, as well as talents in organization and communication."
 text   = "Get to know Data Mining Lab and its members."
 
 [[card]]
 type   = "studies"
+title  = "Studies"
 img    = "/images/opportunities/funding2.jpg"
 copyright = "MCML"
 link   = "/studies/" 
-text   = "MCML is a dynamic and exciting place to work, study, and pursue research in the field of ML and AI."
 text   = "Check out the courses and potential thesis topics we offer."
 
 [[card]]
 type   = "research"
+title  = "Research" 
 link   = "/research/" 
 title  = "Jobs @MCML" 
 img    = "/images/opportunities/jobs2.jpg"
-text   = "MCML consists of about 50 excellent research groups both in the field of application-oriented ML and foundational research."
 text   = "Check out our current research projects."
