@@ -10,8 +10,23 @@ researchAreas:
   - Unsupervised Learnig
   - Spatial AI
   - Knowledge Graphs
+SectionLinks:
+  - title: Team
+    img: /images/opportunities/education2.jpg
+    copyright: MCML
+    link: /team/
+    text: Get to know the Data Mining Lab and its members.
+  - title: Studies
+    img: /images/opportunities/funding2.jpg
+    copyright: MCML
+    link: /studies/
+    text: Check out the courses and potential thesis topics we offer.
+  - title: Research
+    img: /images/opportunities/jobs2.jpg
+    copyright: MCML
+    link: /research/
+    text: Check out our current research projects.
 bgImg:
 video:
 opac:
 ---
-&nbsp;
