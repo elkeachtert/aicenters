@@ -26,6 +26,11 @@ sectionLinks:
     copyright: MCML
     link: /research/
     text: Check out our current research projects.
+  - title: hhh
+    img: /images/adobestock/AdobeStock_672441805-sean.webp
+    copyright:
+    link: /team/
+    text: ddd
 bgImg:
 video:
 opac:
