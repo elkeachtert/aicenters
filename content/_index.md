@@ -10,7 +10,7 @@ researchAreas:
   - Unsupervised Learnig
   - Spatial AI
   - Knowledge Graphs
-SectionLinks:
+sectionLinks:
   - title: Team
     img: /images/opportunities/education2.jpg
     copyright: MCML
