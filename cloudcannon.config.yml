@@ -33,8 +33,7 @@ collections_config:
         type: image
         comment: "Background video used für medium and large devices"
         hidden: true
-      sectionlinks:
-        hidden: true
+      sectionLinks:
       opac:
         hidden: true
       titleImg:
