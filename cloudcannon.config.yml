@@ -412,7 +412,7 @@ _structures:
           title: 
             comment: "Title of the section"
           img:
-            type: url
+            type: image
           text: 
             comment: "Teaser text of section"
             type: textarea

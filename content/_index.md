@@ -18,7 +18,7 @@ sectionLinks:
     text: Get to know the Data Mining Lab and its members.
   - title: Research
     img: /images/adobestock/AdobeStock_672441805-sean.webp
-    copyright: sean - stock.adobe.com
+    copyright: ' bagoesanggito - stock.adobe.com'
     link: /research/
     text: Check out our current research projects.
   - title: Studies
@@ -26,7 +26,6 @@ sectionLinks:
     copyright: MCML
     link: /studies/
     text: Check out the courses and potential thesis topics we offer.
-  
 bgImg:
 video:
 opac:
