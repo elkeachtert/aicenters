@@ -22,8 +22,8 @@ sectionLinks:
     link: /research/
     text: Check out our current research projects.
   - title: Studies
-    img: /images/opportunities/funding2.jpg
-    copyright: MCML
+    img: /images/adobestock/adobestock-460085365-kasto.webp
+    copyright: ' kasto - stock.adobe.com'
     link: /studies/
     text: Check out the courses and potential thesis topics we offer.
 bgImg:
