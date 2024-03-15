@@ -20,8 +20,7 @@
 	<div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3 mt-0 p-2">
 	{{ end -}}
 	{{ range .sectionLinks -}}
-		{{ $code := partial "cardDeckByType" (dict "type" . "opac" $opac) -}}
-		{{ partial "file" (dict "code" $code "indent" 2) }}
+		{{ partial "cardDeckByType" (dict "type" . "opac" $opac) -}}
 	{{ end -}}
 	</div>		
 </div>
