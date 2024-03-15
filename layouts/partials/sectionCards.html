@@ -1,5 +1,4 @@
 {{ $len := .sectionLinks | len -}}
-{{ $opac := .opac -}}
 {{"<!-- Section Cards Start -->" | safeHTML}}
 <div class="container-fluid pt-5 pb-5 mb-0 bg-lgray">
   {{ if .title -}}
@@ -19,9 +18,13 @@
 	{{ else -}}
 	<div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3 mt-0 p-2">
 	{{ end -}}
+	
 	{{ range .sectionLinks -}}
-		{{ partial "cardDeckByType" (dict "type" . "opac" $opac) -}}
-	{{ end -}}
+		{{ range (where site.Data.sections.card "type" $type) -}}
+		  {{ partial "cardDeck" (dict "title" .title "text" .text "link" .link "img" .img "copyright" .copyright) }}
+	  {{ end -}}
+  {{ end -}}
+		
 	</div>		
 </div>
 {{"<!-- Section Cards End -->" | safeHTML -}}
