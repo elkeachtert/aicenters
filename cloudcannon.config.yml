@@ -1,4 +1,4 @@
-co_snippets_imports:
+Fco_snippets_imports:
   hugo: false
 paths:
   data: data
@@ -404,13 +404,17 @@ _structures:
     values:
       - value:
           title: 
-          image: 
+          img: 
           copyright: 
           link: 
           text: 
         _inputs:
-          image:
+          title: 
+            comment: "Title of the section"
+          img:
             type: url
+          text: 
+            type: textarea
                     
   speakers:
     values:
