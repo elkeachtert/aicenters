@@ -17,7 +17,7 @@ sectionLinks:
     link: /team/
     text: Get to know the Data Mining Lab and its members.
   - title: Research
-    img: /images/adobestock/AdobeStock_672441805-sean.webp
+    img: /images/adobestock/AdobeStock_715259130--bagoesanggito.webp
     copyright: ' bagoesanggito - stock.adobe.com'
     link: /research/
     text: Check out our current research projects.
