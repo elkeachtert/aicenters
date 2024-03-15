@@ -62,8 +62,7 @@
 			<div class="col-12 mb-4">
 				{{ .Scratch.Set "truncate" "250" -}}
 				{{ .Scratch.Set "hero" true -}}
-				{{ $code := partial "cardShortNews" . -}}
-				{{ partial "file" (dict "code" $code "indent" 5) }}
+				{{ partial "cardShortNews" . -}}
 			</div>
 			{{ end -}}
 		</div>
