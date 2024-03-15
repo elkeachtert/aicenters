@@ -28,7 +28,7 @@ sectionLinks:
     text: Check out our current research projects.
   - title: hhh
     img: /images/adobestock/AdobeStock_672441805-sean.webp
-    copyright:
+    copyright: sean - stock.adobe.com
     link: /team/
     text: ddd
 bgImg:
