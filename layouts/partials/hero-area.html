@@ -37,7 +37,7 @@
 
 {{"<!-- About Us Start -->" | safeHTML}}		
 <section class="list-content" style="background: url('/images/background/sections/bg-mask-top-white.webp') #00883a left top; background-repeat: no-repeat;"> 
-	{{ partial "sectionCards" (dict "sectionLinks" (slice "team" "research" "studies") "title" "About Us" ) }}
+	{{ partial "sectionCards" (dict "sectionLinks" .Params.sectionLinks "title" "About Us" ) }}
 </section>
 {{"<!-- About Us End -->" | safeHTML}}	
 
