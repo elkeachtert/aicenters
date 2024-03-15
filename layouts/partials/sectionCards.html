@@ -20,7 +20,7 @@
 	{{ end -}}
 	
 	{{ range .sectionLinks -}}
-		{{ range (where site.Data.sections.card "type" $type) -}}
+		{{ range (where site.Data.sections.card "type" .) -}}
 		  {{ partial "cardDeck" (dict "title" .title "text" .text "link" .link "img" .img "copyright" .copyright) }}
 	  {{ end -}}
   {{ end -}}
