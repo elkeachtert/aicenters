@@ -414,6 +414,7 @@ _structures:
           img:
             type: url
           text: 
+            comment: "Teaser text of section"
             type: textarea
                     
   speakers:
