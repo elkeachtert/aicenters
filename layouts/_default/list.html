@@ -23,14 +23,6 @@
 	</div>
 
 </section>
-
-{{"<!-- Section Links Start -->" | safeHTML}}
-{{ if .Params.sectionlinks -}}
-<section class="list-content pt-0 mb-0">	
-	{{ partial "sectionCards" (dict "sectionLinks" .Params.sectionlinks "opac" .Params.opac ) -}}
-</section>
-{{ end -}}
-{{"<!-- Section Links End -->" | safeHTML}}
 {{"<!-- Content End List -->" | safeHTML}}
 
 {{ partial "footer.html" . }}
