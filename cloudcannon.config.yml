@@ -405,10 +405,13 @@ _structures:
       - value:
           title: 
           image: 
-            type: url
           copyright: 
           link: 
-          trxt: 
+          text: 
+        _inputs:
+          image:
+            type: url
+                    
   speakers:
     values:
       - value:
