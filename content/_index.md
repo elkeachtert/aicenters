@@ -16,21 +16,17 @@ sectionLinks:
     copyright: MCML
     link: /team/
     text: Get to know the Data Mining Lab and its members.
+  - title: Research
+    img: /images/adobestock/AdobeStock_672441805-sean.webp
+    copyright: sean - stock.adobe.com
+    link: /research/
+    text: Check out our current research projects.
   - title: Studies
     img: /images/opportunities/funding2.jpg
     copyright: MCML
     link: /studies/
     text: Check out the courses and potential thesis topics we offer.
-  - title: Research
-    img: /images/opportunities/jobs2.jpg
-    copyright: MCML
-    link: /research/
-    text: Check out our current research projects.
-  - title: hhh
-    img: /images/adobestock/AdobeStock_672441805-sean.webp
-    copyright: sean - stock.adobe.com
-    link: /team/
-    text: ddd
+  
 bgImg:
 video:
 opac:
