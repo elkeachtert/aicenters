@@ -387,18 +387,18 @@ _inputs:
       comment: "All-day event (no time will be displayed)"
       type: checkbox
       
-    sectionLinks:
-      type: array
-      comment: "Links to sections"
-      options:
-        structures: _structures.sectionLinks          
-        preview:
-          text:
-            - key: title
-          image:
-            - key: img
-          subtext:
-            - key: text
+  sectionLinks:
+    type: array
+    comment: "Links to sections"
+    options:
+      structures: _structures.sectionLinks          
+      preview:
+        text:
+          - key: title
+        image:
+          - key: img
+        subtext:
+          - key: text
         
 _select_data: {}
 _structures: 
