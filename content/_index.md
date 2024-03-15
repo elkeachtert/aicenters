@@ -12,8 +12,8 @@ researchAreas:
   - Knowledge Graphs
 sectionLinks:
   - title: Team
-    img: /images/opportunities/education2.jpg
-    copyright: MCML
+    img: /images/adobestock/AdobeStock_294015501-REDPIXEL.webp
+    copyright: REDPIXEL - stock.adobe.com
     link: /team/
     text: Get to know the Data Mining Lab and its members.
   - title: Research
