@@ -2,8 +2,8 @@
 _schema: member
 draft: true
 layout: member
-name: schubert
-firstName: matthias
+name: Schubert
+firstName: Matthias
 title: Prof. Dr.
 image:
 position:
