@@ -16,7 +16,7 @@ tags:
   - press
 img: /images/news/2024-02-26-mcml-meets-djs-clara-vetter.jpg
 copyright: MCML & C. S. Vetter  - LMU
-link: /news/intern/2024-01-22-deutsches-museum-ausstellung/
+link:
 ---
 In her research, **Clara Sophie Vetter** wants to find out how depression and psychosis are linked - with the help of artificial intelligence. In the "Precision Psychiatry" working group at LMU Hospital, she is investigating how the brain changes when a person develops a mental illness. Her team is looking at the structure and function of the brain to find out whether it is possible to recognize illnesses earlier or predict their course. For her research, AI models were trained with data from patients who have a high risk of developing psychosis. The AI can then help to evaluate those large amounts of data and recognize patterns.
 
