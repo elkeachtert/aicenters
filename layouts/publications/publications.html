@@ -13,24 +13,13 @@
 					<h1>{{ .Title }}</h1>
 				{{ end -}}
 			</div>
-			<div class="col-6 justify-content-end " style="text-align: right">
-				{{ if .Params.isSW -}}
-					{{ partial "learnMore" (dict "link" "/publications/" "size" "medium" "text" "Publications" "margin" "0") -}}	
-				{{ else -}}
-					{{ partial "learnMore" (dict "link" "/publications/software/" "size" "medium" "text" "Software" "margin" "0") -}}		
-				{{ end -}}		
-			</div>
 			{{ partial "search-form.html" . }}
 		</div>
 	</div>
 	
 	<div class="container-fluid mt-0 pt-0">
 		<div class="row row-cols-1">
-			{{ if .Params.isSW -}}
-			{{ partial "listSoftware.html" . }}
-			{{ else -}}
 			{{ partial "listPublications.html" . }}
-			{{ end -}}		
 		</div>
 	</div>
 </section>
