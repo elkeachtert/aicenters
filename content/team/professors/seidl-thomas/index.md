@@ -9,6 +9,5 @@ image: /images/pis/seidl.webp
 position: Head of group
 mail: mailto:seidl@dbs.ifi.lmu.de
 bio:
-workingGroups:
-  - link:
+workingGroups: []
 ---
