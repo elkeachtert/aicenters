@@ -1,13 +1,12 @@
-baseURL = "https://mcml.ai"
+baseURL = "https://dbs.ifi.lmu.de"
 languageCode = "en"
 title = "Data Mining Lab @LMU"
-description = "The MCML is a top place for AI and ML research in Europe. We attract the most promising researchers from all career levels to our center and transfer innovations and AI potential to industry and society."
 paginate = 3
 
 [module]
 [[module.mounts]]
-    source = 'static'
-    target = 'static'
+  source = 'static'
+  target = 'static'
 	excludeFiles = ['images/**/archive']
 
 disableKinds = ['taxonomy', 'term']
@@ -61,65 +60,63 @@ unsafe="true"
     logo = "images/dmlab.png"
 	  
 	# Team  
-    [[params.navigation.entry]]
-	  id = "team"
-	  name = "Team"
-	  linkto = "/team/"
-	  hasChildren = "true"
-	
-	[[params.navigation.subentry]]
-	  parent = "team"
-	  linkto = "/team/professors/"
-	  name = "Professors"
-	
-	[[params.navigation.subentry]]
-	  parent = "team"
-	  linkto = "/team/office/"
-	  name = "Office" 
-	  #divider = true
-	  
-	[[params.navigation.subentry]]
-	  parent = "team"
-	  linkto = "/team/scientists/"
-	  name = "Scientists"
-
-	[[params.navigation.subentry]]
-	  parent = "team"
-	  linkto = "/team/alumni/"
-	  name = "Alumni"
-
-
-	# Studies #  
-    [[params.navigation.entry]]
-	  id = "studies"
-	  name = "Studies"
-	  linkto = "/studies/"
-	  hasChildren = "false"
-	
-	# Research #  
-    [[params.navigation.entry]]
-	  id = "research"
-	  name = "Research"
-	  linkto = "/research/"
-	  hasChildren = "false"
-	
-#	[[params.navigation.subentry]]
-#	  parent = "research"
-#	  linkto = "/research/areaa/"
-#	  name = "A | Foundations of ML"
-
-    [[params.navigation.entry]]
-  	  id = "news"
-  	  name = "News"
-  	  linkto = "/news/"
-
-	  
-	# Jobs #    
-	[[params.navigation.entry]]
-	  id = "jobs"
-	  name = "Jobs"
-	  linkto = "/opportunities/"	
-	  hasChildren = "false"  
+  [[params.navigation.entry]]
+    id = "team"
+    name = "Team"
+    linkto = "/team/"
+    hasChildren = "true"
+    
+  [[params.navigation.subentry]]
+    parent = "team"
+    linkto = "/team/professors/"
+    name = "Professors"
+    
+  [[params.navigation.subentry]]
+    parent = "team"
+    linkto = "/team/office/"
+    name = "Office" 
+    #divider = true
+    
+  [[params.navigation.subentry]]
+    parent = "team"
+    linkto = "/team/scientists/"
+    name = "Scientists"
+    
+  [[params.navigation.subentry]]
+    parent = "team"
+    linkto = "/team/alumni/"
+    name = "Alumni"
+    
+  # Studies #  
+  [[params.navigation.entry]]
+    id = "studies"
+    name = "Studies"
+    linkto = "/studies/"
+    hasChildren = "false"
+    
+  # Research #  
+  [[params.navigation.entry]]
+    id = "research"
+    name = "Research"
+    linkto = "/research/"
+    hasChildren = "false"
+    
+  #	[[params.navigation.subentry]]
+    #	  parent = "research"
+    #	linkto = "/research/areaa/"
+    #	  name = "A | Foundations of ML"
+    
+  [[params.navigation.entry]]
+    id = "news"
+    name = "News"
+    linkto = "/news/"
+    
+  # Jobs #    
+  [[params.navigation.entry]]
+    id = "jobs"
+    name = "Jobs"
+    linkto = "/opportunities/"	
+    hasChildren = "false"  
 	  
 #	[[params.navigation.subentry]]
 #	  parent = "opportunities"
@@ -138,22 +135,11 @@ unsafe="true"
 #	  linkto = "/opportunities/jobs/"
 #	  name = "Jobs"
 
-    [[params.navigation.entry]]
-  	  id = "contact"
-  	  name = "Contact"
-  	  linkto = "/contact/"
+  [[params.navigation.entry]]
+    id = "contact"
+    name = "Contact"
+    linkto = "/contact/"
 	  
-	
-# ----------------------------------------------------------------------------------------
-# Hero Area (Big Picture)
-# ----------------------------------------------------------------------------------------        
-  [params.hero]
-    enable              = true
-    title               = "A top spot for AI and ML research in Europe"
-	subtitle            = "We attract the most promising researchers from all career levels to our center and transfer innovations and AI potential to industry and society."
-    vision              = "Unite leading researchers in Germany, to strengthen international, national and regional competence in the field of ML and AI. We foster talent and make corresponding potential accessible to users from science, industry and society."
-	description         = "MCML is one of six national AI Competence Centers. It is funded on a permanent basis by the German and Bavarian government's AI strategy, and brings together the leading ML researchers from LMU, TUM and associated institutions."
-
 # ----------------------------------------------------------------------------------------
 # Disable all tracking (DSVGO)
 # ----------------------------------------------------------------------------------------
