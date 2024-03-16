@@ -9,7 +9,7 @@ opac: 'true'
 ---
 {{< teaser txt="<p>The offices of the Data Mining Lab are located on the 2nd floor of the Institute of Computer Science at LMU Munich. </p><p>We are located in the immediate vicinity of the Chinese Tower in Munich's most beautiful park, the English Garden. Please use the map on the bottom to navigate to us.</p><p><strong>We look forward to hear from you!</strong></p>" >}}
 
-{{< img-float src="/images/adobestock/AdobeStock_280340771-Zvonimir.webp" caption="The English Garden in Munich " copyright="Zvonimir - stock.adobe.com" alt="The English Garden in Munich " float="left" size="normal" >}}
+{{< img-float src="/images/adobestock/AdobeStock_280340771-Zvonimir.webp" copyright="Zvonimir - stock.adobe.com" alt="The English Garden in Munich " float="left" size="normal" >}}
 
 {{< clearFloat >}}
 
