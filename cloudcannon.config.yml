@@ -54,7 +54,7 @@ collections_config:
     disable_file_actions: false
     schema: member
     create:
-      path: '{name}-{firstName}/index.md'
+      path: '{name|lowercase}-{firstName|lowercase}/index.md'
       _inputs:
         name:
           comment: Use the last name here
