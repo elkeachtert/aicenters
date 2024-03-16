@@ -17,7 +17,7 @@ tags:
   - press
 img: /images/news/2023-12-22-xmas.png
 copyright: MCML
-link: /news/intern/2023-12-22-xmas/
+link:
 ---
 As we celebrate the season, may your algorithms be efficient, your datasets be abundant, and your Christmas be full of exciting data points.
 
