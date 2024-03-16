@@ -2,7 +2,7 @@
 {{ partial "navigation.html" . }}
 
 <section class="list-content bg-mask-top-white" id="section">	
-	{{partial "breadcrumbs.html" . }} 
+	{{ partial "breadcrumbs.html" . }} 
 	<!-- {{partial "quicklinks.html" . }} -->	
 	<div class="container-fluid"> 
 		<div class="row row-cols-1 row-cols-lg-1">
@@ -18,7 +18,7 @@
 	</div>
 	
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
-		<div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 mt-0 posts" id="posts">			
+		<div class="row row-cols-1 mt-0 posts" id="posts">			
 		{{ $range := .Pages }}
 		{{ $paginator := .Paginate $range }}
 		{{ $pageSize := $paginator.PageSize }}
@@ -26,7 +26,7 @@
 		{{ range $index, $el := (first $totalPostsToShow $range) }}
 			<div {{ if eq $index (sub $totalPostsToShow $pageSize) }}id="newpage"{{ end }} class="post col mt-3 mb-3">
 				{{ .Scratch.Set "hero" false -}}
-				{{ partial "cardShortNews" . -}}
+				{{ partial "cardPost" . -}}
 			</div>
 		{{ end }}
 		{{ if and (gt $paginator.TotalPages 1) ($paginator.HasNext) }}

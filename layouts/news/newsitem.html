@@ -3,7 +3,13 @@
 
 {{ $path := printf "/static%s" .Params.img -}} 
 {{ if not (os.FileExists $path) -}}
-{{ errorf "The news %q requires a valid image path:%q" .Permalink $path}}
+{{ errorf "The news %q requires a valid image path:%q" .Permalink $path -}}
+{{ end -}}
+
+{{ if and (not .Content) (not .Params.link) -}}
+{{ errorf "The news %q requires content or an external link :%q" .Permalink -}}
+{{ else if and .Content .Params.link -}}
+{{ errorf "The news %q has content and external link :%q" .Permalink -}}
 {{ end -}}
 
 {{"<!-- Content Start list-->" | safeHTML}}
@@ -64,7 +70,7 @@
 					{{ if eq .Section "news" }}
 						{{ if ne $myurl .Permalink -}}
 							{{ $index = add $index 1 -}}
-					    	{{ partial "cardRelatedNews" . }}
+					    	{{ partial "cardRelatedPost" . }}
 							  <hr>
 						{{ end }}
 					{{ end }}
