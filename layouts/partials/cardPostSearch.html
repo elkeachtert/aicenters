@@ -1,0 +1,31 @@
+{{ $teaser := .teaser1 }}
+{{ $teaser }}
+<br>
+{{ $teaser = $teaser | truncate 15 }}
+{{ $teaser }}
+
+<p class="card-text">{{ partial "myMarkdownify" (dict "txt" .teaser "truncate" 150  ) | safeHTML}}</p>
+
+<div class="col mt-3 mb-3">
+	<div class="card card-news b-none">
+		<a href="{{ .permalink }}" aria-label="Read more about {{ .title }}" class="stretched-link card-link"></a>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-12 col-lg-4">
+					<img src="{{ .img }}" alt="{{ .title }}" width="300" height="200" class="img-100"><br>
+					<p class="pt-0 pb-0 mb-1 copyright">{{ .copyright }}</p>
+				</div>
+				<div class="col-12 col-lg-8">	
+					<p class="p-s mb-1">{{ .date }}</p>
+					<h3>{{ .title }}</h3>
+					<h4>{{ .subtitle }} </h4>
+					<p>{{ .description }}</p>
+					{{ partial "learnMore" (dict "link" .permalink "size" "small" "text" "Read more") -}}
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+	
+

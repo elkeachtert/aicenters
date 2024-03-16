@@ -1,0 +1,51 @@
+
+	{{ "<!-- Quicklinks Start -->" | safeHTML }}
+	{{ if .Params.quicklinks -}}
+	{{ $length :=  len .Params.quicklinks -}}
+	{{ $mdlength :=  6 -}}
+	{{ if gt $mdlength $length -}}
+	{{ $mdlength = $length -}}
+	{{ end -}}
+	<div class="container-fluid">
+		<div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 d-lg-none">
+			{{- range .Params.quicklinks -}}
+	  		{{- $name :=  index . 0 -}}
+	  		{{- $linkto :=  index . 1 -}}
+			
+		    <div>			
+				<a href="{{ $linkto }}" class="quicklink small">
+					<span class="quicklink_icon">
+						<i class='fas fa-arrow-right'></i>
+					</span>
+					{{ $name }}
+				</a>
+		      </div>
+		    
+		    {{ end -}}
+		</div>
+	</div>
+		
+	<div class="container-fluid">
+		
+		<div class="flex-row d-lg-flex d-none">
+		<!--><div class="row row-cols-2 row-cols-sm-2 row-cols-md-{{ $mdlength }} row-cols-lg-{{ $length }} row-cols-xl-{{ $length }}">-->
+		{{- range .Params.quicklinks -}}
+		{{- $name :=  index . 0 -}}
+		{{- $linkto :=  index . 1 -}}	
+		
+			<button class="button-quicklink pr-2 pl-2" style="text-lign:left;">
+			
+			<a href="{{ $linkto }}" class="quicklink has--icon small icon_white">
+				<span class="quicklink_icon white">
+					<i class='fas fa-arrow-right'></i>
+				</span>
+				{{ $name }}
+			</a>	
+		</button>	
+		
+		{{ end }}
+		</div>
+		<hr style="margin-top: 5px; margin-bottom: 5px;">
+	</div>	
+	{{ end -}}
+	{{ "<!-- Quicklinks End -->" | safeHTML }}

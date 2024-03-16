@@ -1,0 +1,31 @@
+{{ $path := printf "/static%s" .src -}} 
+{{ if not (os.FileExists $path) -}}
+{{ errorf "The image requires a valid image path:%q" $path}}
+{{ end -}}
+
+{{ $margins := .margin |default "mt-2" -}}
+{{ $size := .size -}}
+{{ $floatclass := "" -}}
+{{ if eq .float "right" -}} 
+	{{ if eq $size "small" -}}
+		{{ $floatclass = "floatright-small" -}}
+	{{ else -}}	
+		{{ $floatclass = "floatright" -}}
+	{{ end -}}
+{{ else -}} 
+	{{ if eq $size "small" -}}
+		{{ $floatclass = "floatleft-small" -}}
+	{{ else -}}
+		{{ $floatclass = "floatleft" -}}
+	{{ end -}}
+{{ end -}}
+
+<div class="col pe-lg-3 me-2 {{ $floatclass }} mb-2">
+	<img class="{{ $margins }}" src="{{ .src }}" alt="{{ .alt }}" width="300" height="200"><br>
+	{{ if .copyright -}}
+	<p class="pt-0 pb-0 mb-0 copyright">&copy;{{ .copyright }}</p>
+	{{ end -}}
+	{{ if .caption -}}
+	<p class="mt-1 p-xs gray">{{ .caption }}</p>
+	{{ end -}}
+</div>

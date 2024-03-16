@@ -1,0 +1,14 @@
+{{ $margin := 4 -}}
+{{ if .margin -}}
+	{{ $margin = .margin -}}
+{{ else -}}
+	{{ if eq .size "small" -}}
+		{{ $margin = 0 -}}
+	{{ end -}}
+{{ end -}}
+<a href="{{ .link }}" class="quicklink has--icon mt-{{ $margin }} mb-{{ $margin }} {{ .size }} {{ .color }} ">
+	<span class="quicklink_icon">
+		<i class="fas fa-arrow-right"></i>
+	</span>
+	{{ if .text -}} {{.text -}} {{ else -}} {{ .name -}} {{ end -}}
+</a>

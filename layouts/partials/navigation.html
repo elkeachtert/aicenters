@@ -1,0 +1,41 @@
+{{ $baseURL := .Site.BaseURL }} 
+{{"<!-- Navigation Start -->" | safeHTML}}
+<section class="mb-3 mt-1 pb-5 pt-1">	
+	<nav class="navbar navbar-expand-xl fixed-top navbar-light bg-white pt-2 mt-0 pb-0 mb-0">
+		<a class="navbar-brand" href="{{ .Site.BaseURL }}">
+			<img class="img-logo ps-5 pt-2 pb-2 mt-0 mb-0" src="{{ .Site.Params.navigation.logo | absURL }}" width="1472" height="408" alt="MCML Logo and Link to Home">
+		</a>
+		
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="collapse navbar-collapse" id="navbarNav">
+	    	<ul class="navbar-nav ms-auto">
+				{{ range .Site.Params.navigation.entry -}}
+				{{ if eq .hasChildren "true" -}}	
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="{{.linkto}}" id="navbarDropdown-{{ .id }}" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">{{ .name }}</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .id }}">
+						{{ $id := .id -}}
+						{{ range $.Site.Params.navigation.subentry -}}
+						{{ if eq .parent $id -}}
+						<a class="dropdown-item" href="{{.linkto}}">{{ .name }}</a>
+						{{ if eq .divider true -}}
+						<hr class="dropdown-divider mb-0 mt-0">
+						{{ end -}}
+						{{ end -}}
+						{{ end -}}
+					</div>
+				</li>
+				{{ else -}}
+				<li class="nav-item">
+					<a class="nav-link" href="{{.linkto}}">{{ .name }}</a>
+				</li>
+				{{ end -}}
+				{{ end -}}
+			</ul>
+		</div>
+	</nav>
+</section>
+{{"<!-- Navigation End -->"| safeHTML}}

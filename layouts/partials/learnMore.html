@@ -1,0 +1,18 @@
+{{ $size := .size | default "medium" -}}
+{{ $text := .text | default "Learn more" -}}
+{{ $margin := 4 -}}
+{{ if .margin -}}
+	{{ $margin = .margin -}}
+{{ else -}}
+	{{ if eq $size "small" -}}
+		{{ $margin = 0 -}}
+	{{ end -}}
+{{ end -}}
+<div>
+<a href="{{ .link }}" class="quicklink has--icon mt-{{ $margin }} mb-{{ $margin }} {{ $size }}">
+	<span class="quicklink_icon">
+		<i class="fas fa-arrow-right"></i>
+	</span>
+	{{ $text }}
+</a>
+</div>

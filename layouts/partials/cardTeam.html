@@ -1,0 +1,10 @@
+{{ $contact := .contact | default  (print "#" .name) -}}
+<div class="row g-3 mt-3">
+	<div class="col-xl-3 col-md-3 col-sm-6">
+		{{ partial "cardMember" (dict "image" .image "title" .title "firstName" .firstName "name" .name "position" .position "uni" .uni "affiliation" .affiliation "contact" $contact "mail" .mail "subarea" .subarea "copyright" .copyright ) -}}
+	</div>
+	<div class="col-xl-9 col-md-9 col-sm-12 pt-3" >
+		<h2 id="{{ .name }}">{{ .firstName }} {{ .name }}</h2>	
+		<p>{{ .bio | markdownify }}</p>
+	</div>
+</div>
