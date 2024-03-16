@@ -24,8 +24,7 @@
 			<p class="card-text">{{ $text }}</p>
 		</div>
 		<div class="rounded-0 card-footer b-none pt-0 bg-white">
-			{{ $code := partial "learnMore" (dict "link" $link "size" "medium" ) -}}
-			{{ partial "file" (dict "code" $code "indent" 3) }}
+			{{ partial "learnMore" (dict "link" $link "size" "medium" ) -}}
 		</div>
 	</div>
 </div>
