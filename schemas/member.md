@@ -7,6 +7,8 @@ title:
 image:
 position:
 mail:
+room:
+phone:
 bio:
 workingGroups:
 ---
