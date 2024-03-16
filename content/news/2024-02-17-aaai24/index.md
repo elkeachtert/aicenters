@@ -18,7 +18,7 @@ tags:
   - research
 img: /images/conferences/aaai-3x2.jpg
 copyright:
-link: /news/intern/2023-12-11-neurips23/
+link:
 ---
 {{< announcement conf="AAAI 2024" conflink="https://aaai.org/aaai-conference/" >}}
 

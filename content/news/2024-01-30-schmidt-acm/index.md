@@ -16,7 +16,7 @@ tags:
   - event
 img: /images/logos/acm.jpg
 copyright: ''
-link: /news/intern/2024-01-22-deutsches-museum-ausstellung/
+link:
 ---
 The 2023 ACM Fellows were recently announced by the Association for Computing Machinery (ACM): MCML PI Albrecht Schmidt is one of them. Recognized for their pioneering contributions to computing science and technology, he joins a select class of ACM Fellows. Less than one percent of all worldwide ACM members are recognized as ACM Fellows for their outstanding achievements each year since 1993.
 
@@ -26,7 +26,7 @@ Albrecht Schmidt, who serves as a professor of Computer Science at Ludwig-Maximi
 
 {{< clearFloat >}}
 
-{{< quoteRight name="Albrecht Schmidt" position="MCML PI and Professor at LMU" quote="ACM Fellows are selected and appointed directly from within the research community. This acknowledgment is incredible for me. Thinking more about it, it reflects a professional life of amazing mentors, working with many supportive and inspiring colleagues, and being very lucky with the many students, postdocs, and interns, I could work with and learn from.\"" img="/images/pis/schmidt.webp" size="small" >}}
+{{< quoteRight name="Albrecht Schmidt" position="MCML PI and Professor at LMU" quote="ACM Fellows are selected and appointed directly from within the research community. This acknowledgment is incredible for me. Thinking more about it, it reflects a professional life of amazing mentors, working with many supportive and inspiring colleagues, and being very lucky with the many students, postdocs, and interns, I could work with and learn from.\"" img="/images/pis/schmidt.webp" copyright="" size="small" >}}
 
 **About**
 

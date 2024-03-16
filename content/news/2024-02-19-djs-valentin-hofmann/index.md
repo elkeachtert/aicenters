@@ -18,7 +18,7 @@ tags:
   - press
 img: /images/news/2024-02-19-mcml-meets-djs-valentin-hoffmann.jpg
 copyright: MCML & V. Hofmann  - LMU
-link: /news/intern/2024-01-22-deutsches-museum-ausstellung/
+link:
 ---
 **Valentin Hofmann** is actually a former MCML Junior Member. He was a researcher at LMU and a PHD student at the University of Oxford and recently finished his PhD. He is now a Young Investigator (Postdoc) at the Allen Institute for AI. During his PhD, he also spent time as a research intern at DeepMind and as a visiting scholar at Stanford University. Valentin Hofmann’s research focuses on the link between natural language processing and the social and cognitive sciences.
 

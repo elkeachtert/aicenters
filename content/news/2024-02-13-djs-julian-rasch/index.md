@@ -19,7 +19,7 @@ tags:
   - press
 img: /images/news/2024-02-13-mcml-meets-djs-julian-rasch.jpg
 copyright: MCML & J. Rasch  - LMU
-link: /news/intern/2024-01-22-deutsches-museum-ausstellung/
+link:
 ---
 **Julian Rasch** is an electrical engineer and computer science PhD. He is conducting research about the interaction of humans and machines in virtual space. His current work is about how to better communicate virtual movement intentions.
 

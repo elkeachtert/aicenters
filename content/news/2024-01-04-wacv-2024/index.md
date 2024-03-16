@@ -18,7 +18,7 @@ tags:
   - research
 img: /images/conferences/wacv24.jpg
 copyright: ''
-link: /news/intern/2023-12-11-neurips23/
+link:
 ---
 {{< announcement conf="WACV 2024" conflink="https://wacv2024.thecvf.com/" >}}
 
