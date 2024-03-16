@@ -25,7 +25,7 @@ tags:
   - event
 img: /images/logos/ellis.jpg
 copyright:
-link: /news/intern/2024-01-22-deutsches-museum-ausstellung/
+link:
 ---
 MCML PI Volker Tresp organized an ELLIS Workshop together with Kristian Kersting (TU Darmstadt) & Paolo Frasconi (Università di Firenze).
 
