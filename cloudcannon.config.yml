@@ -45,114 +45,59 @@ collections_config:
       shorttitle: 
         type: text
         comment: "<h1> at top of the page (if empty title is used)"
-  events:
-    path: content/events
+  professors:
+    path: content/team/professors
     output: true
-    icon: notes
+    icon: person
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
-    schema: event
+    schema: person
     create:
-      path: '{date|year}-{date|month}-{date|day}-{slug}/index.md'
+      path: '{name}-{firstName}/index.md'
       _inputs:
-        date:
-          comment: Use the event date here
-        slug:
-          comment: This is used for your directory name
+        name:
+          comment: Use the last name here
+        firstName:
+          comment: Use the first name here
     schemas:
-      event:
-        path: schemas/event.md
+      person:
+        path: schemas/person.md
     _inputs:  
       layout: 
         hidden: true
-        default: eventitem
-      eventType: 
-        type: textarea
-        comment: "Type of the event (appears above the title, e.g. Workshop, Lecture Series, ..."
-      title: 
-        type: textarea
-        comment: "Title of event (<h1>)"
-      subtitle: 
-        type: textarea
-        comment: "Subtitle of event (<h2>)"
-      location: 
-        type: textarea
-        comment: "Location of event"
-      teaser: 
-        type: html
-        comment: "Teaser text (appears in event overview)"  
-        options:
-          bold: true
-          italic: true
-          format: p 
-          subscript: true
-          superscript: true
-          link: true
-          styles: /css/editor.css
-      img: 
-        type: image
-        comment: "Teaser image"
-      copyright: 
+        default: person
+      name: 
         type: text
-        comment: "Copyright for teaser image"
-      link:
-        hidden: internal
-        comment: "External link to event"
-      zoom:
-        type: url
-        comment: "Zoom link (optional)"
-        optional: true
-      tags:
-        type: array
-        comment: "Only te first tag is used for related events"
-      tags[*]:
+      firstName: 
+        type: text
+      title: 
         type: select
         options:
           values:
-            - stat-colloquium
-            - exhibition
-            - summer-school
-            - conference
-            - munich-ai-lectures
-            - workshop
-            - round-table
-            - som-ai
-            - symposium
-            - ceremony
-            - lecture
-            - hci-lab
-            - panel
-      speakers:
+            - Prof. Dr.
+            - Dr.
+            - 
+      img: 
+        type: image
+        comment: "Teaser image"      
+      copyright: 
+        type: text
+        comment: "Copyright for teaser image"      
+      position: 
+        type: text
+      mail: 
+        type: url  
+      bio: 
+        type: textarea
+        comment: "Short biography"
+      workingGroups: 
         type: array
-        comment: "Speakers (each with name and affiliation)"
-        options:
-          structures: _structures.speakers
-          preview:
-            text:
-              - key: name
-            subtext:
-              - key: affiliation
-      moderators:
-        type: array
-        comment: "Moderators (each with name and affiliation)"
-        options:
-          structures: _structures.speakers
-          preview:
-            text:
-              - key: name
-            subtext:
-              - key: affiliation
-      organizers:
-        type: array
-        comment: "Organizers (each with name and affiliation)"
-        options:
-          structures: _structures.speakers
-          preview:
-            text:
-              - key: name
-            subtext:
-              - key: affiliation
+        structures: _structures.workingGroups          
+        preview:
+        text:
+          - key: title
+
   news:
     path: content/news
     output: true
@@ -416,6 +361,14 @@ _structures:
           text: 
             comment: "Teaser text of section"
             type: textarea
+            
+  workingGroups:
+    values:
+      - value:
+          link: 
+        _inputs:
+          link:
+            type: url
                     
   speakers:
     values:
