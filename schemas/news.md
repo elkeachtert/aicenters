@@ -2,8 +2,7 @@
 draft: true
 layout: newsitem
 description: 
-internal: true
-title: New News intern
+title: New News extern
 date: {{ .Date }}
 subtitle: 
 teaser: 

@@ -52,7 +52,7 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
-    schema: person
+    schema: member
     create:
       path: '{name}-{firstName}/index.md'
       _inputs:
@@ -61,12 +61,12 @@ collections_config:
         firstName:
           comment: Use the first name here
     schemas:
-      person:
-        path: schemas/person.md
+      member:
+        path: schemas/member.md
     _inputs:  
       layout: 
         hidden: true
-        default: person
+        default: member
       name: 
         type: text
       firstName: 
