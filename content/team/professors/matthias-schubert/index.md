@@ -1,5 +1,4 @@
 ---
-_schema: member
 draft: true
 layout: member
 name: Matthias
