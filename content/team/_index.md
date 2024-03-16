@@ -1,5 +1,6 @@
 ---
 draft: false
+layout: members
 title: MCML - The Team of the Munich Center for Machine Learning
 shorttitle: The Team of our <br>DAT<span class="green">A</span> M<span class="green">I</span>NING LAB
 description: >-
