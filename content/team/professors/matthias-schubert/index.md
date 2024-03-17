@@ -1,8 +1,8 @@
 ---
 draft: false
 layout: member
-title:
-description:
+title: '{{ .memberTitle }}'
+description: Get to know Prof. Dr. Matthias Schubert
 name: Schubert
 firstName: Matthias
 memberTitle: Prof. Dr.
