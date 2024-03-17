@@ -3,7 +3,7 @@ draft: false
 layout: member
 name: Matthias
 firstName: Schubert
-title: Prof. Dr.
+memberTitle: Prof. Dr.
 image:
 position:
 mail:

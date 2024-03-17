@@ -26,7 +26,4 @@ sectionLinks:
     copyright: ' kasto - stock.adobe.com'
     link: /studies/
     text: Check out the courses and potential thesis topics we offer.
-bgImg:
-video:
-opac:
 ---

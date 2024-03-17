@@ -3,9 +3,6 @@ draft: false
 title: Data Mining Lab @ LMU - Contact
 shorttitle: Contact
 description: Contact details of the Data Mining Lab @ LMU
-bgImg:
-video:
-opac: 'true'
 ---
 {{< teaser txt="<p>The offices of the Data Mining Lab are located on the 2nd floor of the Institute of Computer Science at LMU Munich. </p><p>We are located in the immediate vicinity of the Chinese Tower in Munich's most beautiful park, the English Garden. Please use the map on the bottom to navigate to us.</p><p><strong>We look forward to hear from you!</strong></p>" >}}
 
