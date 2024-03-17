@@ -15,14 +15,12 @@
 			{{ else -}}
 				<h2>{{ .Title }}</h2>
 			{{ end -}}
-			
-			Pages: {{ .Pages }}
 			</div>
 			
 			{{ range sort .Pages "Params.order" "asc" -}}
-			  <div class="post col mt-3 mb-3">
-				  {{ partial "cardMember" . -}}
-			  </div>
+		  <div class="post col-12 col-lg-6 mt-3 mb-3">
+				{{ partial "cardMember" . -}}
+			 </div>
 			{{ end -}}
 		
 		</div>
