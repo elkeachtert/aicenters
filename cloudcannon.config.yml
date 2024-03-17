@@ -25,18 +25,6 @@ collections_config:
     disable_add_folder: false
     disable_file_actions: false
     _inputs:
-      bgImg: 
-        type: image
-        comment: "Background image used für small devices"
-        hidden: true
-      video: 
-        type: image
-        comment: "Background video used für medium and large devices"
-        hidden: true
-      opac:
-        hidden: true
-      titleImg:
-        hidden: true
       layout:
         hidden: true
       order:
@@ -73,19 +61,18 @@ collections_config:
         type: text
       firstName: 
         type: text
-      title: 
+      memberTitle: 
         type: select
         options:
           values:
             - Prof. Dr.
             - Dr.
-            - 
       img: 
         type: image
-        comment: "Teaser image"      
+        comment: "Image (1x1)"      
       copyright: 
         type: text
-        comment: "Copyright for teaser image"      
+        comment: "Copyright for image (optional)"      
       position: 
         type: text
       mail: 
