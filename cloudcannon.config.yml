@@ -72,6 +72,10 @@ collections_config:
         comment: "Copyright for image (optional)"      
       position: 
         type: text
+      phone: 
+        type: text 
+      room: 
+        type: text 
       mail: 
         type: url  
       bio: 

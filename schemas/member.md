@@ -1,14 +1,14 @@
 ---
 draft: true
 layout: member
-name: 
-firstName:
-title: 
+name: Mustermann
+firstName: Max
+academicTitle: Prof. Dr.
 image:
 position:
-mail:
-room:
-phone:
+mail: mustermann@dbs.ifi.lmu.de
+room: "<roomnumber>"
+phone: +49 2180 91xx
 bio:
 workingGroups:
 ---
