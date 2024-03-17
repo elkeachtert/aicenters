@@ -40,16 +40,6 @@
 				{{ partial "cardPost" . -}}
 			</div>
 		{{ end }}
-		{{ if and (gt $paginator.TotalPages 1) ($paginator.HasNext) }}
-			<div>
-				<a href="{{ $paginator.Next.URL }}#newpage" class="quicklink has--icon mt-0 mb-0 medium nextpage">
-					<span class="quicklink_icon">
-						<i class="fas fa-arrow-right"></i>
-					</span>
-					Load more
-				</a>
-			</div>
-		{{ end }}
 		</div>
 	</div>
 </section>
