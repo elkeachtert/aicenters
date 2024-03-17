@@ -8,7 +8,7 @@ image:
 position:
 mail: mustermann@dbs.ifi.lmu.de
 room: "<roomnumber>"
-phone: +49 2180 91xx
+phone: +49 89 2180 91xx
 bio:
 workingGroups:
 ---
