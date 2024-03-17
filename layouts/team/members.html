@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "navigation.html" . }}
 
-<section class="list-content" id="section">	
+<section class="list-content bg-mask-top-white" id="section">	
 	{{ partial "breadcrumbs.html" . }} 
 	{{ partial "makeTitle.html" . }}	
 	
@@ -22,7 +22,7 @@
 		
 			<div class="post col mt-3 mb-3">
 				{{ .Scratch.Set "hero" false -}}
-				{{ partial "cardPost" . -}}
+				{{ partial "cardMember" . -}}
 			</div>
 		{{ end }}
 		</div>
