@@ -1,6 +1,7 @@
 ---
 _schema: member
 draft: false
+order: 2
 layout: member
 name: Schubert
 firstName: Matthias
