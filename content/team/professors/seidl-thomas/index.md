@@ -4,7 +4,7 @@ layout: member
 name: Seidl
 firstName: Thomas
 title: Prof. Dr.
-image: /images/pis/seidl.webp
+image: /images/members/seidl.webp
 position: Head of group
 mail: mailto:seidl@dbs.ifi.lmu.de
 bio:

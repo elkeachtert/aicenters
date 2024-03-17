@@ -6,7 +6,7 @@ description:
 name: Schubert
 firstName: Matthias
 memberTitle: Prof. Dr.
-image:
+image: /images/members/schubert.webp
 position:
 mail:
 bio:
