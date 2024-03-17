@@ -7,6 +7,7 @@
 	{{ partial "makeTitle.html" . }}	
 	
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
+	  {{ if eq .Type "members" -}}
 	  {{ range sort (where .Pages "Params.show" "ne" false) "Params.order" "asc" -}}
 		<div class="row mt-0 posts">			
 			<div class="post col-12 mt-3 mb-3">
@@ -17,8 +18,6 @@
 			{{ end -}}
 			</div>
 			
-			Page: {{ . }}
-			
 			{{ range sort .Pages "Params.order" "asc" -}}
 		  <div class="post col-12 col-lg-6 mt-3 mb-3">
 				{{ partial "cardMember" . -}}
@@ -26,7 +25,18 @@
 			{{ end -}}
 		
 		</div>
-		{{ end }}
+		{{ end -}}
+		
+		{{ else -}}
+		<div class="row mt-0 posts">		
+		{{ range sort .Pages "Params.order" "asc" -}}
+		  <div class="post col-12 col-lg-6 mt-3 mb-3">
+				{{ partial "cardMember" . -}}
+			</div>
+		{{ end -}}
+		</div
+		{{ end -}}
+	
 	</div>
 </section>
 {{"<!-- Content End -->" | safeHTML}}
