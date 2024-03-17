@@ -1,6 +1,6 @@
 ---
 _schema: member
-draft: true
+draft: false
 layout: member
 name: Tresp
 firstName: Volker

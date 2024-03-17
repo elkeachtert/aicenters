@@ -1,4 +1,5 @@
 ---
+_schema: member
 draft: false
 layout: member
 name: Schubert
