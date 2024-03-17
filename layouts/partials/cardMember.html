@@ -26,6 +26,8 @@
 		{{ if .Params.mail -}}
 		<p class="card-text p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
 		{{ end -}}	
+		
+		{{ partial "learnMore" (dict "link" .Permalink "size" "small" "margin" "3" ) -}}
 	</div>
 	</div>
 </div>
