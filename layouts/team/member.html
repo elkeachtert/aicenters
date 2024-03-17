@@ -1,18 +1,12 @@
 {{ partial "header.html" . }}
 {{ partial "navigation.html" . }}
 
-<section class="list-content bg-mask-top-white" id="section">	
+<section class="list-content" id="section">	
 	{{ partial "breadcrumbs.html" . }} 
 	<div class="container-fluid"> 
-		<div class="row row-cols-1 row-cols-lg-1">
+		<div class="row row-cols-1">
 			<div class="col">
-			{{ if .Params.shorttitle -}}
-				<h1>{{ .Params.shorttitle | markdownify }}</h1>
-			{{ else -}}
-				<h1>{{ .Title }}</h1>
-			{{ end -}}
-			</div>
-			{{ partial "search-form-news.html" . }}
+			  <h1>{{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}</h1>
 		</div>
 	</div>
 	

@@ -850,12 +850,12 @@ div.floatright-small img {
   
 .card-news:hover a.quicklink {
     background-color: var(--mcmlblack);
- 	color: white;
+    color: white;
 }
 
 .card-news:hover a.maillink {
     background-color: var(--mcmlblack);
- 	color: white;
+    color: white;
 }
 
 .card-news:hover div {
