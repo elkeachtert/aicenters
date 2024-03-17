@@ -1,8 +1,8 @@
 ---
 _schema: member
 draft: false
-order: 2
 layout: member
+order: 2
 name: Schubert
 firstName: Matthias
 academicTitle: Prof. Dr.
