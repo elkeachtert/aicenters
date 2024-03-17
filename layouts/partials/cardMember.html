@@ -24,7 +24,7 @@
 		{{ end -}}
 			
 		{{ if .Params.mail -}}
-		<a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href = "mailto:{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i></a>
+		<a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href = "{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i></a>
 		{{ end -}}	
 	</div>
 	</div>
