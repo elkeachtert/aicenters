@@ -22,11 +22,15 @@
 		{{ $pageSize := $paginator.PageSize }}
 		{{ $totalPostsToShow := mul $paginator.PageNumber $pageSize }}
 		
-		{{ range sort .Pages "Params.order" "asc" }}
+		{{ range sort .Pages "Params.order" "asc" -}}
 		  {{ if .Params.shorttitle -}}
 				<h2>{{ .Params.shorttitle }}</h2>
 			{{ else -}}
 				<h2>{{ .Title }}</h2>
+			{{ end -}}
+			
+			{{ range sort .Pages "Params.order" "asc" -}}
+			  {{ . }}
 			{{ end -}}
 		
 			<div class="post col mt-3 mb-3">
