@@ -54,6 +54,8 @@ collections_config:
       layout: 
         hidden: true
         default: member
+      order:
+        hidden: true
       name: 
         type: text
       firstName: 
