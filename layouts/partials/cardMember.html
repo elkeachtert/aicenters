@@ -12,12 +12,9 @@
 		{{ end -}}
 	</div>
 	<div class="col-8 card-body ps-2 pb-0 mb-0 b-blue">
-		<p class="card-title bold pt-2 mb-1" style="line-height:1.1;">{{ .Params.academicTitle }} {{ .Params.firstName}} {{ .Params.name }}</p>
-		{{ if .Params.affil -}}
-		<p class="card-text p-xs" style="font-style: italic">{{ .Params.affil }}</p>
-		{{ end -}}
+		<p class="card-title p-xl bold ps-3 pt-2 mb-1" style="line-height:1.1;">{{ .Params.academicTitle }} {{ .Params.firstName}} {{ .Params.name }}</p>
 		{{ if .Params.position -}}
-		<p class="card-text bold p-s mb-1" style="line-height:1.1;">{{ .Params.position }} ({{ .Params.uni }})</p>	
+		<p class="card-text bold p-s mb-1" style="line-height:1.1;">{{ .Params.position }} </p>	
 		{{ end -}}
 		{{ if .Params.affiliation -}}
 		<p class="card-text p-xs mb-1 mt-0 pt-0">{{ .Params.affiliation }} ({{ .Params.uni }})</p>	
