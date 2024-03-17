@@ -1,5 +1,6 @@
 ---
 draft: false
+type: members
 layout: members
 title: MCML - The Team of our Data Mining Lab @LMU
 shorttitle: Our Team
