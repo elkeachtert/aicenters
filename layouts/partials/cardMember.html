@@ -1,5 +1,5 @@
 {{ $path := printf "/static%s" .Params.image -}} 
-{{ if not (os.FileExists $path) -}}
+{{ if or (not .Params.image) (not (os.FileExists $path)) -}}
 {{ errorf "The member %q %q requires a valid image path: %q (%q)" .Params.name .Params.firstName $path . }}
 {{ end -}}
 
