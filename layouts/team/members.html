@@ -1,6 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "navigation.html" . }}
 
+{{"<!-- Content Start -->" | safeHTML}}
 <section class="list-content bg-mask-top-white" id="section">	
 	{{ partial "breadcrumbs.html" . }} 
 	{{ partial "makeTitle.html" . }}	
@@ -18,7 +19,6 @@
 			Pages: {{ .Pages }}
 			
 			{{ range sort .Pages "Params.order" "asc" -}}
-			  {{ . }}
 			  <div class="post col mt-3 mb-3">
 				  {{ partial "cardMember" . -}}
 			  </div>
