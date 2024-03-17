@@ -1,6 +1,7 @@
 ---
 draft: false
 layout: members
+order: 2
 title: Data Mining Lab @LMU - Office
 shorttitle: Scientists
 description: >-

@@ -1,6 +1,7 @@
 ---
 draft: false
 layout: members
+order: 1
 title: Data Mining Lab @LMU - Professors
 shorttitle: Professors
 description: >-

@@ -12,7 +12,6 @@
 				<h1>{{ .Title }}</h1>
 			{{ end -}}
 			</div>
-			{{ partial "search-form-news.html" . }}
 		</div>
 	</div>
 	
@@ -22,7 +21,9 @@
 		{{ $paginator := .Paginate $range }}
 		{{ $pageSize := $paginator.PageSize }}
 		{{ $totalPostsToShow := mul $paginator.PageNumber $pageSize }}
-		{{ range $index, $el := (first $totalPostsToShow $range) }}
+		
+		{{ range sort .Pages "order" "asc" }}
+		
 			<div {{ if eq $index (sub $totalPostsToShow $pageSize) }}id="newpage"{{ end }} class="post col mt-3 mb-3">
 				{{ .Scratch.Set "hero" false -}}
 				{{ partial "cardPost" . -}}

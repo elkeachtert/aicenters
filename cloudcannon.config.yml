@@ -39,6 +39,8 @@ collections_config:
         hidden: true
       layout:
         hidden: true
+      order:
+        hidden: true
       title: 
         type: text
         comment: "Title of the page (used for seo)"
