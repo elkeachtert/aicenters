@@ -7,10 +7,10 @@ name: Schubert
 firstName: Matthias
 academicTitle: Prof. Dr.
 image: /images/members/schubert.webp
-position:
+position: Apl. professor
+mail: mailto:schubert@dbs.ifi.lmu.de
 room: F 107
 phone: +49 89 2180 9328
-mail: mailto:schubert@dbs.ifi.lmu.de
 bio:
 workingGroups:
 ---
