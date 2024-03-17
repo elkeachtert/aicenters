@@ -18,12 +18,10 @@
 			
 			{{ range sort .Pages "Params.order" "asc" -}}
 			  {{ . }}
+			  <div class="post col mt-3 mb-3">
+				  {{ partial "cardMember" . -}}
+			  </div>
 			{{ end -}}
-		
-			<div class="post col mt-3 mb-3">
-				{{ .Scratch.Set "hero" false -}}
-				{{ partial "cardMember" . -}}
-			</div>
 		{{ end }}
 		</div>
 	</div>
