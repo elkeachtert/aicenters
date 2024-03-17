@@ -1195,7 +1195,7 @@ img.img-partner {
 }	
 
 img.img-member {
-	width:60%;
+	width:100%;
 	height: auto;
 	background: linear-gradient(var(--mcmlgray), var(--mcmlmgray));
 }

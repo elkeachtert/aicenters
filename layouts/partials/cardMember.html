@@ -5,13 +5,13 @@
 
 <div class="card card-news h-100 mb-2 mt-2 pb-3 b-red">
   <div class="row g-0">
-	<div class="col-5 card-body p-0 m-0 b-green">
+	<div class="col-4 card-body p-0 m-0 b-green">
 		<img src="{{ .Params.image }}" class="img-member pr-2 b-green" alt="Image of {{ .Params.firstName}} {{ .Params.name }}" width="100" height="100">
 		{{ if .Params.copyright -}}
 		<p class="copyright">&copy;{{ .Params.copyright }}</p>
 		{{ end -}}
 	</div>
-	<div class="col-7 card-body ps-2 pb-0 mb-0 b-blue">
+	<div class="col-8 card-body ps-2 pb-0 mb-0 b-blue">
 		<p class="card-title bold pt-2 mb-1" style="line-height:1.1;">{{ .Params.academicTitle }} {{ .Params.firstName}} {{ .Params.name }}</p>
 		{{ if .Params.affil -}}
 		<p class="card-text p-xs" style="font-style: italic">{{ .Params.affil }}</p>
