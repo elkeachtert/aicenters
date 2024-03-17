@@ -3,8 +3,8 @@ draft: false
 layout: member
 title:
 description:
-name: Matthias
-firstName: Schubert
+name: Schubert
+firstName: Matthias
 memberTitle: Prof. Dr.
 image:
 position:
