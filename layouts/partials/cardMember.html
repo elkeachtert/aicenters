@@ -14,17 +14,17 @@
 	<div class="col-8 card-body ps-5 pb-0 mb-0 b-blue">
 		<p class="h3 card-title bold pt-2 mb-1" style="line-height:1.1;">{{ .Params.academicTitle }} {{ .Params.firstName}} {{ .Params.name }}</p>
 		{{ if .Params.position -}}
-		<p class="card-text mb-1" style="line-height:1.1;">{{ .Params.position }} </p>	
+		<p class="card-text mb-3" style="line-height:1.1;">{{ .Params.position }} </p>	
 		{{ end -}}
-		{{ if .Params.affiliation -}}
-		<p class="card-text p-xs mb-1 mt-0 pt-0">{{ .Params.affiliation }} ({{ .Params.uni }})</p>	
+		{{ if .Params.room -}}
+		<p class="card-text p-xs mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>{{ .Params.room }}</p>	
 		{{ end -}}
-		{{ if .Params.phdPosition -}}
-		<p class="card-text bold p-xs mb-1" style="line-height:1.1;">{{ .Params.phdPosition }}</p>	
+		{{ if .Params.phone -}}
+		<p class="card-text p-xs mb-1 mt-1 pt-0"><i class="fa-solid fa-phone"></i>{{ .Params.phone }}</p>	
 		{{ end -}}
 			
 		{{ if .Params.mail -}}
-		<a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i> Send an email</a>
+		<p class="card-text p-xs mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i> Send an email</a></p>
 		{{ end -}}	
 	</div>
 	</div>
