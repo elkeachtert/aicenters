@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 layout: member
 name: Seidl
 firstName: Thomas
