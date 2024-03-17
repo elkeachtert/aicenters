@@ -6,18 +6,18 @@
 <div class="col mb-2 mt-2 card-news">
 	<div class="card h-100 pb-3 b-none" style="background-color: rgba(255, 255, 255, 0.3);">
 		<div class="card-body ps-2 pb-0 mb-0" style="transform: rotate(0);">
-			<a href="{{ .contact }}" aria-label="Link to {{ .firstName}} {{ .name }}"><img src="{{ .image }}" class="img-member pr-5" alt="Link to {{ .firstName}} {{ .name }}" width="100" height="100"></a>
-			{{ if .copyright -}}
-			<p class="copyright">&copy;{{ .copyright }}</p>
+			<img src="{{ .Params.image }}" class="img-member pr-5" alt="Image of {{ .Params.firstName}} {{ .Params.name }}" width="100" height="100">
+			{{ if .Params.copyright -}}
+			<p class="copyright">&copy;{{ .Params.copyright }}</p>
 			{{ end -}}
-			<p class="card-title bold pt-2 mb-1" style="line-height:1.1;">{{ .firstName}} {{ .name }}</p>
-			{{ if .title -}}
-			<p class="card-title pt-0 mt-0 mb-1 p-xs">{{.title}}</p>
+			<p class="card-title bold pt-2 mb-1" style="line-height:1.1;">{{ .Params.firstName}} {{ .Params.name }}</p>
+			{{ if .Params.title -}}
+			<p class="card-title pt-0 mt-0 mb-1 p-xs">{{ .Params.title }}</p>
 			{{ end -}}
-			{{ if .affil -}}
-			<p class="card-text p-xs" style="font-style: italic">{{ .affil }}</p>
+			{{ if .Params.affil -}}
+			<p class="card-text p-xs" style="font-style: italic">{{ .Params.affil }}</p>
 			{{ end -}}
-			{{ if .position -}}
+			{{ if .Params.position -}}
 			<p class="card-text bold p-s mb-1" style="line-height:1.1;">{{ .position }} ({{ .uni }})</p>	
 			{{ end -}}
 			{{ if .affiliation -}}
@@ -28,32 +28,6 @@
 			{{ end -}}
 			
 		
-			{{ if .subarea -}}
-			{{ if eq .subarea "A1" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area A1" href="/research/areaa/#a1">A1 | Statistical Foundations & Explainability</a></p>	
-			{{ else if eq .subarea "A2" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area A2" href="/research/areaa/#a2">A2 | Mathematical Foundations</a></p>	
-			{{ else if eq .subarea "A3" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area A3" href="/research/areaa/#a3">A3 | Computational Models</a></p>	
-			{{ else if eq .subarea "B1" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area B1" href="/research/areab/#b1">B1 | Computer Vision</a></p>	
-			{{ else if eq .subarea "B2" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area B2" href="/research/areab/#b2">B2 | Natural Language Processing</a></p>
-			{{ else if eq .subarea "B3" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area B3" href="/research/areab/#b3">B3 | Multimodal Perception</a></p>	
-			{{ else if eq .subarea "C1" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area C1" href="/research/areac/#c1">C1 | Medicine</a></p>	
-			{{ else if eq .subarea "C2" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area C2" href="/research/areac/#c2">C2 | Biology</a></p>
-			{{ else if eq .subarea "C3" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area C3" href="/research/areac/#c3">C3 | Physics and Geo Sciences</a></p>
-			{{ else if eq .subarea "C4" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area C4" href="/research/areac/#c4">C4 | Computational Social Sciences</a></p>
-			{{ else if eq .subarea "C5" -}}
-			<p class="p-xs mb-1"><a class="maillink" aria-label="Link to Research Area C5" href="/research/areac/#c5">C5 | Humane AI</a></p>
-					
-			{{ end -}}
-			{{ end -}}
 			{{ if .mail -}}
 			<a class="maillink" aria-label="Mail to {{ .firstName}} {{ .name }}" href = "mailto:{{ .mail }}"><i class="fa-solid fa-envelope"></i></a>
 			{{ end -}}	
