@@ -6,8 +6,9 @@
 	{{ partial "makeTitle.html" . }}	
 	
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
+	  {{ range sort .Pages "Params.order" "asc" -}}
 		<div class="row row-cols-1 row-cols-lg-2 mt-0 posts">			
-			{{ range sort .Pages "Params.order" "asc" -}}
+			
 		  {{ if .Params.shorttitle -}}
 				<h2>{{ .Params.shorttitle }}</h2>
 			{{ else -}}
