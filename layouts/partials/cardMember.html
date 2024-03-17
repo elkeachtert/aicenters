@@ -20,21 +20,19 @@
 			{{ if .Params.position -}}
 			<p class="card-text bold p-s mb-1" style="line-height:1.1;">{{ .position }} ({{ .uni }})</p>	
 			{{ end -}}
-			{{ if .affiliation -}}
-			<p class="card-text p-xs mb-1 mt-0 pt-0">{{ .affiliation }} ({{ .uni }})</p>	
+			{{ if .Params.affiliation -}}
+			<p class="card-text p-xs mb-1 mt-0 pt-0">{{ .Params.affiliation }} ({{ .Params.uni }})</p>	
 			{{ end -}}
-			{{ if .phdPosition -}}
-			<p class="card-text bold p-xs mb-1" style="line-height:1.1;">{{ .phdPosition }}</p>	
+			{{ if .Params.phdPosition -}}
+			<p class="card-text bold p-xs mb-1" style="line-height:1.1;">{{ .Params.phdPosition }}</p>	
 			{{ end -}}
 			
 		
-			{{ if .mail -}}
-			<a class="maillink" aria-label="Mail to {{ .firstName}} {{ .name }}" href = "mailto:{{ .mail }}"><i class="fa-solid fa-envelope"></i></a>
+			{{ if .Params.mail -}}
+			<a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href = "mailto:{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i></a>
 			{{ end -}}	
 		</div>
 		
-		<div class="card-body ps-2 pb-0 pt-0 mb-0 mt-0" style="transform: rotate(0);">
-			<a href="{{ .contact }}" aria-label="Link to {{ .firstName}} {{ .name }}" class="stretched-link"></a>	
-		</div>	
+		
 	</div>
 </div>
