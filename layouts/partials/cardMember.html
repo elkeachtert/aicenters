@@ -3,7 +3,8 @@
 {{ errorf "The member %q %q requires a valid image path: %q (%q)" .Params.name .Params.firstName $path . }}
 {{ end -}}
 
-<div class="card card-news row h-100 mb-2 mt-2 pb-3 b-red">
+<div class="card card-news h-100 mb-2 mt-2 pb-3 b-red">
+  <div class="row">
 	<div class="col-6 card-body ps-2 pb-0 mb-0 b-green">
 		<img src="{{ .Params.image }}" class="img-member pr-5 b-green" alt="Image of {{ .Params.firstName}} {{ .Params.name }}" width="100" height="100">
 		{{ if .Params.copyright -}}
@@ -31,5 +32,6 @@
 		{{ if .Params.mail -}}
 		<a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href = "mailto:{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i></a>
 		{{ end -}}	
+	</div>
 	</div>
 </div>
