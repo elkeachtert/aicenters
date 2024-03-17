@@ -6,7 +6,7 @@ order: 4
 name: Kriegel
 firstName: Hans-Peter
 academicTitle: Prof. Dr.
-image:
+image: /images/members/kriegel.webp
 position: Former head of group
 mail: mailto:kriegel@dbs.ifi.lmu.de
 room: '159'
