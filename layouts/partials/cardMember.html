@@ -1,6 +1,6 @@
-{{ $path := printf "/static%s" .image -}} 
+{{ $path := printf "/static%s" .Params.image -}} 
 {{ if not (os.FileExists $path) -}}
-{{ errorf "The member %q requires a valid image path:%q" .name $path}}
+{{ errorf "The member %q requires a valid image path:%q" .Params.name $path}}
 {{ end -}}
 
 <div class="col mb-2 mt-2 card-news">
