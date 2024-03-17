@@ -5,7 +5,7 @@
 
 <div class="card card-news row h-100 mb-2 mt-2 pb-3 b-red">
 	<div class="col-6 card-body ps-2 pb-0 mb-0 b-green">
-		<img src="{{ .Params.image }}" class="img-member pr-5" alt="Image of {{ .Params.firstName}} {{ .Params.name }}" width="100" height="100">
+		<img src="{{ .Params.image }}" class="img-member pr-5 b-green" alt="Image of {{ .Params.firstName}} {{ .Params.name }}" width="100" height="100">
 		{{ if .Params.copyright -}}
 		<p class="copyright">&copy;{{ .Params.copyright }}</p>
 		{{ end -}}
