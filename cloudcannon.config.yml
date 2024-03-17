@@ -58,7 +58,7 @@ collections_config:
         type: text
       firstName: 
         type: text
-      memberTitle: 
+      academicTitle: 
         type: select
         options:
           values:
