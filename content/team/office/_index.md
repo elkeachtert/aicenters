@@ -1,25 +1,13 @@
 ---
 draft: false
-title: MCML - Junior Members in the research areas
-shorttitle: Junior Members
+layout: members
+title: Data Mining Lab @LMU - Office
+shorttitle: Scientists
 description: >-
-  Get to know the PostDocs and PhD students at the Munich Center for Machine
-  Learning in the research areas.
-sectionlinks:
-  - directors
-  - management
-  - pis
-  - strategyboard
-  - advisoryboard
-  - publications
-bgImg: /images/background/team.webp
-video: /images/background/videos/team
-opac: 'true'
-navname: "Junior Members"
+  Get to know the Office members at the Data Mining Lab @LMU.
+sectionLinks:
 ---
 {{< teaser txt=`
-<p>Get to know the junior members of the Munich Center for Machine Learning.</p>
-<p>Our PostDocs and PhD students form a dynamic cohort of emerging talents pushing the boundaries of artificial intelligence. Their dedicated contributions and focused research form the foundation of our community.</p>`
->}}
+<p>At the forefront of MCML's structure are the four Directors, who provide guidance and strategic direction for our center.</p>` >}}
 
-< listJuniors order="subarea" >
+<p class="copyright">©all images: LMU</p>
