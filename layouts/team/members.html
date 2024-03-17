@@ -24,7 +24,7 @@
 		
 		{{ range sort .Pages "order" "asc" }}
 		
-			<div {{ if eq $index (sub $totalPostsToShow $pageSize) }}id="newpage"{{ end }} class="post col mt-3 mb-3">
+			<div class="post col mt-3 mb-3">
 				{{ .Scratch.Set "hero" false -}}
 				{{ partial "cardPost" . -}}
 			</div>
