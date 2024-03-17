@@ -1,13 +1,11 @@
 ---
 draft: false
 layout: members
-title: MCML - The Team of the Munich Center for Machine Learning
-shorttitle: >-
-  The Team of our <br>DAT<span class="green">A</span> M<span
-  class="green">I</span>NING LAB
+title: MCML - The Team of our Data Mining Lab @LMU
+shorttitle: Our Team
 description: >-
-  Get to know the people behind the MCML: Directors, Strategy Board, Management
-  Team, Principal Investigators, Transfer Positions, Advisiory Board.
+  Get to know the people behind the Data Mining Lab @LMU: Professors, Office,
+  Scientists, Alumni.
 bgImg:
 video:
 ---
