@@ -1,6 +1,7 @@
 ---
 draft: true
 layout: member
+order: 1
 name: Mustermann
 firstName: Max
 academicTitle: Prof. Dr.
