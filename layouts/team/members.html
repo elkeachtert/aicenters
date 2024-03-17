@@ -1,19 +1,9 @@
 {{ partial "header.html" . }}
 {{ partial "navigation.html" . }}
 
-<section class="list-content bg-mask-top-white" id="section">	
+<section class="list-content" id="section">	
 	{{ partial "breadcrumbs.html" . }} 
-	<div class="container-fluid"> 
-		<div class="row row-cols-1 row-cols-lg-1">
-			<div class="col">
-			{{ if .Params.shorttitle -}}
-				<h1>{{ .Params.shorttitle | markdownify }}</h1>
-			{{ else -}}
-				<h1>{{ .Title }}</h1>
-			{{ end -}}
-			</div>
-		</div>
-	</div>
+	{{ partial "makeTitle.html" . }}	
 	
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
 		<div class="row row-cols-1 mt-0 posts" id="posts">			
