@@ -9,7 +9,7 @@ description: >-
 sectionLinks:
 bgImg: /images/background/team.webp
 video: /images/background/videos/team
-opac: 'true'
+opac: true
 ---
 {{< teaser txt=`
 <p>At the forefront of MCML's structure are the four Directors, who provide guidance and strategic direction for our center.</p>` >}}
