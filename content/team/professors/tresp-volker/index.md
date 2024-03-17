@@ -2,6 +2,7 @@
 _schema: member
 draft: false
 layout: member
+order: 3
 name: Tresp
 firstName: Volker
 academicTitle: Prof. Dr.
