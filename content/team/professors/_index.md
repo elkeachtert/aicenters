@@ -7,8 +7,8 @@ description: >-
   Get to know the Professors at the Data Mining Lab @LMU : Thomas Seidl,
   Matthias Schubert, Volker Tresp, Hans-Peter Kriegel
 sectionLinks:
-bgImg: /images/background/team.webp
-video: /images/background/videos/team
+bgImg: 
+video: 
 opac: true
 ---
 {{< teaser txt=`
