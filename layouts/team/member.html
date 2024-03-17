@@ -2,7 +2,7 @@
 {{ partial "navigation.html" . }}
 
 <section class="list-content" id="section">	
-  {{ $navname := printf %q %q .Params.firstName .Params.name -}}
+  {{ $navname := printf %q" "%q .Params.firstName .Params.name -}}
   {{ .Scratch.Set "navname" $navname -}}
 	{{ partial "breadcrumbs.html" . }} 
 	<div class="container-fluid"> 
