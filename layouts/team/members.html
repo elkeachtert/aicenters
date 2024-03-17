@@ -29,6 +29,8 @@
 				<h2>{{ .Title }}</h2>
 			{{ end -}}
 			
+			Pages: {{ .Pages }}
+			
 			{{ range sort .Pages "Params.order" "asc" -}}
 			  {{ . }}
 			{{ end -}}
