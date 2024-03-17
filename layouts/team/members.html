@@ -22,7 +22,7 @@
 		{{ $pageSize := $paginator.PageSize }}
 		{{ $totalPostsToShow := mul $paginator.PageNumber $pageSize }}
 		
-		{{ range sort .Pages ".Params.order" "asc" }}
+		{{ range sort .Pages "Params.order" "asc" }}
 		
 			<div class="post col mt-3 mb-3">
 				{{ .Scratch.Set "hero" false -}}
