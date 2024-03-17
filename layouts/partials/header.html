@@ -4,13 +4,20 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+  {{ if eq .Layout "member" -}}
+	<title>{{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}</title>
+	<meta name="description" content= "Get to know {{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}">
+	{{ else -}}
 	<title> {{ .Title }} </title>
 	{{ if .Description -}}
   <meta name="description" content= "{{ .Description }}">
 	{{ else -}}
 	<meta name="description" content= "Welcome to the Data Mining Lab @LMU Munich.">
 	{{ end -}}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	{{ end -}}
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="8Nu02wZmrFyJlMvIp3WRGLvZp-2SMwGVbFVYdg1soVM" />
     {{ hugo.Generator -}}
   {{ "<!-- Stylesheets -->" | safeHTML }}

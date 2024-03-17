@@ -7,7 +7,9 @@
 	
 	<div class="row row-cols-1 row-cols-lg-2">
 		<div class="col" >
-		{{ if .Params.shorttitle -}}
+		{{ if eq .Layout "member" -}}
+		  <h1>{{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }} </h1>
+		{{ else if .Params.shorttitle -}}
 			<h1 data-cms-bind="#shorttitle">{{ .Params.shorttitle | markdownify }}</h1>
 		{{ else -}}
 			<h1 data-cms-bind="#title">{{ .Title }}</h1>
