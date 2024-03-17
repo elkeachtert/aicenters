@@ -29,9 +29,6 @@ collections_config:
         hidden: true
       order:
         hidden: true
-      title: 
-        type: text
-        comment: "Title of the page (used for seo)"
       shorttitle: 
         type: text
         comment: "<h1> at top of the page (if empty title is used)"
@@ -255,69 +252,13 @@ collections_config:
         
 
 _inputs: 
+  title: 
+    type: text
+    comment: "Title of the page (used for seo)"
+        
   description: 
     type: textarea
     comment: "Description of the page (used for seo). Max. 150 characters!"
-  
-  manager:
-    type: array
-    comment: "Managers in MCML"
-    options:
-      structures: _structures.manager
-  pi:
-    type: array
-    comment: "PIs in MCML"
-    options:
-      structures: _structures.pi
-      
-  affil:
-    type: array
-    comment: "Affiliated Senior Researchers in MCML"
-    options:
-      structures: _structures.pi
-      
-  senior:
-    type: array
-    comment: "Senior Researchers in MCML"
-    options:
-      structures: _structures.pi
-      
-  abmember:
-    type: array
-    comment: "Advisory Board members in MCML"
-    options:
-      structures: _structures.ab
-  
-  phd:
-    type: array
-    comment: "Junior members in MCML"
-    options:
-      structures: _structures.phd
-      
-  eventDate:
-    type: object
-    options:
-      preview:
-        text: "Event Date"
-        icon: date_range
-        metadata: 
-        - text: 
-          - key: start
-          icon: today
-        - text: 
-          - key: end
-          icon: today
-        - text: "All Day Event"
-        - text: 
-          - key: allDay
-          icon: radio_button_checked
-    eventDate.start:
-      type: datetime
-    eventDate.end:
-      type: datetime
-    eventDate.allDay:
-      comment: "All-day event (no time will be displayed)"
-      type: checkbox
       
   sectionLinks:
     type: array
