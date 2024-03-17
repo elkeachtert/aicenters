@@ -3,9 +3,8 @@ draft: false
 layout: members
 order: 2
 title: Data Mining Lab @LMU - Office
-shorttitle: Scientists
-description: >-
-  Get to know the Office members at the Data Mining Lab @LMU.
+shorttitle: Office
+description: Get to know the Office members at the Data Mining Lab @LMU.
 sectionLinks:
 ---
 {{< teaser txt=`
