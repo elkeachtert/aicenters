@@ -17,14 +17,14 @@
 		<p class="card-text mb-3" style="line-height:1.1;">{{ .Params.position }} </p>	
 		{{ end -}}
 		{{ if .Params.room -}}
-		<p class="card-text p-xs mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>&nbsp;Room {{ .Params.room }}</p>	
+		<p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>&nbsp;Room {{ .Params.room }}</p>	
 		{{ end -}}
 		{{ if .Params.phone -}}
-		<p class="card-text p-xs mb-1 mt-1 pt-0"><i class="fa-solid fa-phone"></i>&nbsp;{{ .Params.phone }}</p>	
+		<p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-phone"></i>&nbsp;{{ .Params.phone }}</p>	
 		{{ end -}}
 			
 		{{ if .Params.mail -}}
-		<p class="card-text p-xs mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;Send an email</a></p>
+		<p class="card-text p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;Send an email</a></p>
 		{{ end -}}	
 	</div>
 	</div>
