@@ -358,14 +358,14 @@ a {
     font-weight: bold; }
 
 a:hover {
-	color: var(--mcmlblue);
+	color: var(--lmugreen);
 	font-weight: bold; 
 	text-decoration: none;}
 
 a.nav-link:hover h3{
-  color: var(--mcmlblue);}
+  color: var(--lmugreen);}
 a.nav-link:hover i{
-  color: var(--mcmlblue);}
+  color: var(--lmugreen);}
   
 a.white {
   	color: white; 
