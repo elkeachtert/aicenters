@@ -1,6 +1,6 @@
 ---
 draft: false
-layout: members
+layout: 
 order: 4
 show: false
 title: Data Mining Lab @LMU - Alumni
