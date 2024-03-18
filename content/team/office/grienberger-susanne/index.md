@@ -6,7 +6,7 @@ order: 1
 name: Grienberger
 firstName: Susanne
 academicTitle: Prof. Dr.
-image:
+image: /images/members/grienberger.webp
 position: Assistant
 mail: mailto:grienberger@dbs.ifi.lmu.de
 room: '154'
