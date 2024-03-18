@@ -34,9 +34,6 @@ collections_config:
     path: content/team/professors
     output: true
     icon: person
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
     schema: member
     create:
       path: '{name|lowercase}-{firstName|lowercase}/index.md'
@@ -64,6 +61,38 @@ collections_config:
     schemas:
       member:
         path: schemas/member.md
+        
+  scientists:
+    path: content/team/scientists
+    output: true
+    icon: person
+    schema: member
+    create:
+      path: '{name|lowercase}-{firstName|lowercase}/index.md'
+      _inputs:
+        name:
+          comment: Use the last name here
+        firstName:
+          comment: Use the first name here
+    schemas:
+      member:
+        path: schemas/member.md
+        
+  alumni:
+    path: content/team/alumni
+    output: true
+    icon: person
+    schema: member
+    create:
+      path: '{name|lowercase}-{firstName|lowercase}/index.md'
+      _inputs:
+        name:
+          comment: Use the last name here
+        firstName:
+          comment: Use the first name here
+    schemas:
+      member:
+        path: schemas/alumni.md
 
   news:
     path: content/news
