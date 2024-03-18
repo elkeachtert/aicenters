@@ -73,6 +73,23 @@ collections_config:
     schemas:
       member:
         path: schemas/member.md
+        
+  research:
+    path: content/research
+    output: true
+    icon: psychology
+    schema: research
+    create:
+      path: '{title|lowercase}/index.md'
+      _inputs:
+        title:
+          comment: Title of research area 
+    schemas:
+      member:
+        path: schemas/research.md
+    _inputs:
+      leader:
+        type: url
 
   news:
     path: content/news
