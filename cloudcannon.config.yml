@@ -283,7 +283,6 @@ _inputs:
     type: text 
   fax: 
     type: text 
-    optional: true
     comment: "optional"
   room: 
     type: text 
