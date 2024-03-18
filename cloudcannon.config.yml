@@ -21,11 +21,7 @@ collections_config:
     filter: strict
     parse_branch_index: true
     icon: notes
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
     _inputs:
-      
       shorttitle: 
         type: text
         comment: "<h1> at top of the page (if empty title is used)"
@@ -77,22 +73,6 @@ collections_config:
     schemas:
       member:
         path: schemas/member.md
-        
-  alumni:
-    path: content/team/alumni
-    output: true
-    icon: person
-    schema: alumni
-    create:
-      path: '{name|lowercase}-{firstName|lowercase}/index.md'
-      _inputs:
-        name:
-          comment: Use the last name here
-        firstName:
-          comment: Use the first name here
-    schemas:
-      member:
-        path: schemas/alumni.md
 
   news:
     path: content/news
