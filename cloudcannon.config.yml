@@ -82,7 +82,7 @@ collections_config:
     path: content/team/alumni
     output: true
     icon: person
-    schema: member
+    schema: alumni
     create:
       path: '{name|lowercase}-{firstName|lowercase}/index.md'
       _inputs:
