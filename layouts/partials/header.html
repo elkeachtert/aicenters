@@ -5,9 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-  {{ if eq .Layout "member1" -}}
+  {{ if eq .Layout "member" -}}
+  {{ if eq .Params.academicTitle "<none>"
+  <title>{{ .Params.firstName }} {{ .Params.name }}</title>
+	<meta name="description" content= "Get to know {{ .Params.firstName }} {{ .Params.name }}">
+	{{ else -}}
 	<title>{{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}</title>
 	<meta name="description" content= "Get to know {{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}">
+	{{ end -}}
+	
 	{{ else -}}
 	<title> {{ .Title }} </title>
 	{{ if .Description -}}
