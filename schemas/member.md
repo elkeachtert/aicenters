@@ -2,7 +2,6 @@
 draft: true
 layout: member
 order: 1
-title: "{{ Params.firstName }} {{ Params.name }}"
 name: Mustermann
 firstName: Max
 academicTitle: <none>

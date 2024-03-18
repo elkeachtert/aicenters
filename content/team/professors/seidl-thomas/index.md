@@ -3,7 +3,6 @@ _schema: member
 draft: false
 layout: member
 order: 1
-title: '{{ .Params.firstName }} {{ .Params.name }}'
 name: Seidl
 firstName: Thomas
 academicTitle: Prof. Dr.
