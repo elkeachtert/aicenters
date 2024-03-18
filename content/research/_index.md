@@ -1,13 +1,8 @@
 ---
 draft: false
-title: MCML - Research at the Munich Center for Machine Learning
-shorttitle: >-
-  Research Activities at<br>DAT<span class="green">A</span> M<span
-  class="green">I</span>NING LAB
-description: >-
-  Our research foci are divided into (A ) Foundations of Machine Learning, (B)
-  Perception, Vision, and Natural Language Processing, (C) Domain­-specific
-  Machine Learning.
+title: MCML - Research at the Data Mining Lab @LMU
+shorttitle: 'Research Activities '
+description:
 sectionlinks:
   - researcha
   - researchb
