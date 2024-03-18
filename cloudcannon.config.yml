@@ -25,10 +25,7 @@ collections_config:
     disable_add_folder: false
     disable_file_actions: false
     _inputs:
-      layout:
-        hidden: true
-      order:
-        hidden: true
+      
       shorttitle: 
         type: text
         comment: "<h1> at top of the page (if empty title is used)"
@@ -50,45 +47,26 @@ collections_config:
     schemas:
       member:
         path: schemas/member.md
-    _inputs:  
-      layout: 
-        hidden: true
-        default: member
-      order:
-        hidden: true
-      name: 
-        type: text
-      firstName: 
-        type: text
-      academicTitle: 
-        type: select
-        options:
-          values:
-            - Prof. Dr.
-            - Dr.
-      img: 
-        type: image
-        comment: "Image (1x1)"      
-      copyright: 
-        type: text
-        comment: "Copyright for image (optional)"      
-      position: 
-        type: text
-      phone: 
-        type: text 
-      room: 
-        type: text 
-      mail: 
-        type: url  
-      bio: 
-        type: textarea
-        comment: "Short biography"
-      workingGroups: 
-        type: array
-        structures: _structures.workingGroups          
-        preview:
-        text:
-          - key: title
+        
+  office:
+    path: content/team/office
+    output: true
+    icon: person
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schema: member
+    create:
+      path: '{name|lowercase}-{firstName|lowercase}/index.md'
+      _inputs:
+        name:
+          comment: Use the last name here
+        firstName:
+          comment: Use the first name here
+    schemas:
+      member:
+        path: schemas/member.md
+      
 
   news:
     path: content/news
@@ -265,6 +243,12 @@ _inputs:
   description: 
     type: textarea
     comment: "Description of the page (used for seo). Max. 150 characters!"
+    
+  layout:
+    hidden: true
+  
+  order:
+    hidden: true
       
   sectionLinks:
     type: array
@@ -278,6 +262,40 @@ _inputs:
           - key: img
         subtext:
           - key: text
+          
+  name: 
+        type: text
+      firstName: 
+        type: text
+      academicTitle: 
+        type: select
+        options:
+          values:
+            - Prof. Dr.
+            - Dr.
+  img: 
+    type: image
+    comment: "Image (1x1)"      
+  copyright: 
+    type: text
+    comment: "Copyright for image (optional)"      
+  position: 
+    type: text
+  phone: 
+    type: text 
+  room: 
+    type: text 
+  mail: 
+    type: url  
+  bio: 
+    type: textarea
+    comment: "Short biography"
+  workingGroups: 
+    type: array
+    structures: _structures.workingGroups          
+    preview:
+    text:
+      - key: title
         
 _select_data: {}
 _structures: 
