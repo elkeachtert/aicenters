@@ -281,6 +281,10 @@ _inputs:
     type: text
   phone: 
     type: text 
+  fax: 
+    type: text 
+    optional: true
+    comment: "optional"
   room: 
     type: text 
   mail: 
