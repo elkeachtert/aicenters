@@ -4,12 +4,13 @@ layout: member
 order: 1
 name: Mustermann
 firstName: Max
-academicTitle: Prof. Dr.
-image:
+academicTitle: <none>
+image: /images/members/grienberger.webp
 position:
 mail: mailto:mustermann@dbs.ifi.lmu.de
-room: "<roomnumber>"
+room: <roomnumber>
 phone: +49 89 2180 91xx
+fax: +49 89 2180 91xx
 bio:
 workingGroups:
 ---
