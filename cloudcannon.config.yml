@@ -29,6 +29,7 @@ collections_config:
       shorttitle: 
         type: text
         comment: "<h1> at top of the page (if empty title is used)"
+ 
   professors:
     path: content/team/professors
     output: true
@@ -66,7 +67,6 @@ collections_config:
     schemas:
       member:
         path: schemas/member.md
-      
 
   news:
     path: content/news
