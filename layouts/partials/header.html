@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
   {{ if eq .Layout "member" -}}
-  {{ if eq .Params.academicTitle "<none>"
+  {{ if eq .Params.academicTitle "<none>" -}}
   <title>{{ .Params.firstName }} {{ .Params.name }}</title>
 	<meta name="description" content= "Get to know {{ .Params.firstName }} {{ .Params.name }}">
 	{{ else -}}
