@@ -264,15 +264,15 @@ _inputs:
           - key: text
           
   name: 
-        type: text
-      firstName: 
-        type: text
-      academicTitle: 
-        type: select
-        options:
-          values:
-            - Prof. Dr.
-            - Dr.
+    type: text
+  firstName: 
+    type: text
+  academicTitle: 
+    type: select
+    options:
+      values:
+        - Prof. Dr.
+        - Dr.
   img: 
     type: image
     comment: "Image (1x1)"      
