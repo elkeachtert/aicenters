@@ -38,7 +38,10 @@
 		    {{ end -}}	
 		    
 		    {{ if .Params.officeHours -}}
-		    <p class="p-s mb-1 mt-1 pt-0">Office Hours:<br>{{ .Params.officeHours }}</p>	
+		    <p class="p-s mb-1 mt-1 pt-0 bold">Office Hours:</p>	
+		    {{ range .Params.officeHours -}}
+		    <p class="p-s">.</p>
+		    {{ end -}}	
 		    {{ end -}}	
 	    </div>
 	    
