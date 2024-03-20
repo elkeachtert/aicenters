@@ -2,7 +2,7 @@
 _schema: research
 draft: false
 layout:
-order: 6
+order: 0
 title: Spatial AI
 description: Learn more about our research on Spatial AI.
 leader: /team/professors/matthias-schubert/
