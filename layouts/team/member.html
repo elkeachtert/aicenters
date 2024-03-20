@@ -16,6 +16,20 @@
 			  
 			  <p>{{ .Params.position -}}</p>
 		</div>
+		
+		
+		{{ $start_d := "Test" -}}
+		{{ $start_m := "Test" -}}
+		<div class="ratio1 ratio1-1x1">
+<div class="flex-row d-inline-flex align-items-stretch bg-black b-white ms-{{ $margin_start }}" style="position: absolute;">
+	<div class="bg-black ps-3 pe-3 pt-2 pb-2 m-0">
+		<p class="b-red1 p-s bold text-center mb-0">{{ $start_d }}</p>
+		<p class="b-red1 p-s bold text-center mt-0 mb-0 pt-0">{{ $start_m}}</p>
+	</div>
+</div>
+</div>
+		
+		
 	</div>
 	
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
