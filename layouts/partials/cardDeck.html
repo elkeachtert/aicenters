@@ -18,7 +18,8 @@
 			<img src="{{ $img }}" class="img-100 b-none" alt="Link to {{ $title }}" width="100" height="100">
 			{{ end -}}
 			{{ if .copyright -}}
-			<p class="copyright pt-0 pb-0">&copy;{{ .copyright }}</p>
+			<p class="copyright pt-0 pb-0 b-green">&copy;{{ .copyright }}</p>
+			
 			{{ end -}}
 			<h2 class="h3 card-title pt-2">{{ $title }}</h2>
 			<p class="card-text">{{ $text }}</p>
