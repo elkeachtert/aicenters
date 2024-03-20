@@ -30,8 +30,12 @@
 	     
 	     {{ $areas := slice -}}
 	     {{ range $pages -}}
-	       {{ if eq .Params.leader $leader }}
-	         {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
+	       {{ if eq .Params.leader $leader -}}
+	         {{ $link := .Permalink -}}
+	         {{ if .link -}}
+	           {{ $link = .link -}}
+	         {{ end -}}
+	         {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" $link "text" "" ) -}}
 	         {{ $areas = $areas | append $area -}}
 	       {{ end -}}
 	     {{ end -}}
