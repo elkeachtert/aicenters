@@ -8,12 +8,12 @@
 	
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
 	  {{ .Content }}
-	  
+  </div>	  
 	  
 	  {{ $pages := sort .Pages "Params.order" "asc" -}}
 	  
 	  {{ $scratch := newScratch -}}
-	    {{ range sort .Pages "Params.order" "asc" -}}
+	    {{ range $pages -}}
 	      {{ $leaderurl := strings.TrimRight "/" .Params.leader }}
 	      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
 	      
@@ -44,7 +44,7 @@
 	   {{ end -}}
 	
 	
-	</div>
+	
 	
 	
 
