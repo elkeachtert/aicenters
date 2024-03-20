@@ -14,8 +14,6 @@
 	<div class="col col-12 col-lg-8 txtTwoCol">
 		{{ partial "myMarkdownify" (dict "txt" (.Get "txt1")) }}
 		
-		<div style="clear:both;"></div>
-		
 		{{ if .Get "link" -}}
 		{{ partial "learnMore" (dict "link" (.Get "link") "text" (.Get "linktext") "size" ("medium")) -}}
 		{{ end -}}		
