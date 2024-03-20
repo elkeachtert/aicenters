@@ -32,8 +32,8 @@
 	     {{ range $pages -}}
 	       {{ if eq .Params.leader $leader -}}
 	         {{ $link := .Permalink -}}
-	         {{ if .link -}}
-	           {{ $link = .link -}}
+	         {{ if .Params.link -}}
+	           {{ $link = .Params.link -}}
 	         {{ end -}}
 	         {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" $link "text" "" ) -}}
 	         {{ $areas = $areas | append $area -}}
