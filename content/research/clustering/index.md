@@ -2,7 +2,7 @@
 _schema: research
 draft: false
 layout:
-order: 1
+order: 3
 title: Clustering
 description: Learn more about our research on Clustering.
 leader: /team/professors/seidl-thomas/
