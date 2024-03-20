@@ -18,15 +18,15 @@
 		{{ partial "myMarkdownify" (dict "txt" (.Get "txt1")) }}
 		
 		{{ if .Get "phone" -}}
-		<p><i class="fa-solid fa-phone"></i>{{ .Get "phone" }}</p>
+		<p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;{{ .Get "phone" }}</p>
 		{{ end -}}
 		
 		{{ if .Get "fax" -}}
-		<p><i class="fa-solid fa-fax"></i>{{ .Get "fax" }}</p>
+		<p><i class="fa-solid fa-fax"></i>&nbsp;&nbsp;{{ .Get "fax" }}</p>
 		{{ end -}}
 		
 		{{ if .Get "office" -}}
-			<p><a href="{{ .Get "link" }}">{{ .Get "linktetx" }}</a></p>
+			<p>Office: <a href="{{ .Get "link" }}">{{ .Get "linktext" }}</a></p>
 		{{ end -}}		
 	</div>
 </div>
