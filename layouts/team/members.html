@@ -28,6 +28,7 @@
 		{{ end -}}
 		
 		{{ else -}}
+		 {{ .Content }}
 		<div class="row mt-0 posts">		
 		{{ range sort .Pages "Params.order" "asc" -}}
 		  <div class="post col-12 col-lg-6 mt-3 mb-3">
