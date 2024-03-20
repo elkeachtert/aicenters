@@ -12,10 +12,6 @@
 		{{ end -}}
 	</div>
 	<div class="col col-12 col-lg-8 txtTwoCol">
-		{{ if .Get "img" -}}
-		{{ partial "img-float" (dict "src" (.Get "img") "caption" (.Get "caption") "alt" (.Get "title") "float" (.Get "float") "copyright" (.Get "copyright")) -}}
-		{{ end -}}
-		
 		{{ if .Get "nofloat" -}}
 		{{ if eq (.Get "nofloat") "true" -}}
 		<div style="clear:both;"></div>
