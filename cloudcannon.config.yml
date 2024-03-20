@@ -738,7 +738,7 @@ _snippets:
       nofloat:
         comment: "non-floating image"
         type: checkbox
-        default: false
+        default: "false"
   
   hugo_txtTwoCol-lg:
     template: hugo_shortcode_named_args
