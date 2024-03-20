@@ -1,8 +1,8 @@
 ---
 _schema: research
-draft: true
+draft: false
 layout:
-order: 1
+order: 5
 title: Unsupervised Learning
 description:
 leader: /team/professors/seidl-thomas/
