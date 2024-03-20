@@ -18,24 +18,24 @@
 			  <p>{{ .Params.position -}}</p>
 			  
 			  {{ if .Params.room -}}
-        <p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Room {{ .Params.room }}</p>	
+        <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Room {{ .Params.room }}</p>	
         {{ end -}}
         
         {{ if .Params.phone -}}
-        <p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;{{ .Params.phone }}</p>	
+        <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;{{ .Params.phone }}</p>	
         {{ end -}}
         
         {{ if .Params.fax -}}
-        <p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-fax"></i>&nbsp;&nbsp;{{ .Params.fax }}</p>	
+        <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-fax"></i>&nbsp;&nbsp;{{ .Params.fax }}</p>	
         {{ end -}}
         
         {{ if .Params.mail -}}
-			  <p class="card-text p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
+			  <p class="p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
 			  {{ end -}}	
 		  </div>
 		  
 		  <div class="col-12 col-lg-3 offset-lg-8 bg-lgray b-red">
-		    <img src="{{ .Params.image }}" alt="Link to {{ .Params.name }}" width="300" height="300"class="img-100 b-green">
+		    <img src="{{ .Params.image }}" alt="{{ .Params.name }}" width="300" height="300"class="img-100 b-green">
 		  </div>
 		 
 		</div>
