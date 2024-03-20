@@ -711,7 +711,7 @@ p.caption {
   	line-height: 18px;
 }
 @media (max-width: 575.98px) {
-	.caption {
+	p.caption {
 		font-size: 12px !important;
 		line-height: 1.2;
 	}
