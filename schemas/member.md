@@ -11,7 +11,7 @@ mail: mailto:mustermann@dbs.ifi.lmu.de
 room: <roomnumber>
 phone: +49 89 2180 91xx
 fax: 
-officeHours:
+officeHours: []
 bio:
 workingGroups:
 ---
