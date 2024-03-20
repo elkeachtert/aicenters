@@ -16,15 +16,18 @@
 			  
 			  <p>{{ .Params.position -}}</p>
 			  
-			  { if .Params.room -}}
+			  {{ if .Params.room -}}
         <p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Room {{ .Params.room }}</p>	
         {{ end -}}
+        
         {{ if .Params.phone -}}
         <p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;{{ .Params.phone }}</p>	
         {{ end -}}
+        
         {{ if .Params.fax -}}
         <p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-fax"></i>&nbsp;&nbsp;{{ .Params.fax }}</p>	
         {{ end -}}
+        
         {{ if .Params.mail -}}
 			  <p class="card-text p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
 			  {{ end -}}	
