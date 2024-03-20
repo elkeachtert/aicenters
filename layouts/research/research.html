@@ -23,6 +23,12 @@
 	   {{ $leaderMap }}
 	   
 	   {{ range $leaderMap -}}
+	   
+	      {{ $leaderurl := strings.TrimRight "/" . }}
+	     {{ $leaderPage := $.Site.GetPage $leaderurl -}}
+	     
+	     leaderPage: {{ $leaderPage -}}
+	   
 	   {{ end -}}
 	
 	{{ range sort .Pages "Params.order" "asc" -}}
