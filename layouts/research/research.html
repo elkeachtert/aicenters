@@ -8,7 +8,7 @@
 	
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
 	  {{ .Content }}
-	</div>
+	
 	  
 	{{ $areas := slice -}}
 	
@@ -26,6 +26,8 @@
 	  {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
 	  {{ $areas = $areas | append $area -}}
 	{{ end -}}
+	
+	</div>
 	
 	{{ partial "sectionCards" (dict "sectionLinks" $areas "title" "Research Areas" ) }}
 
