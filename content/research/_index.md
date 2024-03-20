@@ -1,8 +1,11 @@
 ---
 draft: false
+layout: research
 title: MCML - Research at the Data Mining Lab @LMU
-shorttitle: 'Research Activities '
-description:
+shorttitle: Research Activities
+description: >-
+  Process Mining - Active Learning -Clustering - Limited Labels Learning -
+  Unsupervised Learning - Spatial AI - Knowledge Graphs
 sectionLinks:
   - title: Process Mining
     img: /images/adobestock/AdobeStock_437686397-NaMong-Productions.webp
