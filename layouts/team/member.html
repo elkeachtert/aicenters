@@ -15,20 +15,22 @@
 			  {{ end -}}
 			  
 			  <p>{{ .Params.position -}}</p>
+		  </div>
 		</div>
 		
+	
 		
-		{{ $start_d := "Test" -}}
-		{{ $start_m := "Test" -}}
+	
+		
 		<div class="ratio1 ratio1-1x1">
-<div class="flex-row d-inline-flex align-items-stretch bg-black b-white ms-3" style="position: absolute;">
-	<div class="bg-black ps-3 pe-3 pt-2 pb-2 m-0">
-		<p class="b-red1 p-s bold text-center mb-0">{{ $start_d }}</p>
-		<p class="b-red1 p-s bold text-center mt-0 mb-0 pt-0">{{ $start_m}}</p>
-	</div>
-</div>
-</div>
-<img src="{{ .Params.img }}" alt="Link to {{ .Params.name }}" width="300" height="200" class="img-100 ms-3 pe-3 ps-3 pt-3">
+		  <div class="flex-row d-inline-flex align-items-stretch bg-black b-white ms-3" style="position: absolute;">
+		    <div class="bg-black ps-3 pe-3 pt-2 pb-2 m-0">
+		      <img src="{{ .Params.image }}" alt="Link to {{ .Params.name }}" width="300" height="200" class="img-100 ms-3 pe-3 ps-3 pt-3">
+		    </div>
+		  </div>
+		</div>
+
+
 		
 		
 	</div>
