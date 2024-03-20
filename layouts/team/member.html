@@ -6,7 +6,7 @@
   {{ .Scratch.Set "navname" $navname -}}
 	{{ partial "breadcrumbs.html" . }} 
 	<div class="container-fluid bg-gray"> 
-		<div class="row">
+		<div class="row b-blue">
 			<div class="col-12 col-lg-10 pt-5 bg-lgray b-red">
 			  {{ if eq .Params.academicTitle "<none>" -}}
 			  <h1 class="h2">{{ .Params.firstName }} {{ .Params.name }}</h1>
