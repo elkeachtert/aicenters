@@ -5,7 +5,26 @@
   {{ $navname := print .Params.firstName " " .Params.name -}}
   {{ .Scratch.Set "navname" $navname -}}
 	{{ partial "breadcrumbs.html" . }} 
+	
 	<div class="container-fluid bg-gray"> 
+  <div class="row b-blue">
+	  <div class="col-12 col-lg-10 pt-5 bg-lgray b-red">
+	      hhhjo
+	  </div>
+	 
+	  <div class="col-12 col-lg-7 bg-lgray b-red"> 
+	    hhhjo
+	  </div>
+	  
+	  <div class="col-12 col-lg-3 bg-lgray b-red">
+	     hhhjo
+	  </div>  
+	
+	</div>
+	  
+	
+	
+	
 		<div class="row b-blue">
 			<div class="col-12 col-lg-10 pt-5 bg-lgray b-red">
 			  {{ if eq .Params.academicTitle "<none>" -}}
@@ -62,7 +81,7 @@
 
 		
 		
-	</div>
+	
 	
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
 		<div class="row row-cols-1 mt-0 posts" id="posts">			
