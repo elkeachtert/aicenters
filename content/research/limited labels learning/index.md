@@ -2,7 +2,7 @@
 _schema: research
 draft: false
 layout:
-order: 3
+order: 4
 title: Limited Labels Learning
 description: Learn more about our research Limited Labels Learning.
 leader: /team/professors/seidl-thomas/
