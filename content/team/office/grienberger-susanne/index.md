@@ -13,8 +13,8 @@ room: '154'
 phone: +49 89 2180 9190
 fax: +49 89 2180 9192
 officeHours: >-
-  Tuesday 8 a.m. - 11.30 a.m. and 13 p.m. - 16 p.m. Thursday 8 a.m. - 11.30 a.m.
-  and 13 p.m. - 16 p.m.
+  Tuesday 8 am - 11.30 am and 13 pm - 16 pm Thursday 8 a.m. - 11.30 a.m. and 13
+  p.m. - 16 p.m.
 bio:
 workingGroups:
 ---
