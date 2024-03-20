@@ -6,58 +6,39 @@
   {{ .Scratch.Set "navname" $navname -}}
 	{{ partial "breadcrumbs.html" . }} 
 	
-	<div class="container-fluid bg-gray"> 
-  <div class="row b-blue">
+	<div class="row b-blue">
 	  <div class="col-12 col-lg-10 pt-5 bg-lgray b-red">
-	      hhhjo
-	  </div>
-	 
-	  <div class="col-12 col-lg-8 bg-lgray b-red"> 
-	    hhhjo
-	  </div>
-	  
-	  <div class="col-12 col-lg-4 bg-lgray b-red">
-	     hhhjo
-	  </div>  
-	
-	</div>
-	  
-	
-	
-	
-		<div class="row b-blue">
-			<div class="col-12 col-lg-10 pt-5 bg-lgray b-red">
-			  {{ if eq .Params.academicTitle "<none>" -}}
-			  <h1 class="h2">{{ .Params.firstName }} {{ .Params.name }}</h1>
-			  {{ else -}}
-			  <h1 class="h2">{{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}</h1>
-			  {{ end -}}
-			 </div>
-			 <div class="col-12 col-lg-8 pb-5 bg-lgray b-red"> 
-			  <p>{{ .Params.position -}}</p>
-			  
-			  {{ if .Params.room -}}
-        <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Room {{ .Params.room }}</p>	
-        {{ end -}}
-        
-        {{ if .Params.phone -}}
-        <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;{{ .Params.phone }}</p>	
-        {{ end -}}
-        
-        {{ if .Params.fax -}}
-        <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-fax"></i>&nbsp;&nbsp;{{ .Params.fax }}</p>	
-        {{ end -}}
-        
-        {{ if .Params.mail -}}
-			  <p class="p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
-			  {{ end -}}	
-		  </div>
-		  
-		  <div class="col-12 col-lg-4 bg-lgray b-red">
-		    <img src="{{ .Params.image }}" alt="{{ .Params.name }}" width="300" height="300"class="img-100 b-green">
-		  </div>
-		 
+	    {{ if eq .Params.academicTitle "<none>" -}}
+		  <h1 class="h2">{{ .Params.firstName }} {{ .Params.name }}</h1>
+		  {{ else -}}
+		  <h1 class="h2">{{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}</h1>
+		  {{ end -}}
 		</div>
+		
+		<div class="col-12 col-lg-8 pb-5 bg-lgray b-red"> 
+		  <p>{{ .Params.position -}}</p>
+			  
+		  {{ if .Params.room -}}
+      <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Room {{ .Params.room }}</p>	
+      {{ end -}}
+        
+      {{ if .Params.phone -}}
+      <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;{{ .Params.phone }}</p>	
+      {{ end -}}
+        
+      {{ if .Params.fax -}}
+      <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-fax"></i>&nbsp;&nbsp;{{ .Params.fax }}</p>	
+      {{ end -}}
+        
+      {{ if .Params.mail -}}
+		  <p class="p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
+		  {{ end -}}	
+	  </div>
+		  
+	  <div class="col-12 col-lg-4 bg-lgray b-red">
+	    <img src="{{ .Params.image }}" alt="{{ .Params.name }}" width="300" height="300"class="img-100 b-green">
+	  </div>
+		 
 	</div>
 		
 	
