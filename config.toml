@@ -80,7 +80,7 @@ unsafe="true"
   [[params.navigation.subentry]]
     parent = "team"
     linkto = "/team/mcml/"
-    name = "MCML"
+    name = "Management MCML"
     
   [[params.navigation.subentry]]
     parent = "team"
