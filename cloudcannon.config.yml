@@ -737,7 +737,11 @@ _snippets:
         comment: "appears right before text (optional)"
       nofloat:
         comment: "non-floating image"
-        type: checkbox
+        type: select
+        options:
+          values:
+            - "true"
+            - "false"
         default: "false"
   
   hugo_txtTwoCol-lg:
