@@ -10,31 +10,15 @@
 	  {{ .Content }}
 	</div>
 	  
-	  Pages: {{ .Pages }}
-	  
-	  {{ partial "sectionCards" (dict "sectionLinks" .Params.sectionLinks "title" "Research Areas" ) }}
-	  
-	  
-	  {{ $areas := slice -}}
-	  
-	  
-	  
-	  
-		<div class="row mt-0 posts">		
-		{{ range sort .Pages "Params.order" "asc" -}}
-		   {{ $area := (dict "title" .Params.title "image" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
-		   
-		   {{ $areas = $areas | append $area -}}
-		
-		  <div class="post col-12 col-lg-6 mt-3 mb-3">
-				{{ partial "cardMember" . -}}
-			</div>
-		{{ end -}}
-		</div>
-		
-		{{ partial "sectionCards" (dict "sectionLinks" $areas "title" "Research Areas" ) }}
+	{{ $areas := slice -}}
 	
+	{{ range sort .Pages "Params.order" "asc" -}}
+	  {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
+	  {{ $areas = $areas | append $area -}}
+	{{ end -}}
 	
+	{{ partial "sectionCards" (dict "sectionLinks" $areas "title" "Research Areas" ) }}
+
 </section>
 {{"<!-- Content End -->" | safeHTML}}
 
