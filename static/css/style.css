@@ -1183,6 +1183,11 @@ img.img-logo {
 	width:280px;
 	height: auto;
 }
+@media (max-width: 575.98px) {
+	img.img-logo {
+	width:200px;
+	}
+}
 
 img.img-partner {
 	width: 100%;
