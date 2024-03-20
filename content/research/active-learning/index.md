@@ -1,6 +1,7 @@
 ---
 _schema: research
 draft: false
+order: 2
 layout:
 title: Active Learning
 description: Learn more about our research on Active Learning.
