@@ -707,6 +707,9 @@ _snippets:
         - editor_key: img
           type: string
           optional: true
+        - editor_key: nofloat
+          type: string
+          optional: true
     _inputs:
       title:
         type: textarea
@@ -732,6 +735,10 @@ _snippets:
       img:
         type: image
         comment: "appears right before text (optional)"
+      nofloat:
+        comment: "non-floating image"
+        type: checkbox
+        default: false
   
   hugo_txtTwoCol-lg:
     template: hugo_shortcode_named_args
