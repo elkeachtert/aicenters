@@ -9,15 +9,15 @@
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
 	  {{ .Content }}
 	  
-	  hallo
 	
 	  
 	{{ $areas := slice -}}
 	
 	{{ $scratch := newScratch -}}
 	{{ range sort .Pages "Params.order" "asc" -}}
-	  {{ $page := $.GetPage .Params.leader -}}
-	  page: {{ $page }}
+	
+	  {{ $page := $.Site.GetPage .Params.leader -}}
+	  page: {{ $page }} <br>
 	  {{ $scratch.SetInMap "leaders" .Params.leader .Params.leader -}}
 	{{ end -}}
 	
