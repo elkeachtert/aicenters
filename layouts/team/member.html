@@ -6,8 +6,8 @@
   {{ .Scratch.Set "navname" $navname -}}
 	{{ partial "breadcrumbs.html" . }} 
 	
-	<div class="row b-blue">
-	  <div class="col-12 col-lg-10 pt-5 bg-lgray b-red">
+	<div class="row">
+	  <div class="col-12 col-lg-10 pt-5 bg-lgray">
 	    {{ if eq .Params.academicTitle "<none>" -}}
 		  <h1 class="h2">{{ .Params.firstName }} {{ .Params.name }}</h1>
 		  {{ else -}}
@@ -15,7 +15,7 @@
 		  {{ end -}}
 		</div>
 		
-		<div class="col-12 col-lg-8 pb-5 bg-lgray b-red"> 
+		<div class="col-12 col-lg-8 pb-5 bg-lgray"> 
 		  <p>{{ .Params.position -}}</p>
 			  
 		  {{ if .Params.room -}}
@@ -35,7 +35,7 @@
 		  {{ end -}}	
 	  </div>
 		  
-	  <div class="col-12 col-lg-4 bg-lgray b-red">
+	  <div class="col-12 col-lg-4 bg-lgray">
 	    <img src="{{ .Params.image }}" alt="{{ .Params.name }}" width="300" height="300"class="img-100 b-green">
 	  </div>
 		 
