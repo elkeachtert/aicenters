@@ -13,4 +13,4 @@ sectionLinks:
 
 {{< teaser txt="<p>The Munich Center for Machine Learning (MCML) is a joint initiative of leading researchers of Ludwig-Maximilians-Universität München and Technische Universität München.</p><p>MCML is established with permanent institutional funding from the Federal Ministry of Education and Research and the State of Bavaria.</p>" >}}
 
-{{< txtTwoCol title="Learn more about MCML" txt1="" >}}
+{{< txtTwoCol title="Learn more about MCML" txt1="<p>Visit the website of the Munich Center for Machine Learning.</p>" link="www.mcml.ai" linktext="" img="/images/logos/MCML_Logo_cropped.jpg" >}}
