@@ -18,7 +18,7 @@
 	  </div>
 	  
 	  <div class="row">
-	    <div class="col col-9 bg-lgray mb-n5"> 
+	    <div class="col col-9 bg-red mb-n5"> 
 	      <p>{{ .Params.position -}}</p>
 			  
 		    {{ if .Params.room -}}
@@ -37,11 +37,10 @@
 		    <p class="p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
 		    {{ end -}}	
 	    </div>
-	  
-	  
-	  <div class="col col-6 col-lg-3 bg-lgray pb-5">
-	    <img src="{{ .Params.image }}" alt="{{ .Params.name }}" width="300" height="300"class="img-member img-100 b-green">
-	  </div>
+	    
+	    <div class="col col-6 col-lg-3 bg-lgray pb-5">
+	      <img src="{{ .Params.image }}" alt="{{ .Params.name }}" width="300" height="300"class="img-member img-100 b-green">
+	    </div>
 	</div>
 	    
 	
