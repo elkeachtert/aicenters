@@ -12,7 +12,7 @@ mail: mailto:grienberger@dbs.ifi.lmu.de
 room: '154'
 phone: +49 89 2180 9190
 fax: +49 89 2180 9192
-officeHours: 
+officeHours: []
 bio:
 workingGroups:
 ---
