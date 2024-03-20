@@ -21,14 +21,12 @@
 	   {{ end -}}
 	   
 	   {{ $leaderMap := $scratch.Get "leaders" -}}	
-	   {{ $leaderMap }}}<br>
 	   
 	   {{ range $leaderMap -}}
 	      {{ $leader := . -}}
 	   
 	      {{ $leaderurl := strings.TrimRight "/" $leader }}
 	      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
-	      leaderPage: {{ $leaderPage -}}<br>
 	     
 	     {{ $areas := slice -}}
 	     {{ range $pages -}}
@@ -39,15 +37,8 @@
 	     {{ end -}}
 	     
 	     {{ partial "sectionCards" (dict "sectionLinks" $areas "title" $leaderPage.Params.name ) }}
-	     
-	   
 	   {{ end -}}
 	
-	
-	
-	
-	
-
 </section>
 {{"<!-- Content End -->" | safeHTML}}
 
