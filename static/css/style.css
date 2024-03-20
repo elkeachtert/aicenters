@@ -14,9 +14,10 @@
   --mcmldblue: #001c32; /*rgb(0, 28, 50);*/
   --mcmlturquoise: #00ebb5; 
   --mcmlpurple: #8c78ff; 
-  --mcmlgray: #5f5f5f;
+  --mcmlgray: #e4e4e4; 
   --mcmlmgray: #a4a4a4;
   --lmugreen: #00883a;
+  --lmugray: #F5F5F5;
 }
 
 .mgray {
@@ -48,7 +49,7 @@
 }
 
 .bg-lgray {
-	background-color: var(--mcmlgray);
+	background-color: var(--lmugray);
 }
 
 .bg-white-opac {
