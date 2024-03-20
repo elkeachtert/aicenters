@@ -705,7 +705,7 @@ _snippets:
           type: string
           optional: true
         - editor_key: img
-          type: image
+          type: string
           optional: true
     _inputs:
       title:
@@ -723,6 +723,15 @@ _snippets:
           indent: true
           horizontalrule: true
           link: true
+      link:
+        type: url
+        comment: "link for linked button (appears right at the end - optional)"
+      linktext:
+        type: text
+        comment: "text for linked button (optional, default is 'Learn More')"
+      img:
+        type: image
+        comment: "appears right before text (optional)"
   
   hugo_txtTwoCol-lg:
     template: hugo_shortcode_named_args
