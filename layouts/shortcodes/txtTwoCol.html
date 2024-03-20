@@ -14,7 +14,7 @@
 		  <p class="mt-1 caption gray">{{ .Get "caption" }}</p>
 		  {{ end -}}
 	</div>
-	<div class="col col-12 col-lg-8 txtTwoCol mt-3">
+	<div class="col col-12 col-lg-8 txtTwoCol mt-md-3">
 		{{ partial "myMarkdownify" (dict "txt" (.Get "txt1")) }}
 		{{ if .Get "link" -}}
 		{{ partial "learnMore" (dict "link" (.Get "link") "text" (.Get "linktext") "size" ("medium")) -}}
