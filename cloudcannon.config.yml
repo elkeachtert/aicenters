@@ -58,6 +58,22 @@ collections_config:
       member:
         path: schemas/member.md
         
+  mcml:
+    path: content/team/mcml
+    output: true
+    icon: person
+    schema: member
+    create:
+      path: '{name|lowercase}-{firstName|lowercase}/index.md'
+      _inputs:
+        name:
+          comment: Use the last name here
+        firstName:
+          comment: Use the first name here
+    schemas:
+      member:
+        path: schemas/member.md
+        
   scientists:
     path: content/team/scientists
     output: true
