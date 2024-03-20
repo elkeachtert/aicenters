@@ -3,7 +3,7 @@ _schema: research
 draft: false
 layout:
 order: 5
-title: Knowledge-Graphs
+title: Knowledge Graphs
 description: Learn more about our research on Knowledge Graphs.
 leader: /team/professors/tresp-volker/
 image: /images/logos/tresp-lab.webp
