@@ -12,7 +12,8 @@
 	  
 	  Pages: {{ .Pages }}
 	  
-	  {{ partial "sectionCards" .Pages -}}
+	  {{ partial "sectionCards" (dict "sectionLinks" .Params.sectionLinks "title" "Research Areas" ) }}
+	  
 	  
 		<div class="row mt-0 posts">		
 		{{ range sort .Pages "Params.order" "asc" -}}
