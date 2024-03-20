@@ -7,8 +7,9 @@
 	{{ partial "makeTitle.html" . }}	
 	
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
-	  {{ if eq .Type "members" -}}
 	  {{ .Pages }}
+	  
+	  {{ if eq .Type "members" -}}
 	  {{ range sort (where .Pages "Params.show" "ne" false) "Params.order" "asc" -}}
 		<div class="row mt-0 posts">			
 			<div class="post col-12 mt-3 mb-3">
