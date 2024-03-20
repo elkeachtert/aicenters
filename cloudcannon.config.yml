@@ -734,7 +734,74 @@ _snippets:
         comment: "text for linked button (optional, default is 'Learn More')"
       img:
         type: image
-        comment: "appears right before text (optional)"
+        comment: "appears left under h2 (optional)"
+      copyright:
+        type: text
+        comment: "copyright for image (optional)"
+        
+  hugo_txtTwoCol_Contact:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: 
+      - key: title
+      - "Text Two Colums (h2 Title)"
+      subtext: 
+        - key: text
+        - "(left column title h2, right column text)"
+    picker_preview:
+      gallery:
+        image: /examples/txtTwoColh2.png
+        text: "Text Two Colums (h2 Title)"
+    definitions:
+      shortcode_name: txtTwoColContact
+      named_args:
+        - editor_key: title
+          type: string
+        - editor_key: address
+          source_key: txt1
+          type: string
+        - editor_key: phone
+          type: string
+        - editor_key: fax
+          type: string
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: linktext
+          type: string
+          optional: true
+        - editor_key: img
+          type: string
+          optional: true
+        - editor_key: copyright
+          type: string
+          optional: true
+    _inputs:
+      title:
+        type: textarea
+        comment: "appears left in <h2>"
+      address:
+        type: html
+        comment: "appears right in large font"
+        options:
+          bold: true
+          format: p h3 h4 h5 h6
+          subscript: true
+          superscript: true
+      phone:
+        type: text
+      fax:
+        type: text
+      link:
+        type: url
+        comment: "link to office"
+      linktext:
+        type: text
+        comment: "text for link to office"
+      img:
+        type: image
+        comment: "appears left under h2 (optional)"
       copyright:
         type: text
         comment: "copyright for image (optional)"
