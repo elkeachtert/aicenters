@@ -328,6 +328,8 @@ _inputs:
     type: text 
   mail: 
     type: url  
+  officeHours:
+    type: text
   bio: 
     type: textarea
     comment: "Short biography"
