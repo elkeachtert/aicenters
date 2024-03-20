@@ -11,6 +11,8 @@ position: Former head of group
 mail: mailto:kriegel@dbs.ifi.lmu.de
 room: '159'
 phone: +49 89 2180 9302
+officeHours:
+  -
 bio:
 workingGroups:
 ---
