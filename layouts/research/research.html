@@ -10,6 +10,7 @@
 	  {{ .Content }}
 	  
 	  
+	  {{ $pages := sort .Pages "Params.order" "asc" -}}
 	  
 	  {{ $scratch := newScratch -}}
 	    {{ range sort .Pages "Params.order" "asc" -}}
@@ -20,7 +21,7 @@
 	   {{ end -}}
 	   
 	   {{ $leaderMap := $scratch.Get "leaders" -}}	
-	   {{ $leaderMap }}
+	   {{ $leaderMap }}}<br>
 	   
 	   {{ range $leaderMap -}}
 	      {{ $leader := . -}}
@@ -30,7 +31,7 @@
 	      leaderPage: {{ $leaderPage -}}<br>
 	     
 	     {{ $areas := slice -}}
-	     {{ range sort .Pages "Params.order" "asc" -}}
+	     {{ range $pages -}}
 	       {{ if eq .Params.leader $leader }}
 	         {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
 	         {{ $areas = $areas | append $area -}}
