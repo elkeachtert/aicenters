@@ -16,7 +16,7 @@
 	      {{ $leaderurl := strings.TrimRight "/" .Params.leader }}
 	      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
 	      
-	      {{ $scratch.SetInMap "leaders" "$leaderPage.Params.order" .Params.leader -}}
+	      {{ $scratch.SetInMap "leaders" (string $leaderPage.Params.order) .Params.leader -}}
 	   {{ end -}}
 	   
 	   {{ $leaderMap := $scratch.Get "leaders" -}}	
