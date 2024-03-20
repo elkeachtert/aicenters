@@ -7,14 +7,14 @@
 	{{ partial "breadcrumbs.html" . }} 
 	<div class="container-fluid bg-gray"> 
 		<div class="row">
-			<div class="col-12 col-lg-10 pt-5 bg-lgray">
+			<div class="col-12 col-lg-10 pt-5 bg-lgray b-red">
 			  {{ if eq .Params.academicTitle "<none>" -}}
 			  <h1 class="h2">{{ .Params.firstName }} {{ .Params.name }}</h1>
 			  {{ else -}}
 			  <h1 class="h2">{{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}</h1>
 			  {{ end -}}
 			 </div>
-			 <div class="col-12 col-lg-8 bg-lgray"> 
+			 <div class="col-12 col-lg-8 bg-lgray b-red"> 
 			  <p>{{ .Params.position -}}</p>
 			  
 			  {{ if .Params.room -}}
@@ -34,7 +34,7 @@
 			  {{ end -}}	
 		  </div>
 		  
-		  <div class="col-12 col-lg-4 offset-lg-8 bg-lgray">
+		  <div class="col-12 col-lg-4 offset-lg-8 bg-lgray b-red">
 		    <img class="img-100" src="{{ .Params.image }}" alt="Link to {{ .Params.name }}" width="300" height="300" class="img-100 ms-3 pe-3 ps-3 pt-3">
 		  </div>
 		 
