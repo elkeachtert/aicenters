@@ -698,21 +698,21 @@ footer .footer-bottom-right {
 
 
 /* copyright, caption */	
-.copyright  {
+p.copyright  {
 	color: gray;
 	text-align:left;
-	font-size: x-small;
+	font-size: x-small !important;
 	line-height: 15px;
 }
 
-.caption {
+p.caption {
 	color: gray;
-  	font-size: 14px;
+  	font-size: 14px !important;
   	line-height: 18px;
 }
 @media (max-width: 575.98px) {
 	.caption {
-		font-size: 12px;
+		font-size: 12px !important;
 		line-height: 1.2;
 	}
 }
