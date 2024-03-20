@@ -329,7 +329,7 @@ _inputs:
   mail: 
     type: url  
   officeHours:
-    type: text
+    type: textarea
   bio: 
     type: textarea
     comment: "Short biography"
