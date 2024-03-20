@@ -1,4 +1,4 @@
-Fco_snippets_imports:
+_snippets_imports:
   hugo: false
 paths:
   data: data
@@ -329,9 +329,9 @@ _inputs:
   mail: 
     type: url  
   officeHours:
-    type: textarea
+    type: array
   bio: 
-    type: textarea
+    type: html
     comment: "Short biography"
   workingGroups: 
     type: array
