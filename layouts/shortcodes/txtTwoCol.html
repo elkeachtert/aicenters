@@ -2,7 +2,7 @@
 	<div class="col col-12 col-lg-4 pe-lg-4 txtTwoCol">
 		<h2 id="{{ .Get "id" }}">{{ .Get "title" | markdownify }}</h2>
 		{{ if .Get "img" -}}
-		  <img class="img-100" src="{{ .Get "img" }}" alt="{{ .Get "title" }}" width="300" height="200"><br>
+		  <img class="img-100" src="{{ .Get "img" }}" alt="{{ .Get "title" }}" width="300" height="200">
 		  {{ if .Get "copyright" -}}
 		  <p class="pt-0 pb-0 mb-0 copyright">&copy;{{ .Get "copyright" }}</p>
 		  {{ end -}}
@@ -12,12 +12,6 @@
 		{{ end -}}
 	</div>
 	<div class="col col-12 col-lg-8 txtTwoCol">
-		{{ if .Get "nofloat" -}}
-		{{ if eq (.Get "nofloat") "true" -}}
-		<div style="clear:both;"></div>
-		{{ end -}}
-		{{ end -}}
-		
 		{{ partial "myMarkdownify" (dict "txt" (.Get "txt1")) }}
 		
 		<div style="clear:both;"></div>

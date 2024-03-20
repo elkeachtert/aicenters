@@ -710,9 +710,6 @@ _snippets:
         - editor_key: copyright
           type: string
           optional: true
-        - editor_key: nofloat
-          type: string
-          optional: true
     _inputs:
       title:
         type: textarea
@@ -741,14 +738,6 @@ _snippets:
       copyright:
         type: text
         comment: "copyright for image (optional)"
-      nofloat:
-        comment: "non-floating image"
-        type: select
-        options:
-          values:
-            - "true"
-            - "false"
-          default: "false"
   
   hugo_txtTwoCol-lg:
     template: hugo_shortcode_named_args
