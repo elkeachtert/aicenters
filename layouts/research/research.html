@@ -9,7 +9,7 @@
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
 	  {{ .Content }}
 	  
-	  {{ $areas := slice -}}
+	  
 	  
 	  {{ $scratch := newScratch -}}
 	    {{ range sort .Pages "Params.order" "asc" -}}
@@ -23,22 +23,29 @@
 	   {{ $leaderMap }}
 	   
 	   {{ range $leaderMap -}}
+	      {{ $leader := . -}}
 	   
-	      {{ $leaderurl := strings.TrimRight "/" . }}
-	     {{ $leaderPage := $.Site.GetPage $leaderurl -}}
+	      {{ $leaderurl := strings.TrimRight "/" $leader }}
+	      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
+	      leaderPage: {{ $leaderPage -}}<br>
 	     
-	     leaderPage: {{ $leaderPage -}}
+	     {{ $areas := slice -}}
+	     {{ range sort .Pages "Params.order" "asc" -}}
+	       {{ if eq .Params.leader $leader }}
+	         {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
+	         {{ $areas = $areas | append $area -}}
+	       {{ end -}}
+	     {{ end -}}
+	     
+	     {{ partial "sectionCards" (dict "sectionLinks" $areas "title" "Research Areas" ) }}
+	     
 	   
 	   {{ end -}}
 	
-	{{ range sort .Pages "Params.order" "asc" -}}
-	  {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
-	  {{ $areas = $areas | append $area -}}
-	{{ end -}}
 	
 	</div>
 	
-	{{ partial "sectionCards" (dict "sectionLinks" $areas "title" "Research Areas" ) }}
+	
 
 </section>
 {{"<!-- Content End -->" | safeHTML}}
