@@ -3,7 +3,7 @@ _schema: research
 draft: false
 layout:
 title: Process Mining
-description:
+description: Learn more about our research on Process Mining.
 leader: /team/professors/seidl-thomas/
 image: /images/adobestock/AdobeStock_437686397-NaMong-Productions.webp
 copyright: NaMong Productions - stock.adobe.com
