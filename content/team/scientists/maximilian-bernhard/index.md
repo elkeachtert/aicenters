@@ -3,8 +3,8 @@ _schema: member
 draft: true
 layout: member
 order: 1
-name: Maximilian
-firstName: Bernhard
+name: Bernhard
+firstName: Maximilian
 academicTitle: <none>
 image: /images/members/nn.webp
 position: Research Assistant
