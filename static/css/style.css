@@ -175,6 +175,8 @@ body {
   letter-spacing: 0em;
   font-weight: 400;
   color: var(--mcmlblack);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 @media (max-width: 575.98px) {
   body {
