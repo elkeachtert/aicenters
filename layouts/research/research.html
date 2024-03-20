@@ -22,7 +22,8 @@
 	   {{ $leaderMap := $scratch.Get "leaders" -}}	
 	   {{ $leaderMap }}
 	   
-	   {{ range sort .Pages "Params.order" "asc" -}}
+	   {{ range $leaderMap -}}
+	   {{ end -}}
 	
 	{{ range sort .Pages "Params.order" "asc" -}}
 	  {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
