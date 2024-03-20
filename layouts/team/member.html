@@ -8,6 +8,11 @@
 	
 	<div class="row">
 	  <div class="col col-lg-10 pt-5 bg-lgray">
+	    {{ if eq .Params.academicTitle "<none>" -}}
+	    <h1 class="h2">{{ .Params.firstName }} {{ .Params.name }}</h1>
+		  {{ else -}}
+		  <h1 class="h2">{{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}</h1>
+		  {{ end -}}
 	    
 	  </div>
 	</div>
