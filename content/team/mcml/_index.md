@@ -12,7 +12,3 @@ sectionLinks:
 {{< txtTwoCol title="Learn more about" txt1="<p>Visit the website of the Munich Center for Machine Learning.</p>" link="www.mcml.ai" linktext="" img="/images/logos/MCML_Logo_cropped.jpg" copyright="" nofloat=true >}}
 
 {{< txtTwoCol title="" txt1="" link="" linktext="" img="" copyright="" nofloat="" >}}
-
-{{< img-float src="/images/logos/MCML_Logo_cropped.jpg" caption="" copyright="" alt="" float="left" size="normal" >}}
-
-{{< clearFloat >}}
