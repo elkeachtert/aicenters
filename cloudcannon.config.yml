@@ -707,6 +707,9 @@ _snippets:
         - editor_key: img
           type: string
           optional: true
+        - editor_key: copyright
+          type: string
+          optional: true
         - editor_key: nofloat
           type: string
           optional: true
@@ -735,6 +738,9 @@ _snippets:
       img:
         type: image
         comment: "appears right before text (optional)"
+      copyright:
+        type: text
+        comment: "copyright for image (optional)"
       nofloat:
         comment: "non-floating image"
         type: select
@@ -742,7 +748,7 @@ _snippets:
           values:
             - "true"
             - "false"
-        default: "false"
+          default: "false"
   
   hugo_txtTwoCol-lg:
     template: hugo_shortcode_named_args
