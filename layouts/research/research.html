@@ -9,21 +9,15 @@
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
 	  {{ .Content }}
 	  
-	
+	  {{ $areas := slice -}}
 	  
-	{{ $areas := slice -}}
-	
-	{{ $scratch := newScratch -}}
-	{{ range sort .Pages "Params.order" "asc" -}}
-	
-	  {{ $url := strings.TrimRight "/" .Params.leader }}
-	
-	  {{ $page := $.Site.GetPage $url -}}
-	  {{ $page2 := $.Site.GetPage "/team/professors/matthias-schubert" -}}
-	  page: {{ $page }} <br>
-	   page2: {{ $page2 }} <br>
-	  {{ $scratch.SetInMap "leaders" .Params.leader .Params.leader -}}
-	{{ end -}}
+	  {{ $scratch := newScratch -}}
+	    {{ range sort .Pages "Params.order" "asc" -}}
+	      {{ $leaderurl := strings.TrimRight "/" .Params.leader }}
+	      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
+	      
+	      {{ $scratch.SetInMap "leaders" $leaderurl $leaderPage.Params.order -}}
+	   {{ end -}}
 	
 	{{ $leaderMap := $scratch.Get "leaders" -}}	
 	{{ $leaderMap }}
