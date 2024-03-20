@@ -698,6 +698,15 @@ _snippets:
         - editor_key: text
           source_key: txt1
           type: string
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: linktext
+          type: string
+          optional: true
+        - editor_key: img
+          type: image
+          optional: true
     _inputs:
       title:
         type: textarea
