@@ -17,6 +17,35 @@
 	    </div>
 	  </div>
 	  
+	  <div class="col col-12 pb-5 bg-lgray"> 
+	  <div class="row">
+	    <div class="col col-12 col-lg-9 pb-5 bg-lgray"> 
+	      <p>{{ .Params.position -}}</p>
+			  
+		    {{ if .Params.room -}}
+        <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Room {{ .Params.room }}</p>	
+        {{ end -}}
+        
+        {{ if .Params.phone -}}
+        <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;{{ .Params.phone }}</p>	
+        {{ end -}}
+        
+        {{ if .Params.fax -}}
+        <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-fax"></i>&nbsp;&nbsp;{{ .Params.fax }}</p>	
+        {{ end -}}
+        
+        {{ if .Params.mail -}}
+		    <p class="p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
+		    {{ end -}}	
+	    </div>
+	  </div>
+	  </div>
+	  <div class="row">
+	    <div class="col col-12 col-lg-3 bg-lgray">
+	    <img src="{{ .Params.image }}" alt="{{ .Params.name }}" width="300" height="300"class="img-100 b-green">
+	  </div>
+	  </div>
+	  
 	  <div class="row">
 	    <div class="col col-12 col-lg-9 pb-5 bg-lgray"> 
 	      <p>{{ .Params.position -}}</p>
