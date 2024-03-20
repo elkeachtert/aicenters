@@ -1,6 +1,6 @@
 ---
 _schema: member
-draft: true
+draft: false
 layout: member
 order: 1
 name: Bernhard
