@@ -1,7 +1,7 @@
 ---
 draft: false
 layout: members
-order: 3
+order: 4
 title: Data Mining Lab @LMU - Scientists
 shorttitle: Scientists
 description: >-
