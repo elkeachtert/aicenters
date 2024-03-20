@@ -1,6 +1,6 @@
 ---
 _schema: research
-draft: true
+draft: false
 layout:
 order: 1
 title: Spatial AI
