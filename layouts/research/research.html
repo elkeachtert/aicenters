@@ -10,6 +10,8 @@
 	  
 	  {{ .Content }}
 	  
+	  Pages: {{ .Pages }}
+	  
 		<div class="row mt-0 posts">		
 		{{ range sort .Pages "Params.order" "asc" -}}
 		{{ . }}
