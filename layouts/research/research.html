@@ -16,11 +16,13 @@
 	      {{ $leaderurl := strings.TrimRight "/" .Params.leader }}
 	      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
 	      
-	      {{ $scratch.SetInMap "leaders" $leaderPage.Params.order .Params.leader -}}
+	      {{ $scratch.SetInMap "leaders" "$leaderPage.Params.order" .Params.leader -}}
 	   {{ end -}}
-	
-	{{ $leaderMap := $scratch.Get "leaders" -}}	
-	{{ $leaderMap }}
+	   
+	   {{ $leaderMap := $scratch.Get "leaders" -}}	
+	   {{ $leaderMap }}
+	   
+	   {{ range sort .Pages "Params.order" "asc" -}}
 	
 	{{ range sort .Pages "Params.order" "asc" -}}
 	  {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
