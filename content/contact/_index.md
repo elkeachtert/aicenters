@@ -4,7 +4,7 @@ title: Data Mining Lab @ LMU - Contact
 shorttitle: Contact
 description: Contact details of the Data Mining Lab @ LMU
 ---
-{{< teaser txt="<p>The offices of the Data Mining Lab are located on the 2nd floor of the Institute of Computer Science at LMU Munich. </p><p>We are located in the immediate vicinity of the Chinese Tower in Munich's most beautiful park, the English Garden. Please use the map on the bottom to navigate to us.</p><p>We look forward to hear from you!</p><p><strong>We look forward to hear from you!</strong></p>" >}}
+{{< teaser txt="<p>The offices of the Data Mining Lab are located on the 2nd floor of the Institute of Computer Science at LMU Munich. </p><p>We are located in the immediate vicinity of the Chinese Tower in Munich's most beautiful park, the English Garden. Please use the map on the bottom to navigate to us.</p><p><strong>We look forward to hear from you!</strong></p>" >}}
 
 {{< txtTwoColContact title="Get in touch with us!" txt1="<p>Ludwig-Maximilians-Universität München<br />Institut für Informatik<br />Lehrstuhl für Datenbanksysteme und Data Mining<br />Oettingenstraße 67<br />80538 München, Germany</p>" phone="+49 89 2180-9190" fax="+49 89 2180-9192" link="/team/office/grienberger-susanne/" linktext="Susanne Grienberger" img="/images/adobestock/AdobeStock_280340771-Zvonimir.webp" copyright="Zvonimir - stock.adobe.com" >}}
 
