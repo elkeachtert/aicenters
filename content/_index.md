@@ -7,7 +7,7 @@ researchAreas:
   - Active Learning
   - Clustering
   - Limited Labels Learning
-  - Unsupervised Learnig
+  - Unsupervised Learning
   - Spatial AI
   - Knowledge Graphs
 sectionLinks:
