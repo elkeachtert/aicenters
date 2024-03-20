@@ -10,17 +10,6 @@ sectionlinks:
 bgImg: /images/background/research.webp
 video: /images/background/videos/research
 ---
-{{< teaser txt=`
-<p>Examples for our research areas include the following topics:</p>
-<ul>
-<p><li>Clustering</li></p>
-<p><li>Process Mining</li></p>
-<p><li>Remote Sensing & Imaging</li></p>
-<p><li>Graph Machine Learning</li></p>
-<p><li>Machine Learning with limited labeled data</li></p>
-<p><li>(Deep) Reinforcement Learning</li></p>
-<p><li>Machine Learning with Knowledge Basis</li></p>
-<p><li>Semi-/Supervised Natural-Language-Processing</li></p>
-</ul>` >}}
+{{< teaser txt=`<p>By our research activities we advance <strong>data science, data mining, machine learning, artificial intelligence</strong> and <strong>database technologies</strong>.</p><p>We aim at better supporting the analysis of huge and complex data sets from various domains including engineering, business, humanities, life sciences, etc. Both our fundamental research and our applied research inspire and support each other.</p>` >}}
 
 {{< quoteRight name="Prof. Thomas Seidl" position="Director" quote="Munich is a unique location with excellent science and strong industry and, in particular, with many areas of application for AI, such as medicine. MCML provides new impetus for science in Munich." img="/images/members/seidl.webp" copyright="" size="" border="none" >}}
