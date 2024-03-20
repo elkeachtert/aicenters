@@ -12,6 +12,16 @@
 	  
 	{{ $areas := slice -}}
 	
+	{{- $scratch := newScratch -}}
+	{{ range sort .Pages "Params.order" "asc" -}}
+	  {{ $scratch.SetInMap "leaders" .Params.leader .Params.leader -}}
+	{{ end -}}
+	
+	{{ $leaderMap := $scratch.Get "leaders" -}}	
+	{{ $leaders -}}
+	
+	{{ $pages := sort .Pages "Params.leader" "asc" - }}
+	
 	{{ range sort .Pages "Params.order" "asc" -}}
 	  {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
 	  {{ $areas = $areas | append $area -}}
