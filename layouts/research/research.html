@@ -16,7 +16,9 @@
 	{{ $scratch := newScratch -}}
 	{{ range sort .Pages "Params.order" "asc" -}}
 	
-	  {{ $page := $.Site.GetPage .Params.leader -}}
+	  {{ $url = strings.TrimRight "\" .Params.leader }}
+	
+	  {{ $page := $.Site.GetPage $url -}}
 	  {{ $page2 := $.Site.GetPage "/team/professors/matthias-schubert" -}}
 	  page: {{ $page }} <br>
 	   page2: {{ $page2 }} <br>
