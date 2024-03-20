@@ -14,11 +14,13 @@
 	
 	{{- $scratch := newScratch -}}
 	{{ range sort .Pages "Params.order" "asc" -}}
+	  {{ $page := $.GetPage .Params.leader -}}
+	  page: {{ $page -}}
 	  {{ $scratch.SetInMap "leaders" .Params.leader .Params.leader -}}
 	{{ end -}}
 	
 	{{ $leaderMap := $scratch.Get "leaders" -}}	
-	{{ $leaderMap -}}
+	{{ $leaderMap }}
 	
 	{{ $pages := sort .Pages "Params.leader" "asc" - }}
 	
