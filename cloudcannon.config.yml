@@ -90,6 +90,8 @@ collections_config:
     _inputs:
       leader:
         type: url
+      link:
+        comment: "External link to research site"
 
   news:
     path: content/news
@@ -135,11 +137,7 @@ collections_config:
         type: text
         comment: "Copyright for teaser image"
       link:
-        hidden: internal
         comment: "External link to news item"
-      internal:
-        default: false
-        comment: "internal news, i.e. news with own content"
       date:
         type: date
         comment: "Publishing date"
