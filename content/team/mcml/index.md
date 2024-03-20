@@ -7,4 +7,3 @@ shorttitle: Management MCML
 description: Get to know the Management team of MCML at the Data Mining Lab @LMU.
 sectionLinks:
 ---
-<p class="copyright"></p>
