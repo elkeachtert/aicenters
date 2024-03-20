@@ -698,20 +698,20 @@ footer .footer-bottom-right {
 
 
 /* copyright, caption */	
-p.copyright  {
+.copyright  {
 	color: gray;
 	text-align:left;
 	font-size: x-small;
 	line-height: 15px;
 }
 
-p.caption {
+.caption {
 	color: gray;
   	font-size: 14px;
   	line-height: 18px;
 }
 @media (max-width: 575.98px) {
-	p.caption {
+	.caption {
 		font-size: 12px;
 		line-height: 1.2;
 	}
