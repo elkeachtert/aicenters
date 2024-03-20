@@ -85,7 +85,7 @@ collections_config:
         title:
           comment: Title of research area 
     schemas:
-      member:
+      research:
         path: schemas/research.md
     _inputs:
       leader:
