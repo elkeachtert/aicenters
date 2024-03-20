@@ -1,6 +1,7 @@
 ---
 _schema: research
 draft: false
+order: 1
 layout:
 title: Process Mining
 description: Learn more about our research on Process Mining.
