@@ -280,7 +280,7 @@ _inputs:
     comment: "Description of the page (used for seo). Max. 150 characters!"
     
   layout:
-    hidden: true
+    hiddena: true
   
   order:
     hidden: true
