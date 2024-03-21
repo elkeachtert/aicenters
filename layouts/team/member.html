@@ -56,6 +56,8 @@
       <h2>Short Bio</h2>
       <div class="col-xl-9 col-lg-12">
         {{ partial "myMarkdownify" (dict "txt" .Params.bio) }}
+        {{ if .Params.website -}}
+        {{ end -}}
       </div>
       {{ end -}}
     </div>
