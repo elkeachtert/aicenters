@@ -61,8 +61,11 @@
     </div>
   </div>
   
-  {{ $projects := (sort (where site.RegularPages "Section" "research") ".Params.order" "asc") -}}
+  {{ $projects := where site.RegularPages "Section" "research" -}}
   {{ $projects }} <br>
+  
+  {{ $myProjects := (sort (where $projects "leader" .Permalink) ".Params.order" "asc") -}}
+  {{ $myProjects }} <br>
   
 
   <div class="container-fluid"> 
