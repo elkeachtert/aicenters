@@ -73,7 +73,7 @@
   {{ $areas := slice -}}
   {{ range $myProjects -}}
     
-    {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" $link "text" "" ) -}}
+    {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
     {{ $areas = $areas | append $area -}}
   {{ end -}}
   
