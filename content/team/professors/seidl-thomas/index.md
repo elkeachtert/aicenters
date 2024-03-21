@@ -22,9 +22,9 @@ bio: >-
   the Munich School of Data Science @Helmholtz, TUM and LMU (MuDS) and of the
   Elite Master program in Data Science at LMU.</p><p>MCML Director, spokeperson,
   LRZ Director, KI-Rat, etc.</p>
-workingGroups:
-  - link: /research/active-learning/
 ---
+---
+
 ## Recent activities
 
 * [Nature index on AI](https://www.nature.com/collections/hchdibjchj "Nature index on AI") -- [Interview in advertisement feature of LMU (English)](https://www.nature.com/articles/d42473-020-00366-8 "Nature")
