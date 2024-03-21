@@ -67,6 +67,11 @@
   {{ $leader }} <br>
   {{ $projects }} <br>
   
+  {{ range $project -}}
+    Ptitle {{ .title }}<br>
+    PLeader {{ .leader }}<br>
+  {{ end -}}
+  
   {{ $myProjects := (sort (where $projects "leader" $leader) ".Params.order" "asc") -}}
   {{ $myProjects }} <br>
   
@@ -82,7 +87,7 @@
 
   <div class="container-fluid"> 
     <div class="row">    
-      <div class="col col-12">
+      <div class="col-xl-9 col-lg-12">
         {{ .Content }}
       </div>
     </div>
