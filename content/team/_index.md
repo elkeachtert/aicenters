@@ -11,5 +11,3 @@ description: >-
 ---
 {{< teaser txt=`
 <p>Our team at is a dynamic and highly motivated group consisting of international experts in the fields of Artificial Intelligence and Machine Learning, as well as talents in organization and communication.</p>` >}}
-
-&nbsp;
