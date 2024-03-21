@@ -18,4 +18,3 @@ bio: >-
   head of the chair. He has been Professor Emeritus since April 2014.</p>
 workingGroups:
 ---
-{{< learnMoreBtn link="http://fogo.dbs.ifi.lmu.de/cms/Hans-Peter_Kriegel" text="Further Information" size="medium" >}}
