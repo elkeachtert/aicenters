@@ -2,6 +2,7 @@
 draft: false
 type: members
 layout: members
+navname: Team
 title: Data Mining Lab @LMU - Our Team
 shorttitle: Our Team
 description: >-
