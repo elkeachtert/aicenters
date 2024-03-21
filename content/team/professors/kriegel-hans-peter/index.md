@@ -12,7 +12,10 @@ mail: mailto:kriegel@dbs.ifi.lmu.de
 room: '159'
 phone: +49 89 2180 9302
 officeHours:
-bio:
+bio: >-
+  <p>Hans-Peter Kriegel has been a Professor of Informatics at
+  Ludwig-Maximilians-Universitaet München, Germany, since 1991 and the former
+  head of the chair. He has been Professor Emeritus since April 2014.</p>
 workingGroups:
 ---
 {{< learnMoreBtn link="http://fogo.dbs.ifi.lmu.de/cms/Hans-Peter_Kriegel" text="Further Information" size="medium" >}}
