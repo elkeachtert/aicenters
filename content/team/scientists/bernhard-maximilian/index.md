@@ -13,7 +13,7 @@ room: F 109
 phone: +49 89 2180 9329
 fax:
 officeHours:
-  - 'by appointment '
+  - by appointment
 bio:
 workingGroups:
 ---
