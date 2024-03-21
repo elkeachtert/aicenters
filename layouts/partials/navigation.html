@@ -1,15 +1,5 @@
 {{ $baseURL := .Site.BaseURL }} 
 {{"<!-- Navigation Start -->" | safeHTML}}
-<section class="mb-3 mt-1 pb-5 pt-1">	
-<div class="container-fluid">
-
-Page: {{ .Pages }}
-{{ range .Pages -}}
-		    Page: {{ .Title }}
-		    {{ end -}}
-		  </div>
-</section>
-
 <section class="mb-3 mt-1 pb-5 pt-1">			    
 	<nav class="navbar navbar-expand-xl fixed-top navbar-light bg-white pt-2 mt-0 pb-0 mb-0">
 		<a class="navbar-brand" href="{{ .Site.BaseURL }}">
@@ -54,3 +44,13 @@ Page: {{ .Pages }}
 	</nav>
 </section>
 {{"<!-- Navigation End -->"| safeHTML}}
+
+<section class="mb-3 mt-1 pb-5 pt-1">	
+<div class="container-fluid">
+
+Page: {{ .Pages }}
+{{ range .Pages -}}
+		    Page: {{ .Title }}
+		    {{ end -}}
+		  </div>
+</section>
