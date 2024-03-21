@@ -12,12 +12,7 @@
 		
 		<div class="collapse navbar-collapse" id="navbarNav">
 		  <ul class="navbar-nav ms-auto">
-		    {{ range .Pages -}}
-		    Page: {{ .Title }}
-		    {{ end -}}
-	    	  
-	    	  
-				{{ range .Site.Params.navigation.entry -}}
+		  {{ range .Site.Params.navigation.entry -}}
 				{{ if eq .hasChildren "true" -}}	
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="{{.linkto}}" id="navbarDropdown-{{ .id }}" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">{{ .name }}</a>
@@ -50,7 +45,7 @@
 
 {{ $home := .Site.GetPage "/" }}
 
-Pages: {{ $home.Pages }}
+Pages: {{ $home.Pages }}<br>
 {{ range $home.Pages -}}
 		    Page: {{ .Title }}<br>
 		    {{ end -}}
