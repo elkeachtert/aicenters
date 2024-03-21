@@ -47,7 +47,14 @@
 
 Pages: {{ $home.Pages }}<br>
 {{ range $home.Pages -}}
-		    Page: {{ .Title }}<br>
-		    {{ end -}}
-		  </div>
+	Page: {{ .Title }} {{ .Params.shortTitle }} {{ .Params.navname }}<br>
+{{ end -}}
+  </div>
 </section>
+
+
+
+
+
+
+
