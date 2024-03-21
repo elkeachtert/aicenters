@@ -13,7 +13,7 @@ room: F 111
 phone: +49 89 2180 9331
 fax:
 officeHours:
-  - time: by appointment
+  - by appointment
 bio: >-
   <p>Verena is Science Manager for Communication at MCML.</p><p>She is the
   central contact person for all PR activities and public relations of MCML. She
