@@ -104,6 +104,10 @@ collections_config:
     _inputs:
       leader:
         type: url
+      members:
+        type: array
+      members[*]:
+        txpe: url
       link:
         comment: "External link to research site"
 
