@@ -12,6 +12,8 @@ mail: mailto:bernhard@dbs.ifi.lmu.de
 room: F 109
 phone: +49 89 2180 9329
 fax:
+officeHours:
+  - 'by appointment '
 bio:
 workingGroups:
 ---
