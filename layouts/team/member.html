@@ -54,7 +54,7 @@
 	  <div class="row b-red">
 	    {{ if .Params.bio -}}
 	    <div class="col col-12 b-green">
-	      {{ partial myMarkdownify .Params.bio }}
+	      {{ partial "myMarkdownify" .Params.bio }}
 	    </div>
 	    {{ end -}}
 	    
