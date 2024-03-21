@@ -54,8 +54,8 @@
     <div class="row">
       <h2>Short Bio</h2>
       {{ if .Params.bio -}}
-      <div class="col col-12">
-        {{ partial "teaser" (dict "txt" .Params.bio) }}
+      <div class="col-xl-9 col-lg-12 teaser">
+        {{ partial "myMarkdownify" (dict "txt" .Params.bio) }}
       </div>
       {{ end -}}
       
