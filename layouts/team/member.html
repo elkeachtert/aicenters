@@ -70,8 +70,9 @@
   {{ $myProjects := (sort (where $projects "leader" $leader) ".Params.order" "asc") -}}
   {{ $myProjects }} <br>
   
+  {{ $areas := slice -}}
   {{ range $myProjects -}}
-  {{ emd -}}
+  {{ end -}}
   
 
   <div class="container-fluid"> 
