@@ -1,6 +1,7 @@
 ---
 draft: false
 title: Data Mining Lab @LMU - Imprint and Disclaimer
+navname: Imprint
 shorttitle: Imprint and Disclaimer
 displayInNavigation: false
 description: Imprint and Disclaimer of the website of the Data Mining Lab @LMU.
