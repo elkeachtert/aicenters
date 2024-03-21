@@ -58,7 +58,15 @@
         {{ partial "myMarkdownify" (dict "txt" .Params.bio) }}
       </div>
       {{ end -}}
-      
+    </div>
+  </div>
+  
+  {{ $projects := (sort (where site.RegularPages "Section" "research") ".Params.order" "asc") -}}
+  {{ $projects }} <br>
+  
+
+  <div class="container-fluid"> 
+    <div class="row">    
       <div class="col col-12">
         {{ .Content }}
       </div>
