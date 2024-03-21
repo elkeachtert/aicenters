@@ -74,7 +74,10 @@
   {{ range $myProjects -}}
     
     {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" $link "text" "" ) -}}
+    {{ $areas = $areas | append $area -}}
   {{ end -}}
+  
+  {{ partial "sectionCards" (dict "sectionLinks" $areas "title" "Research Areas" ) ) }}
   
 
   <div class="container-fluid"> 
