@@ -1,8 +1,6 @@
 ---
 draft: false
-title: MCML - News around the Munich Center for Machine Learning
+title: Data Mining Lab @LMU - News
 shorttitle: News
-description: >-
-  Current news in an around the Munich Center for Machine Learning, LMU, and TU
-  Munich.
+description: Current news in an around the Data Mining Lab @LMU.
 ---
