@@ -5,7 +5,7 @@ layout: member
 order: 1
 name: Bernhard
 firstName: Maximilian
-academicTitle: <none>
+academicTitle: '-none-'
 image: /images/members/nn.webp
 position: Research Assistant
 mail: mailto:bernhard@dbs.ifi.lmu.de
