@@ -22,16 +22,16 @@ bio: >-
   numerous programme committees and scientific boards and co-chairs the LMU Data
   Science Lab, the ZD.B Innovation Lab, the Munich School of Data Science
   @Helmholtz, TUM and LMU (MuDS), and the Elite Master Programme in Data Science
-  at LMU.</p><p>Thomas Seidl is spokesperson and one of four directors of the
-  Munich Center for Machine Learning (MCML), which is one of six national AI
-  Competence Centers. The MCML is permanently funded by the AI strategy of the
-  German and Bavarian governments and brings together the leading ML researchers
-  from LMU Munich, TU Munich and associated institutions.</p><p>As an advisor,
-  he has supported the Bavarian state government in various roles, including as
-  a member of the Bavarian AI Council. He has been represented on various
-  steering committees of the German Informatics Society, and since the founding
-  of the German Data Science Society in 2019, he has been a member of its
-  advisory board.</p>
+  at LMU.</p><p>Thomas Seidl is spokesperson and one of four directors of the <a
+  href="www.mcml.ai">Munich Center for Machine Learning</a> (MCML), which is one
+  of six national AI Competence Centers. The MCML is permanently funded by the
+  AI strategy of the German and Bavarian governments and brings together the
+  leading ML researchers from LMU Munich, TU Munich and associated
+  institutions.</p><p>As an advisor, he has supported the Bavarian state
+  government in various roles, including as a member of the Bavarian AI Council.
+  He has been represented on various steering committees of the German
+  Informatics Society, and since the founding of the German Data Science Society
+  in 2019, he has been a member of its advisory board.</p>
 ---
 ---
 
