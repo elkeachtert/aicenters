@@ -26,7 +26,6 @@ workingGroups:
 * [Keynote on "Data Mining on Process Data" at ICPM 2020 (Youtube, English)](https://www.youtube.com/watch?v=njA1_eDEERs&amp;ab_channel=ICPM2020 "ICPM 2020 Keynote")
 * [Keynote on "Künstliche Intelligenz verstehen" at High-Tech Summit Bayern 2020 (Youtube, German)](https://youtu.be/IvUnAGZcgZM?t=936 "KI verstehen") [(or here)](https://youtu.be/pzo4RxH4eag?t=1885)
 * More than 300 scientific publications, see my profiles at [DBLP](https://dblp.org/pid/s/ThomasSeidl1.html "DBLP") and at [Google Scholar](https://scholar.google.com/citations?user=0fOi9KkAAAAJ "Google Scholar").
-* &nbsp;
 
 ## Governing and advisory functions, memberships
 
