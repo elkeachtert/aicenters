@@ -15,3 +15,4 @@ officeHours:
 bio:
 workingGroups:
 ---
+{{< learnMoreBtn link="http://fogo.dbs.ifi.lmu.de/cms/Hans-Peter_Kriegel" text="Further Information" size="medium" >}}
