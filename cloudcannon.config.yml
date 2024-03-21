@@ -92,15 +92,15 @@ collections_config:
     path: content/research
     output: true
     icon: psychology
-    schema: research
+    schema: researchArea
     create:
       path: '{title|lowercase}/index.md'
       _inputs:
         title:
           comment: Title of research area 
     schemas:
-      research:
-        path: schemas/research.md
+      researchArea:
+        path: schemas/researchArea.md
     _inputs:
       leader:
         type: url
