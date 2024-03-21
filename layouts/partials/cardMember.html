@@ -14,7 +14,7 @@
       {{ end -}}
     </div>
     <div class="col-8 card-body ps-lg-5 pb-0 mb-0">
-      {{ if eq .Params.academicTitle "<none>" -}}
+      {{ if eq .Params.academicTitle "-none-" -}}
       <p class="h3 card-title bold pt-2 mb-1" style="line-height:1.1;">{{ .Params.firstName}} {{ .Params.name }}</p>
       {{ else -}}
       <p class="h3 card-title bold pt-2 mb-1" style="line-height:1.1;">{{ .Params.academicTitle }} {{ .Params.firstName}} {{ .Params.name }}</p>
