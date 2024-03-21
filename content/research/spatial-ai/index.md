@@ -1,5 +1,5 @@
 ---
-_schema: research
+_schema: researchArea
 draft: false
 layout:
 order: 0
