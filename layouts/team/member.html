@@ -63,7 +63,7 @@
   
   {{ $projects := where site.RegularPages "Section" "research" -}}
   {{ $projects }} <br>
-  {{ $leader := print .Permalink "/" -}}
+  {{ $leader := strings.TrimRight "/" .Permalink -}}
   {{ $leader }} <br>
   {{ $projects }} <br>
   
@@ -72,6 +72,8 @@
   
   {{ $areas := slice -}}
   {{ range $myProjects -}}
+    
+    {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" $link "text" "" ) -}}
   {{ end -}}
   
 
