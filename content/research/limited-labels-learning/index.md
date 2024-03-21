@@ -1,7 +1,7 @@
 ---
 _schema: research
 draft: false
-layout:
+layout: researchArea
 order: 4
 title: Limited Labels Learning
 description: Learn more about our research on Limited Labels Learning.

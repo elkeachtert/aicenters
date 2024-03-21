@@ -2,7 +2,7 @@
 _schema: research
 draft: false
 order: 1
-layout:
+layout: researchArea
 title: Process Mining
 description: Learn more about our research on Process Mining.
 leader: /team/professors/seidl-thomas/

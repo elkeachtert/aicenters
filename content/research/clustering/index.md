@@ -1,7 +1,7 @@
 ---
 _schema: research
 draft: false
-layout:
+layout: researchArea
 order: 3
 title: Clustering
 description: Learn more about our research on Clustering.
