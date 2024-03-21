@@ -68,8 +68,8 @@
   {{ $projects }} <br>
   
   {{ range $project -}}
-    Ptitle {{ .title }}<br>
-    PLeader {{ .leader }}<br>
+    Ptitle {{ .Title }}<br>
+    PLeader {{ .Params.leader }}<br>
   {{ end -}}
   
   {{ $myProjects := (sort (where $projects "leader" $leader) ".Params.order" "asc") -}}
