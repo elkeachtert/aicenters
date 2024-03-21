@@ -48,7 +48,8 @@
 <section class="mb-3 mt-1 pb-5 pt-1">	
 <div class="container-fluid">
 
-Page: {{ .Pages }}
+{{ .Site.GetPage "/" }}
+Pages: {{ .Pages }}
 {{ range .Pages -}}
 		    Page: {{ .Title }}
 		    {{ end -}}
