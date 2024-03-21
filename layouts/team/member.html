@@ -68,7 +68,11 @@
   {{ $myProjects := (sort (where $projects ".Params.leader" .Permalink ) ".Params.order" "asc") -}}
   {{ $areas := slice -}}
   {{ range $myProjects -}}
-    {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
+    {{ $link := .Permalink -}}
+      {{ if .Params.link -}}
+      {{ $link = .Params.link -}}
+      {{ end -}}
+    {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" $link "text" "" ) -}}
     {{ $areas = $areas | append $area -}}
   {{ end -}}
   
