@@ -52,8 +52,8 @@
   
   <div class="container-fluid"> 
     <div class="row">
-      <h2>Short Bio</h2>
       {{ if and .Params.bio (ne .Params.bio "") -}}
+      <h2>Short Bio</h2>
       <div class="col-xl-9 col-lg-12">
         {{ partial "myMarkdownify" (dict "txt" .Params.bio) }}
       </div>
