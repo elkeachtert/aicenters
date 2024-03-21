@@ -1,7 +1,7 @@
 ---
 draft: false
 layout: research
-title: MCML - Research at the Data Mining Lab @LMU
+title: Data Mining Lab @LMU - Research Areas
 shorttitle: Research Areas
 description: >-
   Process Mining - Active Learning -Clustering - Limited Labels Learning -
