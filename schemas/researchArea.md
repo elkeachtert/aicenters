@@ -1,12 +1,10 @@
 ---
 draft: true
-layout: researchArea
+layout: 
 order: 1
 title: Title of working group
 description: 
-teaser:
 leader: 
-members:
 image:
 copyright:
 link:
