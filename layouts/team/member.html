@@ -72,7 +72,7 @@
     PLeader {{ .Params.leader }}<br>
   {{ end -}}
   
-  {{ $myProjects := (sort (where $projects ".Params.leader" $leader) ".Params.order" "asc") -}}
+  {{ $myProjects := (sort (where $projects ".Params.leader" .Permalink ) ".Params.order" "asc") -}}
   {{ $myProjects }} <br>
   
   {{ $areas := slice -}}
