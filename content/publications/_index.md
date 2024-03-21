@@ -1,6 +1,6 @@
 ---
-draft       : false
-title       : "MCML - Publications by our members"
-shorttitle  : "Publications by our Members"
-description : "Listing of Publications by the members of the Munich Center for Machine Learning."
+draft: false
+title: Data Mining Lab @LMU - Publications
+shorttitle: Publications
+description: Listing of Publications by the members of the Data Mining Lab @LMU.
 ---
