@@ -24,7 +24,7 @@ bio: >-
   and is the central contact person for all scientists and institutions
   involved. </p><p>She studied Informatics at LMU Munich and subsequently
   received her PhD there. Before joining MCML, she was coordinator of the
-  ArcheoBioCenter at LMU Munich for many years.</p>
+  ArchaeoBioCenter at LMU Munich for many years.</p>
 workingGroups:
   - link:
 ---
