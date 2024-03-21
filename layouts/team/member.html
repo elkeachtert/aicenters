@@ -2,26 +2,25 @@
 {{ partial "navigation.html" . }}
 
 <section class="list-content" id="section">	
-  {{ $navname := print .Params.firstName " " .Params.name -}}
-  {{ .Scratch.Set "navname" $navname -}}
-	{{ partial "breadcrumbs.html" . }} 
-	
-	<div class="container-fluid"> 
-	  <div class="row">
-	    <div class="col col-12 col-lg-10 pt-3 bg-lgray">
-	      {{ if eq .Params.academicTitle "<none>" -}}
-	      <h1 class="h2">{{ .Params.firstName }} {{ .Params.name }}</h1>
-		    {{ else -}}
-		    <h1 class="h2">{{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}</h1>
-		    {{ end -}}
-	    </div>
-	  </div>
-	  
-	  <div class="row">
-	    <div class="col col-7 col-lg-9 bg-lgray mb-n5"> 
-	      <p>{{ .Params.position -}}</p>
-			  
-		    {{ if .Params.room -}}
+{{ $navname := print .Params.firstName " " .Params.name -}}
+{{ .Scratch.Set "navname" $navname -}}
+{{ partial "breadcrumbs.html" . }} 
+  <div class="container-fluid"> 
+    <div class="row">
+      <div class="col col-12 col-lg-10 pt-3 bg-lgray">
+        {{ if eq .Params.academicTitle "-none-" -}}
+        <h1 class="h2">{{ .Params.firstName }} {{ .Params.name }}</h1>
+        {{ else -}}
+        <h1 class="h2">{{ .Params.academicTitle }} {{ .Params.firstName }} {{ .Params.name }}</h1>
+        {{ end -}}
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col col-7 col-lg-9 bg-lgray mb-n5"> 
+        <p>{{ .Params.position -}}</p>
+        
+        {{ if .Params.room -}}
         <p class="p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Room {{ .Params.room }}</p>	
         {{ end -}}
         
@@ -34,37 +33,36 @@
         {{ end -}}
         
         {{ if .Params.mail -}}
-		    <p class="p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
-		    {{ end -}}	
-		    
-		    {{ if .Params.officeHours -}}
-		    <p class="p-s mb-1 mt-3 pt-0 bold">Office Hours:</p>	
-		    {{ range .Params.officeHours -}}
-		    <p class="p-s mb-1 mt-1">{{ . }}</p>
-		    {{ end -}}	
-		    {{ end -}}	
-	    </div>
-	    
-	    <div class="col col-5 col-lg-3 ps-0 pe-0 bg-lgray d-flex align-items-end">
-	      <img src="{{ .Params.image }}" alt="{{ .Params.name }}" width="300" height="300"class="img-member">
-	    </div>
+        <p class="p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
+        {{ end -}}	
+        
+        {{ if .Params.officeHours -}}
+        <p class="p-s mb-1 mt-3 pt-0 bold">Office Hours:</p>	
+        {{ range .Params.officeHours -}}
+        <p class="p-s mb-1 mt-1">{{ . }}</p>
+        {{ end -}}	
+        {{ end -}}	
+      </div>
+      
+      <div class="col col-5 col-lg-3 ps-0 pe-0 bg-lgray d-flex align-items-end">
+        <img src="{{ .Params.image }}" alt="{{ .Params.name }}" width="300" height="300"class="img-member">
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid"> 
+    <div class="row b-red">
+      {{ if .Params.bio -}}
+      <div class="col col-12 b-green">
+        {{ partial "myMarkdownify" (dict "txt" .Params.bio) }}
+      </div>
+      {{ end -}}
+      
+      <div class="col col-12">
+        {{ .Content }}
+      </div>
+    </div>
 	</div>
-	
-	<div class="container-fluid"> 
-	  <div class="row b-red">
-	    {{ if .Params.bio -}}
-	    <div class="col col-12 b-green">
-	      {{ partial "myMarkdownify" (dict "txt" .Params.bio) }}
-	    </div>
-	    {{ end -}}
-	    
-	    <div class="col col-12">
-	      {{ .Content }}
-	    </div>
-	 </div>
-	</div>
-	    
-	
 </section>
 {{"<!-- Content End -->" | safeHTML}}
 
