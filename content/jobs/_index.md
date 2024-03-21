@@ -1,12 +1,8 @@
 ---
 draft: false
-title: 'MCML - Opportunities: Funding, Education, Training, Jobs'
-shorttitle: >-
-  Jobs at <br>DAT<span class="green">A</span> M<span class="green">I</span>NING
-  LAB
-description: >-
-  The MCML offers a range of opportunities to help you achieve your goals and
-  make a meaningful impact in the field of ML and AI.
+title: Data Mining Lab @LMU - Jobs
+shorttitle: Jobs
+description: Check out the current job offers at the Data Mining Lab @LMU.
 sectionlinks:
   - funding
   - education
