@@ -16,8 +16,7 @@ officeHours:
   - by appointment
 bio: >-
   <p>Volker Tresp is a guest professor for Machine Learning at our chair.
-  </p><p><strong>Learn more about Volker Tresp on his personal
-  website.</strong></p>
+  </p><p>Learn more about Volker Tresp on his personal website.</p>
 website: http://www.dbs.ifi.lmu.de/~tresp
 ---
-{{< learnMoreBtn link="https://www.dbs.ifi.lmu.de/~tresp/" text="Further Information" size="medium" >}}
+---
