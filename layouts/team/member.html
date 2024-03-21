@@ -62,9 +62,10 @@
   </div>
   
   {{ $projects := where site.RegularPages "Section" "research" -}}
+  {{ $leader := strings.Append "/" .Permalink }}
   {{ $projects }} <br>
   
-  {{ $myProjects := (sort (where $projects "leader" .Permalink) ".Params.order" "asc") -}}
+  {{ $myProjects := (sort (where $projects "leader" $leader) ".Params.order" "asc") -}}
   {{ $myProjects }} <br>
   
 
