@@ -29,21 +29,21 @@ bio: >-
   </p><p>He revolutionized steel processing by pioneering a novel <a
   href="http://books.nips.cc/papers/files/nips04/0659.pdf">Bayesian neural
   network approach</a> that cleverly integrated real-world data with simulated
-  data from a prior solution.*** Renowned AI researcher, Geoff Hinton, aptly
-  termed this amalgamation of prior data as "Priors without Prejudice." In 1994
+  data from a prior solution. Renowned AI researcher, Geoff Hinton, aptly termed
+  this amalgamation of prior data as "Priors without Prejudice." </p><p>In 1994
   he was a visiting scientist at the <a href="http://web.mit.edu/">Massachusetts
   Institute of Technology</a> in the <a href="http://cbcl.mit.edu/">Center for
   Biological and Computational Learning</a>, working with the teams of Tomaso
   Poggio and Michael I. Jordan. He was co-editor of <a
   href="https://mitpress.mit.edu/books/advances-neural-information-processing-systems-13">Advances
-  in Neural Information Processing Systems 13</a>. In 2011, he was appointed
-  professor in informatics at the LMU, where he teaches a course on machine
-  learning and where he is leading a second research team. He is known for his
-  work on Bayesian machine learning, in particular the <a
+  in Neural Information Processing Systems 13</a>. </p><p>In 2011, he was
+  appointed professor in informatics at the LMU, where he teaches a course on
+  machine learning and where he is leading a second research team. He is known
+  for his work on Bayesian machine learning, in particular the <a
   href="https://www.dbs.ifi.lmu.de/~tresp/papers/bcm6.pdf">Bayesian Committee
   Machine</a> and his work on <a
   href="https://www.dbs.ifi.lmu.de/~tresp/papers/multitaskGP_final.pdf">hierarchical
-  learning with Gaussian processes</a>. The <a
+  learning with Gaussian processes</a>. </p><p>The <a
   href="https://www.dbs.ifi.lmu.de/~tresp/papers/uai06_relation.pdf">IHRM</a>,
   the <a
   href="https://www.dbs.ifi.lmu.de/~tresp/papers/gplink_nips06.pdf">SRM</a>, <a
@@ -55,7 +55,7 @@ bio: >-
   temporal knowledge graphs, and scene graph analysis. The work on the <a
   href="https://www.dbs.ifi.lmu.de/~tresp/papers/New_Tensor_Brain-final.pdf">Tensor
   Brain</a> reflects his interest in mathematical models for cognition and
-  neuroscience. In 2020, he became a Fellow of the <a
+  neuroscience. </p><p>In 2020, he became a Fellow of the <a
   href="https://ellis.eu/">European Laboratory for Learning and Intelligent
   Systems</a> (ELLIS). As co-director (with Kristian Kersting and Paolo
   Frasconi), he leads the ELLIS program "Semantic, Symbolic and Interpretable
