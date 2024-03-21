@@ -15,7 +15,9 @@ officeHours:
   - by appointment
 bio:
 ---
-### **Research Areas:**
+---
+
+## **Research Areas**
 
 * Sequential Planning and Reinforcement Learning
 * Spatial Analytics in Dynamic Environments
@@ -23,15 +25,15 @@ bio:
 
 ---
 
-### **Publication Profiles:**
+## **Publication Profiles**
 
-* [<u>Google Scholar</u>](https://scholar.google.com/citations?user=GEnUYjQAAAAJ&amp;hl=de)
-* [<u>DBLP</u>](https://dblp.org/pid/77/4813.html)
-* [<u>Semantic Scholar</u>](https://www.semanticscholar.org/author/Matthias-Schubert/39403212)
+* [Google Scholar](https://scholar.google.com/citations?user=GEnUYjQAAAAJ&amp;hl=de)
+* [DBLP](https://dblp.org/pid/77/4813.html)
+* [Semantic Scholar](https://www.semanticscholar.org/author/Matthias-Schubert/39403212)
 
 ---
 
-### **Regular Master Courses**
+## **Regular Master Courses**
 
-* [<u>Artificial Intelligence for Games</u>](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/art22/index.html "Artificial Intelligence for Games")
-* [<u>Deep Learning and Artificial Intelligence</u>](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/deep2223/index.html "Deep Learning and Artificial Intellingence")
+* [Artificial Intelligence for Games](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/art22/index.html "Artificial Intelligence for Games")
+* [Deep Learning and Artificial Intelligence](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/deep2223/index.html "Deep Learning and Artificial Intellingence")
