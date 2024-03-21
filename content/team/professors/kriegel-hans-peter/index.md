@@ -16,5 +16,5 @@ bio: >-
   <p>Hans-Peter Kriegel has been a Professor of Informatics at
   Ludwig-Maximilians-Universität München, Germany, since 1991 and the former
   head of the chair. He has been Professor Emeritus since April 2014.</p>
-workingGroups:
+website: http://fogo.dbs.ifi.lmu.de/cms/Hans-Peter_Kriegel
 ---
