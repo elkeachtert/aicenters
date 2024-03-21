@@ -2,7 +2,7 @@
 draft: false
 type: members
 layout: members
-title: MCML - The Team of our Data Mining Lab @LMU
+title: Data Mining Lab @LMU - Our Team
 shorttitle: Our Team
 description: >-
   Get to know the people behind the Data Mining Lab @LMU: Professors, Office,
