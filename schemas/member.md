@@ -14,5 +14,5 @@ fax:
 officeHours: 
  - by appointment
 bio:
-workingGroups:
+website:
 ---

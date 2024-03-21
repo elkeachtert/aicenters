@@ -334,6 +334,8 @@ _inputs:
   bio: 
     type: html
     comment: "Short biography"
+  website:
+    type: url
   workingGroups: 
     type: array
     structures: _structures.workingGroups          
