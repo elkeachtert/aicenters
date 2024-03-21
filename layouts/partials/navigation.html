@@ -11,7 +11,12 @@
 		</button>
 		
 		<div class="collapse navbar-collapse" id="navbarNav">
-	    	<ul class="navbar-nav ms-auto">
+		  <ul class="navbar-nav ms-auto">
+		    {{ range .Pages -}}
+		    Page: {{ .Title }}
+		    {{ end -}}
+	    	  
+	    	  
 				{{ range .Site.Params.navigation.entry -}}
 				{{ if eq .hasChildren "true" -}}	
 				<li class="nav-item dropdown">
