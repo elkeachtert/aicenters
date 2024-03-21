@@ -1,7 +1,7 @@
 ---
 _schema: research
 draft: false
-layout:
+layout: researchArea
 order: 5
 title: Unsupervised Learning
 description: Learn more about our research on Unsupervised Learning.
