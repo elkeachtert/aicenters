@@ -328,7 +328,9 @@ _inputs:
     type: url  
   officeHours:
     type: array
-    structures:  _structures.officeHours       
+  officeHours[*]:
+    type: text
+  
   bio: 
     type: html
     comment: "Short biography"
@@ -354,14 +356,6 @@ _structures:
           text: 
             comment: "Teaser text of section"
             type: textarea
-            
-  officeHours:
-    values:
-      - value:
-          time: 
-        _inputs:
-          time:
-            type: text
             
   workingGroups:
     values:
