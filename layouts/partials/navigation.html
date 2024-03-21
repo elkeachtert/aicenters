@@ -1,12 +1,16 @@
 {{ $baseURL := .Site.BaseURL }} 
 {{"<!-- Navigation Start -->" | safeHTML}}
 <section class="mb-3 mt-1 pb-5 pt-1">	
+<div class="container-fluid">
 
 Page: {{ .Pages }}
 {{ range .Pages -}}
 		    Page: {{ .Title }}
 		    {{ end -}}
-		    
+		  </div>
+</section>
+
+<section class="mb-3 mt-1 pb-5 pt-1">			    
 	<nav class="navbar navbar-expand-xl fixed-top navbar-light bg-white pt-2 mt-0 pb-0 mb-0">
 		<a class="navbar-brand" href="{{ .Site.BaseURL }}">
 			<img class="img-logo ps-3 ps-md-5 pt-2 pb-2 mt-0 mb-0" src="{{ .Site.Params.navigation.logo | absURL }}" width="1970" height="626" alt="MCML Logo and Link to Home">
