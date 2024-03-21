@@ -18,13 +18,12 @@ bio: >-
   data mining and database technologies with application domains in engineering,
   business, life science and humanities yielded more than 300 scientific
   publications so far.</p><p>He serves on many program committees and scientific
-  boards and is co-chair of </p><ul><li><p>LMU Data Science
-  Lab</p></li><li><p>ZD.B Innovation Lab</p></li><li><p>Munich School of Data
-  Science @Helmholtz, TUM and LMU (MuDS)</p></li><li><p>Elite Master program in
-  Data Science at LMU.</p></li></ul><p>Thomas Seidl has been on the board of
-  directors of the <a href="www.lrz.de">Leibniz Supercomputing Center</a> since
-  2017.</p><p>Since 2018 Thomas Seidl is spokesperson and one of four directors
-  of the <a href="www.mcml.ai" title="MCML" target="_blank"
+  boards and is co-chair of the LMU Data Science Lab, the ZD.B Innovation Lab,
+  the Munich School of Data Science @Helmholtz, TUM and LMU (MuDS), and the
+  Elite Master program in Data Science at LMU.</p><p>Thomas Seidl has been on
+  the board of directors of the <a href="www.lrz.de">Leibniz Supercomputing
+  Center</a> since 2017.</p><p>Since 2018 Thomas Seidl is spokesperson and one
+  of four directors of the <a href="www.mcml.ai" title="MCML" target="_blank"
   rel="noopener">Munich Center for Machine Learning</a> (MCML), which is one of
   six national AI Competence Centers.</p><p>MCML is funded on a permanent basis
   by the German and Bavarian government's AI strategy, and brings together the
