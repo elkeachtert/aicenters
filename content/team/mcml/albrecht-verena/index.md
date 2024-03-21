@@ -15,11 +15,12 @@ fax:
 officeHours:
   - by appointment
 bio: >-
-  <p>Verena is Science Manager for Communication at MCML.</p><p>She is the
-  central contact person for all PR activities and public relations of MCML. She
-  received her MSc in Consumer Science at TU Munich. Before joining MCML, she
-  worked at a communications agency, where she gained professional know-how as
-  well as practical experience with the entire range of PR instruments.</p>
+  <p>Verena is Science Manager for Communication at the Munich Center for
+  Machine Learning (MCML).</p><p>She is the central contact person for all PR
+  activities and public relations of MCML. She received her MSc in Consumer
+  Science at TU Munich. Before joining MCML, she worked at a communications
+  agency, where she gained professional know-how as well as practical experience
+  with the entire range of PR instruments.</p>
 workingGroups:
 ---
 {{< learnMoreBtn link="www.mcml.ai" text="MCML" size="medium" >}}
