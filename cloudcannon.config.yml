@@ -328,15 +328,13 @@ _inputs:
     type: url  
   officeHours:
     type: array
+    structures:  _structures.officeHours       
   bio: 
     type: html
     comment: "Short biography"
   workingGroups: 
     type: array
     structures: _structures.workingGroups          
-    preview:
-    text:
-      - key: title
         
 _select_data: {}
 _structures: 
@@ -356,6 +354,14 @@ _structures:
           text: 
             comment: "Teaser text of section"
             type: textarea
+            
+  officeHours:
+    values:
+      - value:
+          time: 
+        _inputs:
+          time:
+            type: text
             
   workingGroups:
     values:
