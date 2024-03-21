@@ -15,12 +15,13 @@ fax:
 officeHours:
   - by appointment
 bio: >-
-  <p>Elke is General Manager of the MCML at LMU Munich.  Together with her
-  colleagues, she is mainly responsible for the administrative management of all
-  activities of the center and is the central contact person for all scientists
-  and institutions involved. </p><p>She studied Informatics at LMU Munich and
-  subsequently received her PhD there. Before joining MCML, she was coordinator
-  of the ArcheoBioCenter at LMU Munich for many years.</p>
+  <p>Elke is General Manager of the Munich Center for Machine Learning at LMU
+  Munich.  Together with her colleagues, she is mainly responsible for the
+  administrative management of all activities of the center and is the central
+  contact person for all scientists and institutions involved. </p><p>She
+  studied Informatics at LMU Munich and subsequently received her PhD there.
+  Before joining MCML, she was coordinator of the ArcheoBioCenter at LMU Munich
+  for many years.</p>
 workingGroups:
   - link:
 ---
