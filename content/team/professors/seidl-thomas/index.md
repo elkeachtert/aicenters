@@ -22,8 +22,9 @@ bio: >-
   Lab</p></li><li><p>ZD.B Innovation Lab</p></li><li><p>Munich School of Data
   Science @Helmholtz, TUM and LMU (MuDS)</p></li><li><p>Elite Master program in
   Data Science at LMU.</p></li></ul><p>Thomas Seidl is spokesperson and one of
-  four directors of the Munich Center for Machine Learning (MCML), which is one
-  of six national AI Competence Centers.</p><p>It is funded on a permanent basis
+  four directors of the <a href="www.mcml.ai" title="MCML" target="_blank"
+  rel="noopener">Munich Center for Machine Learning</a> (MCML), which is one of
+  six national AI Competence Centers.</p><p>MCML is funded on a permanent basis
   by the German and Bavarian government's AI strategy, and brings together the
   leading ML researchers from LMU Munich, TU Munich,  and associated
   institutions.</p><p> Director, spokeperson, LRZ Director, KI-Rat, etc.</p>
