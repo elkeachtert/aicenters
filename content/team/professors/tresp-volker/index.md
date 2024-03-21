@@ -11,6 +11,9 @@ position: Guest professor for Machine Learning
 mail: mailto:tresp@dbs.ifi.lmu.de
 room: F 108
 phone: +49 89 2180 9397
+officeHours:
+  - by appointment
 bio:
 workingGroups:
 ---
+{{< learnMoreBtn link="https://www.dbs.ifi.lmu.de/~tresp/" text="Further Information" size="medium" >}}
