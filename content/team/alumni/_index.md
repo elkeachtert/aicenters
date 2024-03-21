@@ -8,6 +8,10 @@ shorttitle: Alumni
 description: Get to know the Alumni of the Data Mining Lab @LMU.
 sectionLinks:
 ---
+* [Prof. Dr. Hans-Peter Kriegel](http://fogo.dbs.ifi.lmu.de/cms/Hans-Peter_Kriegel) (former head of group)
+
+  &nbsp;
+
 * Kai Aldinger
 * Dr. Evguenia Altareva
 * Dr. Mihael Ankerst
