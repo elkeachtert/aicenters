@@ -12,7 +12,16 @@ mail: mailto:seidl@dbs.ifi.lmu.de
 room: '152'
 phone: +49 89 2180 9191
 officeHours: []
-bio:
+bio: >-
+  <p>Thomas Seidl is professor for Computer Science and head of the Database
+  Systems and Data Mining Chair at LMU Munich.</p><p>His fundamental research on
+  data mining and database technologies with application domains in engineering,
+  business, life science and humanities yielded more than 300 scientific
+  publications so far.</p><p>He serves on many program committees and scientific
+  boards and is co-chair of the LMU Data Science Lab, the ZD.B Innovation Lab,
+  the Munich School of Data Science @Helmholtz, TUM and LMU (MuDS) and of the
+  Elite Master program in Data Science at LMU.</p><p>MCML Director, spokeperson,
+  LRZ Director, KI-Rat, etc.</p>
 workingGroups:
   - link: /research/active-learning/
 ---
