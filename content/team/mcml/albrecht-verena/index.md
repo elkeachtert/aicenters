@@ -23,4 +23,6 @@ bio: >-
   with the entire range of PR instruments.</p>
 workingGroups:
 ---
+**Learn more about MCML!**
+
 {{< learnMoreBtn link="www.mcml.ai" text="MCML" size="medium" >}}
