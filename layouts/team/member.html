@@ -70,7 +70,7 @@
   {{ end -}}
   
   {{ if gt ($areas | len) 0 -}}
-  {{ partial "sectionCards" (dict "sectionLinks" $areas "title" "Research Areas" ) }}
+    {{ partial "sectionCards" (dict "sectionLinks" $areas "title" "Research Areas" "square" "false") }}
   {{ end -}}
   
 
