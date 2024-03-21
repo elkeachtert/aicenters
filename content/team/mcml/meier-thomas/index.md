@@ -13,7 +13,7 @@ room: F 111
 phone: +49 89 2180 9306
 fax:
 officeHours:
-  - 'by appointment '
+  - by appointment
 bio:
 workingGroups:
 ---
