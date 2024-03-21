@@ -36,6 +36,8 @@ workingGroups:
 * [Keynote on "Künstliche Intelligenz verstehen" at High-Tech Summit Bayern 2020 (Youtube, German)](https://youtu.be/IvUnAGZcgZM?t=936 "KI verstehen") [(or here)](https://youtu.be/pzo4RxH4eag?t=1885)
 * More than 300 scientific publications, see my profiles at [DBLP](https://dblp.org/pid/s/ThomasSeidl1.html "DBLP") and at [Google Scholar](https://scholar.google.com/citations?user=0fOi9KkAAAAJ "Google Scholar").
 
+---
+
 ## Governing and advisory functions, memberships
 
 * Board Member, [Institute for Informatics (IfI)](https://www.ifi.lmu.de/ "IfI") at LMU Munich (2016-)
@@ -59,6 +61,8 @@ workingGroups:
 * Reviewer, associate editor or guest editor for international journals, including VLDB Journal, DAMI/DMKD, Machine Learning, etc.
 * Organizer of scientific conferences and workshops: LWDA 2021, SA4PM @ ICPM 2020, GDSD 2018, SISAP 2017, BTW 2015, LWA 2014, KDML 2013, SSTD 2009, BTW 2007, etc.
 
+---
+
 ## Selected projects at LMU Munich (2016-)
 
 * MCML -- Munich Center for Machine Learning, national competence center on AI, funded by BMBF (director, with B. Bischl and D. Cremers)
@@ -67,6 +71,8 @@ workingGroups:
 * Project ReMLAV in DFG SPP RATIO (with H. Schütze, V. Tresp)
 * ZD.B Innovation Lab for students "Big Data Science" (with B. Bischl, D. Kranzlmüller)
 * Industrial Collaborations (Siemens, Allianz, Huawei, IAV, etc.)
+
+---
 
 ## Selected projects at RWTH Aachen University (2002-2016)
 
@@ -77,6 +83,8 @@ workingGroups:
 * DFG SQFD
 * JARA HumTec e-cosmos
 * AIF MachInNet
+
+---
 
 ## Professional positions and education
 
