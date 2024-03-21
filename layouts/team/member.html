@@ -63,12 +63,15 @@
   
   {{ $projects := where site.RegularPages "Section" "research" -}}
   {{ $projects }} <br>
-  {{ $leader := print "/" .Permalink }}
+  {{ $leader := print .Permalink "/" -}}
   {{ $leader }} <br>
   {{ $projects }} <br>
   
   {{ $myProjects := (sort (where $projects "leader" $leader) ".Params.order" "asc") -}}
   {{ $myProjects }} <br>
+  
+  {{ range $myProjects -}}
+  {{ emd -}}
   
 
   <div class="container-fluid"> 
