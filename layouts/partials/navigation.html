@@ -48,9 +48,10 @@
 <section class="mb-3 mt-1 pb-5 pt-1">	
 <div class="container-fluid">
 
-{{ .Site.GetPage "/" }}
-Pages: {{ .Pages }}
-{{ range .Pages -}}
+{{ $home := .Site.GetPage "/" }}
+
+Pages: {{ $home.Pages }}
+{{ range $home.Pages -}}
 		    Page: {{ .Title }}
 		    {{ end -}}
 		  </div>
