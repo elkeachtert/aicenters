@@ -26,8 +26,14 @@
           
           Page: {{ $name }} <br>
           {{ range .Sections -}}
+            {{ $childName := .Title -}}
+            {{ if .Params.navname -}}
+            {{ $childName = .Params.navname -}}
+            {{ else if .Params.shortTitle -}}
+            {{ $childName = .Params.shortTitle -}}
+            {{ end -}}
           
-          Child: {{ . }} <br>
+          Child: {{ $$childName }} <br>
           
           {{ end -}}
         
