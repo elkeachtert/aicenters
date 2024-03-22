@@ -45,8 +45,8 @@
 
 {{ $home := .Site.GetPage "/" }}
 
-Pages: {{ $home.RegularPages }}<br>
-{{ range $home.RegularPages -}}
+Pages: {{ $home.Setions }}<br>
+{{ range $home.Setions -}}
   {{ $name := .Title -}}
   {{ if .Params.navname -}}
   {{ $name = .Params.navname -}}
