@@ -24,7 +24,7 @@
             {{ $name = .Params.shortTitle -}}
           {{ end -}}
           
-          Page: {{ $name }} <br>
+          Page: {{ $name }} - {{ .Type }}<br>
           {{ range (sort .Pages "Params.order" "asc") -}}
             {{ if ne .Params.displayInNavigation false -}}
               {{ $childName := .Title -}}
