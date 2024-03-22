@@ -9,14 +9,8 @@
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
 	  {{ .Content }}
   </div>	  
-	  {{ $sections := where .RegularPages ".Type" "research" -}}
-	  sections: {{ $sections }}
 	  
 	  {{ $pages := sort (where .RegularPages ".Type" "research") "Params.order" "asc" -}}
-	  
-	  {{ range $pages }}
-	  {{ .Type }}<br>
-	  {{ end }}
 	  
 	  {{ $scratch := newScratch -}}
 	    {{ range $pages -}}
