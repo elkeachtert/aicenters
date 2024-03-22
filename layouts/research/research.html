@@ -14,6 +14,10 @@
 	  
 	  {{ $pages := sort .Pages "Params.order" "asc" -}}
 	  
+	  {{ range $pages }}
+	  {{ .Type }}
+	  {{ end }}
+	  
 	  {{ $scratch := newScratch -}}
 	    {{ range $pages -}}
 	      {{ $leaderurl := strings.TrimRight "/" .Params.leader }}
