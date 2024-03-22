@@ -12,7 +12,7 @@
 	  {{ $sections := where .RegularPages ".Type" "research" -}}
 	  sections: {{ $sections }}
 	  
-	  {{ $pages := sort .Pages "Params.order" "asc" -}}
+	  {{ $pages := sort (where .RegularPages ".Type" "research") "Params.order" "asc" -}}
 	  
 	  {{ range $pages }}
 	  {{ .Type }}<br>
