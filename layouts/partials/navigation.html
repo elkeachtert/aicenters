@@ -40,9 +40,16 @@
               {{ end -}}
               </div>
             </li>
+            
+          {{ else -}}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ .Permalink }}">{{ $name }}</a>
+            </li>
           {{ end -}}
-        {{ end -}}
-			{{ end -}}
+				{{ end -}}
+			</ul>
+		
+  
 					
 			
           
