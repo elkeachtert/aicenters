@@ -1,7 +1,7 @@
 ---
 _schema: researchArea
 draft: false
-layout:
+layout: researchArea
 order: 10
 title: Spatial AI
 description: Learn more about our research on Spatial AI.
