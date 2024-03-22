@@ -1,5 +1,6 @@
 ---
 draft: false
+order: 5
 title: Data Mining Lab @LMU - Jobs
 shorttitle: Jobs
 description: Check out the current job offers at the Data Mining Lab @LMU.
