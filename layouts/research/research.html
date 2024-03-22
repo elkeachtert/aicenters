@@ -9,7 +9,7 @@
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
 	  {{ .Content }}
   </div>	  
-	  {{ $sections := where .RegularPages "Type" "researchArea" -}}
+	  {{ $sections := where .RegularPages ".Type" "researchArea" -}}
 	  sections: {{ $sections }}
 	  
 	  {{ $pages := sort .Pages "Params.order" "asc" -}}
