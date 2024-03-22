@@ -24,7 +24,7 @@
           
           {{ if $hasChildren -}}	
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{{ .Permalink }}" id="navbarDropdown-{{ .id }}" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">{{ $name }}</a>
+              <a class="nav-link dropdown-toggle" href="{{ .Permalink }}" id="navbarDropdown-{{ $name }}" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">{{ $name }}</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown-{{ $name }}">
           	    
               {{ range (sort .Pages "Params.order" "asc") -}}
