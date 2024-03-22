@@ -2,7 +2,7 @@
 _schema: researchArea
 draft: false
 layout: researchArea
-order: 5
+order: 20
 title: Knowledge Graphs
 description: Learn more about our research on Knowledge Graphs.
 leader: /team/professors/tresp-volker/
