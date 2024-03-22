@@ -47,7 +47,7 @@
 
 Pages: {{ $home.Sections }}<br>
 {{ range $home.Sections -}}
-  {{ if ne .Params.displayInNavigation false-}}
+  {{ if ne .Params.displayInNavigation false -}}
     {{ $name := .Title -}}
     {{ if .Params.navname -}}
     {{ $name = .Params.navname -}}
