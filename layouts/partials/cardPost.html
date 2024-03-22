@@ -3,77 +3,18 @@
 	
 	<div class="row g-0 pr-3 pl-3 pt-3">
 		<div class="card-body col-12 col-lg-4 pt-0 pb-0">	
-			{{ if $isEvent -}}
-				{{ partial "eventDate" (dict "startDate" .Params.eventDate.start "endDate" .Params.eventDate.end "format" "en") }}	
-				<img src="{{ .Params.img }}" alt="Link to {{ .Params.title }}" width="300" height="200" class="img-100 ms-3 pe-3 ps-3 pt-3">	
-				{{ if .Params.copyright -}}<p class="copyright ms-3 pe-3 ps-3">&#169;{{ .Params.copyright}}</p>
-				{{ else -}}<p class="copyright ms-3 pe-3 ps-3">&nbsp;</p>
-				{{ end -}}
-			{{ else -}}
-				<img src="{{ .Params.img }}" alt="Link to {{ .Params.title }}" width="300" height="200" class="img-100">
-				{{ if .Params.copyright -}}<p class="copyright">&#169;{{ .Params.copyright}}</p>
-				{{ else -}}<p class="copyright">&nbsp;</p>
-				{{ end -}}
+			<img src="{{ .Params.img }}" alt="Link to {{ .Params.title }}" width="300" height="200" class="img-100">
+			{{ if .Params.copyright -}}<p class="copyright">&#169;{{ .Params.copyright}}</p>
+			{{ else -}}<p class="copyright">&nbsp;</p>
 			{{ end -}}
-			
 		</div>
+		
 		<div class="card-body col-12 col-lg-8">
-			{{ if $isEvent -}}
-				<p class="p-s mb-1 gray">
-					{{ .Params.eventType }} &nbsp;&bull;&nbsp; 
-					{{ partial "eventDate" (dict "startDate" .Params.eventDate.start "endDate" .Params.eventDate.end ) }} &nbsp;&bull;&nbsp;	
-					{{ .Params.location }}
-				</p>
-				{{ if not .Params.eventDate.allDay -}}
-					{{ $starttime := .Params.eventDate.start | time.Format ":time_short" -}}
-					{{ $endtime := .Params.eventDate.end | time.Format ":time_short" -}}
-					<p class="p-s gray">
-						<i class="fa-solid fa-clock"></i> {{ $starttime }} - {{ $endtime }} 
-					</p>
-				{{ end -}}
+			<h2 class="h3 mt-3">{{ .Params.Title }}</h2>
 			
-			{{ else -}}
-				<p class="p-s">{{ .Date.Format "02.01.2006" }}</p>
-				{{ if .Params.deadline -}}
-				{{ $deadline := time.Format "02.01.2006" .Params.deadline -}}
-				<p class="p-s">Deadline: {{ $deadline }}</p>
-				{{ end -}}
-			{{ end -}}
-			
-			{{ if eq ($.Scratch.Get "hero") true -}}
-				<h3 class="mt-3">{{ .Params.Title }}</h3>
-			{{ else -}}
-				<h2 class="h3 mt-3">{{ .Params.Title }}</h2>
-			{{ end -}}
 			
 			{{ if .Params.subtitle -}}
-			{{ if eq ($.Scratch.Get "hero") true -}}
-				<h4 class="mt-3">{{ .Params.subtitle }}</h4>
-			{{ else -}}
-				<h3 class="h4">{{ .Params.subtitle | markdownify }} </h3>
-			{{ end -}}
-			
-			{{ else if and $isEvent .Params.speakers -}}
-				{{ $index := 1 -}}
-				{{ $len := .Params.speakers | len -}}
-				{{ if eq ($.Scratch.Get "hero") true -}}
-					<h4>
-					{{ range .Params.speakers -}}
-						{{ .name }}, {{ .affiliation}}
-						{{ if lt $index $len -}}<br>{{ end -}}
-							{{ $index = add $index 1 -}}
-						{{ end -}}
-					</h4>
-				{{ else -}}
-					<h3 class="h4">
-					{{ range .Params.speakers -}}
-						{{ .name }}, {{ .affiliation}}
-						{{ if lt $index $len -}}<br>{{ end -}}
-							{{ $index = add $index 1 -}}
-						{{ end -}}
-					</h3>
-				{{ end -}}
-			{{ end -}}
+			<h3 class="h4">{{ .Params.subtitle | markdownify }} </h3>
 			
 			<p class="card-text">{{ partial "myMarkdownify" (dict "txt" .Params.teaser "truncate" $truncate  ) }}</p>						
 			{{ partial "learnMore" (dict "link" .Permalink "size" "small" "margin" "3" "text" "Read more") -}}
