@@ -18,7 +18,7 @@
       {{ range (sort $home.Sections "Params.order" "asc") -}}
         {{ if ne .Params.displayInNavigation false -}}
           {{ $name := partial "navName" . -}}
-          {{ $hasChildren := gt (.Pages | len) 0 -}}
+          {{ $hasChildren := and (gt (.Pages | len) 0) (ne .Layout "news") -}}
           
           Page: {{ $name }} - {{ .Type }}<br>
           
