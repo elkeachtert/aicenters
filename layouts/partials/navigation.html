@@ -17,12 +17,7 @@
 
       {{ range (sort $home.Sections "Params.order" "asc") -}}
         {{ if ne .Params.displayInNavigation false -}}
-          {{ $name := .Title -}}
-          {{ if .Params.navname -}}
-            {{ $name = .Params.navname -}}
-            {{ else if .Params.shortTitle -}}
-            {{ $name = .Params.shortTitle -}}
-          {{ end -}}
+          {{ $name := partial "navName" . -}}
           
           Page: {{ $name }} - {{ .Type }}<br>
           
