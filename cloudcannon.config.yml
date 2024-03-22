@@ -110,6 +110,9 @@ collections_config:
         txpe: url
       link:
         comment: "External link to research site"
+      teaser:
+        type: html
+        comment: Teaser text (top of page)
 
   news:
     path: content/news
