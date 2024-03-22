@@ -15,7 +15,7 @@
 		    
       {{ $home := .Site.GetPage "/" }}
 
-      {{ range (sort $home.Sections "Params.order" "asc" -}}
+      {{ range (sort $home.Sections "Params.order" "asc") -}}
         {{ if ne .Params.displayInNavigation false -}}
           {{ $name := .Title -}}
           {{ if .Params.navname -}}
