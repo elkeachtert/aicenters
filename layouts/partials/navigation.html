@@ -24,13 +24,13 @@
           
           {{ if $hasChildren -}}	
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{{.linkto}}" id="navbarDropdown-{{ .id }}" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">{{ $name }}</a>
+              <a class="nav-link dropdown-toggle" href="{{ .Permalink }}" id="navbarDropdown-{{ .id }}" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">{{ $name }}</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown-{{ $name }}">
           	    
               {{ range (sort .Pages "Params.order" "asc") -}}
                 {{ if and (ne .Params.displayInNavigation false) (ne .Layout "newsitem") -}}
                   {{ $childName := partial "navName" . -}}
-                  <a class="dropdown-item" href="{{.Permalink}}">{{ $childName }}</a>
+                  <a class="dropdown-item" href="{{ .Permalink }}">{{ $childName }}</a>
           
                   <!--&nbsp;&nbsp;Child: {{ $childName }} - {{ .Type }} - {{ .Layout }} <br>-->
                   {{ if eq .Params.divider true -}}
