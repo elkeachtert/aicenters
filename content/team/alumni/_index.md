@@ -3,6 +3,7 @@ draft: false
 layout:
 order: 5
 show: false
+divider: true
 title: Data Mining Lab @LMU - Alumni
 shorttitle: Alumni
 description: Get to know the Alumni of the Data Mining Lab @LMU.
