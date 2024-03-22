@@ -11,12 +11,11 @@
 		
 		<div class="card-body col-12 col-lg-8">
 			<h2 class="h3 mt-3">{{ .Params.Title }}</h2>
-			
-			
 			{{ if .Params.subtitle -}}
 			<h3 class="h4">{{ .Params.subtitle | markdownify }} </h3>
+			{{ end -}}
 			
-			<p class="card-text">{{ partial "myMarkdownify" (dict "txt" .Params.teaser "truncate" $truncate  ) }}</p>						
+			<p class="card-text">{{ partial "myMarkdownify" (dict "txt" .Params.teaser ) }}</p>						
 			{{ partial "learnMore" (dict "link" .Permalink "size" "small" "margin" "3" "text" "Read more") -}}
 		</div>
 	</div>
