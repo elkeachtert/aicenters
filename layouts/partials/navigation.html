@@ -47,51 +47,10 @@
 				  {{ end -}}
 				{{ end -}}
 			</ul>
-		
-  
-					
-			
-          
-
-		    
-		    
-		    
-		    
-		    
-		  {{ range .Site.Params.navigation.entry -}}
-				{{ if eq .hasChildren "true" -}}	
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="{{.linkto}}" id="navbarDropdown-{{ .id }}" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">{{ .name }}</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown-{{ .id }}">
-						{{ $id := .id -}}
-						{{ range $.Site.Params.navigation.subentry -}}
-						{{ if eq .parent $id -}}
-						<a class="dropdown-item" href="{{.linkto}}">{{ .name }}</a>
-						{{ if eq .divider true -}}
-						<hr class="dropdown-divider mb-0 mt-0">
-						{{ end -}}
-						{{ end -}}
-						{{ end -}}
-					</div>
-				</li>
-				{{ else -}}
-				<li class="nav-item">
-					<a class="nav-link" href="{{.linkto}}">{{ .name }}</a>
-				</li>
-				{{ end -}}
-				{{ end -}}
-			</ul>
 		</div>
 	</nav>
 </section>
 {{"<!-- Navigation End -->"| safeHTML}}
-
-<section class="mb-3 mt-1 pb-5 pt-1">	
-<div class="container-fluid">
-
-
-  </div>
-</section>
 
 
 
