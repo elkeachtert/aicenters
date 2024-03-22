@@ -17,9 +17,9 @@
         {{ range (sort $home.Sections "Params.order" "asc") -}}
           {{ if ne .Params.displayInNavigation false -}}
             {{ $name := partial "navName" . -}}
-            {{ $hasChildren := and (gt (.Pages | len) 0) (ne .Layout "news") -}}
+            {{ $hasChildren := and (gt (.Pages | len) 0) (ne .Type "news") -}}
           
-            Page: {{ $name }} - {{ .Layout }}<br>
+            Page: {{ $name }} - {{ .Type }}<br>
           
             {{ if $hasChildren -}}	
               <li class="nav-item dropdown">
