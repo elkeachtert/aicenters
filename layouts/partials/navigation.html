@@ -12,40 +12,40 @@
 		
 		<div class="collapse navbar-collapse" id="navbarNav">
 		  <ul class="navbar-nav ms-auto">
-		    
-      {{ $home := .Site.GetPage "/" }}
+		    {{ $home := .Site.GetPage "/" }}
 
-      {{ range (sort $home.Sections "Params.order" "asc") -}}
-        {{ if ne .Params.displayInNavigation false -}}
-          {{ $name := partial "navName" . -}}
-          {{ $hasChildren := and (gt (.Pages | len) 0) (ne .Layout "news") -}}
+        {{ range (sort $home.Sections "Params.order" "asc") -}}
+          {{ if ne .Params.displayInNavigation false -}}
+            {{ $name := partial "navName" . -}}
+            {{ $hasChildren := and (gt (.Pages | len) 0) (ne .Layout "news") -}}
           
-          <!--Page: {{ $name }} - {{ .Type }}<br>-->
+            <!--Page: {{ $name }} - {{ .Type }}<br>-->
           
-          {{ if $hasChildren -}}	
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{{ .Permalink }}" id="navbarDropdown-{{ $name }}" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">{{ $name }}</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown-{{ $name }}">
+            {{ if $hasChildren -}}	
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{{ .Permalink }}" id="navbarDropdown-{{ $name }}" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">{{ $name }}</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-{{ $name }}">
           	    
-              {{ range (sort .Pages "Params.order" "asc") -}}
-                {{ if and (ne .Params.displayInNavigation false) (ne .Layout "newsitem") -}}
-                  {{ $childName := partial "navName" . -}}
-                  <a class="dropdown-item" href="{{ .Permalink }}">{{ $childName }}</a>
+                {{ range (sort .Pages "Params.order" "asc") -}}
+                  {{ if and (ne .Params.displayInNavigation false) (ne .Layout "newsitem") -}}
+                    {{ $childName := partial "navName" . -}}
+                    <a class="dropdown-item" href="{{ .Permalink }}">{{ $childName }}</a>
           
-                  <!--&nbsp;&nbsp;Child: {{ $childName }} - {{ .Type }} - {{ .Layout }} <br>-->
-                  {{ if eq .Params.divider true -}}
-                    <hr class="dropdown-divider mb-0 mt-0">
+                    <!--&nbsp;&nbsp;Child: {{ $childName }} - {{ .Type }} - {{ .Layout }} <br>-->
+                    {{ if eq .Params.divider true -}}
+                      <hr class="dropdown-divider mb-0 mt-0">
+                    {{ end -}}
                   {{ end -}}
                 {{ end -}}
-              {{ end -}}
-              </div>
-            </li>
+                </div>
+              </li>
             
-          {{ else -}}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ .Permalink }}">{{ $name }}</a>
-            </li>
-          {{ end -}}
+            {{ else -}}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ .Permalink }}">{{ $name }}</a>
+              </li>
+            {{ end -}}
+				  {{ end -}}
 				{{ end -}}
 			</ul>
 		
