@@ -18,6 +18,8 @@
       {{ range (sort $home.Sections "Params.order" "asc") -}}
         {{ if ne .Params.displayInNavigation false -}}
           {{ $name := partial "navName" . -}}
+          {{ $hasChildren := gt (.Pages | len) 0 -}}
+          
           
           Page: {{ $name }} - {{ .Type }}<br>
           
