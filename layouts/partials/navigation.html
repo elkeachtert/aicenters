@@ -47,11 +47,13 @@
 
 Pages: {{ $home.Sections }}<br>
 {{ range $home.Sections -}}
-  {{ $name := .Title -}}
-  {{ if .Params.navname -}}
-  {{ $name = .Params.navname -}}
-  {{ else if .Params.shortTitle -}}
-  {{ $name = .Params.shortTitle -}}
+  {{ if displayInNavigation -}}
+    {{ $name := .Title -}}
+    {{ if .Params.navname -}}
+    {{ $name = .Params.navname -}}
+    {{ else if .Params.shortTitle -}}
+    {{ $name = .Params.shortTitle -}}
+    {{ end -}}
   {{ end -}}
 	Page: {{ $name }} <br>
 {{ end -}}
