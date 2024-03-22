@@ -20,7 +20,7 @@
           {{ $name := partial "navName" . -}}
           {{ $hasChildren := and (gt (.Pages | len) 0) (ne .Layout "news") -}}
           
-          Page: {{ $name }} - {{ .Type }}<br>
+          <!--Page: {{ $name }} - {{ .Type }}<br>-->
           
           {{ if $hasChildren -}}	
             <li class="nav-item dropdown">
