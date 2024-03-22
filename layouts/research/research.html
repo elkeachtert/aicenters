@@ -10,7 +10,7 @@
 	  {{ .Content }}
   </div>	  
 	  {{ $sections := where .RegularPages "Type" "researchArea" -}}
-	  {{ $sections }}
+	  sections: {{ $sections }}
 	  
 	  {{ $pages := sort .Pages "Params.order" "asc" -}}
 	  
