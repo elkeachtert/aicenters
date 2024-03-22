@@ -1,6 +1,7 @@
 ---
 draft: false
 layout:
+type: funding
 order: 99
 divider: true
 title: Data Mining Lab @LMU - Funding Projects
