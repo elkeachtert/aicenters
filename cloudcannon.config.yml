@@ -175,44 +175,7 @@ collections_config:
             - jobs
             - research
             - dssg
-  funding:
-    path: content/opportunities/funding
-    output: true
-    icon: notes
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    schema: funding
-    uploads: '[base_path]'
-    create:
-      path: '{slug}{date|year}/index.md'
-      _inputs:
-        date:
-          comment: Use the deadline date here
-        slug:
-          comment: This is used for your directory name (e.g. phd, dssg, ...)
-    schemas:
-      funding:
-        path: schemas/funding.md
-    _inputs:  
-      title: 
-        type: textarea
-        comment: "Title of funding subject (<h1> at top of the page)"
-      subtitle: 
-        type: textarea
-        comment: "Subtitle of funding subject (<h2> next to image)"
-      img: 
-        type: image
-        comment: "Teaser image"
-      copyright: 
-        type: text
-        comment: "Copyright for teaser image"
-      caption: 
-        type: text
-        comment: "Caption for teaser image"
-      deadline:
-        type: date
-        comment: "Deadline date"
+  
   
   data:
     path: data
