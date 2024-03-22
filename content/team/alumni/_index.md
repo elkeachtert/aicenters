@@ -1,7 +1,7 @@
 ---
 draft: false
 layout:
-order: 4
+order: 5
 show: false
 title: Data Mining Lab @LMU - Alumni
 shorttitle: Alumni
