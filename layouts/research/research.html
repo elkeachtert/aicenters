@@ -15,7 +15,7 @@
 	  {{ $pages := sort .Pages "Params.order" "asc" -}}
 	  
 	  {{ range $pages }}
-	  {{ .Type }}
+	  {{ .Type }}<br>
 	  {{ end }}
 	  
 	  {{ $scratch := newScratch -}}
