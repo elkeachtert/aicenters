@@ -1,24 +1,3 @@
-{{ $isEvent := eq .Section "events" -}}
-
-{{ if $isEvent -}}
-{{ if not .Params.eventDate -}}
-{{ errorf "The event %q requires a eventDate parameter." .Permalink }}
-{{ end -}}
-
-{{ if not .Params.eventDate.start -}}
-{{ errorf "The event %q requires a eventDate start parameter." .Permalink }}
-{{ end -}}
-
-{{ if not .Params.eventDate.end -}}
-{{ errorf "The event %q requires a eventDate end parameter." .Permalink }}
-{{ end -}}
-{{ end -}}
-
-{{ $truncate := .Scratch.Get "truncate" -}}
-{{ if not $truncate -}}
-{{ $truncate = 350 -}}
-{{ end -}}
-
 <div class="card b-none card-news">
 	<a href="{{ .Permalink }}" class="stretched-link" aria-label="Read more about {{ .Params.title }}"></a>
 	
