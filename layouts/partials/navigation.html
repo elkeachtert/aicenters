@@ -19,7 +19,7 @@
             {{ $name := partial "navName" . -}}
             {{ $hasChildren := and (gt (.Pages | len) 0) (ne .Layout "news") -}}
           
-            <!--Page: {{ $name }} - {{ .Type }}<br>-->
+            Page: {{ $name }} - {{ .Layout }}<br>
           
             {{ if $hasChildren -}}	
               <li class="nav-item dropdown">
@@ -30,7 +30,6 @@
                   {{ if and (ne .Params.displayInNavigation false) (ne .Layout "newsitem") -}}
                     {{ $childName := partial "navName" . -}}
                     <a class="dropdown-item" href="{{ .Permalink }}">{{ $childName }}</a>
-          
                     <!--&nbsp;&nbsp;Child: {{ $childName }} - {{ .Type }} - {{ .Layout }} <br>-->
                     {{ if eq .Params.divider true -}}
                       <hr class="dropdown-divider mb-0 mt-0">
