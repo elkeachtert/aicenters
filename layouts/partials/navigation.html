@@ -27,10 +27,10 @@
                 {{ range (sort .Pages "Params.order" "asc") -}}
                   {{ if ne .Params.displayInNavigation false -}}
                     {{ $childName := partial "navName" . -}}
-                    <a class="dropdown-item" href="{{ .Permalink }}">{{ $childName }}</a>
                     {{ if eq .Params.divider true -}}
                       <hr class="dropdown-divider mb-0 mt-0">
                     {{ end -}}
+                    <a class="dropdown-item" href="{{ .Permalink }}">{{ $childName }}</a>
                   {{ end -}}
                 {{ end -}}
                 </div>
