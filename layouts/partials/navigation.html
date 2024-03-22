@@ -46,7 +46,7 @@
 {{ $home := .Site.GetPage "/" }}
 
 Pages: {{ $home.Pages }}<br>
-{{ range $home.Pages -}}
+{{ range $home.RegularPages -}}
 	Page: {{ .Title }} - {{ .Params.shortTitle }} - {{ .Params.navname }}<br>
 {{ end -}}
   </div>
