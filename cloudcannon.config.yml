@@ -112,6 +112,14 @@ collections_config:
         comment: "External link to research site"
       teaser:
         type: html
+        options:
+          bold: true
+          italic: true
+          format: p 
+          subscript: true
+          superscript: true
+          link: true
+          styles: /css/editor.css
         comment: Teaser text (top of page)
 
   news:
