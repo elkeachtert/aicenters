@@ -27,12 +27,7 @@
           
           {{ range (sort .Pages "Params.order" "asc") -}}
             {{ if and (ne .Params.displayInNavigation false) (ne .Layout "newsitem") -}}
-              {{ $childName := .Title -}}
-              {{ if .Params.navname -}}
-                {{ $childName = .Params.navname -}}
-                {{ else if .Params.shortTitle -}}
-                {{ $childName = .Params.shortTitle -}}
-              {{ end -}}
+              {{ $childName := partial "navName" . -}}
           
               &nbsp;&nbsp;Child: {{ $childName }} - {{ .Type }} - {{ .Layout }} <br>
             {{ end -}}
