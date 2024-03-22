@@ -26,7 +26,7 @@
           
           Page: {{ $name }} - {{ .Type }}<br>
           {{ range (sort .Pages "Params.order" "asc") -}}
-            {{ if ne .Params.displayInNavigation false -}}
+            {{ if or (ne .Params.displayInNavigation false) (ne .Layout "newsitem") -}}
               {{ $childName := .Title -}}
               {{ if .Params.navname -}}
                 {{ $childName = .Params.navname -}}
