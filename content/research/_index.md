@@ -1,6 +1,7 @@
 ---
 draft: false
 layout: research
+order: 3
 navname: Research
 title: Data Mining Lab @LMU - Research Areas
 shorttitle: Research Areas
