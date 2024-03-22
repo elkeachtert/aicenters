@@ -19,9 +19,9 @@
         {{ if ne .Params.displayInNavigation false -}}
           {{ $name := .Title -}}
           {{ if .Params.navname -}}
-          {{ $name = .Params.navname -}}
-          {{ else if .Params.shortTitle -}}
-          {{ $name = .Params.shortTitle -}}
+            {{ $name = .Params.navname -}}
+            {{ else if .Params.shortTitle -}}
+            {{ $name = .Params.shortTitle -}}
           {{ end -}}
           
           Page: {{ $name }} <br>
@@ -29,19 +29,16 @@
             {{ if ne .Params.displayInNavigation false -}}
               {{ $childName := .Title -}}
               {{ if .Params.navname -}}
-              {{ $childName = .Params.navname -}}
-              {{ else if .Params.shortTitle -}}
-              {{ $childName = .Params.shortTitle -}}
+                {{ $childName = .Params.navname -}}
+                {{ else if .Params.shortTitle -}}
+                {{ $childName = .Params.shortTitle -}}
               {{ end -}}
           
               &nbsp;&nbsp;Child: {{ $childName }} <br>
-            { end -}}
+            {{ end -}}
           
           {{ end -}}
-        
-        
-      {{ end -}}
-      
+        {{ end -}}
       {{ end -}}
 		    
 		    
