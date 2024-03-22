@@ -25,15 +25,17 @@
           {{ end -}}
           
           Page: {{ $name }} <br>
-          {{ range .Sections -}}
-            {{ $childName := .Title -}}
-            {{ if .Params.navname -}}
-            {{ $childName = .Params.navname -}}
-            {{ else if .Params.shortTitle -}}
-            {{ $childName = .Params.shortTitle -}}
-            {{ end -}}
+          {{ range (sort .Sections "Params.order" "asc") -}}
+            {{ if ne .Params.displayInNavigation false -}}
+              {{ $childName := .Title -}}
+              {{ if .Params.navname -}}
+              {{ $childName = .Params.navname -}}
+              {{ else if .Params.shortTitle -}}
+              {{ $childName = .Params.shortTitle -}}
+              {{ end -}}
           
-          &bnsp;&bnsp;Child: {{ $childName }} <br>
+              &bnsp;&bnsp;Child: {{ $childName }} <br>
+            { end -}}
           
           {{ end -}}
         
