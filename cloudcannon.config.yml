@@ -542,8 +542,6 @@ _snippets:
         Link:
           type: url
           
-      
-          
   hugo_announcement:
     template: hugo_shortcode_named_args
     inline: false
