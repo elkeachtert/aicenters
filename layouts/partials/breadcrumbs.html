@@ -26,9 +26,9 @@
 						{{ else if $.Scratch.Get "navname" -}}
 						  &nbsp;|&nbsp;{{ $.Scratch.Get "navname" }}
 						{{ else if $page.Params.shorttitle -}}
-				 			&nbsp;|&nbsp;{{  $page.Params.shorttitle }}
+				 			&nbsp;|&nbsp;{{ $page.Params.shorttitle }}
 				 		{{ else -}}
-				 		  	&nbsp;|&nbsp;{{  $page.Title }}
+				 		  	&nbsp;|&nbsp;{{ $page.Title }}
 						{{ end -}}
 		
 					{{ else -}}
