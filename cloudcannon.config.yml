@@ -539,7 +539,7 @@ _snippets:
           bold: true
           link: true
           bulletedlist: true
-         indent: true
+          indent: true
           undo: true
           redo: true
       img:
