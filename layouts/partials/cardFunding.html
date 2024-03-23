@@ -1,7 +1,8 @@
 <div class="card b-none card-news h-100">
-	<div class="row g-0 pr-3 pl-3 pt-3">
+	<div class="row g-0 pr-3 pl-3 pt-3 b-red">
 	  <a href="{{ .link }}" aria-label="Link to {{ .title}} " class="stretched-link"></a>	
-		<div class="card-body col-4 pt-0 pb-0" style="transform: rotate(0);">	
+		
+		<div class="card-body col-4 pt-0 pb-0 b-green" style="transform: rotate(0);">	
 			<a href="{{ .link }}" aria-label="Read more about {{ .title }}">
 			  <img src="{{ .img }}" alt="Link to {{ .title }}" width="300" height="200" class="img-100">
 			</a>
@@ -10,7 +11,7 @@
 			{{ end -}}
 		</div>
 		
-		<div class="card-body col-8">
+		<div class="card-body col-8 b-blue">
 			<h2 class="h3">{{ .title }}</h2>
 			{{ if .subtitle -}}
 			<h3 class="h4">{{ .subtitle | markdownify }} </h3>
