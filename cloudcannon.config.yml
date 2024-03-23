@@ -492,6 +492,43 @@ editor:
 timezone: Etc/UTC
 
 _snippets:
+  hugo_cardHorizontal:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: 
+      - key: title
+      - "Title"
+      icon: image
+      image: 
+        key: img
+      metadata:
+        - text: 
+          - key: subtitle
+          - "Subtitle"
+        - text:
+          - key: teaser
+          - "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+    picker_preview:
+      gallery:
+        image: /examples/announcement.png
+        text: "Title"
+    definitions:
+      shortcode_name: cardFunding
+      named_args:
+        - source_key: conf
+          editor_key: conference
+          type: string
+        - source_key: conflink
+          editor_key: conferenceLink
+          type: string
+      _inputs:
+        conference:
+          type: text
+          comment: "Conference abbreviation, e.g. CVPR 2023"
+        conferenceLink:
+          type: url
+          
   hugo_announcement:
     template: hugo_shortcode_named_args
     inline: false
@@ -509,17 +546,30 @@ _snippets:
     definitions:
       shortcode_name: announcement
       named_args:
-        - source_key: conf
-          editor_key: conference
+        - editor_key: title
           type: string
-        - source_key: conflink
-          editor_key: conferenceLink
+        - editor_key: subtitle
+          type: string
+        - editor_key: teaser
+          type: string
+        - editor_key: img
+          type: string
+        - editor_key: copyright
+          type: string
+        - editor_key: link
           type: string
       _inputs:
-        conference:
+        title:
           type: text
-          comment: "Conference abbreviation, e.g. CVPR 2023"
-        conferenceLink:
+        subtitle:
+          type: text
+        teaser:
+          type: html  
+        img:
+          type: image  
+        copxright:
+          type: text
+        Link:
           type: url
         
   hugo_contribution:
