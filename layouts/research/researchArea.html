@@ -3,11 +3,7 @@
 
 {{"<!-- Content Start -->" | safeHTML}}
 <section class="list-content" id="section">	
-  {{ if .Params.shorttitle -}}
-  {{ .Scratch.Set "navname" .Params.shorttitle -}}
-  {{ else -}}
-  {{ .Scratch.Set "navname" .Title -}}
-  {{ end -}}
+  
 	{{ partial "breadcrumbs.html" . }} 
 	{{ partial "makeTitle.html" . }}	
 	
