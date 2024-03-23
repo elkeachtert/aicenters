@@ -1,22 +1,22 @@
 <div class="card b-none card-news">
-	<a href="{{ .Permalink }}" class="stretched-link" aria-label="Read more about {{ .Params.title }}"></a>
+	<a href="{{ .link }}" class="stretched-link" aria-label="Read more about {{ .title }}"></a>
 	
 	<div class="row g-0 pr-3 pl-3 pt-3">
 		<div class="card-body col-12 col-lg-4 pt-0 pb-0">	
-			<img src="{{ .Params.img }}" alt="Link to {{ .Params.title }}" width="300" height="200" class="img-100">
-			{{ if .Params.copyright -}}<p class="copyright">&#169;{{ .Params.copyright}}</p>
+			<img src="{{ .img }}" alt="Link to {{ .title }}" width="300" height="200" class="img-100">
+			{{ if .copyright -}}<p class="copyright">&#169;{{ .copyright}}</p>
 			{{ else -}}<p class="copyright">&nbsp;</p>
 			{{ end -}}
 		</div>
 		
 		<div class="card-body col-12 col-lg-8">
-			<h2 class="h3 mt-3">{{ .Params.title }}</h2>
-			{{ if .Params.subtitle -}}
-			<h3 class="h4">{{ .Params.subtitle | markdownify }} </h3>
+			<h2 class="h3 mt-3">{{ .title }}</h2>
+			{{ if .subtitle -}}
+			<h3 class="h4">{{ .subtitle | markdownify }} </h3>
 			{{ end -}}
 			
-			<p class="card-text">{{ partial "myMarkdownify" (dict "txt" .Params.teaser ) }}</p>						
-			{{ partial "learnMore" (dict "link" .Permalink "size" "small" "margin" "3" ) -}}
+			<p class="card-text">{{ partial "myMarkdownify" (dict "txt" .teaser ) }}</p>						
+			{{ partial "learnMore" (dict "link" .link "size" "small" "margin" "3" ) -}}
 		</div>
 	</div>
 </div>
