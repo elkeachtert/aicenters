@@ -1,6 +1,6 @@
 ---
 draft: false
-layout:
+layout: single
 type: funding
 order: 99
 divider: true
