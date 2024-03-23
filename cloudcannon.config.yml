@@ -558,7 +558,7 @@ _snippets:
         text: "Announcement"
     definitions:
       shortcode_name: announcement
-     named_args:
+      named_args:
         - source_key: conf
           editor_key: conference
           type: string
