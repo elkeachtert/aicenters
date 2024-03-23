@@ -25,15 +25,19 @@
 							&nbsp;|&nbsp;{{ $page.Params.navname }}
 						{{ else if $.Scratch.Get "navname" -}}
 						  &nbsp;|&nbsp;{{ $.Scratch.Get "navname" }}
-						{{ else -}}
-				 			&nbsp;|&nbsp;{{  humanize . }}
+						{{ else if $page.Params.shorttitle -}}
+				 			&nbsp;|&nbsp;{{  $page.Params.shorttitle }}
+				 		{{ else -}}
+				 		  	&nbsp;|&nbsp;{{  $page.Ttitle }}
 						{{ end -}}
 		
 					{{ else -}}
-						{{ with $page.Params.navname -}}
+						{{ if $page.Params.navname -}}
 						&nbsp;|&nbsp;<a href="{{ $.Scratch.Get "url" }}/">{{ $page.Params.navname }}</a>
+						{{ else if $page.Params.shorttitle -}}
+						&nbsp;|&nbsp;<a href="{{ $.Scratch.Get "url" }}/">{{ $page.Params.shorttitle }}</a>
 						{{ else -}}
-						&nbsp;|&nbsp;<a href="{{ $.Scratch.Get "url" }}/">{{ humanize . }}</a>
+						&nbsp;|&nbsp;<a href="{{ $.Scratch.Get "url" }}/">{{ $page.Ttitle }}</a>
 						{{ end -}}
 					{{ end -}}
 				{{ end -}}
