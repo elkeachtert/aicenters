@@ -28,7 +28,7 @@
 						{{ else if $page.Params.shorttitle -}}
 				 			&nbsp;|&nbsp;{{  $page.Params.shorttitle }}
 				 		{{ else -}}
-				 		  	&nbsp;|&nbsp;{{  $page.Ttitle }}
+				 		  	&nbsp;|&nbsp;{{  $page.Title }}
 						{{ end -}}
 		
 					{{ else -}}
@@ -37,7 +37,7 @@
 						{{ else if $page.Params.shorttitle -}}
 						&nbsp;|&nbsp;<a href="{{ $.Scratch.Get "url" }}/">{{ $page.Params.shorttitle }}</a>
 						{{ else -}}
-						&nbsp;|&nbsp;<a href="{{ $.Scratch.Get "url" }}/">{{ $page.Ttitle }}</a>
+						&nbsp;|&nbsp;<a href="{{ $.Scratch.Get "url" }}/">{{ $page.Title }}</a>
 						{{ end -}}
 					{{ end -}}
 				{{ end -}}
