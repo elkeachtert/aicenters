@@ -845,7 +845,12 @@ div.floatright-small img {
 }
 .card-news:hover > * {
     background-color: var(--mcmlblack);
-	color: white;
+	  color: white;
+}
+
+.card-news:hover a {
+    background-color: var(--mcmlblack);
+    color: white;
 }
   
 .card-news:hover a.quicklink {
