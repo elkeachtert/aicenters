@@ -528,19 +528,26 @@ _snippets:
           type: string
         - editor_key: link
           type: string
-      _inputs:
-        title:
-          type: text
-        subtitle:
-          type: text
-        teaser:
-          type: html  
-        img:
-          type: image  
-        copxright:
-          type: text
-        Link:
-          type: url
+    _inputs:
+      title:
+        type: text
+      subtitle:
+        type: text
+      teaser:
+        type: html
+        options: 
+          bold: true
+          link: true
+          bulletedlist: true
+         indent: true
+          undo: true
+          redo: true
+      img:
+        type: image  
+      copxright:
+        type: text
+      Link:
+        type: url
           
   hugo_announcement:
     template: hugo_shortcode_named_args
@@ -565,12 +572,12 @@ _snippets:
         - source_key: conflink
           editor_key: conferenceLink
           type: string
-      _inputs:
-        conference:
-          type: text
-          comment: "Conference abbreviation, e.g. CVPR 2023"
-        conferenceLink:
-          type: url
+    _inputs:
+      conference:
+        type: text
+        comment: "Conference abbreviation, e.g. CVPR 2023"
+      conferenceLink:
+        type: url
         
   hugo_contribution:
     template: hugo_shortcode_named_args
