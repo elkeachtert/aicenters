@@ -15,6 +15,14 @@
 			<h3 class="h4">{{ .subtitle | markdownify }} </h3>
 			{{ end -}}
 			
+			<p class="card-text">
+			  <a href="{{ .fundingLink }}">{{ .fundingName }}</a>
+			</p>
+			
+			<p class="card-text">
+			  Period: {{ .period }}
+			</p>
+			
 			<p class="card-text">{{ partial "myMarkdownify" (dict "txt" .teaser ) }}</p>						
 			{{ partial "learnMore" (dict "link" .link "size" "small" "margin" "3" ) -}}
 		</div>
