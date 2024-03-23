@@ -492,7 +492,7 @@ editor:
 timezone: Etc/UTC
 
 _snippets:
-  hugo_cardHorizontal:
+  hugo_cardFunding:
     template: hugo_shortcode_named_args
     inline: false
     preview:
@@ -507,8 +507,11 @@ _snippets:
           - key: subtitle
           - "Subtitle"
         - text:
-          - key: teaser
-          - "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+          - key: fundingName
+          - "Funding agency"
+        - text:
+          - key: period
+          - "01/2022 - 05/2024"
     picker_preview:
       gallery:
         image: /examples/announcement.png
@@ -519,6 +522,12 @@ _snippets:
         - editor_key: title
           type: string
         - editor_key: subtitle
+          type: string
+        - editor_key: fundingName
+          type: string
+        - editor_key: fundingLink
+          type: string
+        - editor_key: period
           type: string
         - editor_key: teaser
           type: string
@@ -532,6 +541,12 @@ _snippets:
       title:
         type: text
       subtitle:
+        type: text
+      fundingName:
+        type: text
+      fundingLink:
+        type: url
+      period:
         type: text
       teaser:
         type: html
