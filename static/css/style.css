@@ -60,6 +60,10 @@
 	background: url('/images/background/sections/bg-mask-top-yellow.webp') left top no-repeat;
 }
 
+.bg-mask-top-green {
+	background: url('/images/background/sections/bg-mask-top-green.webp') left top no-repeat;
+}
+
 .bg-mask-top-white {
 	background: url('/images/background/sections/bg-mask-top-white.webp') var(--lmugreen) left top no-repeat;
 }
