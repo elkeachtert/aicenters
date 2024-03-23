@@ -516,36 +516,6 @@ _snippets:
     definitions:
       shortcode_name: cardFunding
       named_args:
-        - source_key: conf
-          editor_key: conference
-          type: string
-        - source_key: conflink
-          editor_key: conferenceLink
-          type: string
-      _inputs:
-        conference:
-          type: text
-          comment: "Conference abbreviation, e.g. CVPR 2023"
-        conferenceLink:
-          type: url
-          
-  hugo_announcement:
-    template: hugo_shortcode_named_args
-    inline: false
-    preview:
-      text: "Announcement"
-      metadata:
-        - text: "We are happy to announce that MCML researchers are represented with the following papers at"
-        - text:
-          - key: conference
-          - "Conference"
-    picker_preview:
-      gallery:
-        image: /examples/announcement.png
-        text: "Announcement"
-    definitions:
-      shortcode_name: announcement
-      named_args:
         - editor_key: title
           type: string
         - editor_key: subtitle
@@ -570,6 +540,38 @@ _snippets:
         copxright:
           type: text
         Link:
+          type: url
+          
+      
+          
+  hugo_announcement:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: "Announcement"
+      metadata:
+        - text: "We are happy to announce that MCML researchers are represented with the following papers at"
+        - text:
+          - key: conference
+          - "Conference"
+    picker_preview:
+      gallery:
+        image: /examples/announcement.png
+        text: "Announcement"
+    definitions:
+      shortcode_name: announcement
+     named_args:
+        - source_key: conf
+          editor_key: conference
+          type: string
+        - source_key: conflink
+          editor_key: conferenceLink
+          type: string
+      _inputs:
+        conference:
+          type: text
+          comment: "Conference abbreviation, e.g. CVPR 2023"
+        conferenceLink:
           type: url
         
   hugo_contribution:
