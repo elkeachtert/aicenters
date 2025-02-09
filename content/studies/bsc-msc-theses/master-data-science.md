@@ -4,12 +4,12 @@ order: 6
 title: BSc MSc Theses
 shorttitle:
 description: tbd
-image: /images/adobestock/AdobeStock_338830065-max_776.webp
+image: /images/adobestock/AdobeStock_199229394.webp
 copyright: BillionPhotos.com - stock.adobe.com
 ---
 ## Available Topics
 
-<table><tbody><tr><td><p><strong>Type</strong></p></td><td><p><strong>Title</strong></p></td><td><p><strong>Contact</strong></p></td><td><p><strong>Date</strong></p></td></tr><tr><td><p></p></td><td><p></p></td><td><p></p></td><td><p></p></td></tr></tbody></table>
+<table><tbody><tr><td><p><strong>Type</strong></p></td><td><p><strong>Title</strong></p></td><td><p><strong>Contact</strong></p></td><td><p><strong>Date</strong></p></td></tr><tr><td><p>abc</p></td><td><p>rtg</p></td><td><p>dfhdr</p></td><td><p>grttr</p></td></tr></tbody></table>
 
 ### **Others**
 
