@@ -5,6 +5,8 @@ navname: Past Terms
 title: Courses in Past Terms
 shorttitle:
 description: tbd
+image: /images/adobestock/AdobeStock_508097008-max_776.webp
+copyright: max_776 - stock.adobe.com
 ---
 ### **Veranstaltungen im Sommersemester 2022**
 
