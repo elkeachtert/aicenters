@@ -1,10 +1,10 @@
 ---
 draft: false
 order: 2
-navname: Winter Term 24/25
-title: Courses in Winter Term 2024/2025
+navname: Past Terms
+title: Courses in Past Terms
 shorttitle:
-description: Courses in Winter Term 2024/2025 at the Data Mining Lab @LMU.
+description: tbd
 ---
 ### **Veranstaltungen im Sommersemester 2022**
 
