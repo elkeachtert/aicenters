@@ -49,40 +49,6 @@
 	  
 	  {{ .Content }}
   </div>	  
-	  
-	  {{ $pages := sort .Pages "Params.order" "asc" -}}
-	  
-	  {{ $scratch := newScratch -}}
-	    {{ range $pages -}}
-	      {{ $leaderurl := strings.TrimRight "/" .Params.leader }}
-	      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
-	      
-	      {{ $scratch.SetInMap "leaders" (string $leaderPage.Params.order) .Params.leader -}}
-	   {{ end -}}
-	   
-	   {{ $leaderMap := $scratch.Get "leaders" -}}	
-	   
-	   {{ range $leaderMap -}}
-	      {{ $leader := . -}}
-	   
-	      {{ $leaderurl := strings.TrimRight "/" $leader }}
-	      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
-	     
-	     {{ $areas := slice -}}
-	     {{ range $pages -}}
-	       {{ if eq .Params.leader $leader -}}
-	         {{ $link := .Permalink -}}
-	         {{ if .Params.link -}}
-	           {{ $link = .Params.link -}}
-	         {{ end -}}
-	         {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" $link "text" "" ) -}}
-	         {{ $areas = $areas | append $area -}}
-	       {{ end -}}
-	     {{ end -}}
-	     
-	     {{ partial "sectionCards" (dict "sectionLinks" $areas "title" (print $leaderPage.Params.academicTitle " " $leaderPage.Params.name) ) }}
-	   {{ end -}}
-	
 </section>
 {{"<!-- Content End -->" | safeHTML}}
 
