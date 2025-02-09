@@ -1,34 +1,30 @@
 ---
 draft: false
-title: Bachelor Studies
+order: 4
+title: Master Studies
 shorttitle:
 description: tbd
 ---
 &nbsp;
 
+## Folgende Lehrveranstaltungen bieten wir regelmäßig für Masterstudierende an (ohne Gewähr):
+
 ## Vorlesungen
 
-Der Lehrstuhl beteiligt sich an den folgenden Vorlesungen im Wechsel mit anderen Dozenten:
-
-* Einführung in die Programmierung (V4Ü2, Winter)
-* Datenbanksysteme (V3Ü2, Winter)
-* [Algorithmen und Datenstrukturen](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_bachelor/algodat24/index.html "AlgoDat23") (V3Ü2, Sommer)
-* [Einführung in die Informatik: Systeme und Anwendungen](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_bachelor/sysanw23/index.html "SysAnw23") (V3Ü2, Sommer)
-
-Folgende Vorlesungen des [Masterstudiums](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/index.html "Masterstudium") eignen sich als Wahlpflichtveranstaltungen für Bachelorstudierende:
-
-* [Knowledge Discovery in Datenbanken I](http://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/kdd2223/index.html) (V3Ü2, Winter)
+* [Data Mining Algorithms 1](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/dma2324/index.html "Data Mining Algorithmen I &#40;DMA I&#41; im WS 2023/24") (V3Ü2, Winter)
+* [Knowledge Discovery in Datenbanken II](http://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/kdd222/index.html)(V3Ü2, Sommer)
+* [Maschinelles Lernen](http://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/ml23/index.html)(V3Ü2, Sommer)
+* [Deep Learning and Artificial Intelligence](http://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/deep2324/index.html)(V3Ü2, Winter)
+* [Artificial Intelligence for Games](http://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/art23/index.html) (V3Ü2, Sommer)
 
 ## Seminare und Praktika
 
-* Proseminar (S2, unregelmäßig)
-* [Bachelorseminar "Process Mining"](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_bachelor/pmseminar23/index.html "Bachelorseminar &quot;Process Mining&quot;")
-* [Bachelorseminar "Data Mining"](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_bachelor/dmseminar23/index.html)
-* [Softwareentwicklungspraktikum](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_bachelor/sep2324/index.html "Softwareentwicklungspraktikum &#40;WS 2023/24&#41;") (Winter)
-* [Oberseminar](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/oberseminar2324/index.html)
+* [Hauptseminar](http://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/semrecent2223) (jedes Semester)
+* Praktikum Big Data Science (Sommer)
+* [Oberseminar](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/oberseminar2425/index.html)
 
-## Bachelorarbeiten
+## Masterarbeiten
 
-* Mögliche Themen für Bachelorarbeiten finden Sie [hier](https://www.dbs.ifi.lmu.de/cms/studium_lehre/bama_theses/index.html#BA "Abschlussarbeiten -- BSc MSc Theses"). Bei Interesse schreiben Sie bitte der Betreuerin oder dem Betreuer oder an das Sekretariat eine Email mit Angaben zu Ihren Interessen und Vorkenntnissen (einschlägige Lehrveranstaltungen, Programmiererfahrung). Sowohl Vorstellungsvorträge als auch Abschlusskolloquien zu den Bachelorarbeiten finden im [Oberseminar](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/oberseminar1718/index.html "Oberseminar &#40;WS 2017/18&#41;") des Lehrstuhls statt.
+* Mögliche Themen für Masterarbeiten finden Sie [hier](https://www.dbs.ifi.lmu.de/cms/studium_lehre/bama_theses/index.html#MA "Abschlussarbeiten -- BSc MSc Theses"). Bei Interesse wenden Sie sich bitte an den Betreuer oder die Betreuerin oder an das Sekretariat mit Angaben zu Ihren Interessen und Vorkenntnissen (einschlägige Lehrveranstaltungen, Programmiererfahrung). Vorstellungsvorträge und Abschlusskolloquiuen zu Masterarbeiten finden in unserem [Oberseminar](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/oberseminar1718/index.html "Oberseminar &#40;WS 2017/18&#41;") statt.
 
 ---
