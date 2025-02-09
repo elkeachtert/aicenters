@@ -23,16 +23,25 @@
       </div>
     </div>
     
-   <div class="row mt-0 posts">			
-     <h2>Group leader</h2>
-     <div class="post col-12 mt-3 mb-3">
-     {{ $leaderurl := strings.TrimRight "/" .Params.leader }}
-     {{ $leaderPage := $.Site.GetPage $leaderurl -}}
-     {{ partial "cardMember" $leaderPage  -}}
+    <div class="row mt-0 posts">
+      <h2>Group leader</h2>
+      <div class="post col-12 col-lg-6 mt-3 mb-3">
+        {{ $leaderurl := strings.TrimRight "/" .Params.leader -}}
+        {{ $leaderPage := $.Site.GetPage $leaderurl -}}
+        {{ partial "cardMember" $leaderPage  -}}
+      </div>
+    </div>
+    
+    <div class="row mt-0 posts">
+      <h2>Group members</h2>
+      <div class="post col-12 col-lg-6 mt-3 mb-3">
+      {{ range Params.members -}}
+        {{ $memberurl := strings.TrimRight "/" . -}}
+        {{ $memberPage := $.Site.GetPage $memberurl -}}
+        {{ partial "cardMember" $memberPage  -}}
+      {{ end -}}
+      </div>
      </div>
-  </div>
-     
-     <h2>Group members</h2>
     
     
 	  
