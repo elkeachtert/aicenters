@@ -4,8 +4,8 @@ order: 3
 title: Bachelor Studies
 shorttitle:
 description: tbd
-image: /images/adobestock/AdobeStock_338830065-max_776.webp
-copyright: max_776 - stock.adobe.com
+image: /images/adobestock/AdobeStock_105146623.webp
+copyright: kunertus - stock.adobe.com
 ---
 &nbsp;
 
