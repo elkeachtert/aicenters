@@ -16,7 +16,8 @@ teaser: >-
   gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 leader: /team/professors/seidl-thomas/
 members:
-  -
+  - team/scientists/aljoud-mamdouh/
+  - team/scientists/bernhard-maximilian/
 image: /images/adobestock/AdobeStock_728303119-Bipul.webp
 copyright: Bipul - stock.adobe.com
 ---
