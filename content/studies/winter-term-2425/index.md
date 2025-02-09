@@ -1,6 +1,6 @@
 ---
 draft: false
-order: 2
+order: 1
 navname: Winter Term 24/25
 title: Courses in Winter Term 2024/2025
 shorttitle:
