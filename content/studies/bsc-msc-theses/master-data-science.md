@@ -5,7 +5,7 @@ title: BSc MSc Theses
 shorttitle:
 description: tbd
 image: /images/adobestock/AdobeStock_338830065-max_776.webp
-copyright: 
+copyright: BillionPhotos.com - stock.adobe.com
 ---
 ## Available Topics
 
@@ -19,7 +19,7 @@ copyright:
 
 \[English version below\]
 
-Die Themen unserer Bachelor- und Masterarbeiten orientieren sich an unseren [Forschungsgebieten](https://www.dbs.ifi.lmu.de/cms/forschung/themen/index.html "Forschungsthemen DBS"). Oben findet sich eine Auswahl konkreter Angebote für Abschlussarbeiten. Falls bei deinem gewünschten Thema kein Kontakt angegeben ist oder bei einer initiativen Anfrage wende dich bitte per Email an [grienberger@dbs.ifi.lmu.de](mailto:grienberger@dbs.ifi.lmu.de?subject=[BAMA]%20Anfrage%20f%C3%BCr%20Abschlussarbeit). Bitte füge ausreichend Angaben zu den von dir besuchten Veranstaltungen und wissenschaftlichen Interessen bei:
+Die Themen unserer Bachelor- und Masterarbeiten orientieren sich an unseren [Forschungsgebieten](https://www.dbs.ifi.lmu.de/cms/forschung/themen/index.html "Forschungsthemen DBS"). Oben findet sich eine Auswahl konkreter Angebote für Abschlussarbeiten. Falls bei deinem gewünschten Thema kein Kontakt angegeben ist oder bei einer initiativen Anfrage wende dich bitte per Email an [grienberger@dbs.ifi.lmu.de](mailto:grienberger@dbs.ifi.lmu.de?subject=%5BBAMA%5D%20Anfrage%20f%C3%BCr%20Abschlussarbeit). Bitte füge ausreichend Angaben zu den von dir besuchten Veranstaltungen und wissenschaftlichen Interessen bei:
 
 * Wann möchtest du deine Arbeit beginnen?
 * Handelt es sich um eine Bachelorarbeit oder Masterarbeit?
@@ -37,7 +37,7 @@ Die Anfragen werden in unserer Lehrstuhlrunde besprochen und bleiben für 4-8 Wo
 
 \[English version\]
 
-The topics of our bachelor and master theses are based on our research areas. Above, you can find a selection of concrete offers for thesis topics. If no contact is specified for your desired topic or if you have an initiative request, please email [grienberger@dbs.ifi.lmu.de](mailto:grienberger@dbs.ifi.lmu.de?subject=[BAMA]%20Anfrage%20f%C3%BCr%20Abschlussarbeit). Please include sufficient information about the courses you have attended and your scientific interests:
+The topics of our bachelor and master theses are based on our research areas. Above, you can find a selection of concrete offers for thesis topics. If no contact is specified for your desired topic or if you have an initiative request, please email [grienberger@dbs.ifi.lmu.de](mailto:grienberger@dbs.ifi.lmu.de?subject=%5BBAMA%5D%20Anfrage%20f%C3%BCr%20Abschlussarbeit). Please include sufficient information about the courses you have attended and your scientific interests:
 
 * When do you want to start your work?
 * Is it a bachelor's or master's thesis?
