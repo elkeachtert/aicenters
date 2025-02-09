@@ -1,5 +1,6 @@
 ---
 draft: false
+layout: studies
 order: 2
 title: Data Mining Lab @LMU - Studies
 shorttitle: Studies
