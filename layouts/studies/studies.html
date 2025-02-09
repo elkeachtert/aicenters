@@ -8,6 +8,7 @@
   
   <div id="content" class="container-fluid mt-0 pt-0 mb-0">
     {{ .Content }}
+  </div>
     
     {{ $pages := sort (where .RegularPages ".Type" "studies") "Params.order" "asc" -}}
     {{ $areas := slice -}}
@@ -18,7 +19,6 @@
     {{ end -}}
     {{ partial "sectionCards" (dict "sectionLinks" $areas "title" "Studies" ) }}
     
-  </div>	  
 </section>
 {{"<!-- Content studies End -->" | safeHTML}}
 
