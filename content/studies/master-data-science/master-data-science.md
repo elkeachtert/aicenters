@@ -1,6 +1,6 @@
 ---
 draft: false
-order: 2
+order: 5
 title: Master Data Science
 shorttitle:
 description: tbd
