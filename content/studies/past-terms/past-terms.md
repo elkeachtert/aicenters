@@ -5,8 +5,8 @@ navname: Past Terms
 title: Courses in Past Terms
 shorttitle:
 description: tbd
-image: /images/adobestock/AdobeStock_950294783.webp
-copyright: 3r1k_ai - stock.adobe.com
+image: /images/adobestock/AdobeStock_924085209.webp
+copyright: ron - stock.adobe.com
 ---
 ### **Veranstaltungen im Sommersemester 2022**
 
@@ -85,7 +85,6 @@ copyright: 3r1k_ai - stock.adobe.com
 * [Master Seminar "Deep Learning for Graphs"](http://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/semrecent1920/index.html)
 * [Oberseminar](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/oberseminar1920/index.html "Oberseminar &#40;WS 2019/20&#41;")
 * [Master Praktikum "Big Data Science"](https://www.dbs.ifi.lmu.de/cms/studium_lehre/lehre_master/practical1920/index.html "Master Praktikum &quot;Big Data Science&quot;")
-
 * ESG Kernmodul: Knowledge Discovery and Data Mining
 * ESG Individualmodul: Algorithm Design
 * ESG Individualmodul: Systems Development
