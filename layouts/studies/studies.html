@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "navigation.html" . }}
 
-{{"<!-- Content Start Research-->" | safeHTML}}
+{{"<!-- Content studies Start -->" | safeHTML}}
 <section class="list-content" id="section">	
 	{{ partial "breadcrumbs.html" . }} 
 	{{ partial "makeTitle.html" . }}	
@@ -10,7 +10,7 @@
 	  {{ .Content }}
   </div>	  
 	  
-	  {{ $pages := sort (where .RegularPages ".Type" "research") "Params.order" "asc" -}}
+	  {{ $pages := sort (where .RegularPages ".Type" "studies") "Params.order" "asc" -}}
 	  
 	  {{ $scratch := newScratch -}}
 	    {{ range $pages -}}
@@ -44,6 +44,6 @@
 	   {{ end -}}
 	
 </section>
-{{"<!-- Content End -->" | safeHTML}}
+{{"<!-- Content studies End -->" | safeHTML}}
 
 {{ partial "footer.html" . }}
