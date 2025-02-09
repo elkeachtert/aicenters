@@ -26,7 +26,7 @@
      <h2>Gruppe leader</h2>
      {{ $leaderurl := strings.TrimRight "/" .Params.leader }}
      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
-     {{ partial "cardMember" $leaderPage  -}}
+     {{ partial "cardTeam" $leaderPage  -}}
     
     
 	  
