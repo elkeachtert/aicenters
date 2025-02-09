@@ -16,7 +16,7 @@
       {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
       {{ $areas = $areas | append $area -}}
     {{ end -}}
-    {{ partial "sectionCards" (dict "sectionLinks" $areas "title" (print $leaderPage.Params.academicTitle " " $leaderPage.Params.name) ) }}
+    {{ partial "sectionCards" (dict "sectionLinks" $areas "title" Params.shortTitle ) }}
     
   </div>	  
 </section>
