@@ -4,9 +4,9 @@
 {{"<!-- Content Start -->" | safeHTML}}
 <section class="list-content" id="section">	
   {{ partial "breadcrumbs.html" . }} 
-	{{ partial "makeTitle.html" . }}	
+  {{ partial "makeTitle.html" . }}	
 	
-	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
+  <div id="content" class="container-fluid mt-0 pt-0 mb-0">
 	  <div class="row">
 	    <div class="col-xl-9 col-lg-12 teaser">
 	      {{ partial "myMarkdownify" (dict "txt" .Params.teaser) -}}
@@ -21,6 +21,13 @@
 		  {{ end -}}
 	   </div>
     </div>
+    
+   <div class="row">
+     <h2>Gruppe leader</h2>
+     {{ $leaderPage := $.Site.GetPage $leaderurl -}}
+     {{ partial "cardMember" $leaderPage  -}}
+    
+    
 	  
 	  {{ .Content }}
   </div>	  
