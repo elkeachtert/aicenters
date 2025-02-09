@@ -4,6 +4,8 @@ order: 5
 title: Master Data Science
 shorttitle:
 description: tbd
+image: /images/adobestock/AdobeStock_508097008-max_776.webp
+copyright: max_776 - stock.adobe.com
 ---
 ## For the [elite master program in Data Science](http://datascience-munich.de/) we contribute to the following courses:
 
