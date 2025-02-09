@@ -4,6 +4,8 @@ order: 6
 title: BSc MSc Theses
 shorttitle:
 description: tbd
+image: /images/adobestock/AdobeStock_338830065-max_776.webp
+copyright: 
 ---
 ## Available Topics
 
