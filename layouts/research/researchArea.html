@@ -2,31 +2,37 @@
 {{ partial "navigation.html" . }}
 
 {{"<!-- Content Start -->" | safeHTML}}
-<section class="list-content" id="section">	
+<section class="list-content" id="section">
   {{ partial "breadcrumbs.html" . }} 
-  {{ partial "makeTitle.html" . }}	
-	
+  {{ partial "makeTitle.html" . }}
+  
   <div id="content" class="container-fluid mt-0 pt-0 mb-0">
-	  <div class="row">
-	    <div class="col-xl-9 col-lg-12 teaser">
-	      {{ partial "myMarkdownify" (dict "txt" .Params.teaser) -}}
-	      {{ if .Params.link -}}
-	      {{ partial "learnMore" (dict "link" .Params.link "size" "medium" ) -}}
-	      {{ end -}}
-	   </div>
-	   <div class="col-xl-3 col-lg-12 teaser">
-	     <img src="{{ .Params.image }}" alt="Image for {{ .Title }}" class="img-100" width=100 height=100>
-	     {{ if .Params.copyright -}}
-	     <p class="pt-0 pb-0 mb-0 copyright">&copy;{{ .Params.copyright }}</p>
-		  {{ end -}}
-	   </div>
+    <div class="row">
+      <div class="col-xl-9 col-lg-12 teaser">
+        {{ partial "myMarkdownify" (dict "txt" .Params.teaser) -}}
+        {{ if .Params.link -}}
+        {{ partial "learnMore" (dict "link" .Params.link "size" "medium" ) -}}
+        {{ end -}}
+      </div>
+      
+      <div class="col-xl-3 col-lg-12 teaser">
+        <img src="{{ .Params.image }}" alt="Image for {{ .Title }}" class="img-100" width=100 height=100>
+        {{ if .Params.copyright -}}
+        <p class="pt-0 pb-0 mb-0 copyright">&copy;{{ .Params.copyright }}</p>
+        {{ end -}}
+      </div>
     </div>
     
-   <div class="row">
+   <div class="row mt-0 posts">			
      <h2>Group leader</h2>
+     <div class="post col-12 mt-3 mb-3">
      {{ $leaderurl := strings.TrimRight "/" .Params.leader }}
      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
      {{ partial "cardMember" $leaderPage  -}}
+     </div>
+  </div>
+     
+     <h2>Group members</h2>
     
     
 	  
