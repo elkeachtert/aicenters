@@ -107,7 +107,7 @@ collections_config:
       members:
         type: array
       members[*]:
-        txpe: url
+        type: url
       link:
         comment: "External link to research site"
       teaser:
