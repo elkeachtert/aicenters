@@ -1,6 +1,5 @@
 ---
 draft: false
-order: 2
 title: Bachelor Studies
 shorttitle:
 description: tbd
