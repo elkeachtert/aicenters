@@ -5,6 +5,8 @@ navname: Winter Term 24/25
 title: Courses in Winter Term 2024/2025
 shorttitle:
 description: Courses in Winter Term 2024/2025 at the Data Mining Lab @LMU.
+image: /images/adobestock/AdobeStock_508097008-max_776.webp
+copyright: max_776 - stock.adobe.com
 ---
 {{< img-float src="/images/opportunities/education.webp" copyright="MCML" alt="education image" float="left" >}}
 
