@@ -2,47 +2,23 @@
 {{ partial "navigation.html" . }}
 
 {{"<!-- Content studies Start -->" | safeHTML}}
-<section class="list-content" id="section">	
-	{{ partial "breadcrumbs.html" . }} 
-	{{ partial "makeTitle.html" . }}	
-	
-	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
-	  {{ .Content }}
+<section class="list-content" id="section">
+  {{ partial "breadcrumbs.html" . }} 
+  {{ partial "makeTitle.html" . }}
+  
+  <div id="content" class="container-fluid mt-0 pt-0 mb-0">
+    {{ .Content }}
+    
+    {{ $pages := sort (where .RegularPages ".Type" "studies") "Params.order" "asc" -}}
+    {{ $areas := slice -}}
+    
+    {{ range $pages -}}
+      {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
+      {{ $areas = $areas | append $area -}}
+    {{ end -}}
+    {{ partial "sectionCards" (dict "sectionLinks" $areas "title" (print $leaderPage.Params.academicTitle " " $leaderPage.Params.name) ) }}
+    
   </div>	  
-	  
-	  {{ $pages := sort (where .RegularPages ".Type" "studies") "Params.order" "asc" -}}
-	  
-	  {{ $scratch := newScratch -}}
-	    {{ range $pages -}}
-	      {{ $leaderurl := strings.TrimRight "/" .Params.leader }}
-	      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
-	      
-	      {{ $scratch.SetInMap "leaders" (string $leaderPage.Params.order) .Params.leader -}}
-	   {{ end -}}
-	   
-	   {{ $leaderMap := $scratch.Get "leaders" -}}	
-	   
-	   {{ range $leaderMap -}}
-	      {{ $leader := . -}}
-	   
-	      {{ $leaderurl := strings.TrimRight "/" $leader }}
-	      {{ $leaderPage := $.Site.GetPage $leaderurl -}}
-	     
-	     {{ $areas := slice -}}
-	     {{ range $pages -}}
-	       {{ if eq .Params.leader $leader -}}
-	         {{ $link := .Permalink -}}
-	         {{ if .Params.link -}}
-	           {{ $link = .Params.link -}}
-	         {{ end -}}
-	         {{ $area := (dict "title" .Params.title "img" .Params.image "copyright" .Params.copyright "link" .Permalink "text" "" ) -}}
-	         {{ $areas = $areas | append $area -}}
-	       {{ end -}}
-	     {{ end -}}
-	     
-	     {{ partial "sectionCards" (dict "sectionLinks" $areas "title" (print $leaderPage.Params.academicTitle " " $leaderPage.Params.name) ) }}
-	   {{ end -}}
-	
 </section>
 {{"<!-- Content studies End -->" | safeHTML}}
 
