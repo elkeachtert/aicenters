@@ -15,6 +15,8 @@ teaser: >-
   vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
   gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 leader: /team/professors/seidl-thomas/
+members:
+  -
 image: /images/adobestock/AdobeStock_728303119-Bipul.webp
 copyright: Bipul - stock.adobe.com
 ---
