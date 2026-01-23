@@ -47,18 +47,33 @@
 	</section>
 
     <section class="pt-0 pb-0 mb-0 pt-2 mt-0 bg-black">
-    	<div class="container-fluid mb-0 mt-0 pt-0 bg-black" style="color: white">
-			<div class="row align-items-end white">
-              <br>
-              <a class="white" href="{{ "/intranet/"| absURL }}">Intranet</a> | 						
-              <a class="white" href="{{ "/imprint/"| absURL }}">Imprint</a> | 						
-              <a class="white" href="{{ "/data-protection/"| absURL }}">Data Protection</a>					
-			</div>
+    	<div class="row align-items-end white">
+				<div class="col-12 pt-md-4 footer-bottom-right pb-3">	
+					<a href="https://www.linkedin.com/company/munich-center-for-machine-learning" title="LinkedIn" aria-label="LinkedIn">
+						<img class="img-social" src="{{ "/images/footer/linkedin_white.webp" | absURL }}" width="100" height="100" alt="Link to LinkedIn">
+					</a>
+					<a href="https://x.com/MunichCenterML" title="X-Twitter" aria-label="X-Twitter">
+						<img class="img-social" src="{{ "/images/footer/twitter-x_white.webp" | absURL }}" width="100" height="100" alt="Link to X-Twitter">
+					</a>
+					<a href="https://www.instagram.com/munichcenter_ml/" title="Instagram" aria-label="Instagram">
+						<img class="img-social" src="{{ "/images/footer/insta.webp" | absURL }}" width="100" height="100" alt="Link to Instagram">
+					</a>
+					<a href="https://bsky.app/profile/munichcenterml.bsky.social" title="Bluesky" aria-label="Bluesky">
+						<img class="img-social" src="{{ "/images/footer/bluesky.webp" | absURL }}" width="100" height="100" alt="Link to Bluesky">
+					</a>
+					<a href="https://www.youtube.com/@MCML_Munich" title="YouTube" aria-label="YouTube">
+						<img class="img-social" src="{{ "/images/footer/youtube.webp" | absURL }}" width="100" height="100" alt="Link to YouTube">
+					</a><br>		
+								
+					<a class="white" href="{{ "/intranet/"| absURL }}">Intranet</a> | 						
+					<a class="white" href="{{ "/imprint/"| absURL }}">Imprint</a> | 						
+					<a class="white" href="{{ "/data-protection/"| absURL }}">Data Protection</a>					
+				</div>
 				
-			<div class="col-12 footer-bottom-right pt-4">	
-				<p class="p-xs">German AI Centers of Excellence | &copy;{{ dateFormat "2006" now }} | All rights reserved.</p>
+				<div class="col-12 footer-bottom-right pt-4">	
+					<p class="p-xs">Munich Center for Machine Learning | &copy;{{ dateFormat "2006" now }} | All rights reserved.</p>
+				</div>
 			</div>
-		</div>
 	</section>
 
     <section class="pt-0 pb-0 mb-0 pt-0 mt-0">
