@@ -5,6 +5,9 @@
       <div class="row align-items-end white">
         <div class="col-12 pt-md-4 footer-bottom-right pb-3">
           {{ range .Site.Params.aicenter -}}
+            <a href="{{ .link }}" title="{{ .name }}" aria-label="{{ .name }}">
+            <img class="img-social" src="{{ .link | absURL }}" width="1" height="2" alt="Link to {{ .name }}">
+          </a>
             {{ .name }}
           {{ end -}}
 
