@@ -31,6 +31,37 @@ unsafe="true"
     
 [params]
 
+[params.ai-center]
+name = "DFKI"
+image = "/images/logos/dfki.jpg"
+link = "https://www.dfki.de/web"
+
+[params.ai-center]
+name = "BIFOLD"
+image = "/images/logos/bifold.jpg"
+link = "https://www.bifold.berlin"
+
+[params.ai-center]
+name = "Scads.AI"
+image = "/images/logos/scads.webp"
+link = "https://scads.ai"
+
+[params.ai-center]
+type = ["ai-center"]
+name = "LAMARR"
+image = "/images/logos/lamarr.webp"
+link = "https://lamarr-institute.org"
+
+[params.ai-center]
+name = "Tue.AI"
+image = "/images/logos/tueai.jpg"
+link = "https://tuebingen.ai"
+
+[params.ai-center]
+name = "MCML"
+image = "/images/logos/mcml.webp"
+link = "https://mcml.ai"
+
 # ----------------------------------------------------------------------------------------
 # Navigation
 # ----------------------------------------------------------------------------------------      
