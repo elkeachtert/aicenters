@@ -1,6 +1,10 @@
 {{"<!-- Hero Area Start -->" | safeHTML}}
 <section class="list-content">
-	{{ partial "makeTitle.html" . }}	
+  {{ partial "makeTitle.html" . }}
+
+  <div id="content" class="container-fluid mt-0 pt-0 mb-0">
+	  {{ .Content }}
+  </div>	
 	
   <div class="container-fluid hero-area">
 	<div class="row mt-4" >
