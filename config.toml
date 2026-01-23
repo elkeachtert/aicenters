@@ -57,7 +57,7 @@ unsafe="true"
 # ----------------------------------------------------------------------------------------      
 [params.navigation]
 	home  = "Home"
-    logo = "images/dmlab.webp"
+    logo = "images/network_ai_research.jpg"
 	  
 	# Team  
   [[params.navigation.entry]]
