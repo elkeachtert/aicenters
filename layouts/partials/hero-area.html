@@ -18,44 +18,4 @@
       <p class="mt-1 pb-0 mb-1 p-xs gray">The Network of the German AI Competence Centers</p>
 	</div>
   </div>
-</section>
-
-{{"<!-- About Us Start -->" | safeHTML}}		
-<section class="list-content" style="background: url('/images/background/sections/bg-mask-top-white.webp') #00883a left top; background-repeat: no-repeat;"> 
-	{{ partial "sectionCards" (dict "sectionLinks" .Params.sectionLinks "title" "About Us" ) }}
-</section>
-{{"<!-- About Us End -->" | safeHTML}}	
-
-
-
-{{"<!-- Latest News Start -->" | safeHTML}}		
-<section class="list-content" style="background: url('/images/background/sections/bg-mask-top-white.webp') #00883a left top; background-repeat: no-repeat;"> 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3">
-				<div class="card card-news bg-black ratio ratio-1x1 p-2 b-none">
-				    <div class="p-3">
-						<h2>Latest News</h2>
-						<i class="pt-3 fas fa-arrow-right"></i><a class="white" href="/news/">&nbsp;All News</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">	
-			{{ $news := where .Site.RegularPages "Section" "news" -}}
-			{{ range first 3 $news -}}	
-			<div class="col-12 mb-4">
-				{{ .Scratch.Set "truncate" "250" -}}
-				{{ .Scratch.Set "hero" true -}}
-				{{ partial "cardPost" . -}}
-			</div>
-			{{ end -}}
-		</div>
-		<div class="row">
-			<div class="col d-flex justify-content-end align-items-end">
-				{{ partial "learnMore" (dict "link" "/news/" "size" "medium" "text" "All news" "margin" "0") -}}
-			</div>
-		</div>
-	</div>
-</section>
-{{"<!-- Latest News End -->" | safeHTML}}		
+</section>	
