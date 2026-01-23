@@ -1,5 +1,6 @@
 ---
 draft: false
+layout: list
 navname: Research
 title: German AI Centers of Excellence - Research
 shorttitle: Research
