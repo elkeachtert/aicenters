@@ -2,28 +2,5 @@
 draft: false
 title: German AI Centers of Excellence
 description: Get to know the German AI Centers of Excellence
-researchAreas:
-  - Process Mining
-  - Active Learning
-  - Clustering
-  - Limited Labels Learning
-  - Unsupervised Learning
-  - Spatial AI
-  - Knowledge Graphs
-sectionLinks:
-  - title: Team
-    img: /images/adobestock/AdobeStock_397640321-REDPIXEL.webp
-    copyright: REDPIXEL - stock.adobe.com
-    link: /team/
-    text: Get to know the Data Mining Lab and its members.
-  - title: Research
-    img: /images/adobestock/AdobeStock_715259130--bagoesanggito.webp
-    copyright: ' bagoesanggito - stock.adobe.com'
-    link: /research/
-    text: Check out our current research projects.
-  - title: Studies
-    img: /images/adobestock/adobestock-460085365-kasto.webp
-    copyright: ' kasto - stock.adobe.com'
-    link: /studies/
-    text: Check out the courses and potential thesis topics we offer.
 ---
+{{< teaser txt="<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>" >}}
