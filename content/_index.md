@@ -1,7 +1,7 @@
 ---
 draft: false
-title: Data Mining Lab @ LMU
-description: Get to know the Data Mining Lab @ LMU headed by Professor Thomas Seidl
+title: German AI Centers of Excellence
+description: Get to know the German AI Centers of Excellence
 researchAreas:
   - Process Mining
   - Active Learning
