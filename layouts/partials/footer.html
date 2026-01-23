@@ -4,6 +4,12 @@
     <div class="container-fluid mb-0 mt-0 pt-0">
       <div class="row align-items-end white">
         <div class="col-12 pt-md-4 footer-bottom-right pb-3">
+          {{ range .Site.Params.ai-center -}}
+            {{ .name }}
+          {{ end -}}
+
+
+          
           <a href="https://www.bifold.berlin" title="BIFOLD" aria-label="BIFOLD">
             <img class="img-social" src="{{ "/images/logos/bifold.jpg" | absURL }}" width="1" height="2" alt="Link to BIFOLD">
           </a>
