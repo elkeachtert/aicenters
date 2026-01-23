@@ -1,23 +1,23 @@
 {{"<!-- Hero Area Start -->" | safeHTML}}
 <section class="list-content">
-	<div class="container-fluid hero-area">
-		
-		<div class="row mt-4" >
-			<div class="col-xl-12 col-lg-12 mt-5">
-				<h1>{{ .Title }}</h1>
-				<h2 class="green mt-5">
-				  {{ $i := 0 -}}
-				  {{ range .Params.researchAreas -}}
-				    {{ if gt $i 0 -}}
-		          &bull; 
-		        {{ end -}}
-		        {{ . }}
-		        {{ $i = add $i 1 -}}
-					{{ end -}}
-				</h2>
-			</div>
-		</div>
+  <div class="container-fluid hero-area">
+	<div class="row mt-4" >
+      <div class="col-xl-12 col-lg-12 mt-5">
+        <h1>{{ .Title }}</h1>
+        {{ range sort .Site.Params.aicenter "name" -}}
+		<div class="col-12 col-md-6 pt-2 pb-2">
+          <a href="{{ .link }}">
+            <img src="{{ .image }}" class="img-partner" alt="{{ .name }}" width=2 height=1 style="width:100%; height:auto;">
+          </a>
+        </div>
+		{{ end -}}
+      </div>
+    </div>
+    <div class="col-10 col-md-6">
+      <img src="/images/logos/german_ai_centers.webp" class="mcml-logo" alt="MCML" width=3 height=2 style="width:100%; height:auto;">
+      <p class="mt-1 pb-0 mb-1 p-xs gray">The Network of the German AI Competence Centers</p>
 	</div>
+  </div>
 </section>
 
 {{"<!-- About Us Start -->" | safeHTML}}		
