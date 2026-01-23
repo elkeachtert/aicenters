@@ -31,33 +31,32 @@ unsafe="true"
     
 [params]
 
-[[params.ai-center]]
+[[params.aicenter]]
 name = "DFKI"
 image = "/images/logos/dfki.jpg"
 link = "https://www.dfki.de/web"
 
-[[params.ai-center]]
+[[params.aicenter]]
 name = "BIFOLD"
 image = "/images/logos/bifold.jpg"
 link = "https://www.bifold.berlin"
 
-[[params.ai-center]]
+[[params.aicenter]]
 name = "Scads.AI"
 image = "/images/logos/scads.webp"
 link = "https://scads.ai"
 
-[[params.ai-center]]
-type = ["ai-center"]
+[[params.aicenter]]
 name = "LAMARR"
 image = "/images/logos/lamarr.webp"
 link = "https://lamarr-institute.org"
 
-[[params.ai-center]]
+[[params.aicenter]]
 name = "Tue.AI"
 image = "/images/logos/tueai.jpg"
 link = "https://tuebingen.ai"
 
-[[params.ai-center]]
+[[params.aicenter]]
 name = "MCML"
 image = "/images/logos/mcml.webp"
 link = "https://mcml.ai"
