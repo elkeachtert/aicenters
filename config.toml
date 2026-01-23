@@ -1,7 +1,6 @@
 baseURL = "https://dbs.ifi.lmu.de"
 languageCode = "en"
-title = "Data Mining Lab @LMU"
-paginate = 3
+title = "German AI Centers of Excellence"
 
 [module]
 [[module.mounts]]
@@ -11,27 +10,7 @@ paginate = 3
 
 disableKinds = ['taxonomy', 'term']
 
-[outputFormats.Publications]
-mediaType = "application/json"
-baseName = "publications"
-isPlainText = true
-notAlternative = true
-
-[outputFormats.Software]
-mediaType = "application/json"
-baseName = "software"
-isPlainText = true
-notAlternative = true
-
-[outputFormats.News]
-mediaType = "application/json"
-baseName = "news"
-isPlainText = true
-notAlternative = true
-	
-[outputs]
-   home = [ "HTML", "Publications", "Software", "News" ]
-   
+  
 [frontmatter]
 	lastmod = ["lastmod", ":fileModTime"]
 
