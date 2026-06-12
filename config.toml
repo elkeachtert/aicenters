@@ -75,8 +75,6 @@ link = "https://mcml.ai"
     linkto = "/about/"
     hasChildren = "false"
     
-  
-    
   # Studies #  
   [[params.navigation.entry]]
     id = "studies"
