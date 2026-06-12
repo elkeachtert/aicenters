@@ -1,6 +1,5 @@
 ---
 draft: false
-order: 6
 title: Data Mining Lab @ LMU - Contact
 shorttitle: Contact
 description: Contact details of the Data Mining Lab @ LMU
