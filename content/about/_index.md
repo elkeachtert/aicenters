@@ -1,14 +1,9 @@
 ---
 draft: false
-type: members
-layout: members
-order: 1
-navname: Team
-title: Data Mining Lab @LMU - Our Team
+title: About
 shorttitle: Our Team
 description: >-
-  Get to know the people behind the Data Mining Lab @LMU: Professors, Office,
-  Scientists, Alumni.
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 ---
 {{< teaser txt=`
-<p>Our team at is a dynamic and highly motivated group consisting of international experts in the fields of Artificial Intelligence and Machine Learning, as well as talents in organization and communication.</p>` >}}
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>` >}}
