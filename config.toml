@@ -75,53 +75,33 @@ link = "https://mcml.ai"
     linkto = "/about/"
     hasChildren = "false"
     
-  # Studies #  
-  [[params.navigation.entry]]
-    id = "studies"
-    name = "Studies"
-    linkto = "/studies/"
-    hasChildren = "false"
-    
-  # Research #  
-  [[params.navigation.entry]]
-    id = "research"
-    name = "Research"
-    linkto = "/research/"
-    hasChildren = "false"
-    
-  #	[[params.navigation.subentry]]
-    #	  parent = "research"
-    #	linkto = "/research/areaa/"
-    #	  name = "A | Foundations of ML"
-    
+  # News #  
   [[params.navigation.entry]]
     id = "news"
     name = "News"
     linkto = "/news/"
+    hasChildren = "false"
     
-  # Jobs #    
+  # Research #  
   [[params.navigation.entry]]
-    id = "jobs"
-    name = "Jobs"
-    linkto = "/opportunities/"	
+    id = "events"
+    name = "Events"
+    linkto = "/events/"
+    hasChildren = "false"
+       
+  # Partner Programs #    
+  [[params.navigation.entry]]
+    id = "partner"
+    name = "Partner Programs"
+    linkto = "/partner_programs/"	
     hasChildren = "false"  
-	  
-#	[[params.navigation.subentry]]
-#	  parent = "opportunities"
-#	  linkto = "/opportunities/funding/"
-#	  name = "Funding Programs"
-#	[[params.navigation.subentry]]
-#	  parent = "opportunities"
-#	  linkto = "/opportunities/education/"
-#	  name = "Education Programs"
-#	[[params.navigation.subentry]]
-#	  parent = "opportunities"
-#	  linkto = "/opportunities/training/"
-#	  name = "Professional Training"
-#	[[params.navigation.subentry]]
-#	  parent = "opportunities"
-#	  linkto = "/opportunities/jobs/"
-#	  name = "Jobs"
+
+  # European Network #    
+  [[params.navigation.entry]]
+    id = "network"
+    name = "European Network"
+    linkto = "/european_network/"	
+    hasChildren = "false"  
 
   [[params.navigation.entry]]
     id = "contact"
