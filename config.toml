@@ -68,38 +68,14 @@ link = "https://mcml.ai"
 	home  = "Home"
     logo = "images/aicenters.png"
 	  
-	# Team  
+  # About  
   [[params.navigation.entry]]
-    id = "team"
-    name = "Team"
-    linkto = "/team/"
-    hasChildren = "true"
+    id = "about"
+    name = "About"
+    linkto = "/about/"
+    hasChildren = "false"
     
-  [[params.navigation.subentry]]
-    parent = "team"
-    linkto = "/team/professors/"
-    name = "Professors"
-    
-  [[params.navigation.subentry]]
-    parent = "team"
-    linkto = "/team/office/"
-    name = "Office" 
-    #divider = true
-    
-  [[params.navigation.subentry]]
-    parent = "team"
-    linkto = "/team/mcml/"
-    name = "Management MCML"
-    
-  [[params.navigation.subentry]]
-    parent = "team"
-    linkto = "/team/scientists/"
-    name = "Scientists"
-    
-  [[params.navigation.subentry]]
-    parent = "team"
-    linkto = "/team/alumni/"
-    name = "Alumni"
+  
     
   # Studies #  
   [[params.navigation.entry]]
