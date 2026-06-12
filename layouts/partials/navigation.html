@@ -17,23 +17,6 @@
 	</button>
 		
 	<div class="collapse navbar-collapse flex-column" id="navbarNav">
-		<ul class="navbar-nav navbar-quicklinks mt-xl-2 ms-auto pb-xl-0">
-			{{ range .Site.Params.navigation.quicklink -}}
-				<li class="nav-item">
-					<a class="nav-link nav-link-light" href="{{.linkto | absURL}}">{{ .name }}</a>
-				</li>
-			{{ end -}}
-			
-			<div class="ms-xl-4 me-xl-4 mt-2 mt-xl-0 mb-2 mb-xl-0">
-			{{ range .Site.Params.navigation.social -}}
-				<a class="maillink nav-social dgray m-0 p-0" title="{{.name}}" aria-label="{{.name}}" href="{{.linkto}}" target="_blank" rel="noopener"><i class="{{.iclass}}"></i></a>
-			{{ end -}}
-			{{ range .Site.Params.navigation.scholar -}}
-				<a class="maillink nav-social dgray m-0 p-0" title="{{.name}}" aria-label="{{.name}}" href="{{.linkto}}" target="_blank" rel="noopener"><i class="{{.iclass}}"></i></a>
-			{{ end -}}
-			</div>
-		</ul>
-
 		<ul class="navbar-nav ms-auto me-xl-5 mb-0 pe-xl-5 pb-0">
 			{{ range .Site.Params.navigation.entry -}}
 				{{ if eq .hasChildren "true" -}}	
