@@ -60,36 +60,5 @@ p.small {
 	}
 }
 
-p.xsmall {
-  font-size: 14px;
-}
-@media (max-width: 575.98px) {
-	p.xsmall {
-		font-size: 12px;
-	}
-}
-
-span.small-text {
-  display: block;
-  font-size: 18px;
-	line-height: 26px;
-}
-@media (max-width: 575.98px) {
-	span.small-text {
-		font-size: 16px;
-		line-height: 24px;
-	}
-}
-span.xsmall-text {
-  display: block;
-  font-size: 14px;
-	line-height: 20px;
-}
-@media (max-width: 575.98px) {
-	span.xsmall-text {
-		font-size: 12px;
-		line-height: 18px;
-	}
-}
 
 
