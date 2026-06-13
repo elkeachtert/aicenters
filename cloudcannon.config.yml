@@ -20,7 +20,6 @@ collections_config:
     path: content
     glob:
       - '**/*.md'
-      - '!dssgxmunich/*'
       - '!**/index.md'
     name: Sections
     icon: home
