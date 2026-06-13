@@ -69,21 +69,26 @@ link = "https://www.bifold.berlin"
 name = "Scads.AI"
 image = "/images/logos/scads.webp"
 link = "https://scads.ai"
+description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+
 
 [[params.aicenter]]
 name = "LAMARR"
 image = "/images/logos/lamarr.webp"
 link = "https://lamarr-institute.org"
+description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 
 [[params.aicenter]]
 name = "Tue.AI"
 image = "/images/logos/tueai.jpg"
 link = "https://tuebingen.ai"
+description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 
 [[params.aicenter]]
 name = "MCML"
 image = "/images/logos/mcml.webp"
 link = "https://mcml.ai"
+description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 
 # ----------------------------------------------------------------------------------------
 # Navigation
@@ -105,13 +110,6 @@ link = "https://mcml.ai"
     name = "News"
     linkto = "/news/"
     hasChildren = "false"
-    
-  # Research #  
-  [[params.navigation.entry]]
-    id = "events"
-    name = "Events"
-    linkto = "/events/"
-    hasChildren = "false"
        
   # Partner Programs #    
   [[params.navigation.entry]]
@@ -125,12 +123,7 @@ link = "https://mcml.ai"
     id = "network"
     name = "European Network"
     linkto = "/european_network/"	
-    hasChildren = "false"  
-
-  [[params.navigation.entry]]
-    id = "contact"
-    name = "Contact"
-    linkto = "/contact/"
+    hasChildren = "false"
 	  
 # ----------------------------------------------------------------------------------------
 # Disable all tracking (DSVGO)

@@ -1,44 +1,46 @@
 {{ "<!-- Footer Start -->" | safeHTML }}
 <footer id="footer pt-0 pb-0 mb-0">
-  <section class="pt-0 pb-0 mb-0 pt-5 mt-0 bg-black">
-    <div class="container-fluid mb-0 mt-0 pt-0">
-      <div class="row align-items-end white">
-        <div class="col-12 pt-md-4 footer-bottom-right pb-3">
-          {{ range .Site.Params.aicenter -}}
-            <a href="{{ .link }}" title="{{ .name }}" aria-label="{{ .name }}">
-              <img class="img-social" src="{{ .image | absURL }}" width="1" height="2" alt="Link to {{ .name }}">
-            </a>
-          {{ end -}}
-          <br><br>
-          <a class="white" href="{{ "/imprint/"| absURL }}">Imprint</a> | 						
-          <a class="white" href="{{ "/data-protection/"| absURL }}">Data Protection</a>
-        </div>
-        
-        <div class="col-12 footer-bottom-right pt-4">	
-          <p class="p-xs">German AI Centers of Excellence | &copy;{{ dateFormat "2006" now }} | All rights reserved.</p>
+	<section class="pt-0 pb-0 mb-0 pt-5 mt-0 bg-black">
+		<div class="container-fluid mb-0 mt-0 pt-0">
+			<div class="row align-items-end white">
+				<div class="col-12 pt-md-4 footer-bottom-right pb-3">
+					{{ range sort hugo.Data.aicenters "name" -}}
+					<a href="{{ .link }}" title="{{ .name }}" aria-label="{{ .name }}">
+						<img class="img-social" src="{{ .image | absURL }}" width="1" height="2" alt="Link to {{ .name }}">
+					</a>
+					{{ end -}}
+					<br><br>
+					<a class="white" href="{{ "/imprint/"| absURL }}">Imprint</a> | 						
+					<a class="white" href="{{ "/data-protection/"| absURL }}">Data Protection</a>
+				</div>
+
+				<div class="col-12 footer-bottom-right pt-4">	
+					<p class="p-xs">German AI Centers of Excellence | &copy;{{ dateFormat "2006" now }} | All rights reserved.</p>
+				</div>
+			</div>
 		</div>
-      </div>
-  </section>
-  
-  <section class="pt-0 pb-0 mb-0 pt-0 mt-0">
-    <div class="container-fluid mb-0 mt-0 pt-0">
-      <div class="row g-0 pt-4">
-        <div class="col">	
-          Institutionally funded by
-        </div>
+	</section>
+
+	<section class="pt-0 pb-0 mb-0 pt-0 mt-0">
+		<div class="container-fluid mb-0 mt-0 pt-0">
+			<div class="row g-0 pt-4">
+				<div class="col">	
+					Institutionally funded by
+				</div>
 		
-        <div class="row g-0 row-cols-3 pt-0 align-items-center">
-          <div class="col text-md-start text-center p-0">
-            <img src="{{ "/images/footer/bmftr.webp" | absURL }}" alt="Bundesministerium für Forschung, Technologie und Raumfahrt" width="600" height="264" class="img-60 mt-3">
-          </div>
-        </div>
-        <div class="row g-0 row-cols-1 pt-2 align-items-center">
-          <div class="col text-md-start text-center p-0">
-            <img src="{{ "/images/footer/fundedby.webp" | absURL }}" alt="Funded by" width="2000" height="160" class="img-100 mt-3">
-          </div>
-        </div>
-    </div>
-  </section>
+				<div class="row g-0 row-cols-3 pt-0 align-items-center">
+					<div class="col text-md-start text-center p-0">
+						<img src="{{ "/images/footer/bmftr.webp" | absURL }}" alt="Bundesministerium für Forschung, Technologie und Raumfahrt" width="600" height="264" class="img-60 mt-3">
+					</div>
+				</div>
+				<div class="row g-0 row-cols-1 pt-2 align-items-center">
+					<div class="col text-md-start text-center p-0">
+						<img src="{{ "/images/footer/fundedby.webp" | absURL }}" alt="Funded by" width="2000" height="160" class="img-100 mt-3">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </footer>
 {{ "<!-- Footer End -->" | safeHTML }}
 

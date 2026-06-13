@@ -1,9 +1,9 @@
 ---
 draft: true
 layout: newsitem
-description: 
-title: New News extern
-date: {{ .Date }}
+date:
+description:
+title: 
 subtitle: 
 teaser: 
 tags:

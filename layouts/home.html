@@ -10,7 +10,6 @@
 {{ $news := partialCached "getAllNews" . -}}
 {{ $lastnews := index $news 0 -}}
 {{ $lastmod := $lastnews.Date -}}
-{{/* partial "lastMod" (dict "bgcolor" "bg-yellow" "date" .Date "lastmod" $lastmod) - */}}
 {{ partial "lastMod" (dict "date" .Date "lastmod" $lastmod) -}}
 {{"<!-- lastmod home.html End -->" | safeHTML}}
 {{- end -}}

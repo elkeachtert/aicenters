@@ -1,6 +1,8 @@
 {{ $title := .title -}}
 {{ if not $title -}}
 	{{ $title = "German AI Centers of Excellence" -}}
+{{ else -}}
+	{{ $title = printf "German AI Centers of Excellence - %s" $title -}}
 {{ end -}}
 {{- $description := .description -}}
 {{ if not $description -}}

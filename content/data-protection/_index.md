@@ -1,9 +1,8 @@
 ---
 draft: false
-title: Data Mining Lab @LMU - Data Protection Policy
-shorttitle: Data Protection Policy
+title: Data Protection Policy
 navname: Data Protection
-displayInNavigation: false
-description: Data Protection Policy of the website of the Data Mining Lab @LMU.
+description: Data Protection Policy of the website of the German AI Centers of Excellence.
+date: 2026-06-12
 ---
 {{< teaser txt="<p>The <a href=\"https://www.lmu.de/en/footer/privacy-disclaimer/index.html\">Privacy Policy</a> of LMU München applies to the use of this website.</p>" >}}
