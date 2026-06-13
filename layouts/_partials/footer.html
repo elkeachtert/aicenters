@@ -31,9 +31,9 @@
 			<div class="row">
 				{{ $offset := 6 -}}
 				{{ range sort hugo.Data.aicenters "center_short_name" -}}
-				<div class="col-1 offset-{{ $offset }} pt-md-4 pb-3">
+				<div class="col-2 col-md-1 offset-md-{{ $offset }} pt-md-4 pb-3">
 					<a href="{{ .center_url }}" title="{{ .center_short_name }}" aria-label="{{ .center_short_name }}">
-						<img class="img-social" src="{{ .center_logo | absURL }}" width="1" height="2" alt="Link to {{ .center_short_name }}">
+						<img class="img-100" src="{{ .center_logo | absURL }}" width="1" height="2" alt="Link to {{ .center_short_name }}">
 					</a>
 				</div>
 				{{ $offset = 0 -}}
