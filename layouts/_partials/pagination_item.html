@@ -1,0 +1,79 @@
+
+{{"<!-- pagination_item Start -->" | safeHTML}}
+{{ $thisPage := .thisPage -}}
+{{ $prev := .pages.Prev .thisPage -}}
+{{ $next := .pages.Next .thisPage -}}
+{{ $last := index .pages 0 -}}
+{{ $first := index .pages (add (.pages | len) -1) }}
+
+{{ if eq .type "tags" -}}
+	{{ $index := -1 -}}
+	{{ range $i, $p := .pages -}}
+		{{ if eq $p.Permalink $thisPage.Permalink -}}
+			{{ $index = $i -}}
+			{{ break -}}
+		{{ end -}}
+	{{ end -}}
+
+	{{ $prev = index .pages (sub $index 1) }}
+	{{ $next = index .pages (add $index 1) }}
+{{ end -}}
+
+<nav aria-label="Page navigation" class="w-100 pe-1">
+	<ul class="pagination justify-content-start ms-0 ps-0 mt-0">
+		{{"<!-- First page. -->" | safeHTML}}
+		<!--<li class="page-item">
+		{{ if ne .thisPage $first -}}
+			<a class="page-link" title="first" href="{{ $first.Permalink }}">
+		{{ else -}}
+			<a class="page-link disabled">
+		{{ end -}}
+				<i class="fa-solid fa-arrow-left-to-line"></i>
+			</a>
+		</li>
+		&nbsp;-->
+		{{"<!-- Previous page. -->" | safeHTML}}
+		<li class="page-item">
+		{{ if $prev -}}
+			<a class="page-link" title="previous" href="{{ $prev.Permalink }}">
+		{{ else -}}
+			<a class="page-link disabled">
+		{{ end -}}
+				<i class="fa-solid fa-arrow-left"></i>
+			</a>
+		</li>
+		&nbsp;
+		{{"<!-- Next page. -->" | safeHTML}}
+		<li class="page-item">
+		{{ if $next -}}
+			<a class="page-link" title="next" href="{{ $next.Permalink }}">
+		{{ else -}}
+			<a class="page-link disabled">
+		{{ end -}}
+				<i class="fa-solid fa-arrow-right"></i>
+			</a>
+		</li>
+		&nbsp;
+		{{"<!-- Last page. -->" | safeHTML}}
+		<!--<li class="page-item">
+		{{ if ne .thisPage $last -}}
+			<a class="page-link" title="last" href="{{ $last.Permalink }}">
+		{{ else -}}
+			<a class="page-link disabled">
+		{{ end -}}
+				<i class="fa-solid fa-arrow-right-to-line"></i>
+			</a>
+		</li>
+		&nbsp;-->
+		{{"<!-- All pages -->" | safeHTML}}
+		<li class="page-item">
+			<a class="page-link" title="all" href="{{ .link | absURL }}">
+				<i class="fa-solid fa-arrow-up-from-bracket"></i>
+			</a>
+		</li>
+	</ul>
+	
+</nav>
+</div>
+
+{{"<!-- pagination_item End -->" | safeHTML}}

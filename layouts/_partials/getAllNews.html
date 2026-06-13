@@ -1,0 +1,5 @@
+
+{{ "<!-- partial getAllNews Start -->" | safeHTML }}
+{{ $news := (sort (where site.RegularPages "Section" "news") "Date" "desc") -}}
+{{ return $news -}}
+{{ "<!-- partial getAllNews End -->" | safeHTML }}

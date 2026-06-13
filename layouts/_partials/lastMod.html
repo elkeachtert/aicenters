@@ -1,0 +1,28 @@
+
+{{ "<!-- partial lastMod Start -->" | safeHTML }}
+{{ if .bgcolor -}}
+<div class="mcml-content {{ .bgcolor }}">
+{{ else if .opac -}}
+<div class="mcml-content bg-opac">
+{{ else -}}
+<div class="mcml-content">
+{{ end -}}
+	<div class="container-fluid">
+	{{ if and .color (eq .color "white") -}}
+		<a href="#top" class="btn btn-sm btn-outline-light mt-0 mb-3">
+	{{ else -}}
+		<a href="#top" class="btn btn-sm btn-outline-secondary mt-0 mb-3">
+	{{ end -}}
+			<i class="fa-solid fa-arrow-up me-1"></i>Back to Top
+		</a>
+	
+	{{ if and .color (eq .color "white") -}}
+		<p class="copyright-white">
+	{{ else -}}
+		<p class="copyright">
+	{{ end -}}
+		{{ .date.Format "2006-01-02" }} - Last modified: {{ .lastmod.Format "2006-01-02" }}
+		</p>
+	</div>
+</div>
+{{ "<!-- partial lastMod End -->" | safeHTML }}

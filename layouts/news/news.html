@@ -1,46 +1,39 @@
-{{ partial "header.html" . }}
-{{ partial "navigation.html" . }}
+{{ define "header" }}
+{{"<!-- header news.html Start -->" | safeHTML}}
+{{ partialCached "header.html" (dict "title" (strings.Title .Title) "description" .Description "page" .Permalink "rss" "true" ) .Permalink }}
+{{"<!-- header news.html End -->" | safeHTML}}
+{{ end -}}
 
-<section class="list-content bg-mask-top-white" id="section">	
-	{{ partial "breadcrumbs.html" . }} 
-	<div class="container-fluid"> 
+{{ define "content" }}
+{{"<!-- content news.htmlStart -->" | safeHTML}}
+<section class="mcml-content noshow-lg bg-news" id="section">
+	{{ partialCached "breadcrumbs.html" (dict "page" .) "news"}}
+	<div class="container-fluid">
+		{{ $videoPath := printf "/images/background/videos/%s.mp4" .Params.background -}}
+		<video class="background-video2" autoplay playsinline muted loop width=1080 height=1080>
+			<source src="{{ $videoPath | absURL }}" type="video/mp4">
+		</video>
 		<div class="row row-cols-1 row-cols-lg-1">
 			<div class="col">
-			{{ if .Params.shorttitle -}}
-				<h1>{{ .Params.shorttitle | markdownify }}</h1>
-			{{ else -}}
-				<h1>{{ .Title }}</h1>
-			{{ end -}}
+				<h1>{{ strings.Title .Title }}</h1>
 			</div>
-			{{ partial "search-form-news.html" . }}
+			{{ partialCached "search-form-post.html" . .Section }}
 		</div>
 	</div>
-	
+
 	<div id="content" class="container-fluid mt-0 pt-0 mb-0">
-		<div class="row row-cols-1 mt-0 posts" id="posts">			
-		{{ $range := .Pages }}
-		{{ $paginator := .Paginate $range }}
-		{{ $pageSize := $paginator.PageSize }}
-		{{ $totalPostsToShow := mul $paginator.PageNumber $pageSize }}
-		{{ range $index, $el := (first $totalPostsToShow $range) }}
-			<div {{ if eq $index (sub $totalPostsToShow $pageSize) }}id="newpage"{{ end }} class="post col mt-3 mb-3">
-				{{ .Scratch.Set "hero" false -}}
-				{{ partial "cardPost" . -}}
-			</div>
-		{{ end }}
-		{{ if and (gt $paginator.TotalPages 1) ($paginator.HasNext) }}
-			<div>
-				<a href="{{ $paginator.Next.URL }}#newpage" class="quicklink has--icon mt-0 mb-0 medium nextpage">
-					<span class="quicklink_icon">
-						<i class="fas fa-arrow-right"></i>
-					</span>
-					Load more
-				</a>
-			</div>
-		{{ end }}
-		</div>
+		{{ $news := partialCached "getAllNews" . -}}
+		{{ partial "paginatePostCards" (dict "posts" $news "page" .) -}}
 	</div>
 </section>
-{{"<!-- Content End -->" | safeHTML}}
+{{"<!-- content news.html End -->" | safeHTML}}
+{{ end -}}
 
-{{ partial "footer.html" . }}
+{{ define "lastmod" }}
+{{"<!-- lastmod news.html Start -->" | safeHTML}}
+{{ $news := partialCached "getAllNews" . -}}
+{{ $lastnews := index $news 0 -}}
+{{ $lastmod := $lastnews.Date -}}
+{{ partial "lastMod" (dict "bgcolor" "bg-news" "date" .Date "lastmod" $lastmod) -}}
+{{"<!-- lastmod news.html End -->" | safeHTML}}
+{{- end -}}

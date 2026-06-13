@@ -2,33 +2,57 @@ baseURL = "https://dbs.ifi.lmu.de"
 languageCode = "en"
 title = "German AI Centers of Excellence"
 
+titleCaseStyle = 'ap'
+
+#disableKinds = ['taxonomy', 'term']
+
+[taxonomies]
+	category = "categories"
+	tag = "tags" 
+
+[pagination]
+	pagerSize = 6
+
 [module]
 [[module.mounts]]
-  source = 'static'
-  target = 'static'
-	excludeFiles = ['images/**/archive']
+	source = 'static'
+	target = 'static'
+	files = ['! images/**/archive']
+	
+[[module.mounts]]
+	source = 'static'
+	target = 'assets'
+	files = ['! images/**/archive']
 
-disableKinds = ['taxonomy', 'term']
+[outputFormats.News]
+mediaType = "application/json"
+baseName = "news"
+isPlainText = true
+notAlternative = true
 
-  
+[outputs]
+	home = [ 'html', 'News' ]
+	section = ['html']
+	taxonomy = ['html']
+	term = ['html']
+	
 [frontmatter]
-	lastmod = ["lastmod", ":fileModTime"]
-
-#[taxonomies]
-#  category = 'categories'
-#  series = 'series'
-#  tag = 'tags'
+  date = ['date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified']
+  expiryDate = ['expirydate', 'unpublishdate']
+  lastmod = ['lastmod', ':fileModTime']
+  publishDate = ['publishdate', 'pubdate', 'published', 'date']
 
 [blackfriday]
 extensions = ["hardLineBreak"]
+
 [markup.goldmark.renderer]
-unsafe="true"
+unsafe = true
 
 [sitemap]
   changefreq = 'daily'
   filename = 'sitemap.xml'
   priority = 0.5
-    
+
 [params]
 
 [[params.aicenter]]

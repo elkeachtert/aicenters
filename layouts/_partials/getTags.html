@@ -1,0 +1,60 @@
+
+{{ "<!-- partial getTags Start -->" | safeHTML }}
+{{/* Sort News und Events tags */}}
+
+{{ $allTags := slice -}}
+{{ $newsTags := slice -}}
+{{ $eventTags := slice -}}
+{{ $publicationTags := slice -}}
+{{ $newsPrioTags := slice -}}
+{{ $newsRemainingTags := slice -}}
+{{ $newsPriorityNames := hugo.Data.corenewstags -}}
+
+{{/* filter news and event tags */}}
+{{ range $name, $taxonomy := site.Taxonomies.tags -}}
+	{{ $isNewsTag := false -}}
+	{{ $isEventTag := false -}}
+	{{ $isPublicationTag := false -}}
+	{{ range $taxonomy.Pages -}}
+		{{ if eq .Section "news" -}}
+			{{ $isNewsTag = true -}}
+		{{ else if eq .Section "events" -}}
+			{{ $isEventTag = true -}}
+		{{ else if eq .Section "publications" -}}
+			{{ $isPublicationTag = true -}}
+		{{ else -}}
+			{{ errorf "Wrong tag in section %v" . }}
+		{{ end -}}
+	{{ end -}}
+			
+	{{ if $isNewsTag -}}
+		{{ $newsTags = $newsTags | append (dict "name" $name "taxonomy" $taxonomy) -}}
+		{{ if in $newsPriorityNames $name -}}
+			{{ $newsPrioTags = $newsPrioTags | append (dict "name" $name "taxonomy" $taxonomy "page" .Page) -}}
+		{{ else -}}
+			{{ $newsRemainingTags = $newsRemainingTags | append (dict "name" $name "taxonomy" $taxonomy "page" .Page) -}}
+		{{ end -}}
+	{{ end -}}
+	{{ if $isEventTag -}}
+		{{ $eventTags = $eventTags | append (dict "name" $name "taxonomy" $taxonomy "page" .Page) -}}
+	{{ end -}}
+	{{ if $isPublicationTag -}}
+		{{ $publicationTags = $publicationTags | append (dict "name" $name "taxonomy" $taxonomy "page" .Page) -}}
+	{{ end -}}
+{{ end -}}
+
+{{ range $newsPrioTags -}}
+	{{ $allTags = $allTags | append .page -}}
+{{ end -}}
+{{ range $newsRemainingTags -}}
+	{{ $allTags = $allTags | append .page -}}
+{{ end -}}
+{{ range $eventTags -}}
+	{{ $allTags = $allTags | append .page -}}
+{{ end -}}
+{{ range $publicationTags -}}
+	{{ $allTags = $allTags | append .page -}}
+{{ end -}}
+
+{{ return (dict "newsPrioTags" $newsPrioTags "newsRemainingTags" $newsRemainingTags "eventTags" $eventTags "publicationTags" $publicationTags "allTags" $allTags ) -}}
+{{ "<!-- partial getTags End -->" | safeHTML }}

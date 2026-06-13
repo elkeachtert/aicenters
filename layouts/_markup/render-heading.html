@@ -1,0 +1,8 @@
+{{ $id := .Anchor | default (.Text | urlize) -}}
+{{ $level := .Level -}}
+{{ $text := strings.Title .PlainText | safeHTML -}}
+<h{{ $level }} id="{{ $id }}">{{ $text }}</h{{ $level -}}>
+{{/* save heading in Page.Store */}}
+{{ $headings := .Page.Store.Get "headings" | default (slice) -}}
+{{ $headings = $headings | append (dict "id" $id "text" $text "level" $level) -}}
+{{ .Page.Store.Set "headings" $headings -}}

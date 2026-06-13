@@ -1,87 +1,199 @@
-{{ partial "header.html" . }}
-{{ partial "navigation.html" . }}
-
+{{ define "content" }}
+{{"<!-- content newsitem.html Start -->" | safeHTML}}
+{{/* some checks */}}
 {{ $path := printf "/static%s" .Params.img -}} 
 {{ if not (os.FileExists $path) -}}
 {{ errorf "The news %q requires a valid image path:%q" .Permalink $path -}}
 {{ end -}}
 
-{{ if and (not .Content) (not .Params.link) -}}
-{{ errorf "The news %q requires content or an external link :%q" .Permalink -}}
-{{ else if and .Content .Params.link -}}
-{{ errorf "The news %q has content and external link :%q" .Permalink -}}
+{{ if gt (len (findRE "\r?\n" .Params.subtitle)) 0 -}}
+{{ errorf "The news %q has a linebreak in subtitle." .Permalink }}
 {{ end -}}
 
-{{"<!-- Content Start list-->" | safeHTML}}
-<section class="list-content pb-3" style="background: url('/images/background/sections/bg-mask-top-yellow.webp') left top no-repeat, url('/images/background/sections/bg-mask-bottom-yellow.webp') left bottom no-repeat;" >
-	{{ partial "breadcrumbs.html" . }} 
-	
+{{ if and .Params.subtitle .Params.speakers -}}
+{{ errorf "The news %q has speaker and subtitle." .Permalink }}
+{{ end -}}
+
+<section class="mcml-content pb-3 noshow-lg bg-newsitem opac">
+	{{ partial "breadcrumbs.html" (dict "page" .) }}
 	<div class="container-fluid pb-0 pt-0"> 
 		<div class="row">
-			{{ partial "search-form-news.html" . }}
-			<div class="col" style="text-align: right">
-				{{ partial "pagination_newsitem" . }}
+			{{ partialCached "search-form-post" . .Section }}
+			<div class="col">
+				{{ $pages := partialCached "getAllNews" . .Section -}}
+				{{ partial "pagination_item" (dict "pages" $pages "thisPage" . "link" "/news/") }}
 			</div>
 		</div>
 	</div>
-
+	
 	<div id="content" class="container-fluid mt-0 pt-0">
+		{{ $videoPath := "/images/background/videos/current.mp4" -}}
+		<video class="background-video1" autoplay playsinline muted loop width=1080 height=1080>
+			<source src="{{ $videoPath | absURL }}" type="video/mp4">
+		</video>
 		<div class="row">
-			<div class="col-12 col-lg-8">	
+			<div class="col-12 col-lg-8 g-0">
+			<div class="bg-whitex rounded-5 shadow-lg overflow-hidden ps-3 pe-3 pb-3">
 				<p data-cms-bind="#date" class="p-xs pt-2 mb-1 gray">{{ time.Format "02.01.2006" .Date -}}</p>	
 				<div class="row">
-					<div class="col-xs-12 col-md-8 col-xxl-6">
-					  <img data-cms-bind="#img" src="{{ .Params.img }}" alt="Teaser image to {{ .Title }}" width="300" height="200" class="img-100">
+					<div class="col-xs-12 col-md-8 col-xxl-6 position-relative">
+						{{ if .Params.tinyLogo -}}
+							{{ if eq .Params.tinyLogoSize "small" -}}
+							<div class="flex-row d-inline-flex position-absolute justify-content-end pe-3 pt-1">
+								<img data-cms-bind="#tinyLogo" src="{{ .Params.tinyLogo }}" alt="Tiny logo" width="1" height="1" class="img-15">
+							</div>
+							
+							{{ else -}}
+							<div class="flex-row d-inline-flex position-absolute">
+								<img data-cms-bind="#tinyLogo" src="{{ .Params.tinyLogo }}" alt="Tiny logo" width="1" height="1" class="b-mgray img-20" style="border-top-left-radius: 2rem">
+							</div>
+							{{ end -}}
+						
+						{{ end -}}
+						<img data-cms-bind="#img" src="{{ .Params.img }}" alt="Teaser image to {{ .Title }}" width="300" height="200" class="img-100 rounded-5">
+							
 						{{ if .Params.copyright -}}
-						<p data-cms-bind="#copyright" class="pt-0 pb-0 mb-1 copyright">&copy;{{ .Params.copyright }}</p>
+							{{ if .Params.tinyLogo -}}
+							<p data-cms-bind="#copyright" class="pt-0 pb-0 mb-1 ms-3 copyright">&copy;{{ .Params.copyright }}</p>
+							{{ else -}}
+							<p data-cms-bind="#copyright" class="pt-0 pb-0 mb-1 copyright">&copy;{{ .Params.copyright }}</p>
+							{{ end -}}
 						{{ else -}}
-						<p data-cms-bind="#copyright" class="pt-0 pb-0 mb-1 copyright">&nbsp;</p>
+							<p data-cms-bind="#copyright" class="pt-0 pb-0 mb-1 copyright">&nbsp;</p>
 						{{ end -}}
 					</div>
 				</div>
-				<h1 class="h2" data-cms-bind="#title">{{ .Title }}</h1>
-				{{ if .Params.subtitle -}}
-				<h2 class="h3" data-cms-bind="#subtitle">{{ .Params.subtitle }}</h2>
+				
+				{{ $title := .Params.title -}}
+				{{ if in $title `"` -}}
+					{{ $title = $title | .Page.RenderString | markdownify -}}
 				{{ end -}}
-								
-				{{ if .Content -}}
-					{{ .Content }}	
+				{{ if .Params.germanTitle -}}
+				<h1 class="h2" data-cms-bind="#title">{{ $title }}</h1>
 				{{ else -}}
-				<div data-cms-bind="#teaser">
-				{{ partial "myMarkdownify" (dict "txt" .Params.teaser ) }}
-				</div>
-				<div data-cms-bind="#link">
-				{{ partial "learnMore" (dict "link" .Params.link "size" "medium") }}
-				</div>
+				<h1 class="h2" data-cms-bind="#title">{{ strings.Title $title }}</h1>
 				{{ end -}}
 				
-				<p data-cms-bind="#date" class="p-xs gray">{{ time.Format "02.01.2006" .Date -}}</p>
+				{{ if .Params.subtitle -}}
+					{{ $subtitle := .Params.subtitle -}}
+					{{ if in $subtitle `"` -}}
+						{{ $subtitle = $subtitle | .Page.RenderString | markdownify -}}
+					{{ end -}}
+					<h2 class="h3" data-cms-bind="#subtitle">{{ strings.Title $subtitle }}</h2>
+					{{ if .Params.top_conf -}}
+						<p class="strong">{{ .Params.publication.conference_title }}</p>
+					{{ end -}}
+				{{ end -}}
+				
+				{{ if .Params.top_conf -}}
+				<h3 class="h4">{{ .Params.conferenceTitle }}, {{ .Params.conferenceLocation }}, {{ .Params.conferenceDate }}</h3>
+				{{ end -}}
+					
+				<div data-cms-bind="#teaser">
+				{{ if or (strings.Contains .Params.teaser "<em>") (strings.Contains .Params.teaser "<i>") -}}
+					{{ errorf "Please dont't use italic at %s" . -}}
+				{{ end -}}
+				{{ partial "myMarkdownify" (dict "txt" .Params.teaser ) }}
+
+				{{ if .Content -}}
+					{{ if or (strings.Contains .Content "<em>") (strings.Contains .Content "<i>") -}}
+						{{ errorf "Please dont't use italic at %s" . -}}
+					{{ end -}}
+					{{ .Content }}	
+				{{ end -}}
+
+				{{ if .Params.top_conf -}}
+				{{ partialCached "listConferencePublications" . (.Params.conferenceAbbreviation) -}}
+				{{ end -}}
+
+				{{ if .Params.top_journal -}}
+					{{ $publications := partialCached "getTopJournals" (dict "year" (string .Params.year)) (string .Params.year) -}}
+					{{ range sort ($publications) "journal" -}}
+						<div class="row m-4">
+							{{ $context := merge (.) (dict "isNews" "true" ) -}}
+							{{ $cacheKey := printf "%s-isNews" .bibtexkey -}}
+							{{ partialCached "publicationitem" $context $cacheKey }}
+						</div>
+					{{ end -}}
+				{{ end -}}
+				</div>
+
+				{{ if .Params.link -}}
+				<div data-cms-bind="#link">
+					{{ partial "learnMore" (dict "link" .Params.link "size" "medium" "newWindow" "true" ) }}
+				</div>
+				{{ end -}}
+					
+				{{/* tags */}}
+				{{ $newsTags := hugo.Data.corenewstags -}}
+				{{ $mytags := .Params.tags -}}
+		
+				{{/* sort with newstags order */}}
+				{{ $sortedNewsTags := slice -}}
+				{{ range $tag := $newsTags -}}
+					{{ if in $mytags $tag -}}
+						{{ $sortedNewsTags = $sortedNewsTags | append $tag -}}
+					{{ end -}}
+				{{ end -}}
+					
+				{{ range $sortedNewsTags -}}
+					<a href="/tags/{{ . }}/" class="badge bg-blue text-decoration-none m-0">
+						#{{ . }}
+					</a>
+				{{ end -}}
+		
+				{{/* find all tags from the post that are NOT in the global order */}}
+				{{ $remainingTags := slice -}}
+				{{ range $t := $mytags -}}
+					{{ if not (in $newsTags $t) -}}
+						{{ $remainingTags = $remainingTags | append $t -}}
+					{{ end -}}
+				{{ end -}}
+			
+				{{ range sort $remainingTags -}}
+					<a href="/tags/{{ . }}/" class="badge bg-purple text-decoration-none m-0">
+					#{{ . }}
+					</a>
+				{{ end -}}
+					
 				<hr>
+				{{ partial "learnMore" (dict "text" "Subscribe to RSS News feed" "link" "/news/index.xml" "size" "small" "icon" "fas fa-rss") -}}
+			</div>
 			</div>
 				
-			<div class="col-lg-4 col-sm-12 col-xs-12 ps-lg-4">
+			{{ if .Params.tags -}}
+			<div data-cms-bind="#tags" class="col-lg-4 col-sm-12 col-xs-12 ps-lg-4 mt-4 ps-lg-5 mt-lg-2">
 				<h3>Related</h3>
-					
-				{{ $mytag := index .Params.tags 0 -}}
+				{{ $mytags := .Params.tags -}}
 				{{ $myurl := .Permalink -}}
-				{{ $tagpages := where site.RegularPages "Params.tags" "intersect" (slice $mytag) -}}
+				{{ $tagpages := where site.RegularPages "Params.tags" "intersect" $mytags -}}
+				{{ $tagpages = where $tagpages "Permalink" "ne" $myurl -}}
 				{{ $index := 0 -}}
-				{{ range $tagpages -}}
-					{{ if eq .Section "news" }}
-						{{ if ne $myurl .Permalink -}}
-							{{ $index = add $index 1 -}}
-					    	{{ partial "cardRelatedPost" . }}
-							  <hr>
-						{{ end }}
-					{{ end }}
+				{{ range (sort $tagpages ".Date" "desc") -}}
+					{{ if eq .Section "news" -}}
+						{{ $index = add $index 1 -}}
+						{{ partialCached "cardRelatedPost" . .Permalink -}}
+					{{ end -}}
 					{{ if eq $index 5 -}}
 						{{ break -}}
 					{{ end -}}
-				{{ end -}}	
+				{{ end -}}
+			{{ else -}}
+				{{ errorf "The news %s has no tag specified." .Permalink -}}
+			{{ end -}}
 			</div>
 		</div>
 	</div>
 </section>
-{{"<!-- Content End -->" | safeHTML}}
+{{"<!-- content newsitem.html End -->" | safeHTML}}
+{{ end -}}
 
-{{ partial "footer.html" . }}
+{{ define "lastmod" }}
+{{"<!-- lastmod newsitem.html Start -->" | safeHTML}}
+{{ if intersect .Params.tags (slice "blog") -}}
+	{{ partial "lastMod" (dict "bgcolor" "bg-blog" "date" .Date "lastmod" .Date) -}}
+{{ else -}}
+	{{ partial "lastMod" (dict "bgcolor" "bg-news" "date" .Date "lastmod" .Date) -}}
+{{- end -}}
+{{"<!-- lastmod newsitem.html End -->" | safeHTML}}
+{{ end -}}

@@ -1,0 +1,56 @@
+{{- $authorEmail := "contact@mcml.ai" }}
+{{- $authorName := "Munich Center for Machine Learning" }}
+
+{{- $pages := (sort (where site.RegularPages "Section" "news") ".Params.Date" "desc") -}}
+{{- $limit := .Site.Config.Services.RSS.Limit }}
+{{- if ge $limit 1 }}
+{{- $pages = $pages | first $limit }}
+{{- end }}
+
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?> " | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+	<channel>
+		<title>{{strings.Title .Title}}</title>
+		<link>{{ .Permalink }}</link>
+		<description>Recent content {{ .Title }}</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		{{ with $authorEmail -}}
+		<managingEditor>{{.}} {{ with $authorName }} ({{ . }}){{ end -}}</managingEditor>{{ end -}}
+		{{ with $authorEmail }}
+		<webMaster>{{ . }}{{ with $authorName }} ({{ . }}){{ end -}}
+		</webMaster>{{ end -}}
+		<copyright>Munich Center for Machine Learning | ©2024 | All rights reserved.</copyright>
+		{{ if not .Date.IsZero -}}
+		<lastBuildDate>{{ (index $pages.ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+		{{ end -}}
+		{{- with .OutputFormats.Get "RSS" -}}
+		{{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+		{{ end -}}
+	
+		{{ range $pages -}}
+			{{ $title := strings.Title .Title -}}
+			{{ if .Params.germanTitle -}}
+				{{ $title = .Title -}}
+			{{ end -}}
+			{{ $subtitle := strings.Title .Params.subtitle -}}
+			{{ $teaser := .Params.teaser -}}
+		<item>
+			<pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 Z0700" | safeHTML }}</pubDate>
+			<title>{{$title}}</title>
+			<link>{{ .Permalink }}</link>
+			<guid>{{ .Permalink }}</guid>
+			<description>{{.Params.description | htmlEscape | safeHTML}}</description>
+			<content:encoded>
+				{{ printf "<![CDATA[ " | safeHTML }}				
+				<img src="https://mcml.ai{{ .Params.img }}" width="300" height="200" alt="{{ .Title }}">
+				<br /><br />
+				<strong>{{ $subtitle | safeHTML }}</strong><br />
+				{{$teaser | safeHTML }}
+				<a href="{{ .Permalink }}">Goto article</a>
+				]]>
+			</content:encoded>
+		</item>
+		{{ end -}}
+	</channel>
+</rss>

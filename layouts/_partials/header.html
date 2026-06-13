@@ -1,0 +1,55 @@
+{{ $title := .title -}}
+{{ if not $title -}}
+	{{ $title = "German AI Centers of Excellence" -}}
+{{ end -}}
+{{- $description := .description -}}
+{{ if not $description -}}
+	{{ $description = "The Network of the German AI Competence Centers is comprised of six leading research institutions in the field of Artificial Intelligence." -}}
+{{ end -}}
+{{ if gt ($description |len) 150 -}}
+	{{ errorf "The description of %s has more than 150 characters: %v characters" .page ($description | len) -}}
+{{ end -}}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{$title}}</title>
+	<meta name="description" content="{{$description}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="8Nu02wZmrFyJlMvIp3WRGLvZp-2SMwGVbFVYdg1soVM"/>
+	<meta name="author" content="mcml.ai"/>
+	{{ "<!--  Open Graph -->" | safeHTML }}
+	<meta property="og:url" content="{{.page}}"/>
+	<meta property="og:title" content="{{$title}}"/>
+	<meta property="og:description" content="{{$description}}"/>
+	<meta property="og:type" content="website" />
+	{{ if .image -}}
+	<meta property="og:image" content="https://mcml.ai{{.image}}"/>
+	{{ else -}}
+	<meta property="og:image" content="https://mcml.ai/images/MCML_Logo_2x1.webp"/>
+	{{ end -}}
+	{{ hugo.Generator }}
+	{{ "<!--  Bootstrap CSS -->" | safeHTML }}
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	{{ "<!-- Stylesheets -->" | safeHTML }}
+	<link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+	{{ "<!-- Favicon -->" | safeHTML }}
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ "/favicon/apple-touch-icon.png" | absURL}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon/favicon-32x32.png" | absURL}}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon/favicon-16x16.png" | absURL}}">
+	<link rel="manifest" href="{{ "/favicon/site.webmanifest" | absURL}}">
+	<link rel="icon" href="{{ "/favicon/favicon.ico" | absURL}}" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ "/favicon/favicon.ico" | absURL}}" type="image/x-icon">
+	<link rel="canonical" href="{{.page| absURL}}" />
+	{{ if .rss -}}
+	{{ "<!--  RSS -->" | safeHTML }}
+	<link rel="alternate" type="application/rss+xml" href="{{.page}}index.xml | absURL" title="{{.title}}">
+	{{ end -}}
+</head>
+
+<body id="body">

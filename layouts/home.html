@@ -1,21 +1,16 @@
-{{"<!-- layout home.html Start -->" | safeHTML}}
-{{ partial "header.html" . }}
-{{ partial "navigation.html" . }}
-<section class="list-content">
-  {{ partial "makeTitle.html" . }}	
-  {{ partial "hero-area.html" . }}
-</section>
-{{ partial "footer.html" . }}
+{{ define "content" }}
+{{"<!-- content home.html Start -->" | safeHTML}}
+{{ partial "content.html" . }}
+{{ partial "hero-area.html" . }}
+{{"<!-- content home.html End -->" | safeHTML}}
+{{- end -}}
 
-<section class="list-content">
-  {{ partial "breadcrumbs.html" . }}
-  {{ partial "makeTitle.html" . }}	
-  <div class="container-fluid">
-    <div class="row row-cols-1">
-      <div class="col">
-		{{ .Content }}	
-      </div>
-    </div>
-  </div>
-</section>
-{{"<!-- layout home.html End -->" | safeHTML}}
+{{ define "lastmod" }}
+{{"<!-- lastmod home.html Start -->" | safeHTML}}
+{{ $news := partialCached "getAllNews" . -}}
+{{ $lastnews := index $news 0 -}}
+{{ $lastmod := $lastnews.Date -}}
+{{/* partial "lastMod" (dict "bgcolor" "bg-yellow" "date" .Date "lastmod" $lastmod) - */}}
+{{ partial "lastMod" (dict "date" .Date "lastmod" $lastmod) -}}
+{{"<!-- lastmod home.html End -->" | safeHTML}}
+{{- end -}}

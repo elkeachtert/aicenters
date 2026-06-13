@@ -1,0 +1,50 @@
+
+{{ "<!-- content Start -->" | safeHTML }}
+{{ partial "initSection.html" . }}
+	<div class="container-fluid">
+		<div class="row row-cols-1">
+			<div class="col">
+				{{ .Content -}}	
+			</div>
+		</div>
+	</div>
+
+{{ if .Params.filterTag -}}
+	{{ $posts := where site.RegularPages "Params.tags" "intersect" (slice (.Params.filterTag)) -}}
+	{{ $page := . -}}
+	
+	{{ $post := index $posts 0 -}}
+	{{ $isEvent := eq $post.Layout "eventitem" -}}
+	
+	{{ if $isEvent -}}
+		{{ $events := (sort $posts ".Params.eventDate.start" "asc") -}}
+		{{ $futureEvents := slice -}}
+		{{ range $events -}}
+			{{ if ge (time.AsTime .Params.eventDate.end) now -}}
+				{{ $futureEvents = $futureEvents | append . -}}
+			{{ end -}}
+		{{ end -}}
+		{{ $posts = $futureEvents -}}
+	{{ end -}}
+	
+	{{ $link := "" -}}
+	{{ $linktext := "" -}}
+	{{ if $isEvent -}}
+		{{ $link = printf "/tags/%s/" .Params.filterTag -}}
+		{{ $linktext = "All Events (Past and Upcoming)" -}}
+	{{ end -}}
+	
+	<div class="container-fluid mt-0 pt-0 mb-0">
+		{{ if gt (len $posts) 0 -}}
+			{{ if .Params.filterTagTitle -}}
+				{{ partial "txtTwoCol" (dict "title" .Params.filterTagTitle "txt" "" "link" $link "linktext" $linktext) }}
+			{{ end -}}
+			{{ partial "paginatePostCards" (dict "posts" $posts "page" .) -}}
+	
+		{{ else if $isEvent -}}
+			{{ partial "txtTwoCol" (dict "title" .Params.filterTagTitle "txt" "Currently there are no upcoming events. Stay tuned—we will post new events here." "link" $link "linktext" "Past Events") }}
+		{{ end -}}
+	</div>
+{{ end -}}
+</section>
+{{ "<!-- content End -->" | safeHTML }}

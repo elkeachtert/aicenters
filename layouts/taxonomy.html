@@ -1,0 +1,50 @@
+{{ define "content" }}
+{{"<!-- content layout taxonomy Start -->" | safeHTML}}
+{{ partial "content.html" . }}
+	
+<section class="mcml-content">
+	<div class="container-fluid mt-0 pt-2">
+		{{/* Get News und Events tags */}}
+		{{ $tags := partialCached "getTags" . -}}
+		{{ $newsPrioTags := $tags.newsPrioTags -}}
+		{{ $newsRemainingTags := $tags.newsRemainingTags -}}
+		{{ $eventTags := $tags.eventTags -}}
+		{{ $publicationTags := $tags.publicationTags -}}
+		
+		{{/* NEWS-TAGS */}}
+		<h2 class="mt-4 mb-3">News Tags</h2>
+		{{/* first prio tags */}}
+		{{ range sort $newsPrioTags "name" -}}
+			<a href="{{ .taxonomy.Page.RelPermalink }}" class="badge bg-blue text-decoration-none">
+				#{{ lower .taxonomy.Page.Title }} <span class="text-light-50">({{ .taxonomy.Count }})</span>
+			</a>
+		{{ end -}}
+		<br><br>
+			
+		{{/* then the rest alphabetically */}}
+		{{ range sort $newsRemainingTags "name" -}}
+			<a href="{{ .taxonomy.Page.RelPermalink }}" class="badge bg-purple text-decoration-none">
+				#{{ lower .taxonomy.Page.Title }} <span class="text-light-50">({{ .taxonomy.Count }})</span>
+			</a>
+		{{ end -}}
+
+		{{/* EVENT-TAGS alphabetically */}}
+		<h2 class="mt-5 mb-3">Event Tags</h2>
+		{{ range sort $eventTags "name" -}}
+			<a href="{{ .taxonomy.Page.RelPermalink }}" class="badge bg-turquoise text-decoration-none">
+				#{{ lower .taxonomy.Page.Title }} <span class="text-light-50">({{ .taxonomy.Count }})</span>
+			</a>
+		{{ end -}}
+		
+		{{/* PUBLICATION-TAGS alphabetically */}}
+		<h2 class="mt-5 mb-3">Publication Tags</h2>
+		{{ range sort $publicationTags "name" -}}
+			<a href="{{ .taxonomy.Page.RelPermalink }}" class="badge bg-green text-decoration-none">
+				#{{ lower .taxonomy.Page.Title }} <span class="text-light-50">({{ .taxonomy.Count }})</span>
+			</a>
+		{{ end -}}
+		
+	</div>
+</section>
+{{"<!-- content layout taxonomy End -->" | safeHTML}}
+{{ end -}}
