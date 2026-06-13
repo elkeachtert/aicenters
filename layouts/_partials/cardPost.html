@@ -1,106 +1,81 @@
-{{ $isEvent := eq .Section "events" -}}
 
+{{ "<!-- cardPost Start -->" | safeHTML }}
+{{ $thisPage := . -}}
+{{ $titleLevel := .titleLevel | default "h2-small" -}}
+{{ $showTags := "false" -}}
+{{ $home := printf "%s" (.site.Home.Permalink | absURL) -}}
+{{ if strings.Contains $home "localhost" -}}
+	{{ $showTags = "true" -}}
+{{ end -}}
+
+{{ $truncate := 200 -}}
+
+{{ $isNews := eq .post.Layout "newsitem" -}}
+{{ $isEvent := eq .post.Layout "eventitem" -}}
+
+{{ if not .post.Params.img -}}
+	{{ errorf "Please specify an image for the post: %s (at %s)" .post $thisPage -}}
+{{ end -}}
+
+{{ $header := "" -}}
+{{ $type := "" -}}
+{{ $time := "" -}}
+{{ $subtitle := .post.Params.subtitle -}}
+{{ $eventType := "" -}}
 {{ if $isEvent -}}
-{{ if not .Params.eventDate -}}
-{{ errorf "The event %q requires a eventDate parameter." .Permalink }}
-{{ end -}}
-
-{{ if not .Params.eventDate.start -}}
-{{ errorf "The event %q requires a eventDate start parameter." .Permalink }}
-{{ end -}}
-
-{{ if not .Params.eventDate.end -}}
-{{ errorf "The event %q requires a eventDate end parameter." .Permalink }}
-{{ end -}}
-{{ end -}}
-
-{{ $truncate := .Scratch.Get "truncate" -}}
-{{ if not $truncate -}}
-{{ $truncate = 350 -}}
-{{ end -}}
-
-<div class="card b-none card-news">
-	<a href="{{ .Permalink }}" class="stretched-link" aria-label="Read more about {{ .Params.title }}"></a>
+	{{ $type = "event" -}}
+	{{ $eventDate := partial "eventDate" (dict "startDate" .post.Params.eventDate.start "endDate" .post.Params.eventDate.end ) -}}
+	{{/* $header = printf "%s • %s • %s" .post.Params.eventType $eventDate .post.Params.location - */}}
+	{{ $eventType = .post.Params.eventType -}}
+	{{ if not .post.Params.eventDate.allDay -}}
+		{{ $starttime := .post.Params.eventDate.start | time.Format ":time_short" -}}
+		{{ $endtime := .post.Params.eventDate.end | time.Format ":time_short" -}}
+		{{ $time = printf "%s - %s" $starttime $endtime -}}
+	{{ end -}}
 	
-	<div class="row g-0 pr-3 pl-3 pt-3">
-		<div class="card-body col-12 col-lg-4 pt-0 pb-0">	
-			{{ if $isEvent -}}
-				{{ partial "eventDate" (dict "startDate" .Params.eventDate.start "endDate" .Params.eventDate.end "format" "en") }}	
-				<img src="{{ .Params.img }}" alt="Link to {{ .Params.title }}" width="300" height="200" class="img-100 ms-3 pe-3 ps-3 pt-3">	
-				{{ if .Params.copyright -}}<p class="copyright ms-3 pe-3 ps-3">&#169;{{ .Params.copyright}}</p>
-				{{ else -}}<p class="copyright ms-3 pe-3 ps-3">&nbsp;</p>
-				{{ end -}}
-			{{ else -}}
-				<img src="{{ .Params.img }}" alt="Link to {{ .Params.title }}" width="300" height="200" class="img-100">
-				{{ if .Params.copyright -}}<p class="copyright">&#169;{{ .Params.copyright}}</p>
-				{{ else -}}<p class="copyright">&nbsp;</p>
-				{{ end -}}
+	{{ if .post.Params.speakers -}}
+		{{ $subtitle = "" -}}
+		{{ $index := 1 -}}
+		{{ $len := .post.Params.speakers | len -}}
+		{{ range .post.Params.speakers -}}
+			{{ $subtitle = printf "%s %s, %s" $subtitle .name .affiliation -}}
+			{{ if lt $index $len -}}
+				{{ $subtitle = printf "%s <br>" $subtitle -}}
 			{{ end -}}
-			
-		</div>
-		<div class="card-body col-12 col-lg-8">
-			{{ if $isEvent -}}
-				<p class="p-s mb-1 gray">
-					{{ .Params.eventType }} &nbsp;&bull;&nbsp; 
-					{{ partial "eventDate" (dict "startDate" .Params.eventDate.start "endDate" .Params.eventDate.end ) }} &nbsp;&bull;&nbsp;	
-					{{ .Params.location }}
-				</p>
-				{{ if not .Params.eventDate.allDay -}}
-					{{ $starttime := .Params.eventDate.start | time.Format ":time_short" -}}
-					{{ $endtime := .Params.eventDate.end | time.Format ":time_short" -}}
-					<p class="p-s gray">
-						<i class="fa-solid fa-clock"></i> {{ $starttime }} - {{ $endtime }} 
-					</p>
-				{{ end -}}
-			
-			{{ else -}}
-				<p class="p-s">{{ .Date.Format "02.01.2006" }}</p>
-				{{ if .Params.deadline -}}
-				{{ $deadline := time.Format "02.01.2006" .Params.deadline -}}
-				<p class="p-s">Deadline: {{ $deadline }}</p>
-				{{ end -}}
-			{{ end -}}
-			
-			{{ if eq ($.Scratch.Get "hero") true -}}
-				<h3 class="mt-3">{{ .Params.Title }}</h3>
-			{{ else -}}
-				<h2 class="h3 mt-3">{{ .Params.Title }}</h2>
-			{{ end -}}
-			
-			{{ if .Params.subtitle -}}
-			{{ if eq ($.Scratch.Get "hero") true -}}
-				<h4 class="mt-3">{{ .Params.subtitle }}</h4>
-			{{ else -}}
-				<h3 class="h4">{{ .Params.subtitle | markdownify }} </h3>
-			{{ end -}}
-			
-			{{ else if and $isEvent .Params.speakers -}}
-				{{ $index := 1 -}}
-				{{ $len := .Params.speakers | len -}}
-				{{ if eq ($.Scratch.Get "hero") true -}}
-					<h4>
-					{{ range .Params.speakers -}}
-						{{ .name }}, {{ .affiliation}}
-						{{ if lt $index $len -}}<br>{{ end -}}
-							{{ $index = add $index 1 -}}
-						{{ end -}}
-					</h4>
-				{{ else -}}
-					<h3 class="h4">
-					{{ range .Params.speakers -}}
-						{{ .name }}, {{ .affiliation}}
-						{{ if lt $index $len -}}<br>{{ end -}}
-							{{ $index = add $index 1 -}}
-						{{ end -}}
-					</h3>
-				{{ end -}}
-			{{ end -}}
-			
-			<p class="card-text">{{ partial "myMarkdownify" (dict "txt" .Params.teaser "truncate" $truncate  ) }}</p>						
-			{{ partial "learnMore" (dict "link" .Permalink "size" "small" "margin" "3" "text" "Read more") -}}
-		</div>
-	</div>
-</div>
+			{{ $index = add $index 1 -}}
+		{{ end -}}
+	{{ end -}}
+{{ else if $isNews -}}
+	{{ $type = "news" -}}
+	{{ $header = .post.Date.Format "02.01.2006" }}
+{{ end -}}
 
-	
+{{ $text := partial "myMarkdownify" (dict "txt" .post.Params.teaser "truncate" $truncate "p" "p-mxs") -}}
 
+{{ partialCached "cardDeckInner" (dict 
+	"page" $thisPage
+	"header" $header
+	"title" .post.Title
+	"germanTitle" .post.Params.germanTitle
+	"titleLevel" $titleLevel 
+	"subtitle" $subtitle 
+	"link" .post.Permalink
+	"linktext" "Read more" 
+	"img" .post.Params.img 
+	"copyright" .post.Params.copyright 
+	"buttonSize" "small" 
+	"tinyLogo" .post.Params.tinyLogo 
+	"tinyLogoSize" .post.Params.tinyLogoSize 
+	"text" $text 
+	"pClass" "p-mxs" 
+	"tags" .post.Params.tags
+	"showTags" $showTags
+	"showEventDate" "true"
+	"start" .post.Params.eventDate.start
+	"end" .post.Params.eventDate.end
+	"time" $time
+	"location" .post.Params.location
+	"eventType" $eventType 
+	"type" $type 
+) .post.Permalink -}}
+{{ "<!-- cardPost End -->" | safeHTML }}

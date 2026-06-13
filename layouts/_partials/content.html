@@ -1,6 +1,10 @@
 
 {{ "<!-- content Start -->" | safeHTML }}
-{{ partial "initSection.html" . }}
+<section class="list-content">
+
+	{{ partial "breadcrumbs.html" (dict "page" .) }}
+	{{ partial "makeTitle.html" . }}
+	
 	<div class="container-fluid">
 		<div class="row row-cols-1">
 			<div class="col">

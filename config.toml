@@ -96,13 +96,6 @@ description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam n
 [params.navigation]
 	home  = "Home"
     logo = "images/aicenters.png"
-	  
-  # About  
-  [[params.navigation.entry]]
-    id = "about"
-    name = "About"
-    linkto = "/about/"
-    hasChildren = "false"
     
   # News #  
   [[params.navigation.entry]]
@@ -115,14 +108,14 @@ description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam n
   [[params.navigation.entry]]
     id = "partner"
     name = "Partner Programs"
-    linkto = "/partner_programs/"	
+    linkto = "/partner-programs/"	
     hasChildren = "false"  
 
   # European Network #    
   [[params.navigation.entry]]
     id = "network"
     name = "European Network"
-    linkto = "/european_network/"	
+    linkto = "/european-network/"	
     hasChildren = "false"
 	  
 # ----------------------------------------------------------------------------------------

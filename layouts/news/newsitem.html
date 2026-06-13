@@ -187,13 +187,3 @@
 </section>
 {{"<!-- content newsitem.html End -->" | safeHTML}}
 {{ end -}}
-
-{{ define "lastmod" }}
-{{"<!-- lastmod newsitem.html Start -->" | safeHTML}}
-{{ if intersect .Params.tags (slice "blog") -}}
-	{{ partial "lastMod" (dict "bgcolor" "bg-blog" "date" .Date "lastmod" .Date) -}}
-{{ else -}}
-	{{ partial "lastMod" (dict "bgcolor" "bg-news" "date" .Date "lastmod" .Date) -}}
-{{- end -}}
-{{"<!-- lastmod newsitem.html End -->" | safeHTML}}
-{{ end -}}

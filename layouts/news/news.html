@@ -6,13 +6,9 @@
 
 {{ define "content" }}
 {{"<!-- content news.htmlStart -->" | safeHTML}}
-<section class="mcml-content noshow-lg bg-news" id="section">
+<section class="mcml-content bg-news" id="section">
 	{{ partialCached "breadcrumbs.html" (dict "page" .) "news"}}
 	<div class="container-fluid">
-		{{ $videoPath := printf "/images/background/videos/%s.mp4" .Params.background -}}
-		<video class="background-video2" autoplay playsinline muted loop width=1080 height=1080>
-			<source src="{{ $videoPath | absURL }}" type="video/mp4">
-		</video>
 		<div class="row row-cols-1 row-cols-lg-1">
 			<div class="col">
 				<h1>{{ strings.Title .Title }}</h1>
@@ -28,12 +24,3 @@
 </section>
 {{"<!-- content news.html End -->" | safeHTML}}
 {{ end -}}
-
-{{ define "lastmod" }}
-{{"<!-- lastmod news.html Start -->" | safeHTML}}
-{{ $news := partialCached "getAllNews" . -}}
-{{ $lastnews := index $news 0 -}}
-{{ $lastmod := $lastnews.Date -}}
-{{ partial "lastMod" (dict "bgcolor" "bg-news" "date" .Date "lastmod" $lastmod) -}}
-{{"<!-- lastmod news.html End -->" | safeHTML}}
-{{- end -}}

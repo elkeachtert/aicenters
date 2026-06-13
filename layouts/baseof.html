@@ -1,10 +1,7 @@
 {{ block "header" . }}
 {{"<!-- header baseof.html Start -->" | safeHTML }}
 {{ $title := strings.Title .Title -}}
-{{ if .Params.germanTitle -}}
-	{{ $title := .Params.title -}}
-{{ end -}}
-{{ if or (eq .Section "news") (eq .Section "events") -}}
+{{ if eq .Section "news" -}}
 	{{ partial "header.html" (dict "title" $title "description" .Description "page" .Permalink "image" .Params.img "rss" true) -}}
 {{ else if eq .Section "tags" -}}
 	{{ $title = printf "#%s" (lower .Title) -}}
@@ -26,48 +23,6 @@
 {{"<!-- content baseof.html Start -->" | safeHTML }}
 {{ partial "content.html" . -}}
 {{"<!-- content baseof.html End -->" | safeHTML }}
-{{ end -}}
-
-{{ block "section-links" . }}
-{{"<!-- section-links baseof.html Start -->" | safeHTML }}
-{{ if .Params.sectionlinks -}}
-	{{ $opac := not .Params.background -}}
-	{{ partial "sectionCards" (dict "page" .Page "sectionLinks" .Params.sectionlinks "sectionLinksTitle" .Params.sectionlinksTitle "opac" $opac ) -}}
-{{ end -}}
-{{"<!-- section-links baseof.html End -->" | safeHTML }}
-{{ end -}}
-
-{{ block "lastmod" . }}
-{{"<!-- lastmod baseof.html Start -->" | safeHTML }}
-{{ if eq .Layout "statistics" -}}
-	{{ partial "lastMod" (dict "date" .Date "lastmod" now "opac" "true") -}}
-{{ else if .Params.filterTag -}}
-	{{ $posts := where site.RegularPages "Params.tags" "intersect" (slice (.Params.filterTag)) -}}
-	{{ $lastpost := index $posts 0 -}}
-	{{ $lastmod := $lastpost.Date -}}
-	
-	{{ $bgcolor := "" -}}
-	
-	{{ if strings.HasPrefix .RelPermalink "/research/blog/" -}}
-		{{ $bgcolor = "bg-blog" -}}
-	{{ else if strings.HasPrefix .RelPermalink "/research/awards/" -}}
-		{{ $bgcolor = "bg-awards" -}}
-	{{ else if strings.HasPrefix .RelPermalink "/research/top-tier-work/" -}}
-		{{ $bgcolor = "bg-top-tier" -}}
-	{{ end -}}
-	
-	{{ partial "lastMod" (dict "bgcolor" $bgcolor "date" .Date "lastmod" $lastmod) -}}
-	
-{{ else -}}
-	{{ $opac := not .Params.background -}}
-	{{ $bgcolor := "" -}}
-	{{ if strings.HasPrefix .RelPermalink "/intranet/" -}}
-		{{ $bgcolor = "bg-intranet" -}}
-	{{ end -}}
-	
-	{{ partial "lastMod" (dict "bgcolor" $bgcolor "date" .Date "lastmod" .Lastmod "opac" $opac) -}}
-{{ end -}}
-{{"<!-- lastmod baseof.html End -->" | safeHTML }}
 {{ end -}}
 
 {{ block "footer" . }}

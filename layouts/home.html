@@ -1,15 +1,47 @@
 {{ define "content" }}
 {{"<!-- content home.html Start -->" | safeHTML}}
 {{ partial "content.html" . }}
-{{ partial "hero-area.html" . }}
-{{"<!-- content home.html End -->" | safeHTML}}
-{{- end -}}
+<section class="list-content">
+	<div class="container-fluid hero-area">
+		<div class="row pt-3 pb-3">
+			<div class="col-2 col-md-4">
+				<div class="row ">
+					{{ range sort hugo.Data.aicenters "center_short_name" -}}
+					<div class="col-12 col-md-6 pt-2 pb-2">
+						<a href="{{ .center_url }}">
+							<img src="{{ .center_logo }}" class="img-partner rounded-4" alt="{{ .center_short_name }}" width=2 height=1 style="width:100%; height:auto;">
+						</a>
+					</div>
+					{{ end -}}
+				</div>
+			</div>
 
-{{ define "lastmod" }}
-{{"<!-- lastmod home.html Start -->" | safeHTML}}
-{{ $news := partialCached "getAllNews" . -}}
-{{ $lastnews := index $news 0 -}}
-{{ $lastmod := $lastnews.Date -}}
-{{ partial "lastMod" (dict "date" .Date "lastmod" $lastmod) -}}
-{{"<!-- lastmod home.html End -->" | safeHTML}}
+			<div class="col-10 col-md-6">
+				<img src="/images/logos/german_ai_centers.webp" class="rounded-5" alt="The Network of the German AI Centers of Excellence" width=3 height=2 style="width:100%; height:auto;">
+				<p class="mt-1 pb-0 mb-1 p-xs gray">The Network of the German AI Centers of Excellence</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid hero-area">
+		<div class="row row-cols-2 row-cols-md-3 pt-3 pb-3">
+			{{ range sort hugo.Data.aicenters "center_short_name" -}}
+				{{ partial "cardDeck" (dict 
+					"title" .center_short_name 
+					"subtitle" .center_full_name
+					"text" .center_description
+					"link" .center_url 
+					"linktext" (printf "Website %s" .center_short_name)
+					"location" .center_location
+					"mail" .center_contact
+					"img" .center_logo 
+				)}}
+			
+			{{ end -}}
+		</div>
+	</div>
+</section>
+
+		
+{{"<!-- content home.html End -->" | safeHTML}}
 {{- end -}}
