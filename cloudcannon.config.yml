@@ -144,7 +144,7 @@ collections_config:
           image_size_attributes: true
           italic: true
           link: true
-          styles: /css/editor.css
+          #styles: /css/editor.css
           subscript: true
           superscript: true
       img:
@@ -409,7 +409,7 @@ _inputs:
       image_size_attributes: true
       italic: true
       link: true
-      styles: /css/editor.css
+      #styles: /css/editor.css
       subscript: true
       superscript: true
       show_count: true
@@ -441,7 +441,7 @@ _inputs:
       image_size_attributes: true
       italic: true
       link: true
-      styles: /css/editor.css
+      #styles: /css/editor.css
       subscript: true
       superscript: true
     cascade: true
@@ -844,7 +844,7 @@ _editables:
     right: align-right
     snippet: true
     strike: true
-    styles: /css/editor.css
+    #styles: /css/editor.css
     subscript: true
     superscript: true
     table: true
@@ -896,7 +896,7 @@ _snippets:
           image_size_attributes: true
           italic: true
           link: true
-          styles: /css/editor.css
+          #styles: /css/editor.css
           subscript: true
           superscript: true
 
@@ -1820,7 +1820,7 @@ _snippets:
           image_size_attributes: false
           italic: true
           link: true
-          styles: /css/editor.css
+          #styles: /css/editor.css
           subscript: true
           superscript: true
       abstract:
@@ -1837,7 +1837,7 @@ _snippets:
           image_size_attributes: false
           italic: true
           link: true
-          styles: /css/editor.css
+          #styles: /css/editor.css
           subscript: true
           superscript: true
 
