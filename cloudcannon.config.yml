@@ -222,16 +222,6 @@ collections_config:
     preview:
     _enabled_editors:
     _inputs:
-      bio:
-        type: html
-        options:
-          allow_custom_markup: false
-          remove_custom_markup: false
-          initial_height: 320
-          format: p
-          image_size_attributes: true
-        cascade: true
-        optional: true
       contact:
         type: url
         cascade: true
