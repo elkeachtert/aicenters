@@ -20,6 +20,7 @@ collections_config:
     path: content
     glob:
       - '**/*.md'
+      - '!dssgxmunich/*'
       - '!**/index.md'
     name: Sections
     icon: home
@@ -214,6 +215,10 @@ collections_config:
         icon: notes
   data:
     path: data
+    glob:
+      - '!publications/*'
+      - '!unused/**'
+      - '!mlcuPublications/*'
     name: Data Files
     icon: people
     disable_url: false
@@ -221,6 +226,16 @@ collections_config:
     preview:
     _enabled_editors:
     _inputs:
+      bio:
+        type: html
+        options:
+          allow_custom_markup: false
+          remove_custom_markup: false
+          initial_height: 320
+          format: p
+          image_size_attributes: true
+        cascade: true
+        optional: true
       contact:
         type: url
         cascade: true
