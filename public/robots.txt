@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: 
-Sitemap: https://mcml.ai/sitemap.xml
