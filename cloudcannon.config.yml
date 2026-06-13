@@ -1,972 +1,359 @@
-_schema: _schema
-source: /
 paths:
-  uploads: static/images
-  uploads_filename:
-  uploads_use_relative_path:
-  static: static
-  dam_uploads:
-  dam_uploads_filename:
-  dam_static:
-  collections: content
   data: data
-  layouts: layouts
+  collections: content
   includes: layouts
-data_config:
-  newsTags:
-    path: data/newstags.yaml
+  layouts: layouts
+  static: static
+  uploads: static/images
+  source: ''
+  archetypes: archetypes
+  assets: assets
+  content: content
+  pages: content
+  publish: public
+  config: ''
 collections_config:
   sections:
     path: content
-    glob:
-      - '**/*.md'
-      - '!dssgxmunich/*'
-      - '!**/index.md'
-    name: Sections
-    icon: home
-    disable_url: false
-    description: ''
-    _enabled_editors:
+    output: true
+    filter: strict
+    parse_branch_index: true
+    icon: notes
     _inputs:
-      background:
-        comment: Type of background
-        hidden: true
-      backgroundVideo:
-        type: boolean
-        comment: Indicates if a background video is used für medium and large devices
-        hidden: true
-      anchors:
-        label: Anchors within this page
-        comment: "Can be displayed with snippet Anchor Buttons (optional)."
-        type: array
-        options:
-          preview:
-            text:
-              - key: title
-          structures: _structures.anchors
-      highlights:
-        comment: "Highlight cards with link to news, events or pages."
-        type: array
-        options:
-          preview:
-            text:
-              - key: highlightLinkText
-          structures: _structures.highlights
-      sectionlinks:
-        label: Links to other sections 
-        comment: "Appear at the bottom of the page (optional)."
-        type: array
-        hidden: false
-      sectionlinks[*]:
-        type: select
-        options:
-          allow_empty: true
-          values:
-            - team
-            - directors
-            - management
-            - researchgroups
-            - jrgs
-            - tbfs
-            - juniors
-            - strategyboard
-            - advisoryboard
-            - opportunities
-            - collaborations
-            - partners
-            - publications
-            - researcha
-            - researchb
-            - researchc
-            - forMembers
-            - forPhDApplicants
-            - forFJN
-            - forJobCandidates
-            - industryPartnerships
-            - consulting
-            - continuingEducation
-            - schoolsAndOutreach
-      sectionlinksTitle:
-        label: "Title for section links (optional)"
-      filterTag:
-        label: Tag for posts to be filtered (optional)
-        comment: "The filtered posts appear at the end of this section (optional)."
-      filterTagTitle:
-        label: "Title for filtered posts (optional)"
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    schemas:
-      section:
-        path: schemas/section.md
-        reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: false
-        icon: notes
-  events:
-    path: content/events
-    glob:
-      - '**/index.md'
-    name: Events
-    icon: calendar_month
-    disable_url: false
-    description: ''
-    _enabled_editors:
-    _inputs:
-      germanTitle: 
-        hidden: true
-        default: false
-      outputs:
-        type: multiselect
-        options:
-          - empty_type: array
-            values:
-              - HTML
-              - Calendar
-        hidden: true
-        default:
-          - HTML
-          - Calendar
-      layout:
-        type: auto
-        default: eventitem
-      mcmlEvent:
-        type: checkbox
-        label: MCML Event
-        comment: For MCML members only.
-      description:
-        type: textarea
-        comment: Used for SEO, RSS and related events. Max. 150 characters!
-        options: 
-          show_count: true
-      eventType:
+      shorttitle: 
         type: text
-        comment: >-
-          Appears above the title, e.g. Workshop, Lecture Series, etc. Has no
-          effect on Related Events.
-      eventDate.start:
-        type: datetime
-        options:
-          timezone: Europe/Berlin
-      eventDate.end:
-        type: datetime
-        options:
-          timezone: Europe/Berlin
-      eventDate.allDay:
-        type: checkbox
-        comment: All-day event (no time will be displayed)
-      eventDate:
-        type: object
-        options:
-          structures:
-            style: select
-            values:
-              - preview:
-                  text:
-                    - ''
-                  subtext:
-                    - ' '
-                  icon: calendar_clock
-                  metadata:
-                    - text: Start
-                    - text:
-                        - key: start
-                      icon: today
-                    - text: End
-                    - text:
-                        - key: end
-                      icon: today
-                    - text: All Day Event
-                    - text:
-                        - key: allDay
-                        - false
-                      icon: radio_button_checked
-                value:
-                  start:
-                  end:
-                  allDay:
-      title:
-        type: textarea
-        comment: Title of the event
-      subtitle:
-        type: textarea
-        comment: >-
-          Either subtitle or speaker(s) must be specified, not both; appears
-          below the title.
-      location:
-        type: textarea
+        comment: "<h1> at top of the page (if empty title is used)"
+ 
+  professors:
+    path: content/team/professors
+    output: true
+    icon: person
+    schema: member
+    create:
+      path: '{name|lowercase}-{firstName|lowercase}/index.md'
+      _inputs:
+        name:
+          comment: Use the last name here
+        firstName:
+          comment: Use the first name here
+    schemas:
+      member:
+        path: schemas/member.md
+        
+  office:
+    path: content/team/office
+    output: true
+    icon: person
+    schema: member
+    create:
+      path: '{name|lowercase}-{firstName|lowercase}/index.md'
+      _inputs:
+        name:
+          comment: Use the last name here
+        firstName:
+          comment: Use the first name here
+    schemas:
+      member:
+        path: schemas/member.md
+        
+  mcml:
+    path: content/team/mcml
+    output: true
+    icon: person
+    schema: member
+    create:
+      path: '{name|lowercase}-{firstName|lowercase}/index.md'
+      _inputs:
+        name:
+          comment: Use the last name here
+        firstName:
+          comment: Use the first name here
+    schemas:
+      member:
+        path: schemas/member.md
+        
+  scientists:
+    path: content/team/scientists
+    output: true
+    icon: person
+    schema: member
+    create:
+      path: '{name|lowercase}-{firstName|lowercase}/index.md'
+      _inputs:
+        name:
+          comment: Use the last name here
+        firstName:
+          comment: Use the first name here
+    schemas:
+      member:
+        path: schemas/member.md
+        
+  research:
+    path: content/research
+    output: true
+    icon: psychology
+    schema: researchArea
+    create:
+      path: '{title|lowercase}/index.md'
+      _inputs:
+        title:
+          comment: Title of research area 
+    schemas:
+      researchArea:
+        path: schemas/researchArea.md
+    _inputs:
+      leader:
+        type: url
+      members:
+        type: array
+      members[*]:
+        type: url
+      link:
+        comment: "External link to research site"
       teaser:
         type: html
-        comment: >-
-          Teaser text, appears in event overview and as content, if no content
-          is specified.
-        options: 
-          allow_custom_markup: false
-          remove_custom_markup: false
-          initial_height: 320
+        options:
           bold: true
-          bulletedlist: true
-          format: p
-          image_size_attributes: true
           italic: true
-          link: true
-          styles: /css/editor.css
+          format: p 
           subscript: true
           superscript: true
-      img:
-        type: image
-        label: Teaser image (max. 200kB)
-        options:
-          max_file_size: 200
-          max_file_size_message: For SEO, keep this under 200kB.
-      copyright:
-        type: text
-        label: Copyright for teaser image
-      link:
-        type: url
-        label: External link to event
-      zoom:
-        type: url
-        label: Zoom link (optional)
-      tags:
-        type: array
-        comment: Used for related events.
-      tags[*]:
-        type: select
-        options:
-          allow_empty: false
-          values:
-            - summer-school
-            - conference
-            - workshop
-            - panel
-            - symposium
-            - lecture
-            - mcml-event
-            - mcml-junior-members-event
-            - mcml-education
-            - german-ai-centers-event
-            - entrepreneurship
-      speakers:
-        type: array
-        options:
-          preview:
-            text:
-              - key: name
-            subtext:
-              - key: affiliation
-          structures: _structures.speakers
-        comment: >-
-          Either subtitle or speaker(s) must be specified, not both; appears
-          below the title.
-      moderators:
-        type: array
-        options:
-          preview:
-            text:
-              - key: name
-            subtext:
-              - key: affiliation
-          structures: _structures.speakers
-      organizers:
-        type: array
-        options:
-          preview:
-            text:
-              - key: name
-            subtext:
-              - key: affiliation
-          structures: _structures.speakers
-    create:
-      path: '{date|year}-{date|month}-{date|day}-{slug}/index.md'
-      _inputs:
-        date:
-          type: auto
-          comment: Use the event date here
-        slug:
-          type: auto
-          comment: This is used for your directory name
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    schemas:
-      event:
-        path: schemas/event.md
-        reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: false
-        icon: notes
+          link: true
+          styles: /css/editor.css
+        comment: Teaser text (top of page)
+
   news:
     path: content/news
-    glob:
-      - '**/index.md'
-    name: News
-    icon: newspaper
-    disable_url: false
-    description: ''
-    _enabled_editors:
-    _inputs:
-      germanTitle: 
-        hidden: true
-        default: false
-      layout:
-        type: auto
-        default: newsitem
-      description:
-        type: textarea
-        comment: Used for SEO, RSS and related news. Max. 150 characters!
-        options: 
-          show_count: true
-      title:
-        type: textarea
-        comment: Title of news item (<h1> at top of the page)
-      subtitle:
-        type: textarea
-        comment: Subtitle of news item (<h2> next to image)
-      teaser:
-        type: html
-        comment: >-
-          Teaser text, appears in news overview and before content.
-        options: 
-          allow_custom_markup: false
-          remove_custom_markup: false
-          initial_height: 320
-          bold: true
-          bulletedlist: true
-          format: p
-          image_size_attributes: true
-          italic: true
-          link: true
-          styles: /css/editor.css
-          subscript: true
-          superscript: true
-      img:
-        type: image
-        label: Teaser image
-        options:
-          max_file_size: 200
-          max_file_size_message: For SEO, keep this under 200kB.
-      copyright:
-        type: text
-        comment: Copyright for teaser image
-      tinyLogo:
-        type: image
-        label: Tiny logo appears right above the teaser image (optional)
-        optional: true
-        options:
-          max_file_size: 200
-          max_file_size_message: For SEO, keep this under 200kB.
-      link:
-        type: auto
-        comment: External link to news item
-      tags:
-        type: array
-        comment: Used for related news.
-      tags[*]:
-        type: select
-        options:
-          allow_empty: false
-          values: data.newsTags
-      year:
-        comment: Year of publication (all papers in top journals in specified year will be displayed)
+    output: true
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schema: news-extern
+    uploads: '[base_path]'
     create:
       path: '{date|year}-{date|month}-{date|day}-{slug}/index.md'
       _inputs:
         date:
-          type: auto
           comment: Use the publishing date here
-          cascade: true
         slug:
-          type: auto
           comment: This is used for your directory name
-          cascade: true
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
     schemas:
-      news:
-        path: schemas/news.md
-        reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: false
-        icon: notes
-      conference:
-        path: schemas/conference.md
-        reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: false
-        icon: notes
-      journal:
-        path: schemas/journal.md
-        reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: false
-        icon: notes
-  funding:
-    path: content/opportunities/for-phd-applicants
-    glob:
-      - '**/index.md'
-    name: Matchmaking Calls
-    icon: school
-    disable_url: false
-    description: ''
-    create:
-      path: '{slug}{date|year}/index.md'
-      _inputs:
-        date:
-          type: auto
-        slug:
-          type: auto
-          comment: This is used for your directory name (e.g. phd, dssg, ...)
-          cascade: true
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    _inputs:
-      background:
-        comment: Type of background
-        hidden: true
-      backgroundVideo:
-        type: boolean
-        comment: Indicates if a background video is used für medium and large devices
-        hidden: true
-      callOpen:
-        type: select
+      news-extern:
+        path: schemas/news-extern.md
+    _inputs:  
+      title: 
+        type: textarea
+        comment: "Title of news item (<h1> at top of the page)"
+      subtitle: 
+        type: textarea
+        comment: "Subtitle of news item (<h2> next to image)"
+      teaser: 
+        type: html
+        comment: "Teaser text (appears in news overview)"  
         options:
-          values: _select_data.boolean
-        comment: 'Indicates, wether the call is open (and will be displayed first on the landing page)'
-      currentCall:
-        type: select
-        options:
-          values: _select_data.boolean
-        comment: 'Indicates, wether the call is the current one (true: will be displayed first on the opportunities page; false: will be displayed on the opportunities page under "PhD Students From the Last Years".)'
-      tickerText:
-        comment: 'Text for ticker on the landing page, if the call is indicated as open'
-      img:
+          bold: true
+          italic: true
+          format: p 
+          subscript: true
+          superscript: true
+          link: true
+          styles: /css/editor.css
+      img: 
         type: image
-        label: Teaser image (max. 200kB)
-        options:
-          max_file_size: 200
-          max_file_size_message: For SEO, keep this under 200kB.
-      anchors:
-        label: Anchors within this page
-        comment: "Can be displayed with snippet Anchor Buttons (optional)."
+        comment: "Teaser image"
+      copyright: 
+        type: text
+        comment: "Copyright for teaser image"
+      link:
+        comment: "External link to news item"
+      date:
+        type: date
+        comment: "Publishing date"
+      tags:
         type: array
+        comment: "Only te first tag is used for related news"
+      tags[*]:
+        type: select
         options:
-          preview:
-            text:
-              - key: title
-          structures: _structures.anchors
-    schemas:
-      matchmaking:
-        path: schemas/matchmaking.md
-        reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: false
-      phdApplication:
-        path: schemas/phdApplication.md
-        reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: false
+          values:
+            - event
+            - press
+            - award
+            - podcast
+            - training
+            - conference
+            - jobs
+            - research
+            - dssg
+  
+  
   data:
     path: data
-    glob:
-      - '!publications/*'
-      - '!unused/**'
-      - '!mlcuPublications/*'
-    name: Data Files
-    icon: people
-    disable_url: false
-    description: ''
-    preview:
-    _enabled_editors:
+    output: false
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
     _inputs:
-      bio:
+      bio: 
         type: html
-        options:
-          allow_custom_markup: false
-          remove_custom_markup: false
-          initial_height: 320
-          format: p
-          image_size_attributes: true
-        cascade: true
         optional: true
-      contact:
+        options:
+          format: p 
+      contact: 
         type: url
-        cascade: true
-      mail:
+      mail: 
         type: email
-        cascade: true
       title:
         type: select
         options:
-          allow_empty: true
           values:
             - Prof. Dr.
             - Dr.
             - PD Dr.
-        cascade: true
       uni:
         type: select
         options:
-          allow_empty: true
           values:
             - LMU
             - TUM
             - Helmholtz AI
-        cascade: true
-      piID:
-        type: select
-        options:
-          allow_empty: true
-          values:
-            - akata
-            - althoff
-            - bauer_s
-            - bauer_u
-            - bischl
-            - boulesteix
-            - buyx
-            - cremers
-            - dai
-            - doepp
-            - drton
-            - feuerriegel
-            - feurer
-            - fornasier
-            - fortuin
-            - fraser
-            - gabor
-            - gagneur
-            - gruen
-            - guennemann
-            - heckel
-            - hedderich
-            - huellermeier
-            - ingrisch
-            - jegelka
-            - kaissis
-            - kauermann
-            - kern
-            - kilbertus
-            - krahmer
-            - kreuter
-            - kuechenhoff
-            - kuehn
-            - kutyniok
-            - lange
-            - leutenegger
-            - maly
-            - mayer
-            - mueller
-            - nagler
-            - navab
-            - niessner
-            - nyholm
-            - ommer
-            - plank
-            - rauhut
-            - rueckert
-            - ruegamer
-            - scheipl
-            - schmid
-            - schmidt
-            - schnabel
-            - schneider
-            - schoellig
-            - schubert
-            - schueffler
-            - schuetze
-            - schuller
-            - seidl
-            - sra
-            - stein
-            - theis
-            - thuerey
-            - tresp
-            - wachinger
-            - westermann
-            - zhu
-            - zimmer
-        cascade: true
       subarea:
         type: select
         options:
-          allow_empty: true
-          values: _select_data.subAreas
-        cascade: true
+          values:
+            - A1
+            - A2
+            - A3
+            - B1
+            - B2
+            - B3
+            - C1
+            - C2
+            - C3
+            - C4
+            - C5
       director:
         type: checkbox
-        cascade: true
         default: false
         optional: true
       strategyBoard:
         type: checkbox
-        cascade: true
         default: false
         optional: true
-      position:
-        type: text
-        comment: position within MCML, e.g. Education Coordination (optional) 
-        cascade: true
+      funding:
+        type: checkbox
+        default: true
         optional: true
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-collection_groups:
-  - heading: Pages
-    collections:
-      - sections
-      - events
-      - news
-      - funding
-  - heading: Data Files
-    collections:
-      - data
-_inputs:
-  layout:
+        
+
+_inputs: 
+  title: 
     type: text
-    hidden: true
-    cascade: true
-  outputs:
-    hidden: true
-  date:
-    type: datetime
-    options:
-      timezone: Europe/Berlin
-    comment: Publishing date
-  lastmod:
-    type: datetime
-    options:
-      timezone: Europe/Berlin
-    comment: Last modification date
-  title:
-    type: text
-    comment: Title of the page (<h1> at top of the page; also used for SEO and RSS)
-  description:
+    comment: "Title of the page (used for seo)"
+        
+  description: 
     type: textarea
-    comment: Used for SEO and RSS. Max. 150 characters!
-    options: 
-      show_count: true
-  aliases:
-    type: auto
-    comment: Create redirects from old URLs to this URL
-  navname:
-    type: auto
-    label: Navigation Name
-    comment: "Used in breadcrumbs - optional, default: filename"
-  teaser:
-    type: html
+    comment: "Description of the page (used for seo). Max. 150 characters!"
+    
+  layout:
+    hidden: true
+  
+  order:
+    hidden: true
+      
+  sectionLinks:
+    type: array
+    comment: "Links to sections"
     options:
-      allow_custom_markup: false
-      remove_custom_markup: false
-      initial_height: 320
-      bold: true
-      bulletedlist: true
-      format: p, h3
-      image_size_attributes: true
-      italic: true
-      link: true
-      styles: /css/editor.css
-      subscript: true
-      superscript: true
-      show_count: true
-  img:
-    type: image
-    label: Teaser image (max. 200kB)
-    options:
-    max_file_size: 200
-    max_file_size_message: For SEO, keep this under 200kB.
-  conferenceDateStart:
-    type: date
-    options:
-      timezone: Europe/Berlin
-  conferenceDateEnd:
-    type: date
-    options:
-      timezone: Europe/Berlin
-  conferenceLink:
-    type: url  
-  text:
-    type: html
-    options:
-      allow_custom_markup: false
-      remove_custom_markup: false
-      initial_height: 320
-      bold: true
-      bulletedlist: true
-      format: p
-      image_size_attributes: true
-      italic: true
-      link: true
-      styles: /css/editor.css
-      subscript: true
-      superscript: true
-    cascade: true
-  highlightImage:
-    type: image
-    label: Teaser image for highlight (max. 200kB)
-    options:
-    max_file_size: 200
-    max_file_size_message: For SEO, keep this under 200kB.
-  highlightLink:
-    type: url
-    label: Link to highlight
-  highlightLinkText:
+      structures: _structures.sectionLinks          
+      preview:
+        text:
+          - key: title
+        image:
+          - key: img
+        subtext:
+          - key: text
+          
+  name: 
     type: text
-    label: Link text for highlight
-  manager:
-    type: array
+  firstName: 
+    type: text
+  academicTitle: 
+    type: select
     options:
-      structures: _structures.manager
-    comment: Managers in MCML
-    cascade: true
-  pi:
+      values:
+        - Prof. Dr.
+        - Dr.
+        - "-none-"
+  img: 
+    type: image
+    comment: "Image (1x1)"      
+  copyright: 
+    type: text
+    comment: "Copyright for image (optional)"      
+  position: 
+    type: text
+  phone: 
+    type: text 
+  fax: 
+    type: text 
+    comment: "optional"
+  room: 
+    type: text 
+  mail: 
+    type: url  
+  officeHours:
     type: array
-    options:
-      structures: _structures.pi
-    comment: PIs in MCML
-    cascade: true
-  affil:
+  officeHours[*]:
+    type: text
+  
+  bio: 
+    type: html
+    comment: "Short biography"
+  website:
+    type: url
+  workingGroups: 
     type: array
-    options:
-      structures: _structures.pi
-    comment: Affiliated Senior Researchers in MCML
-    cascade: true
-  senior:
-    type: array
-    options:
-      structures: _structures.pi
-    comment: Senior Researchers in MCML
-    cascade: true
-  abmember:
-    type: array
-    options:
-      structures: _structures.ab-member
-    comment: Advisory Board members in MCML
-    cascade: true
-  phd:
-    type: array
-    options:
-      structures: _structures.phd
-    comment: PhDs in MCML
-    cascade: true
-  postdoc:
-    type: array
-    options:
-      structures: _structures.postdoc
-    comment: Postdocs in MCML
-    cascade: true
-_select_data:
-  piID:
-    - akata
-    - althoff
-    - bauer_s
-    - bauer_u
-    - bischl
-    - boulesteix
-    - buyx
-    - cremers
-    - dai
-    - dietrich
-    - doepp
-    - drton
-    - feuerriegel
-    - feurer
-    - fornasier
-    - fortuin
-    - fraser
-    - gabor
-    - gagneur
-    - gruen
-    - guennemann
-    - heckel
-    - hedderich
-    - huellermeier
-    - ingrisch
-    - jegelka
-    - kaissis
-    - kauermann
-    - kern
-    - kilbertus
-    - kinder
-    - krahmer
-    - kreuter
-    - kuechenhoff
-    - kutyniok
-    - lange
-    - leutenegger
-    - maly
-    - mayer
-    - mueller
-    - nagler
-    - navab
-    - niessner
-    - nyholm
-    - ommer
-    - paradies
-    - plank
-    - rauhut
-    - rinke
-    - rueckert
-    - ruegamer
-    - scheipl
-    - schmid
-    - schmidt
-    - schnabel
-    - schneider
-    - schoellig
-    - schubert
-    - schueffler
-    - schuetze
-    - schuller
-    - seidl
-    - sra
-    - sterkenburg
-    - theis
-    - thuerey
-    - tresp
-    - wachinger
-    - westermann
-    - wiestler
-    - zhu
-    - zimmer
-  membershipTypes:
-    - Directors
-    - Management Team
-    - Supervisors
-    - JRGs
-    - Thomas Bayes Fellows
-    - Junior Members
-    - Former Members
-    - Strategy Board
-    - Advisory Board
-    - Junior Member Representatives
-  positionIDs:
-    - collaboration
-    - industry
-    - outreach
-    - mlcu
-    - phdCoordination
-    - diversityCoordination
-    - strategyBoard
-    - director
-    - jrgEthics
-    - jrgNLP
-    - jrgMuMoL
-    - jrgAIforVision
-    - juniorRep
-    - diversityRep
-    - matchmaking23
-    - matchmaking24
-    - matchmaking25
-    - matchmaking26
-  jrgIDs:
-    - jrgEthics
-    - jrgNLP
-    - jrgMuMoL
-    - jrgAIforVision
-  boolean:
-    - 'true'
-    - 'false'
-  titleSize:
-    - h2
-    - h2 small
-    - h3
-    - h3 large
-  imgSize:
-    - big
-    - small
-  researchAreas:
-    - all
-    - A1
-    - A2
-    - A3
-    - B1
-    - B2
-    - B3
-    - C1
-    - C2
-    - C3
-    - C4
-    - C5
-  subAreas:
-    - A1
-    - A2
-    - A3
-    - B1
-    - B2
-    - B3
-    - C1
-    - C2
-    - C3
-    - C4
-    - C5
-_structures:
-  linkedButton:
-    style: select
+    structures: _structures.workingGroups          
+        
+_select_data: {}
+_structures: 
+  sectionLinks:
     values:
       - value:
-          link:
-          text:
-          size:
-          newWindow:
-  anchors:
-    style: select
-    values:
-      - value:
-          title:
-          label:
-          url:
+          title: 
+          img: 
+          copyright: 
+          link: 
+          text: 
         _inputs:
-          title:
-            comment: "If no url is specified, please specify the exact title as it appears in the <h> tags; anchor is generated from this."
-          label:
-            comment: "Optional label; if empty, the title is used."
-          url:
-            comment: "Optional url to another page; if empty, the anchor links to the title within this page."
+          title: 
+            comment: "Title of the section"
+          img:
+            type: image
+          text: 
+            comment: "Teaser text of section"
+            type: textarea
+            
+  workingGroups:
+    values:
+      - value:
+          link: 
+        _inputs:
+          link:
+            type: url
+                    
   speakers:
-    style: select
     values:
       - value:
-          name:
-          affiliation:
-          mail:
-          url:
-  highlights:
-    style: select
-    values:
-      - value:
-          highlightLinkText:
-          highlightLink:
-          highlightImage:
+          name: 
+          affiliation: 
   manager:
-    style: select
     values:
-      - preview:
-          text:
-            - key: name
-          subtext:
-            - key: firstName
-          icon: person
-          icon_color:
-          image:
-            - key: image
-          metadata:
-            - text:
-                - key: position
-            - text:
-                - key: uni
-        tags:
-        value:
-          name:
+      - value:
+          name: 
           firstName:
           title:
           image:
@@ -975,24 +362,23 @@ _structures:
           contact:
           mail:
           bio:
-  pi:
-    style: select
-    values:
-      - preview:
+        preview:
           text:
             - key: name
           subtext:
             - key: firstName
-          icon: person
           image:
             - key: image
-          metadata:
-            - text:
-                - key: subarea
-            - text:
-                - key: uni
-        value:
-          name:
+          icon: person  
+          metadata:  
+          - text: 
+            - key: position
+          - text: 
+            - key: uni
+  pi:
+    values:
+      - value:
+          name: 
           firstName:
           title:
           image:
@@ -1004,143 +390,267 @@ _structures:
           director:
           strategyBoard:
           id:
+        preview:
+          text:
+            - key: name
+          subtext:
+            - key: firstName
+          image:
+            - key: image
+          icon: person  
+          metadata:  
+          - text: 
+            - key: subarea
+          - text: 
+            - key: uni
+            
   phd:
-    style: select
     values:
-      - preview:
-          text:
-            - key: name
-          subtext:
-            - key: firstName
-          icon: person
-          image:
-            - key: image
-          metadata:
-            - text:
-                - key: piID
-        value:
-          name:
-          firstName:
-          image:
-          contact:
-          position:
-          piID:
-  postdoc:
-    style: select
-    values:
-      - preview:
-          text:
-            - key: name
-          subtext:
-            - key: firstName
-          icon: person
-          image:
-            - key: image
-          metadata:
-            - text:
-                - key: piID
-        value:
-          name:
+      - value:
+          name: 
           firstName:
           title:
           image:
           contact:
           position:
+          funding:
           piID:
-  ab-member:
-    style: select
-    values:
-      - preview:
+        preview:
           text:
             - key: name
           subtext:
             - key: firstName
-          icon: person
           image:
             - key: image
-          metadata:
-            - text:
-                - key: uni
-        value:
-          name:
+          icon: person  
+          metadata:  
+          - text: 
+            - key: piID
+            
+  ab:
+    values:
+      - value:
+          name: 
           firstName:
           title:
           image:
-          copyright:
           uni:
           affiliation:
           contact:
           bio:
+        preview:
+          text:
+            - key: name
+          subtext:
+            - key: firstName
+          image:
+            - key: image
+          icon: person  
+          metadata:  
+          - text: 
+            - key: uni
 _editables:
   text:
-    allow_custom_markup: true
-    remove_custom_markup: false
     italic: true
   block:
-    allow_custom_markup: false
-    remove_custom_markup: false
     format: p h3
-    image_size_attributes: true
-    redo: true
     undo: true
+    redo: true
   content:
-    allow_custom_markup: false
-    remove_custom_markup: false
     blockquote: false
     bold: true
-    bulletedlist: true
-    center: align-center
-    code: true
-    copyformatting: true
-    embed: true
-    format: p h2 h3 h4 h5 h6 div li
-    horizontalrule: true
-    image: true
-    image_size_attributes: true
-    indent: true
+    format: p h2 h3 h4 h5 h6 div
     italic: true
-    justify: align-justify
-    left: align-left
-    link: true
-    numberedlist: true
-    outdent: true
-    redo: true
-    removeformat: true
-    right: align-right
-    snippet: true
     strike: true
-    styles: /css/editor.css
     subscript: true
     superscript: true
-    table: true
     underline: true
+    link: true
+    bulletedlist: true
+    indent: true
+    numberedlist: false
+    outdent: true
+    code: true
+    embed: true
+    horizontalrule: true
+    image: true
+    table: true
     undo: true
-_snippets_imports:
-  hugo: false
+    redo: true
+    removeformat: true
+    copyformatting: true
+    styles: /css/editor.css
+    left: align-left
+    center: align-center
+    right: align-right
+    justify: align-justify
+    image_size_attributes: true
+    snippet: true
+data_config: true
+editor:
+  default_path:
+timezone: Etc/UTC
+
 _snippets:
-  hugo_teaser:
+  hugo_cardFunding:
     template: hugo_shortcode_named_args
-    mcmlType: text
-    mcmlDescription: >-
-      Large teaser text, to be used at the top of a page, directly after the title.
-    mcmlLastMod: 2025-08-15
-    mcmlExample: >
-      {{< teaser txt="<p>Large teaser text for pages.</p><p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor
-      incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt
-      ut labore et dolore magna aliqua.</p><p><strong>Text can be bold</strong></p><p>You can insert links:
-      <a href=\"https://mcml.ai\">www.mcml.ai</a></p><p>You can insert lists</p><ul><li><p>list 1</p></li><li><p>list 2</p></li></ul>" >}}
-    mcmlInputImages:
-      - /examples/teaser_input.webp
+    inline: false
     preview:
-      text: Teaser
-      subtext:
-        - key: text
-      image:
-        - /examples/teaser.webp
+      text: 
+      - key: title
+      - "Title"
+      icon: image
+      image: 
+        key: img
+      metadata:
+        - text: 
+          - key: subtitle
+          - "Subtitle"
+        - text:
+          - key: fundingName
+          - "Funding agency"
+        - text:
+          - key: period
+          - "01/2022 - 05/2024"
     picker_preview:
       gallery:
-        image: /examples/teaser.webp
-        text: Teaser for pages
+        image: /examples/announcement.png
+        text: "Title"
+    definitions:
+      shortcode_name: cardFunding
+      named_args:
+        - editor_key: title
+          type: string
+        - editor_key: subtitle
+          type: string
+        - editor_key: fundingName
+          type: string
+        - editor_key: fundingLink
+          type: string
+        - editor_key: period
+          type: string
+        - editor_key: teaser
+          type: string
+        - editor_key: img
+          type: string
+        - editor_key: copyright
+          type: string
+        - editor_key: link
+          type: string
+    _inputs:
+      title:
+        type: text
+      subtitle:
+        type: text
+      fundingName:
+        type: text
+      fundingLink:
+        type: url
+      period:
+        type: text
+      teaser:
+        type: html
+        options: 
+          bold: true
+          link: true
+          bulletedlist: true
+          indent: true
+          undo: true
+          redo: true
+      img:
+        type: image  
+      copxright:
+        type: text
+      Link:
+        type: url
+          
+  hugo_announcement:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: "Announcement"
+      metadata:
+        - text: "We are happy to announce that MCML researchers are represented with the following papers at"
+        - text:
+          - key: conference
+          - "Conference"
+    picker_preview:
+      gallery:
+        image: /examples/announcement.png
+        text: "Announcement"
+    definitions:
+      shortcode_name: announcement
+      named_args:
+        - source_key: conf
+          editor_key: conference
+          type: string
+        - source_key: conflink
+          editor_key: conferenceLink
+          type: string
+    _inputs:
+      conference:
+        type: text
+        comment: "Conference abbreviation, e.g. CVPR 2023"
+      conferenceLink:
+        type: url
+        
+  hugo_contribution:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "Published paper (or article)"
+      metadata:
+        - text:
+          - key: title
+          - "Title"
+        - text:
+          - key: author  
+          - "Authors"
+        - text:
+          - key: link
+          - "Link"
+    picker_preview:
+      gallery:
+        image: /examples/contribution.png
+        text: "Published paper (or article)"
+    definitions:
+      shortcode_name: contribution
+      named_args:
+        - editor_key: title
+          type: string
+        - editor_key: author
+          type: string
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: linktext
+          type: string
+          optional: true
+    _inputs:
+      title:
+        type: textarea
+        comment: "Title od the paper"
+      author:
+        type: textarea
+      link:
+        type: url  
+      linktext:
+        type: text
+        comment: "e.g. DOI, PDF, URL, arXiv"
+          
+  hugo_teaser:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: "Teaser for section pages"
+      metadata:
+        - text:
+          - key: text
+    picker_preview:
+      gallery:
+        image: /examples/teaser.png
+        text: "Teaser for section pages"
     definitions:
       shortcode_name: teaser
       named_args:
@@ -1149,551 +659,36 @@ _snippets:
           type: string
     _inputs:
       text:
-        comment: Teaser text in html format
         type: html
-        options:
-          allow_custom_markup: false
-          remove_custom_markup: false
-          initial_height: 320
+        options: 
           bold: true
-          bulletedlist: true
-          format: p, h2, h3
-          image_size_attributes: true
-          italic: true
           link: true
-          styles: /css/editor.css
-          subscript: true
-          superscript: true
-
-  hugo_txtTwoCol:
-    template: hugo_shortcode_named_args
-    mcmlType: text
-    mcmlDescription: >-
-      Two column text paragraph for pages; left column title, right column text and optional image and linked button.
-    mcmlLastMod: 2025-08-15
-    mcmlExample: >
-      {{< txtTwoCol title="Left column: Title in h2" titleSize="h2"
-      txt1="<p>Right column: Text in large font.</p><p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
-      Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p><p><strong>Text can be bold</strong></p>
-      <p>You can insert links:&nbsp;<a href=\"https://mcml.ai\">www.mcml.ai</a></p><p>You can insert lists</p><ul><li><p>list 1</p></li><li><p>list 2</p></li></ul>" 
-      link="https://mcml.ai" newWindow="true" img="/images/adobestock/adobeStock-109360299-FleischiPixel.jpeg" imgSize="big" noFloat="false" 
-      positionID="phdCoordination" showAffiliation="true" contactTitle="Another Contact Title" linktext="MCML Website" >}}
-    mcmlInputImages:
-      - /examples/txtTwoCol_input1.webp
-      - /examples/txtTwoCol_input2.webp
-      - /examples/txtTwoCol_input3.webp
-    preview:
-      text: Paragraph (title left, text right)
-      subtext:
-        - key: title
-      image: /examples/txtTwoCol.webp
-      metadata:
-        - text:
-            - key: text
-          image:
-            - key: image
-        - text:
-            - template: titleSize {titleSize}
-          icon: title
-        - text:
-            - template: List members with position {positionID}
-          icon: user_attributes
-        - text:
-            - template: Link to {link}
-          icon: east
-    picker_preview:
-      gallery:
-        image: /examples/txtTwoCol.webp
-        text: Paragraph (title left, text right)
-    definitions:
-      shortcode_name: txtTwoCol
-      named_args:
-        - editor_key: title
-          type: string
-        - editor_key: titleSize
-          type: string
-          optional: true
-          default: h2
-        - editor_key: text
-          source_key: txt1
-          type: string
-        - editor_key: link
-          type: string
-          optional: true
-        - editor_key: linkText
-          source_key: linktext
-          type: string
-          optional: true
-        - editor_key: newWindow
-          type: string
-          optional: true
-          default: 'false'
-        - editor_key: image
-          source_key: img
-          type: string
-          optional: true
-        - editor_key: imageSize
-          source_key: imgSize
-          type: string
-          optional: true
-          default: big
-        - editor_key: noFloat
-          type: string
-          default: 'false'
-          optional: true
-        - editor_key: positionID
-          type: string
-          optional: true
-        - editor_key: showAffiliation
-          type: string
-          optional: true
-          default: 'false'
-        - editor_key: contactTitle
-          type: string
-          optional: true
-        - editor_key: backToTop
-          type: string
-          optional: true
-          default: 'false'
-    _inputs:
-      title:
-        type: textarea
-        comment: Title of the paragraph, left column in <titleSize>
-      titleSize:
-        type: select
-        comment: 'Size and level of the title; <h2 small> has the size of h3, <h3 big> has the size of h2 (default: <h2>)'
-        options:
-          values: _select_data.titleSize
-      text:
-        type: html
-        comment: 'Text of the paragraph in html format, right column'
-      link:
-        type: url
-        comment: 'URL for linked button, appears after the text (optional)'
-      linkText:
-        type: text
-        comment: 'Text for linked button (optional, default: <Learn More>)'
-      newWindow:
-        type: select
-        options:
-          allow_empty: true
-          values: _select_data.boolean
-        comment: 'If true, opens URL in new window (default: <false>)'
-      image:
-        type: image
-        comment: 'Image to appear right before text, can be floated by the text; max. file size 300 kB (optional)'
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
-      imageSize:
-        type: select
-        options:
-          values: _select_data.imgSize
-        comment: 'Size of the image (default: <big>)'
-      noFloat:
-        type: select
-        options:
-          values: _select_data.boolean
-        comment: 'If true, the image will not be flotaed by the text (default: <false>)'
-      positionID:
-        type: select
-        options:
-          allow_empty: true
-          values: _select_data.positionIDs
-        comment: >-
-          Shows the contact details of all members with this position ID at the
-          end of the paragraph (optional)
-      showAffiliation:
-        type: select
-        options:
-          allow_empty: true
-          values: _select_data.boolean
-        comment: 'If true, the affiliations are shown in contact details, e.g. Machine Lerning Consulting Unit (default: <false>)'
-      contactTitle:
-        type: text
-        comment: 'Title for contact details (optional, default: <Contact>)'
-      backToTop:
-        type: select
-        options:
-          values: _select_data.boolean
-        comment: 'If true, a small "Back To Top" button is shown at the bottom of the paragraph (default: <false>)'
-
-  hugo_paragraphImgLeft:
-    template: hugo_shortcode_named_args
-    mcmlType: text
-    mcmlDescription: >-
-      Two column text paragraph for pages; left column small image, right column title and text and optional linked button.
-    mcmlLastMod: 2025-08-15
-    mcmlExample: >
-      {{< paragraphImgLeft title="Title in h3" txt="<p><strong>Text, optional with linked button</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
-      Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>" img="/images/opportunities/mm_ap4.webp" link="https://mcml.ai/research/" linktext="MCML Research" >}}
-    mcmlInputImages:
-      - /examples/paragraphImgLeft_input1.webp
-      - /examples/paragraphImgLeft_input2.webp
-    preview:
-      text: Paragraph with left small image (before title)
-      subtext:
-        - key: title
-      image: /examples/paragraphImgLeft.webp
-      metadata:
-        - text:
-            - key: text
-          image: 
-            - key: image
-        - text:
-            - template: Link to {link}
-          icon: east
-    picker_preview:
-      gallery: 
-        image: /examples/paragraphImgLeft.webp
-        text: Paragraph with left small image (before title)
-    definitions:
-      shortcode_name: paragraphImgLeft
-      named_args:
-        - editor_key: title
-          type: string
-        - editor_key: date
-          type: string
-          optional: true
-        - editor_key: text
-          source_key: txt
-          type: string
-        - editor_key: image
-          source_key: img
-          type: string
-        - editor_key: link
-          type: string
-          optional: true
-        - editor_key: linkText
-          source_key: linktext
-          type: string
-          optional: true
-    _inputs:
-      title:
-        type: textarea
-        comment: 'Title of the paragraph (in size h3)'
-      date:
-        type: datetime
-        comment: 'e.g. for status updates; optional'
-        options:
-          timezone: Europe/Berlin
-      text:
-        type: html
-        comment: 'Text of the paragraph in html format'
-      image:
-        type: image
-        comment: 'Appears left before title; must have ratio 1:1, max. file size: 300 kB'
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
-      link:
-        type: url
-        comment: 'URL for linked button, appears after the text (optional)'
-      linkText:
-        type: text
-        comment: 'Text for linked button (optional, default: <Learn More>)'
-
-  hugo_txtImgLeft:
-    template: hugo_shortcode_named_args
-
-    mcmlType: text
-    mcmlDescription: >-
-      Text paragraph for pages with left image, floated by title and text and optional linked button.
-    mcmlLastMod: 2025-08-18
-    mcmlExample: >
-      {{< txtImgLeft title="Title in h2" titleSize="h2" 
-      txt1="<p>Text in large font.</p><p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>"
-      img="/images/adobestock/adobeStock-142781697-F8.jpeg" copyright="copyright" caption="Caption:  Lorem ipsum dolor sit amen" link="https://mcml.ai" linktext="MCML Website" >}}
-    mcmlInputImages:
-      - /examples/txtImgLeft_input1.webp
-      - /examples/txtImgLeft_input2.webp
-      - /examples/txtImgLeft_input3.webp
-    preview:
-      text: Paragraph with floating image left
-      subtext:
-        - key: title
-      image: 
-        - key: image
-        - /examples/txtImgLeft.webp
-      metadata:
-        - text:
-            - key: text
-        - text:
-            - template: titleSize {titleSize}
-          icon: title
-        - text:
-            - template: Link to {link}
-          icon: east
-    picker_preview:
-      gallery:
-        image: /examples/txtImgLeft.webp
-        text: Paragraph with floating image left
-    definitions:
-      shortcode_name: txtImgLeft
-      named_args:
-        - editor_key: title
-          type: string
-        - editor_key: titleSize
-          type: string
-          default: h2
-          optional: true
-        - editor_key: text
-          source_key: txt1
-          type: string
-        - editor_key: image
-          source_key: img
-          type: string
-        - editor_key: copyright
-          type: string
-          optional: true
-        - editor_key: caption
-          type: string
-          optional: true
-        - editor_key: link
-          type: string
-          optional: true
-        - editor_key: linkText
-          e_key: linktext
-          type: string
-          optional: true
-    _inputs:
-      title:
-        type: textarea
-        comment: 'Title of the paragraph in <titleSize>'
-      titleSize:
-        type: select
-        options:
-          allow_empty: true
-          values: _select_data.titleSize
-        comment: 'Size and level of the title; <h2 small> has the size of h3, <h3 big> has the size of h2 (default: <h2>)'
-      text:
-        type: html
-        comment: 'Text of the paragraph in html format, floats the image'
-      image:
-        type: image
-        comment: 'Image to appear left, floated by the text; max. file size 200 kB'
-        options:
-          max_file_size: 200
-          max_file_size_message: For SEO, keep this under 200kB.
-      copyright:
-        type: text
-        comment: 'Copyright annotation for image (optional)'
-      caption:
-        type: text
-        comment: 'Caption for image (optional)'
-      link:
-        type: url
-        comment: 'URL for linked button, appears after the text (optional)'
-      linkText:
-        type: text
-        comment: 'Text for linked button (optional, default: <Learn More>)'
-
-  hugo_txtTwoColContact:
-    template: hugo_shortcode_named_args
-    mcmlType: text
-    mcmlDescription: >-
-      Two column text paragraph for contact section; left column title, right column text and contact details. Lists the directors at the end of the paragraph automatically.
-    mcmlLastMod: 2025-08-15
-    mcmlExample: >
-      {{< txtTwoColContact title="Get in touch with us!" 
-      txt1="<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>" 
-      contact="contact@mcml.ai" mailtxt="MCML Coordinators" >}}
-    mcmlInputImages:
-      - /examples/txtTwoColContact_input.webp
-    preview:
-      text: Paragraph for Contact Section
-      subtext:
-        - key: text
-      image: /examples/txtTwoColContact.webp
-      metadata:
-        - text:
-            - template: Mail to {contact_email}
-          icon: east
-    picker_preview:
-      gallery:
-        image: /examples/txtTwoColContact.webp
-        text: Paragraph for Contact Section
-    definitions:
-      shortcode_name: txtTwoColContact
-      named_args:
-        - editor_key: title
-          type: string
-        - editor_key: text
-          source_key: txt1
-          type: string
-        - editor_key: contact_email
-          source_key: contact
-          type: string
-        - editor_key: contactTitle
-          source_key: mailtxt
-          type: string
-    _inputs:
-      title:
-        type: textarea
-        comment: 'Title of the paragraph, left column in <titleSize>'
-      text:
-        type: html
-        comment: 'Text of the paragraph in html format, right column'
-      contact_email:
-        type: email
-        comment: 'Mail address for contact'
-        options:
-          pattern: '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
-          pattern_message: Please use the format ___@___.__
-      contactTitle:
-        type: textarea
-        comment: 'Title for mail address'
-  
-  hugo_txtTwoColThreeLinks:
-    template: hugo_shortcode_named_args
-    mcmlType: text
-    mcmlDescription: Two column text paragraph with up to three linked images; left column title, right column text and linked images.
-    mcmlLastMod: 2025-08-18
-    mcmlExample: >
-      {{< txtTwoColThreeLinks title="Title of paragraph" text="<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
-      Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>" 
-      link1="/opportunities/for-research-x-change/" linktext1="Lorem ipsum dolor sit amet" img1="/images/opportunities/ai-x-change-1x1.webp" 
-      link2="https://2024.aclweb.org" linktext2="ACL 2024" img2="/images/conferences/acl24_q.webp" 
-      link3="/opportunities/for-job-candidates/" linktext3="MCML Job Opportunities" img3="/images/opportunities/jobs2.jpg" >}}
-    mcmlInputImages:
-      - /examples/txtTwoColThreeLinks_input1.webp
-      - /examples/txtTwoColThreeLinks_input2.webp
-      - /examples/txtTwoColThreeLinks_input3.webp
-      - /examples/txtTwoColThreeLinks_input4.webp
-    preview:
-      text: Paragraph with up to three linked images
-      subtext:
-        - key: title
-      image: /examples/txtTwoColThreeLinks.webp
-      metadata:
-        - text:
-            - key: text
-        - text:
-            - key: firstLink
-          icon: image
-          image:
-            - key: firstImage
-        - text:
-            - key: secondLink
-          icon: image
-          image:
-            - key: secondImage
-        - text:
-            - key: thirdLink
-          icon: image
-          image:
-            - key: thirdImage
-    picker_preview:
-      gallery:
-        image: /examples/txtTwoColThreeLinks.webp
-        text: Paragraph with up to three linked images
-    definitions:
-      shortcode_name: txtTwoColThreeLinks
-      named_args:
-        - editor_key: title
-          type: string
-        - editor_key: text
-          type: string
-        - editor_key: firstLink
-          source_key: link1
-          type: string
-        - editor_key: titleFirstLink
-          source_key: linktext1
-          type: string
-        - editor_key: firstImage
-          source_key: img1
-          type: string
-        - editor_key: secondLink
-          source_key: link2
-          type: string
-        - editor_key: titleSecondLink
-          source_key: linktext2
-          type: string
-        - editor_key: secondImage
-          source_key: img2
-          type: string
-        - editor_key: thirdLink
-          source_key: link3
-          type: string
-        - editor_key: titleThirdLink
-          source_key: linktext3
-          type: string
-        - editor_key: thirdImage
-          source_key: img3
-          type: string
-    _inputs:
-      title:
-        type: textarea
-        comment: 'Title of the paragraph, left column in h3'
-      text:
-        type: html
-        comment: 'Text of the paragraph in html format, right column'
-      firstLink:
-        type: url
-        comment: 'URL for first linked image'
-      titleFirstLink:
-        type: textarea
-        comment: Title for first link
-      firstImage:
-        type: image
-        comment: Image for first link, max. file size 300kB, all images should have the same ratio
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
-      secondLink:
-        type: url
-        comment: 'URL for second linked image (optional)'
-      titleSecondLink:
-        type: textarea
-        comment: Title for second link (optional)
-      secondImage:
-        type: image
-        comment: Image for second link, max. file size 300kB, all images should have the same ratio (optional)
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
-      thirdLink::
-        type: url
-        comment: 'URL for third linked image (optional)'
-      titleThirdLink:
-        type: textarea
-        comment: Title for third link (optional)
-      thirdImage:
-        type: image
-        comment: Image for third link, max. file size 300kB, all images should have the same ratio (optional)
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
-
+          bulletedlist: true
+          indent: true
+          undo: true
+          redo: true
+          
   hugo_quoteRight:
     template: hugo_shortcode_named_args
-    mcmlType: quote
-    mcmlDescription: Quote with image for pages, centered.
-    mcmlLastMod: 2025-08-15
-    mcmlExample: >
-      {{< quoteRight name="Verena Albrecht" position="Science Communication Manager MCML" 
-      quote="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua." 
-      img="/images/management/albrecht.webp" copyright="MCML" size="normal" >}}
-    mcmlInputImages:
-      - /examples/quote_input.webp
+    inline: false
     preview:
-      text: Quote with image
       icon: image
-      image:
-        key: image
+      image: 
+        key: img
+      text: 
+        - key: quote
+        - "Quote"
       metadata:
         - text:
-            - key: quote
+          - key: name
         - text:
-            - key: name
+          - key: position
         - text:
-            - key: position
-        - text:
-            - key: size
+          - key: size
     picker_preview:
       gallery:
-        image: /examples/quote.webp
-        text: Quote with image
+        image: /examples/quote.png
+        text: "Quote"
     definitions:
       shortcode_name: quoteRight
       named_args:
@@ -1703,697 +698,325 @@ _snippets:
           type: string
         - editor_key: quote
           type: string
-        - editor_key: image
-          source_key: img
+        - editor_key: img
           type: string
         - editor_key: copyright
           type: string
           optional: true
         - editor_key: size
-          default: normal
+          type: string
+          optional: true
     _inputs:
       name:
         type: text
-        comment: Name of author
       position:
         type: text
-        comment: Author's position within MCML, e.g. MCML Director
+        comment: "e.g. MCML Director"
       quote:
         type: textarea
-        comment: Text of the quote
-      image:
+      img:
         type: image
-        comment: 'Portrait of the author; ratio: 1/1, max. file size 200 kB'
-        options:
-          max_file_size: 200
-          max_file_size_message: For SEO, keep this under 200kB.
+        comment: ""
       copyright:
         type: text
-        comment: Copyright annotations for the portrait
+        comment: ""
       size:
         type: select
-        comment: 'Size of the quote (<normal> or <small>), default: <normal>'
+        comment: "small or big (default big)"
         options:
           values:
-            - normal
             - small
-  hugo_highlightBlog:
+            - big
+          
+  hugo_txtTwoCol:
     template: hugo_shortcode_named_args
-    mcmlType: quote
-    mcmlDescription: Highlight for blog post, floated by text. You can choose color and float direction.
-    mcmlLastMod: 2025-09-03
-    mcmlExample: >
-      {{< highlightBlog label="Kex Insight" highlight="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua." color="red" float="left" >}}
-    mcmlInputImages:
-      - /examples/quoteBlog_input.webp
+    inline: false
     preview:
-      text: Highlight for Blog (floated)
-      icon: format_quote
-      metadata:
-        - text:
-            - key: label
-        - text:
-            - key: highlight
-        - text:
-            - key: color
-    picker_preview:
-      gallery:
-        image: /examples/quoteBlog.webp
-        text: Highlight for Blog (floated)
-    definitions:
-      shortcode_name: highlightBlog
-      named_args:
-        - editor_key: label
-          type: string
-        - editor_key: highlight
-          type: string
-        - editor_key: color
-          type: string
-          default: "blue"
-        - editor_key: float
-          type: string
-          default: "left"
-    _inputs:
-      label:
-        type: text
-        comment: Label of the Highlight
-      highlight:
-        type: textarea
-        comment: Text of the highlight
-      color:
-        type: select
-        comment: "Color of the quote, default: <blue>"
-        options:
-          values:
-            - blue
-            - green
-            - yellow
-            - red
-            - purple
-            - turquoise
-      float:
-        comment: "Floating position (<left> or <right>, default: <left>)"
-        type: select
-        options:
-          values:
-            - left
-            - right
-
-  hugo_quoteBlog:
-    template: hugo_shortcode_named_args
-    mcmlType: quote
-    mcmlDescription: Quote for blog post, floated by text. You can choose color and float direction.
-    mcmlLastMod: 2025-09-03
-    mcmlExample: >
-      {{< quoteBlog name="Jane Doe" position="MCML Junior Member" quote="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua." color="red" float="left" >}}
-    mcmlInputImages:
-      - /examples/quoteBlog_input.webp
-    preview:
-      text: Quote for Blog (floated)
-      icon: format_quote
-      metadata:
-        - text:
-            - key: quote
-        - text:
-            - key: name
-        - text:
-            - key: position
-        - text:
-            - key: color
-    picker_preview:
-      gallery:
-        image: /examples/quoteBlog.webp
-        text: Quote for Blog (floated)
-    definitions:
-      shortcode_name: quoteBlog
-      named_args:
-        - editor_key: name
-          type: string
-        - editor_key: position
-          type: string
-        - editor_key: quote
-          type: string
-        - editor_key: color
-          type: string
-          default: "blue"
-        - editor_key: float
-          type: string
-          default: "left"
-    _inputs:
-      name:
-        type: text
-        comment: Name of author
-      position:
-        type: text
-        comment: Author's position within MCML, e.g. MCML Director
-      quote:
-        type: textarea
-        comment: Text of the quote
-      color:
-        type: select
-        comment: "Color of the quote, default: <blue>"
-        options:
-          values:
-            - blue
-            - green
-            - yellow
-            - red
-            - purple
-            - turquoise
-      float:
-        comment: "Floating position (<left> or <right>, default: <left>)"
-        type: select
-        options:
-          values:
-            - left
-            - right
-  
-  hugo_quotePost:
-    template: hugo_shortcode_named_args
-    mcmlType: quote
-    mcmlDescription: Quote for post, centered. You can choose color.
-    mcmlLastMod: 2025-09-03
-    mcmlExample: >
-      {{< quotePost name="Max Mustermann" position="MCML Director" quote="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. " color="yellow" >}}
-    mcmlInputImages:
-      - /examples/quotePost_input.webp
-    preview:
-      text: Quote for Post (centered)
-      icon: format_quote
-      metadata:
-        - text:
-            - key: quote
-        - text:
-            - key: name
-        - text:
-            - key: color
-    picker_preview:
-      gallery:
-        image: /examples/quotePost.webp
-        text: Quote for Post (centered)
-    definitions:
-      shortcode_name: quotePost
-      named_args:
-        - editor_key: name
-          type: string
-        - editor_key: position
-          type: string
-        - editor_key: quote
-          type: string
-        - editor_key: color
-          type: string
-          default: "blue"
-    _inputs:
-      name:
-        comment: Name of author
-        type: text
-      position:
-        type: text
-        comment: Author's position within MCML, e.g. MCML Director
-      quote:
-        comment: Text of the quote
-        type: textarea
-      color:
-        comment: "Color of the quote, default: <blue>"
-        type: select
-        options:
-          values:
-            - blue
-            - green
-            - yellow
-            - red
-            - purple
-            - turquoise
-
-  hugo_learnMoreBtn:
-    template: hugo_shortcode_named_args
-    mcmlType: "special text"
-    mcmlDescription: "Linked Learn More Button with optional text and optional small size."
-    mcmlLastMod: 2025-09-03
-    mcmlExample: >
-      {{< learnMoreBtn link="https://mcml.ai" text="Any other text" size="medium" mt="4" mb="4" newWindow="false" paragraph="false" >}}
-    mcmlInputImages:
-      - /examples/learnMore_input1.webp
-      - /examples/learnMore_input2.webp
-      - /examples/learnMore_input3.webp
-    preview:
-      text:
+      text: 
+      - key: title
+      - "Text Two Colums (h2 Title)"
+      subtext: 
         - key: text
-        - Learn More Button (with optional text)
-      icon: east
-      metadata:
-        - text:
-            - key: link
-        - text:
-            - key: size
-            - medium (default)
+        - "(left column title h2, right column text)"
     picker_preview:
       gallery:
-        image: /examples/learnMore.webp
-        text: Learn More Button (with optional text)
+        image: /examples/txtTwoColh2.png
+        text: "Text Two Colums (h2 Title)"
     definitions:
-      shortcode_name: learnMoreBtn
-      named_args:
-        - editor_key: link
-          type: string
-        - editor_key: text
-          type: string
-          optional: true
-          default: Learn More
-        - editor_key: size
-          optional: true
-          default: medium
-        - editor_key: marginTop
-          source_key: mt
-          optional: true
-          default: "4"
-        - editor_key: marginBottom
-          source_key: mb
-          optional: true
-          default: "4"
-        - editor_key: newWindow
-          type: string
-          optional: true
-          default: 'false'
-        - editor_key: paragraphLayout
-          source_key: paragraph
-          type: string
-          optional: true
-          default: 'false'
-    _inputs:
-      link:
-        type: url
-        comment: URL for linked button
-      text:
-        type: text
-        comment: "Text to appear on the button (default: <Learn more>)"
-      size:
-        type: select
-        options:
-          allow_empty: true
-          values:
-            - medium
-            - small
-        comment: "Size of the button; <small> or <medium>, default: <medium>"
-      marginTop:
-        type: text
-        options:
-          allow_empty: true
-          pattern: '[0-5]'
-          pattern_message: Choose between 0 and 5
-        comment: 'Margin top (optional, default: 4), choose between 0-5'
-      marginBottom:
-        type: text
-        options:
-          allow_empty: true
-          pattern: '[0-5]'
-          pattern_message: Choose between 0 and 5
-        comment: 'Margin bottom (optional, default: 4), choose between 0-5'
-      newWindow:
-        type: select
-        options:
-          values: _select_data.boolean
-          allow_empty: true
-        comment: 'If <true>, link opens in new window, default: <false>'
-      paragraphLayout:
-        type: select
-        options:
-          allow_empty: true
-          values: _select_data.boolean
-        comment: >-
-          Choose <true>, if the button should be displayed within paragraph layout
-          (on the right), default: <false>
-  
-  
-  hugo_agendaitem:
-    template: hugo_shortcode_named_args
-    mcmlType: "special text"
-    mcmlDescription: "Agenda item with start time, end time, and description."
-    mcmlLastMod: 2025-09-05
-    mcmlExample: >
-      {{< agendaitem start="12:00 pm" end="2:00 pm" description="<p><strong>Keynote Talk</strong></p><p><strong>Jane Doe: Lorem ipsum dolor sit amet</strong></p><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>" >}}
-    mcmlInputImages:
-      - /examples/agendaitem_input1.webp
-      - /examples/agendaitem_input2.webp
-    preview:
-      text: Agenda Item
-      subtext:
-        - key: start
-      image:
-        - /examples/agendaitem.webp
-      metadata:
-        - text:
-            - key: description
-    picker_preview:
-      gallery:
-        image: /examples/agendaitem.webp
-        text: Agenda Item
-    definitions:
-      shortcode_name: agendaitem
-      named_args:
-        - editor_key: start
-          type: string
-        - editor_key: end
-          type: string
-        - editor_key: description
-          type: string
-        - editor_key: abstract
-          type: string
-          optional: true
-    _inputs:
-      start:
-        type: time
-        comment: 'Start time in hh:mm format (European timezone); will be rendered to h:mm a'
-        options:
-          timezone: Europe/Berlin
-      end:
-        type: time
-        comment: 'End time in hh:mm format (European timezone); will be rendered to h:mm a'
-        options:
-          timezone: Europe/Berlin
-      description:
-        type: html
-        comment: 'Description of the agenda item in html format'
-        options:
-          allow_custom_markup: false
-          remove_custom_markup: false
-          initial_height: 320
-          bold: true
-          bulletedlist: true
-          numberedlist: true
-          format: p
-          image_size_attributes: false
-          italic: true
-          link: true
-          styles: /css/editor.css
-          subscript: true
-          superscript: true
-      abstract:
-        type: html
-        comment: 'Abstract of the agenda item in html format; optional. Appears in small font.'
-        options:
-          allow_custom_markup: false
-          remove_custom_markup: false
-          initial_height: 320
-          bold: true
-          bulletedlist: true
-          numberedlist: true
-          format: p
-          image_size_attributes: false
-          italic: true
-          link: true
-          styles: /css/editor.css
-          subscript: true
-          superscript: true
-
-  hugo_faq:
-    template: hugo_shortcode_named_args
-    mcmlType: "special text"
-    mcmlDescription: "Item for Frequently Asked Questions (FAQs)."
-    mcmlLastMod: 2025-09-05
-    mcmlExample: >
-      {{< faq title="Title of FAQ no 1" txt="<p><strong>This FAQ has a linked button at the end</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. </p>" link="https://mcml.ai/research/" linktext="Link Text" >}}
-    mcmlInputImages:
-      - /examples/faq_input1.webp
-      - /examples/faq_input2.webp
-      - /examples/faq_input3.webp
-    preview:
-      text: FAQ
-      subtext:
-        - key: title
-      image: /examples/faq.png
-      metadata:
-        - text:
-            - key: text
-    picker_preview:
-      gallery:
-        image: /examples/faq.webp
-        text: FAQ
-    definitions:
-      shortcode_name: faq
+      shortcode_name: txtTwoCol
       named_args:
         - editor_key: title
           type: string
         - editor_key: text
-          source_key: txt
+          source_key: txt1
           type: string
         - editor_key: link
           type: string
           optional: true
-        - editor_key: linkText
-          source_key: linktext
+        - editor_key: linktext
+          type: string
+          optional: true
+        - editor_key: img
+          type: string
+          optional: true
+        - editor_key: copyright
           type: string
           optional: true
     _inputs:
       title:
         type: textarea
-        comment: Title of the FAQ, will be displayed in size <h3>
+        comment: "appears left in <h2>"
       text:
         type: html
-        comment: Text of the FAQ in html format
+        comment: "appears right in large font"
+        options:
+          bold: true
+          format: p h3 h4 h5 h6
+          subscript: true
+          superscript: true
+          bulletedlist: true
+          indent: true
+          horizontalrule: true
+          link: true
       link:
         type: url
-        comment: URL for linked button (appears at the end - optional)
+        comment: "link for linked button (appears right at the end - optional)"
       linktext:
         type: text
-        comment: Text for linked button (optional, default is 'Learn More')
-
-  hugo_infobox:
+        comment: "text for linked button (optional, default is 'Learn More')"
+      img:
+        type: image
+        comment: "appears left under h2 (optional)"
+      copyright:
+        type: text
+        comment: "copyright for image (optional)"
+        
+  hugo_txtTwoCol_Contact:
     template: hugo_shortcode_named_args
-    mcmlType: "special text"
-    mcmlDescription: "Infobox floated right by text."
-    mcmlLastMod: 2025-09-05
-    mcmlExample: >
-      {{< infobox title="This is the title" subtitle="This is the subtitle" text="<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>" >}}
-    mcmlInputImages:
-      - /examples/infobox_input1.webp
-      - /examples/infobox_input2.webp
+    inline: false
     preview:
-      text: Infobox (floated)
-      icon: info
-      metadata:
-        - text:
-            - key: title
-        - text:
-            - key: subtitle
-        - text:
-            - key: text
+      text: 
+      - key: title
+      - "Text Two Colums (h2 Title)"
+      subtext: 
+        - key: text
+        - "(left column title h2, right column text)"
     picker_preview:
       gallery:
-        image: /examples/infobox.webp
-        text: Infobox (floated)
+        image: /examples/txtTwoColh2.png
+        text: "Text Two Colums (h2 Title)"
     definitions:
-      shortcode_name: infobox
+      shortcode_name: txtTwoColContact
       named_args:
         - editor_key: title
           type: string
-        - editor_key: subtitle
+        - editor_key: address
+          source_key: txt1
           type: string
-        - editor_key: text
+        - editor_key: phone
           type: string
-    _inputs:
-      title:
-        type: text
-        comment: Title of the infobox (appears at the top)
-      subtitle:
-        type: text
-        comment: Subitle of the infobox (appears at the bottom) in smaller size
-      text:
-        type: html
-        comment: Text in html format floating the infobox (appears at the right of the infobox)
-  
-  hugo_ticker:
-    template: hugo_shortcode_named_args
-    mcmlType: "special text"
-    mcmlDescription: "Yellow ticker with running text and optional link."
-    mcmlLastMod: 2025-09-05
-    mcmlExample: >
-      {{< ticker link="https://mcml.ai" newWindow="false" text="Lorem ipsum dolor sit amet" fontSize="large" >}}
-    mcmlInputImages:
-      - /examples/ticker_input1.webp
-      - /examples/ticker_input2.webp
-    preview:
-      text:
-        - Yellow ticker with optional link
-      icon: east
-      image: /examples/ticker.webp
-      metadata:
-        - text:
-            - key: text
-        - text:
-            - key: link
-    picker_preview:
-      gallery:
-        image: /examples/ticker.webp
-        text: Yellow ticker with optional link
-    definitions:
-      shortcode_name: ticker
-      named_args:
+        - editor_key: fax
+          type: string
         - editor_key: link
           type: string
           optional: true
-        - editor_key: newWindow
+        - editor_key: linktext
           type: string
           optional: true
-          default: 'false'
-        - editor_key: text
-          type: string
-        - editor_key: fontSize
+        - editor_key: img
           type: string
           optional: true
-          default: large
-    _inputs:
-      link:
-        type: url
-        optional: true
-        comment: Link to be opened clicking on the ticker, optional
-      newWindow:
-        type: select
-        options:
-          allow_empty: true
-          values: _select_data.boolean
-        comment: 'If <true>, link opens in new window, default: <false>'
-      text:
-        type: textarea
-        comment: Text to appear in the ticker
-      fontSize:
-        type: select
-        comment: "Font size of the text, <large> or <normal>, default: <large>"
-        options:
-          allow_empty: true
-          values:
-            - large
-            - normal
-  
-  hugo_anchor-buttons:
-    template: hugo_shortcode_named_args
-    mcmlType: "special text"
-    mcmlDescription: "Use this snippet, to display anchors within a page as buttons. The anchors have to be defined in the page parameters. This snippet has no parameters and therefore no input."
-    mcmlLastMod: 2025-09-22
-    mcmlExample: >
-      {{< anchor-buttons >}}
-    mcmlInputImages:
-      - /examples/anchor-buttons_input.webp
-    preview:
-      text: Anchor Buttons
-      image: /examples/anchor-buttons.webp
-    picker_preview:
-      gallery:
-        text:  Anchor Buttons
-        image: /examples/anchor-buttons.webp
-    definitions:
-      shortcode_name: anchor-buttons
-  
-  hugo_clear-float:
-    template: hugo_shortcode_named_args
-    mcmlType: "special text"
-    mcmlDescription: "Use this snippet, if you want to stop floating (e.g. text around images etc.). This snippet has no parameters and therefore no input."
-    mcmlLastMod: 2025-09-05
-    mcmlExample: >
-      {{< clearFloat >}}
-    mcmlInputImages:
-      - /examples/clearFloat_input.webp
-    preview:
-      text: Clear float
-      image: /examples/clearFloat.webp
-    picker_preview:
-      gallery:
-        text: Clear float
-        image: /examples/clearFloat.webp
-    definitions:
-      shortcode_name: clearFloat
-  
-  hugo_comment:
-    template: hugo_paired_shortcode_positional_args
-    mcmlType: "special text"
-    mcmlDescription: "Use this snippet, if you want to comment something (e.g. save it for future use)."
-    mcmlLastMod: 2025-09-05
-    mcmlExample: >
-      {{< comment >}}Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. {{< /comment >}}
-    mcmlInputImages:
-      - /examples/comment_input.webp
-    preview:
-      text: Comment
-      icon: comment
-      image: /examples/comment.webp
-    picker_preview:
-      gallery:
-        text: Comment
-        image: /examples/comment.webp
-    definitions:
-      shortcode_name: comment
-      content_key: inner_text
-    _inputs:
-      inner_text:
-        type: textarea
-        comment: This text will be in comment tags
-  
-  hugo_video:
-    template: hugo_shortcode_named_args
-    preview:
-      text:
-        - Embedded video
-      icon: image
-      image:
-        - key: thumbnail
-      metadata:
-        - text:
-            - key: copyright
-            - no copyright
-    picker_preview:
-      gallery:
-        text: Embedded video
-        image: /examples/video.webp
-    definitions:
-      shortcode_name: video
-      named_args:
-        - editor_key: videoFile
-          source_key: src
-          type: string
-        - editor_key: thumbnail
-          type: string
         - editor_key: copyright
           type: string
-        - editor_key: ratio
-          type: string
-          default: '16/9'
+          optional: true
     _inputs:
-      videoFile:
-        type: file
-        comment: Choose video
-      thumbnail:
-        type: image
-        comment: Thumbnail image of the video
+      title:
+        type: textarea
+        comment: "appears left in <h2>"
+      address:
+        type: html
+        comment: "appears right in large font"
         options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
+          bold: true
+          format: p h3 h4 h5 h6
+          subscript: true
+          superscript: true
+      phone:
+        type: text
+      fax:
+        type: text
+      link:
+        type: url
+        comment: "link to office"
+      linktext:
+        type: text
+        comment: "text for link to office"
+      img:
+        type: image
+        comment: "appears left under h2 (optional)"
       copyright:
-        type: auto
-      ratio:
-        type: auto
-        comment: ratio of the video, e.g. 16/9 (default), 2/3, etc.
-        optional: true
-  hugo_imgFloat:
+        type: text
+        comment: "copyright for image (optional)"
+  
+  hugo_txtTwoCol-lg:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text:
-        - Floating Image
-      subtext:
-        - key: img
       icon: image
       image:
         - key: img
+      text: 
+        - key: title
+        - "Text Two Colums (h3 title, large font)"
+      subtext: 
+        - key: text
+        - "left column title h3, right column image (optional), text and button with link (optional)"
+      metadata:  
+        - icon: east
+          text: 
+            - key: linktext
+            - "Learn more"
+        - text: 
+            - key: link
+            - "no link"
+    picker_preview:
+      gallery:
+        image: /examples/txtTwoColh3-lg.png
+        text: "Text Two Colums (h3 Title, large Font)"      
+    definitions:
+      shortcode_name: txtTwoCol-lg
+      named_args:
+        - editor_key: title
+          type: string
+        - editor_key: text
+          source_key: txt1
+          type: string
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: linktext
+          type: string
+          optional: true
+        - editor_key: img
+          type: string
+          optional: true
+    _inputs:
+      title:
+        type: textarea
+        comment: "appears left in <h3>"
+      text:
+        type: html
+        comment: "appears right in large font"
+        options:
+          bold: true
+          format: p h4 h5 h6
+          subscript: true
+          superscript: true
+          bulletedlist: true
+          indent: true
+          horizontalrule: true
+          link: true
+      link:
+        type: url
+        comment: "link for linked button (appears right at the end - optional)"
+      linktext:
+        type: text
+        comment: "text for linked button (optional, default is 'Learn More')"
+      img:
+        type: image
+        comment: "appears right before text (optional)"
+        
+  hugo_txtTwoCol-md:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: image
+      image:
+        - key: img
+      text: 
+        - key: title
+        - "Text Two Colums (h3 title, normal font)"
+      subtext: 
+        - key: text
+        - "left column title h3, right column image (optional), text and button with link (optional)"
+      metadata:  
+        - icon: east
+          text: 
+            - key: linktext
+            - "no linktext"
+        - text: 
+            - key: link
+            - "no link"
+    picker_preview:
+      gallery:
+        image: /examples/txtTwoColh3.png
+        text: "Text Two Colums (h3 Title, normal Font)"
+    definitions:
+      shortcode_name: txtTwoCol-md
+      named_args:
+        - editor_key: title
+          type: string
+        - editor_key: text
+          source_key: txt1
+          type: string
+        - editor_key: link
+          type: string
+          optional: true
+        - editor_key: linktext
+          type: string
+          optional: true
+        - editor_key: img
+          type: string
+          optional: true
+    _inputs:
+      title:
+        type: textarea
+        comment: "appears left in <h3>"
+      text:
+        type: html
+        comment: "appears right in normal font"
+        options:
+          bold: true
+          format: p h4 h5 h6
+          subscript: true
+          superscript: true
+          bulletedlist: true
+          indent: true
+          horizontalrule: true
+          link: true
+          styles: /css/editor.css
+      link:
+        type: url
+        comment: "link for linked button (appears right at the end - optional)"
+      linktext:
+        type: text
+        comment: "text for linked button (optional, default is 'Learn More')"
+      img:
+        type: image
+        comment: "appears right before text (optional)"
+            
+  hugo_imgFloat:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: image
+      image: 
+        - key: img
+      text: 
+        -  "Floating Image"
+      subtext: 
+        - key: img
       metadata:
         - text:
-            - key: float
-            - left (default)
+          - key: float
+          - "left (default)"
         - text:
-            - key: size
-            - normal size (default)
+          - key: size
+          - "normal size (default)"
     picker_preview:
       gallery:
         image: /examples/floatingImage.png
-        text: Floating Image
+        text:  "Floating Image"
     definitions:
       shortcode_name: img-float
       named_args:
@@ -2417,274 +1040,99 @@ _snippets:
     _inputs:
       img:
         type: image
-        comment: Floating image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
+        comment: "Floating image"
       copyright:
         type: text
-        cascade: true
-      caption:
-        type: textarea
-        cascade: true
+        comment: ""
       float:
         type: select
+        comment: "Image position (default left)"
         options:
-          allow_empty: true
           values:
             - left
             - right
-        comment: Image position (default left)
-        cascade: true
       size:
         type: select
+        comment: "Image size (default normal)"
         options:
-          allow_empty: true
           values:
             - normal
             - small
-            - big
-        comment: Image size (default normal)
-        cascade: true
-  hugo_img-100:
+            
+  hugo_learnMoreBtn:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
+      icon: east
+      text: 
+      - key: text
+      - "Learn More Button (with optional text)"
+      metadata:
+        - text:
+          - key: link
+        - text:
+          - key: size
+          - "medium (default)"
+    picker_preview:
+      gallery:
+        image: /examples/learnMore.png
+        text: "Learn More Button (with optional text)"
+    definitions:
+      shortcode_name: learnMoreBtn
+      named_args:
+        - editor_key: link
+          type: string
+        - editor_key: text
+          type: string
+          optional: true
+          default: Learn More
+        - editor_key: size
+          optional: true
+          default: medium
+    _inputs:
+      link:
+        comment: ""
       text:
-        - Image full width
-      subtext:
-        - key: img
-      icon: image
-      image:
-        - key: img
-    picker_preview:
-      gallery:
-        image: /examples/imageFullWidth.png
-        text: Image full width
-    definitions:
-      shortcode_name: img-100
-      named_args:
-        - source_key: src
-          editor_key: img
-          type: string
-        - editor_key: caption
-          type: string
-          optional: true
-        - editor_key: copyright
-          type: string
-          optional: true
-        - editor_key: alt
-          type: string
-    _inputs:
-      img:
-        type: image
-        label: Image
-        comment: To be displayed in full width; max. file size 200kB
+        comment: "Text to appear on the button (if empty 'Learn more')"
+      size:
+        comment: "Size of the button (default: medium)"
+        type: select
         options:
-          max_file_size: 200
-          max_file_size_message: For SEO, keep this under 200kB.
-      copyright:
-        comment: optional
-        type: text
-      caption:
-        type: textarea
-      alt:
-        comment:  Specifies an alternate text for the image, if the image cannot be displayed
-        type: text
-  hugo_img-75:
-      template: hugo_shortcode_named_args
-      preview:
-        text:
-          - 'Image 75% width'
-        subtext:
-          - key: img
-        icon: image
-        image:
-          - key: img
-      picker_preview:
-        gallery:
-          image: /examples/imageFullWidth.png
-          text: 'Image 75% width'
-      definitions:
-        shortcode_name: img-75
-        named_args:
-          - source_key: src
-            editor_key: img
-            type: string
-          - editor_key: caption
-            type: string
-            optional: true
-          - editor_key: copyright
-            type: string
-            optional: true
-          - editor_key: alt
-            type: string
-      _inputs:
-        img:
-          type: image
-          label: Image
-          comment: 'To be displayed in 75 % width; max. file size 200kB'
-          options:
-            max_file_size: 200
-            max_file_size_message: For SEO, keep this under 200kB.
-        copyright:
-          comment: optional
-          type: text
-        caption:
-          type: textarea
-        alt:
-          comment:  Specifies an alternate text for the image, if the image cannot be displayed
-          type: text
-  hugo_galleryOne:
-    template: hugo_shortcode_named_args
-    preview:
-      text: Gallery with one image
-      icon: collections
-      image:
-        - key: img1
-      metadata:
-        - text:
-            - key: text1
-            - img1
-          icon: image
-          image:
-            - key: img1
-    picker_preview:
-      gallery:
-        image: /examples/galleryOne.webp
-        text: Gallery of one image
-    definitions:
-      shortcode_name: galleryOne
-      named_args:
-        - editor_key: img1
-          type: string
-        - editor_key: imgAlt1
-          type: string
-        - editor_key: copyright1
-          type: string
-          optional: true
-        - editor_key: caption1
-          type: string
-          optional: true
-        - editor_key: text1
-          type: string
-          optional: true
-    _inputs:
-      img1:
-        type: image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
-      text1:
-        type: textarea
-        cascade: true
-  hugo_galleryTwo:
-    template: hugo_shortcode_named_args
-    preview:
-      text: Gallery of two images
-      icon: collections
-      image:
-        - key: img1
-      metadata:
-        - text:
-            - key: text1
-            - img1
-          icon: image
-          image:
-            - key: img1
-        - text:
-            - key: text2
-            - img2
-          icon: image
-          image:
-            - key: img2
-    picker_preview:
-      gallery:
-        image: /examples/galleryTwo.webp
-        text: Gallery of two images
-    definitions:
-      shortcode_name: galleryTwo
-      named_args:
-        - editor_key: img1
-          type: string
-        - editor_key: imgAlt1
-          type: string
-        - editor_key: copyright1
-          type: string
-          optional: true
-        - editor_key: caption1
-          type: string
-          optional: true
-        - editor_key: text1
-          type: string
-          optional: true
-        - editor_key: img2
-          type: string
-        - editor_key: imgAlt2
-          type: string
-        - editor_key: copyright2
-          type: string
-          optional: true
-        - editor_key: caption2
-          type: string
-          optional: true
-        - editor_key: text2
-          type: string
-          optional: true
-        - editor_key: width
-          type: string
-        - editor_key: height
-          type: string
-    _inputs:
-      img1:
-        type: image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
-      caption1:
-        type: textarea
-      text1:
-        type: textarea
-      img2:
-        type: image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
-      caption2:
-        type: textarea
-      text2:
-        type: textarea
+          values:
+            - medium
+            - small
+
   hugo_gallery:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text: Gallery of three images
       icon: collections
-      image:
-        - key: img1
+      text: "Gallery of three images"
       metadata:
-        - text:
+        - icon: image
+          text: 
             - key: text1
-            - img1
-          icon: image
+            - "img1"
           image:
-            - key: img1
-        - text:
-            - key: text2
-            - img2
-          icon: image
+            key: img1
+        - icon: image
+          text:
+          - key: text2
+          - "img2"
           image:
             key: img2
-        - text:
-            - key: text3
-            - img3
-          icon: image
+        - icon: image
+          text:
+          - key: text3
+          - "img3"
           image:
             - key: img3
     picker_preview:
       gallery:
         image: /examples/galleryThree.png
-        text: Gallery of three images
+        text: "Gallery of three images"
     definitions:
-      shortcode_name: galleryThree
+      shortcode_name: gallery
       named_args:
         - editor_key: img1
           type: string
@@ -2723,66 +1171,57 @@ _snippets:
           type: string
           optional: true
         - editor_key: text3
-          type: string
+          type: string  
           optional: true
     _inputs:
       img1:
         type: image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
       text1:
         type: textarea
       img2:
         type: image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
       text2:
         type: textarea
       img3:
         type: image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
       text3:
         type: textarea
+        
   hugo_galleryFour:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text: Gallery of four images
       icon: collections
-      image:
-        - key: img1
+      text: "Gallery of four images"
       metadata:
-        - text:
+        - icon: image
+          text: 
             - key: text1
-            - img1
-          icon: image
+            - "img1"
           image:
             - key: img1
-        - text:
-            - key: text2
-            - img2
-          icon: image
+        - icon: image
+          text:
+          - key: text2
+          - "img2"
           image:
             - key: img2
-        - text:
-            - key: text3
-            - img3
-          icon: image
+        - icon: image
+          text:
+          - key: text3
+          - "img3"
           image:
             - key: img3
-        - text:
-            - key: text4
-            - img4
-          icon: image
+        - icon: image
+          text: 
+          - key: text4
+          - "img4"
           image:
             - key: img4
     picker_preview:
       gallery:
         image: /examples/galleryFour.png
-        text: Gallery of four images
+        text: "Gallery of four images"
     definitions:
       shortcode_name: galleryFour
       named_args:
@@ -2823,7 +1262,7 @@ _snippets:
           type: string
           optional: true
         - editor_key: text3
-          type: string
+          type: string  
           optional: true
         - editor_key: img4
           type: string
@@ -2836,67 +1275,41 @@ _snippets:
           type: string
           optional: true
         - editor_key: text4
-          type: string
+          type: string  
           optional: true
-        - editor_key: width
-          type: string
-          default: 300
-        - editor_key: height
-          type: string
-          default: 200
-        - editor_key: rows
-          comment: "Number of rows (default 2)"
-          type: string
-          default: 2
     _inputs:
       img1:
         type: image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
       text1:
         type: textarea
       img2:
         type: image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
       text2:
         type: textarea
       img3:
         type: image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
       text3:
         type: textarea
       img4:
         type: image
-        options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
       text4:
         type: textarea
-      rows:
-        type: select
-        options:
-          values:
-            - 1
-            - 2
+        
   hugo_gallery-slider:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text: Gallery slider
+      icon: collections
+      text: "Gallery slider"
       subtext:
         key: dir
-      icon: collections
       metadata:
         - text:
             key: orientation
     picker_preview:
       gallery:
         image: /examples/gallerySlider.png
-        text: Gallery slider
+        text: "Gallery slider"
     definitions:
       shortcode_name: gallery-slider
       named_args:
@@ -2911,228 +1324,147 @@ _snippets:
     _inputs:
       dir:
         type: file
-        comment: >-
-          Directory of the images to be shwon (please edit directory in source
-          editor - you can only choose files here!)
-        cascade: true
-      copyright:
+        comment: "Directory of the images to be shwon (please edit directory in source editor - you can only choose files here!)"
+      copyright: 
         type: text
-        comment: Copyright for images
-        cascade: true
+        comment: "Copyright for images"
       orientation:
         type: select
+        comment: "Orientation of the slider (default: landscape)"
         options:
-          allow_empty: true
           values:
             - landscape
             - portrait
-        comment: 'Orientation of the slider (default: landscape)'
-        cascade: true
-  
-  hugo_listAICenters:
+        
+  hugo_clear-float:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text: List AI Centers
+      text: "Clear float"
     picker_preview:
       gallery:
-        text: List AI Centers
+        text: "Clear float"
     definitions:
-      shortcode_name: listAICenters
-
-  hugo_listAICenterLogos:
+      shortcode_name: clearFloat
+  hugo_listTransferByPos:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text: List AI Centers
-    picker_preview:
-      gallery:
-        text: List AI Center Logos
-    definitions:
-      shortcode_name: listAICenterLogos
-
-  hugo_listReports:
-    template: hugo_shortcode_named_args
-    preview:
-      text: List Annual Reports
-    picker_preview:
-      gallery:
-        text: List Annual Reports
-    definitions:
-      shortcode_name: listReports
-  hugo_listPDF:
-    template: hugo_shortcode_named_args
-    preview:
-      text:
-        - key: title
-        - PDF Preview
-      icon: picture_as_pdf
-      image:
-        - key: img
+      icon: image
+      text: "List Transfer Position"
       metadata:
         - text:
-            - key: pdf
-    picker_preview:
-      gallery:
-        text: PDF Preview
+          - key: abbreviation
     definitions:
-      shortcode_name: listPDF
+      shortcode_name: listTransferByPos
       named_args:
-        - editor_key: pdf
-          type: string
-        - editor_key: title
-          type: string
-        - editor_key: img
+        - source_key: posabbr
+          editor_key: abbreviation
           type: string
     _inputs:
-      pdf:
-        type: file
-        comment: Choose pdf file
-      title:
-        type: text
-        comment: Title of pdf
-      img:
-        type: image
-        comment: Thumbnail image of pdf
+      abbreviation:
+        type: select
+        comment: "Type of Transfer Position"
         options:
-          max_file_size: 300
-          max_file_size_message: For SEO, keep this under 300kB.
-  hugo_listMatchMakingSections:
+          values:
+            - industry
+            - ml
+            - innolab
+            - open science
+            - open source
+            - education
+            - entrepreneur
+  
+  hugo_listPIs:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text: List Matchmaking Sections
-    picker_preview:
-      gallery:
-        text: List Matchmaking Sections
-    definitions:
-      shortcode_name: listMatchmakingSections
-  hugo_listMatchMakingProcesses:
-    template: hugo_shortcode_named_args
-    preview:
-      text: List Matchmaking Processes
-    picker_preview:
-      gallery:
-        text: List Matchmaking Processes
-    definitions:
-      shortcode_name: listMatchmakingProcesses
-  hugo_listPublications:
-    template: hugo_shortcode_named_args
-    preview:
-      text: List Publications by Research Area
       icon: collections
-      image: /examples/publications.webp
+      text: "List PIs by Research Area"
       metadata:
         - text:
-            - template: Research Area {subarea}   ....
-            - all
-      picker_preview:
-        gallery:
-          text: List Publications by Research Area
-          image: /examples/publications.webp
+          - key: subarea
+          - "all"
     definitions:
-      shortcode_name: listPublications
+      shortcode_name: listPIs
       named_args:
         - editor_key: subarea
           type: string
           optional: true
     _inputs:
       subarea:
-        label: Research Area
-        type: select
-        options:
-          values: _select_data.researchAreas
-  
-  hugo_listPublication:
-    template: hugo_shortcode_named_args
-    preview:
-      text: List Publication with bibtex key
-      icon: collections
-      metadata:
-        - text:
-            - key: bibtexkey
-    definitions:
-      shortcode_name: listPublication
-      named_args:
-        - editor_key: bibtexkey
-          type: string
-    _inputs:
-      bibtexkey:
         type: text
-        comment: "specify the unique bibtex key"
-
-  hugo_listCollaborationPublications:
+        comment: "e.g. A1, B3, C2, ... empty will return all"
+        
+  hugo_listDirectors:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text: List Publications with German AI Centers
       icon: collections
+      text: "List Directors"
     definitions:
-      shortcode_name: listCollaborationPublications
-
-  hugo_listCollaborationNews:
+      shortcode_name: listDirectors
+      
+  hugo_listStrategyBoard:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text: List Collaboration News with German AI Centers
       icon: collections
+      text: "List Strategy Board"
     definitions:
-      shortcode_name: listCollaborationNews
-
-  hugo_listEducationEvents:
+      shortcode_name: listStrategyBoard
+      
+  hugo_listAdvisoryBoard:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text: List Events for Continuing Education
       icon: collections
+      text: "List Advisory Board"
     definitions:
-      shortcode_name: listEducationEvents
-
-  hugo_listMembersByType:
+      shortcode_name: listAdvisoryBoard
+      
+  hugo_listManagement:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text: List Members by Type and Research Area
       icon: collections
-      image: /examples/listMembers.webp
-      metadata:
-        - text:
-            - template: Membership type {membershipType}   ....
-            - Membership type   .... 
-        - text:
-            - template: Research area {researchArea}   ....
-            - all   ....
-    picker_preview:
-      gallery:
-        image: /examples/listMembers.webp
-        text: List Members by Type and Research Area
+      text: "List Management"
     definitions:
-      shortcode_name: listMembersByType
-      named_args:
-        - editor_key: researchArea 
-          source_key: subarea
-          type: string
-          default: "all"
-        - editor_key: membershipType 
-          type: string
-    _inputs:
-      membershipType:
-        type: select
-        comment: "Type of members to be displayed"
-        options:
-          values: _select_data.membershipTypes
-      researchArea:
-        type: select
-        comment: "e.g. A1, B3, C2, or all (only applies to membership type Supervisor)"
-        options:
-          values: _select_data.researchAreas
-  hugo_listPartner:
+      shortcode_name: listManagement
+      
+  hugo_listPublications:
     template: hugo_shortcode_named_args
+    inline: false
     preview:
-      text:
+      icon: collections
+      text: "List publications"
+    definitions:
+      shortcode_name: listPublications
+      
+  hugo_listSoftware:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: "List software"
+    definitions:
+      shortcode_name: listSoftware
+      
+  hugo_txtTwoColPartner:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: collections
+      text: 
         - key: title
-        - List Partner (with text and title)
-      icon: collections
+        - "List Partner (with text and title)"
       metadata:
         - text:
-            - key: text
+          - key: text
         - text:
-            - key: type
+          - key: type
     definitions:
-      shortcode_name: listPartner
+      shortcode_name: txtTwoColPartner
       named_args:
         - editor_key: title
           type: string
@@ -3144,28 +1476,117 @@ _snippets:
     _inputs:
       title:
         type: text
-        comment: appears left in <h2>
-        cascade: true
+        comment: "appears left in <h2>"
       text:
         type: html
-        comment: appears right in large font
-        cascade: true
+        comment: "appears right in large font"
       type:
         type: select
+        comment: "Type of partner"
         options:
-          allow_empty: true
           values:
             - institutional
             - academic
             - ecosystem
             - industry
-        comment: Type of partner
-        cascade: true
-
-editor:
-  default_path:
-source_editor:
-  tab_size: 2
-  theme: monokai
-  show_gutter: true
-timezone: Etc/UTC
+            
+  hugo_txtTwoColTransfer:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      icon: image
+      text: 
+        - key: title
+        - "List Transfer Positions with text"
+      subtext: "(left column title, right column text and images)"
+      metadata:
+        - text:
+          - key: text
+        - text:
+          - key: abbreviation
+    definitions:
+      shortcode_name: txtTwoColTransfer
+      named_args:
+        - editor_key: title
+          type: string
+        - source_key: txt1
+          editor_key: text
+          type: string
+        - source_key: posabbr
+          editor_key: abbreviation
+          type: string
+    _inputs:
+      title:
+        type: text
+        comment: "appears left in <h2>"
+      text:
+        type: html
+        comment: "appears right in large font"
+      abbreviation:
+        type: select
+        comment: "Type of Transfer Position"
+        options:
+          values:
+            - industry
+            - ml
+            - innolab
+            - open science
+            - open source
+            - education
+            - entrepreneur
+      
+  hugo_comment:
+    template: hugo_paired_shortcode_positional_args
+    inline: false
+    preview:
+      icon: comment
+      text: "Comment"
+    definitions:
+      shortcode_name: comment
+      content_key: inner_text
+    _inputs:
+      inner_text: 
+        type: textarea
+        comment: This text will be in comment tags
+        
+  hugo_agenda:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: "Agenda row"
+      metadata:
+        - text:
+          - key: time
+        - text:
+          - key: name
+        - text:
+          - key: title
+    picker_preview:
+      gallery:
+        image: 
+        text: "Agenda row"
+    definitions:
+      shortcode_name: agenda
+      named_args:
+        - editor_key: time
+          type: string
+        - editor_key: name
+          type: string
+        - editor_key: title
+          type: string
+    _inputs:
+      time:
+        type: text
+        
+manager:
+  preview:
+    icon: image
+    text:
+      - key: name
+    subtext:
+      - key: position
+        
+    
+        
+        
+  
