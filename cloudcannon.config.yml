@@ -27,71 +27,6 @@ collections_config:
     description: ''
     _enabled_editors:
     _inputs:
-      background:
-        comment: Type of background
-        hidden: true
-      backgroundVideo:
-        type: boolean
-        comment: Indicates if a background video is used für medium and large devices
-        hidden: true
-      anchors:
-        label: Anchors within this page
-        comment: "Can be displayed with snippet Anchor Buttons (optional)."
-        type: array
-        options:
-          preview:
-            text:
-              - key: title
-          structures: _structures.anchors
-      highlights:
-        comment: "Highlight cards with link to news, events or pages."
-        type: array
-        options:
-          preview:
-            text:
-              - key: highlightLinkText
-          structures: _structures.highlights
-      sectionlinks:
-        label: Links to other sections 
-        comment: "Appear at the bottom of the page (optional)."
-        type: array
-        hidden: false
-      sectionlinks[*]:
-        type: select
-        options:
-          allow_empty: true
-          values:
-            - team
-            - directors
-            - management
-            - researchgroups
-            - jrgs
-            - tbfs
-            - juniors
-            - strategyboard
-            - advisoryboard
-            - opportunities
-            - collaborations
-            - partners
-            - publications
-            - researcha
-            - researchb
-            - researchc
-            - forMembers
-            - forPhDApplicants
-            - forFJN
-            - forJobCandidates
-            - industryPartnerships
-            - consulting
-            - continuingEducation
-            - schoolsAndOutreach
-      sectionlinksTitle:
-        label: "Title for section links (optional)"
-      filterTag:
-        label: Tag for posts to be filtered (optional)
-        comment: "The filtered posts appear at the end of this section (optional)."
-      filterTagTitle:
-        label: "Title for filtered posts (optional)"
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -101,7 +36,7 @@ collections_config:
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
-        remove_extra_inputs: false
+        remove_extra_inputs: true
         icon: notes
   news:
     path: content/news
@@ -113,9 +48,6 @@ collections_config:
     description: ''
     _enabled_editors:
     _inputs:
-      germanTitle: 
-        hidden: true
-        default: false
       layout:
         type: auto
         default: newsitem
@@ -124,6 +56,7 @@ collections_config:
         comment: Used for SEO, RSS and related news. Max. 150 characters!
         options: 
           show_count: true
+        cascade: false
       title:
         type: textarea
         comment: Title of news item (<h1> at top of the page)
@@ -156,13 +89,6 @@ collections_config:
       copyright:
         type: text
         comment: Copyright for teaser image
-      tinyLogo:
-        type: image
-        label: Tiny logo appears right above the teaser image (optional)
-        optional: true
-        options:
-          max_file_size: 200
-          max_file_size_message: For SEO, keep this under 200kB.
       link:
         type: auto
         comment: External link to news item
@@ -174,8 +100,6 @@ collections_config:
         options:
           allow_empty: false
           values: data.newsTags
-      year:
-        comment: Year of publication (all papers in top journals in specified year will be displayed)
     create:
       path: '{date|year}-{date|month}-{date|day}-{slug}/index.md'
       _inputs:
@@ -198,26 +122,8 @@ collections_config:
         remove_empty_inputs: false
         remove_extra_inputs: false
         icon: notes
-      conference:
-        path: schemas/conference.md
-        reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: false
-        icon: notes
-      journal:
-        path: schemas/journal.md
-        reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
-        remove_extra_inputs: false
-        icon: notes
   data:
     path: data
-    glob:
-      - '!publications/*'
-      - '!unused/**'
-      - '!mlcuPublications/*'
     name: Data Files
     icon: people
     disable_url: false
@@ -377,11 +283,6 @@ _inputs:
     options:
       timezone: Europe/Berlin
     comment: Publishing date
-  lastmod:
-    type: datetime
-    options:
-      timezone: Europe/Berlin
-    comment: Last modification date
   title:
     type: text
     comment: Title of the page (<h1> at top of the page; also used for SEO and RSS)
@@ -390,9 +291,6 @@ _inputs:
     comment: Used for SEO and RSS. Max. 150 characters!
     options: 
       show_count: true
-  aliases:
-    type: auto
-    comment: Create redirects from old URLs to this URL
   navname:
     type: auto
     label: Navigation Name
@@ -419,16 +317,6 @@ _inputs:
     options:
     max_file_size: 200
     max_file_size_message: For SEO, keep this under 200kB.
-  conferenceDateStart:
-    type: date
-    options:
-      timezone: Europe/Berlin
-  conferenceDateEnd:
-    type: date
-    options:
-      timezone: Europe/Berlin
-  conferenceLink:
-    type: url  
   text:
     type: html
     options:
@@ -445,169 +333,7 @@ _inputs:
       subscript: true
       superscript: true
     cascade: true
-  highlightImage:
-    type: image
-    label: Teaser image for highlight (max. 200kB)
-    options:
-    max_file_size: 200
-    max_file_size_message: For SEO, keep this under 200kB.
-  highlightLink:
-    type: url
-    label: Link to highlight
-  highlightLinkText:
-    type: text
-    label: Link text for highlight
-  manager:
-    type: array
-    options:
-      structures: _structures.manager
-    comment: Managers in MCML
-    cascade: true
-  pi:
-    type: array
-    options:
-      structures: _structures.pi
-    comment: PIs in MCML
-    cascade: true
-  affil:
-    type: array
-    options:
-      structures: _structures.pi
-    comment: Affiliated Senior Researchers in MCML
-    cascade: true
-  senior:
-    type: array
-    options:
-      structures: _structures.pi
-    comment: Senior Researchers in MCML
-    cascade: true
-  abmember:
-    type: array
-    options:
-      structures: _structures.ab-member
-    comment: Advisory Board members in MCML
-    cascade: true
-  phd:
-    type: array
-    options:
-      structures: _structures.phd
-    comment: PhDs in MCML
-    cascade: true
-  postdoc:
-    type: array
-    options:
-      structures: _structures.postdoc
-    comment: Postdocs in MCML
-    cascade: true
 _select_data:
-  piID:
-    - akata
-    - althoff
-    - bauer_s
-    - bauer_u
-    - bischl
-    - boulesteix
-    - buyx
-    - cremers
-    - dai
-    - dietrich
-    - doepp
-    - drton
-    - feuerriegel
-    - feurer
-    - fornasier
-    - fortuin
-    - fraser
-    - gabor
-    - gagneur
-    - gruen
-    - guennemann
-    - heckel
-    - hedderich
-    - huellermeier
-    - ingrisch
-    - jegelka
-    - kaissis
-    - kauermann
-    - kern
-    - kilbertus
-    - kinder
-    - krahmer
-    - kreuter
-    - kuechenhoff
-    - kutyniok
-    - lange
-    - leutenegger
-    - maly
-    - mayer
-    - mueller
-    - nagler
-    - navab
-    - niessner
-    - nyholm
-    - ommer
-    - paradies
-    - plank
-    - rauhut
-    - rinke
-    - rueckert
-    - ruegamer
-    - scheipl
-    - schmid
-    - schmidt
-    - schnabel
-    - schneider
-    - schoellig
-    - schubert
-    - schueffler
-    - schuetze
-    - schuller
-    - seidl
-    - sra
-    - sterkenburg
-    - theis
-    - thuerey
-    - tresp
-    - wachinger
-    - westermann
-    - wiestler
-    - zhu
-    - zimmer
-  membershipTypes:
-    - Directors
-    - Management Team
-    - Supervisors
-    - JRGs
-    - Thomas Bayes Fellows
-    - Junior Members
-    - Former Members
-    - Strategy Board
-    - Advisory Board
-    - Junior Member Representatives
-  positionIDs:
-    - collaboration
-    - industry
-    - outreach
-    - mlcu
-    - phdCoordination
-    - diversityCoordination
-    - strategyBoard
-    - director
-    - jrgEthics
-    - jrgNLP
-    - jrgMuMoL
-    - jrgAIforVision
-    - juniorRep
-    - diversityRep
-    - matchmaking23
-    - matchmaking24
-    - matchmaking25
-    - matchmaking26
-  jrgIDs:
-    - jrgEthics
-    - jrgNLP
-    - jrgMuMoL
-    - jrgAIforVision
   boolean:
     - 'true'
     - 'false'
@@ -619,31 +345,6 @@ _select_data:
   imgSize:
     - big
     - small
-  researchAreas:
-    - all
-    - A1
-    - A2
-    - A3
-    - B1
-    - B2
-    - B3
-    - C1
-    - C2
-    - C3
-    - C4
-    - C5
-  subAreas:
-    - A1
-    - A2
-    - A3
-    - B1
-    - B2
-    - B3
-    - C1
-    - C2
-    - C3
-    - C4
-    - C5
 _structures:
   linkedButton:
     style: select
@@ -653,159 +354,6 @@ _structures:
           text:
           size:
           newWindow:
-  anchors:
-    style: select
-    values:
-      - value:
-          title:
-          label:
-          url:
-        _inputs:
-          title:
-            comment: "If no url is specified, please specify the exact title as it appears in the <h> tags; anchor is generated from this."
-          label:
-            comment: "Optional label; if empty, the title is used."
-          url:
-            comment: "Optional url to another page; if empty, the anchor links to the title within this page."
-  speakers:
-    style: select
-    values:
-      - value:
-          name:
-          affiliation:
-          mail:
-          url:
-  highlights:
-    style: select
-    values:
-      - value:
-          highlightLinkText:
-          highlightLink:
-          highlightImage:
-  manager:
-    style: select
-    values:
-      - preview:
-          text:
-            - key: name
-          subtext:
-            - key: firstName
-          icon: person
-          icon_color:
-          image:
-            - key: image
-          metadata:
-            - text:
-                - key: position
-            - text:
-                - key: uni
-        tags:
-        value:
-          name:
-          firstName:
-          title:
-          image:
-          position:
-          uni:
-          contact:
-          mail:
-          bio:
-  pi:
-    style: select
-    values:
-      - preview:
-          text:
-            - key: name
-          subtext:
-            - key: firstName
-          icon: person
-          image:
-            - key: image
-          metadata:
-            - text:
-                - key: subarea
-            - text:
-                - key: uni
-        value:
-          name:
-          firstName:
-          title:
-          image:
-          uni:
-          affiliation:
-          contact:
-          bio:
-          subarea:
-          director:
-          strategyBoard:
-          id:
-  phd:
-    style: select
-    values:
-      - preview:
-          text:
-            - key: name
-          subtext:
-            - key: firstName
-          icon: person
-          image:
-            - key: image
-          metadata:
-            - text:
-                - key: piID
-        value:
-          name:
-          firstName:
-          image:
-          contact:
-          position:
-          piID:
-  postdoc:
-    style: select
-    values:
-      - preview:
-          text:
-            - key: name
-          subtext:
-            - key: firstName
-          icon: person
-          image:
-            - key: image
-          metadata:
-            - text:
-                - key: piID
-        value:
-          name:
-          firstName:
-          title:
-          image:
-          contact:
-          position:
-          piID:
-  ab-member:
-    style: select
-    values:
-      - preview:
-          text:
-            - key: name
-          subtext:
-            - key: firstName
-          icon: person
-          image:
-            - key: image
-          metadata:
-            - text:
-                - key: uni
-        value:
-          name:
-          firstName:
-          title:
-          image:
-          copyright:
-          uni:
-          affiliation:
-          contact:
-          bio:
 _editables:
   text:
     allow_custom_markup: true
