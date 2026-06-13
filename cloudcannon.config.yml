@@ -274,7 +274,7 @@ collection_groups:
 _inputs:
   center_description:
     type: textarea
-    comment: Description of the center. Max. 150 characters!
+    comment: Description of the center.
     options: 
       show_count: true
   center_short_name:
@@ -286,7 +286,7 @@ _inputs:
   center_logo:
     type: image
     comment: Logo of the center.
-   center_link:
+  center_url:
     type: url
     comment: URL of the center.
   layout:
