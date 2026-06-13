@@ -444,7 +444,7 @@ _snippets:
           image_size_attributes: true
           italic: true
           link: true
-          #styles: /css/editor.css
+          styles: /css/editor.css
           subscript: true
           superscript: true
 
