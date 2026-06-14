@@ -1,8 +1,8 @@
 {{ define "content" }}
 {{"<!-- content home.html Start -->" | safeHTML}}
 {{ partial "content.html" . }}
-<section class="list-content">
-	<div class="container-fluid hero-area">
+<section>
+	<div class="container-fluid">
 		<div class="row pt-3 pb-3">
 			<div class="col-2 col-md-4">
 				<div class="row ">
@@ -23,7 +23,7 @@
 		</div>
 	</div>
 	
-	<div class="container-fluid hero-area">
+	<div class="container-fluid">
 		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 pt-3 pb-3">
 			{{ range sort hugo.Data.aicenters "center_short_name" -}}
 				{{ partial "cardDeck" (dict 
@@ -36,12 +36,9 @@
 					"mail" .center_contact
 					"img" .center_logo 
 				)}}
-			
 			{{ end -}}
 		</div>
 	</div>
 </section>
-
-		
 {{"<!-- content home.html End -->" | safeHTML}}
 {{- end -}}
