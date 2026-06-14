@@ -14,7 +14,7 @@
 {{ errorf "The news %q has speaker and subtitle." .Permalink }}
 {{ end -}}
 
-<section class="mcml-content pb-3 noshow-lg bg-newsitem opac">
+<section class="pb-3 opac">
 	{{ partial "breadcrumbs.html" (dict "page" .) }}
 	<div class="container-fluid pb-0 pt-0"> 
 		<div class="row">
@@ -27,10 +27,6 @@
 	</div>
 	
 	<div id="content" class="container-fluid mt-0 pt-0">
-		{{ $videoPath := "/images/background/videos/current.mp4" -}}
-		<video class="background-video1" autoplay playsinline muted loop width=1080 height=1080>
-			<source src="{{ $videoPath | absURL }}" type="video/mp4">
-		</video>
 		<div class="row">
 			<div class="col-12 col-lg-8 g-0">
 			<div class="bg-whitex rounded-5 shadow-lg overflow-hidden ps-3 pe-3 pb-3">
@@ -186,4 +182,14 @@
 	</div>
 </section>
 {{"<!-- content newsitem.html End -->" | safeHTML}}
+{{ end -}}
+
+{{ define "lastmod" }}
+{{"<!-- lastmod newsitem.html Start -->" | safeHTML}}
+{{ if intersect .Params.tags (slice "blog") -}}
+	{{ partial "lastMod" (dict "bgcolor" "bg-blog" "date" .Date "lastmod" .Date) -}}
+{{ else -}}
+	{{ partial "lastMod" (dict "bgcolor" "bg-news" "date" .Date "lastmod" .Date) -}}
+{{- end -}}
+{{"<!-- lastmod newsitem.html End -->" | safeHTML}}
 {{ end -}}

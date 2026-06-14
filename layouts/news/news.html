@@ -6,7 +6,7 @@
 
 {{ define "content" }}
 {{"<!-- content news.htmlStart -->" | safeHTML}}
-<section class="mcml-content bg-news" id="section">
+<section id="section">
 	{{ partialCached "breadcrumbs.html" (dict "page" .) "news"}}
 	<div class="container-fluid">
 		<div class="row row-cols-1 row-cols-lg-1">
@@ -24,3 +24,12 @@
 </section>
 {{"<!-- content news.html End -->" | safeHTML}}
 {{ end -}}
+
+{{ define "lastmod" }}
+{{"<!-- lastmod news.html Start -->" | safeHTML}}
+{{ $news := partialCached "getAllNews" . -}}
+{{ $lastnews := index $news 0 -}}
+{{ $lastmod := $lastnews.Date -}}
+{{ partial "lastMod" (dict "bgcolor" "bg-news" "date" .Date "lastmod" $lastmod) -}}
+{{"<!-- lastmod news.html End -->" | safeHTML}}
+{{- end -}}

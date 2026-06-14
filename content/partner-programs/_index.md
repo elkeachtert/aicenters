@@ -1,6 +1,6 @@
 ---
 draft: false
-layout: list
+layout: partner-programs
 title: Partner Programs
 navname: Partner Programs
 description: The Partner Programs of the German AI Centers of Excellence.

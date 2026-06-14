@@ -141,7 +141,8 @@ function customSearchResults() {
     if (badwords.includes(search_words[i])) {
       continue;
     } else {
-      words.push(search_words[i]);
+		if (search_words[i] != '')
+      	  words.push(search_words[i]);
     }
   }
   if (!words.length) {
@@ -158,6 +159,7 @@ function customSearchResults() {
 	var linktext = data[i].linktext;
 	var link2 = data[i].link2;
 	var linktext2 = data[i].linktext2;
+	var html = data[i].html;
 
     var searchtext = '';
     if (title != '')   searchtext += title;
@@ -248,7 +250,8 @@ function customSearchResults() {
 	  var link = results[i].link; 
 	  var linktext = results[i].linktext; 
 	  var link2 = results[i].link2; 
-	  var linktext2 = results[i].linktext2; 
+	  var linktext2 = results[i].linktext2;
+	  var html = results[i].html;
 
       // only for debug mode
       var infos = '';
@@ -326,6 +329,14 @@ function customSearchResults() {
             templ = templ.replace("[LINKTEXT2]", '');
           }
         }
+	  //console.log("html: "+html);
+	  if (templ.includes("[HTML]")) {
+		  if (html != '') { 
+			  templ = templ.replaceAll("[HTML]", html);
+		  } else {
+			  templ = templ.replaceAll("[HTML]", '');
+		  }
+	  }
         results_content += templ;
         if (infos != '') {
           results_content += '<li>'+infos+'</li>';

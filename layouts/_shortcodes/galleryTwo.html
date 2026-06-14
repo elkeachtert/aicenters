@@ -1,0 +1,64 @@
+
+{{ "<!-- shortcode galleryTwo Start -->" | safeHTML }}
+{{ $img1 := .Get "img1" -}}
+{{ $imgAlt1 := .Get "imgAlt1" -}}
+{{ $text1 := .Get "text1" -}}
+{{ $caption1 := .Get "caption1" -}}
+{{ $copyright1 := .Get "copyright1" -}}
+
+{{ $img2 := .Get "img2" -}}
+{{ $imgAlt2 := .Get "imgAlt2" -}}
+{{ $text2 := .Get "text2" -}}
+{{ $caption2 := .Get "caption2" -}}
+{{ $copyright2 := .Get "copyright2" -}}
+
+{{ $width := .Get "width" | default "3" -}}
+{{ $height := .Get "height" | default "2" -}}
+
+{{ $path1 := printf "/static%s" $img1 -}} 
+{{ if not (os.FileExists $path1) -}}
+{{ errorf "The image requires a valid image path: %q" $path1 -}}
+{{ end -}}
+
+{{ if and ($img1) (or (not $imgAlt1) (eq $imgAlt1 "")) -}}
+{{ errorf "Please specify an alt tag: %q" $path1 -}}
+{{ end -}}
+
+{{ $path2 := printf "/static%s" $img2 -}} 
+{{ if not (os.FileExists $path2) -}}
+{{ errorf "The image requires a valid image path: %q" $path2 -}}
+{{ end -}}
+
+{{ if and ($img2) (or (not $imgAlt2) (eq $imgAlt2 "")) -}}
+{{ errorf "Please specify an alt tag: %q" $path2 -}}
+{{ end -}}
+
+<div class="row pt-3 pb-3 row-cols-1 row-cols-md-2">
+	<div class="col mt-1 mb-xl-0 mb-3">
+		<img src="{{ $img1 }}" width="{{ $width }}" height="{{ $height }}" class="img-100" alt="{{ $imgAlt1 }}"/>
+		{{ if $copyright1 -}}
+		<p class="pb-0 mb-0 copyright">&copy;{{ $copyright1 }} </p>
+		{{ end -}}
+		{{ if ne $caption1 "" -}}
+		<p class="p-xs gray mt-1"> {{ $caption1 | markdownify }} </p>
+		{{ end -}}
+		{{ if ne $text1 "" -}}
+		<p class="p-s mt-3"> {{ $text1 | markdownify }} </p>
+		{{ end -}}
+	</div>
+  {{ if $img2 -}}
+	<div class="col mt-1 mb-xl-0 mb-3">
+		<img src="{{ $img2 }}" width="{{ $width }}" height="{{ $height }}" class="img-100" alt="{{ $imgAlt2 }}"/>
+		{{ if $copyright2 -}}
+		<p class="pb-0 mb-0 copyright">&copy;{{ $copyright2 }} </p>
+		{{ end -}}
+		{{ if ne $caption2 "" -}}
+		<p class="p-xs gray mt-1"> {{ $caption2 | markdownify }} </p>
+		{{ end -}}
+		{{ if ne $text2 "" -}}
+		<p class="p-s mt-3"> {{ $text2 | markdownify }} </p>
+		{{ end -}}
+	</div>
+  {{ end -}}
+</div>
+{{ "<!-- shortcode galleryTwo End -->" | safeHTML }}

@@ -1,45 +1,45 @@
 {{ "<!-- Footer Start -->" | safeHTML }}
-<footer id="footer" class="bg-standard">
-	<section>
+<footer id="footer">
+	<section class="bg-footer">
 		<hr class="m-0 p-0">
 		<div class="container-fluid mb-0 mt-0 pt-0">
 			<div class="row g-0 pt-4">
-				<div class="col">	
+				<div class="col pb-2">	
 					Institutionally funded by
 				</div>
 					
-				<div class="row g-0 align-items-center">
-					<div class="col col-2">
-						<img src="{{ "/images/footer/bmftr.webp" | absURL }}" alt="Bundesministerium für Forschung, Technologie und Raumfahrt" width="600" height="264" class="img-100 mt-3">
-					</div>
-					<div class="col col-10 ps-3">
-						<img src="{{ "/images/footer/fundedby.webp" | absURL }}" alt="Funded by" width="3300" height="264" class="img-100">
+				<div class="row g-0 align-items-center">	
+					<div class="col col-12">
+						<img src="{{ "/images/footer/fundedby.webp" | absURL }}" alt="Funded by" width=3323 height=260 class="img-100 rounded-4">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	<section class="pb-0 mb-0 pt-5 mt-0">
+	<section class="bg-footer pb-0 mb-0 pt-3 mt-0">
 		<div class="container-fluid mb-0 mt-0 pt-0">
-			<div class="row align-items-end">
-				<div class="col-12 pt-md-4 footer-bottom-right pb-3">
-					<a href="{{ "/imprint/"| absURL }}">Imprint</a> | 						
-					<a href="{{ "/data-protection/"| absURL }}">Data Protection</a>
-				</div>
-			</div>		
 			<div class="row">
 				{{ $offset := 6 -}}
 				{{ range sort hugo.Data.aicenters "center_short_name" -}}
-				<div class="col-2 col-md-1 offset-md-{{ $offset }} pt-md-4 pb-3">
+				<div class="col-2 col-md-1 offset-md-{{ $offset }} pt-md-4">
 					<a href="{{ .center_url }}" title="{{ .center_short_name }}" aria-label="{{ .center_short_name }}">
-						<img class="img-100" src="{{ .center_logo | absURL }}" width="1" height="2" alt="Link to {{ .center_short_name }}">
+						<img class="img-100 rounded-3" src="{{ .center_logo | absURL }}" width="1" height="2" alt="Link to {{ .center_short_name }}">
 					</a>
 				</div>
 				{{ $offset = 0 -}}
 				{{ end -}}
-
-				<div class="col-12 footer-bottom-right pt-2">	
+			</div>
+				
+			<div class="row align-items-end">
+				<div class="col-12 footer-bottom-right pt-3">
+					<a class="bg-footer" href="{{ "/imprint/"| absURL }}">Imprint</a> | 						
+					<a class="bg-footer" href="{{ "/data-protection/"| absURL }}">Data Protection</a>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-12 footer-bottom-right pt-3">	
 					<p class="p-xs">German AI Centers of Excellence | &copy;{{ dateFormat "2006" now }} | All rights reserved.</p>
 				</div>
 			</div>

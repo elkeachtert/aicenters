@@ -87,6 +87,11 @@
 	color: white;
 }
 
+.bg-footer {
+	background-color: var(--textcolor);
+	color: white;
+}
+
 .bg-news {
 	/*background-color: var(--mcmllightblue);*/
 	background: url('/images/background/current.webp');
@@ -368,6 +373,7 @@
 
 /* hr */
 hr {
+	border: 0.5px solid var(--textcolor);
 	background-color: inherit;
 	opacity: 1;
 }
@@ -413,14 +419,14 @@ section {
 	padding-right: 0rem !important;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	background-color: var(--backgroundcolor);
+	background-colorx: var(--backgroundcolor);
 }
 .container-fluid {
 	padding-left: 15rem !important;
 	padding-right: 15rem !important;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	background-color: var(--backgroundcolor);
+	background-colorx: var(--backgroundcolor);
 }
 @media (max-width: 1399.98px) {
 	.container-fluid {
@@ -483,7 +489,10 @@ body {
   color: var(--textcolor);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
 @media (max-width: 575.98px) {
   body {
     font-size: 18px;
@@ -887,7 +896,12 @@ div.txtTwoCol-md ul {
 
 .mybreadcrumb {
 	font-size: 14px;
-	padding-top: 10rem;;
+	padding-top: 10rem;
+}
+
+@media (max-width: 480px) {
+	.mybreadcrumb {
+		padding-top: 12rem; }
 }
 
 /* Navigation  */
@@ -902,7 +916,13 @@ div.txtTwoCol-md ul {
 .navbar-nav {
 	font-weight: 600;
 	font-size: 20px;
+}
 
+.navbar-toggler-icon {
+	filter: invert(1);
+}
+.navbar .navbar-toggler {
+	border-color: rgba(255, 255, 255, 0.6);
 }
 	
 .navbar-light .navbar-nav .nav-link {
@@ -921,8 +941,6 @@ div.txtTwoCol-md ul {
 	padding-left:0.5rem;
 	padding-right:0.5rem;
 }
-
-
 
 /* Untermenues */	
 .dropdown:hover .dropdown-menu {
