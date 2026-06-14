@@ -100,7 +100,7 @@ description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam n
   # About us #  
   [[params.navigation.entry]]
     id = "about"
-    name = "The Network"
+    name = "Our Network"
     linkto = "/"
     hasChildren = "false"
     
