@@ -1,0 +1,5 @@
+partner_short_name = "ELLIS"
+partner_full_name = "European Laboratory for Learning and Intelligent Systems"
+partner_logo = "/images/logos/ellis.webp"
+partner_url = "https://ellis.eu"
+partner_description="ELLIS is a pan-European AI network of excellence which aims to secure lasting international leadership of AI made in Europe by connecting top researchers in this field and by creating a multi-centric AI research laboratory."

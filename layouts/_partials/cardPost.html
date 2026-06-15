@@ -1,0 +1,81 @@
+
+{{ "<!-- cardPost Start -->" | safeHTML }}
+{{ $thisPage := . -}}
+{{ $titleLevel := .titleLevel | default "h2-small" -}}
+{{ $showTags := "false" -}}
+{{ $home := printf "%s" (.site.Home.Permalink | absURL) -}}
+{{ if strings.Contains $home "localhost" -}}
+	{{ $showTags = "true" -}}
+{{ end -}}
+
+{{ $truncate := 200 -}}
+
+{{ $isNews := eq .post.Layout "newsitem" -}}
+{{ $isEvent := eq .post.Layout "eventitem" -}}
+
+{{ if not .post.Params.img -}}
+	{{ errorf "Please specify an image for the post: %s (at %s)" .post $thisPage -}}
+{{ end -}}
+
+{{ $header := "" -}}
+{{ $type := "" -}}
+{{ $time := "" -}}
+{{ $subtitle := .post.Params.subtitle -}}
+{{ $eventType := "" -}}
+{{ if $isEvent -}}
+	{{ $type = "event" -}}
+	{{ $eventDate := partial "eventDate" (dict "startDate" .post.Params.eventDate.start "endDate" .post.Params.eventDate.end ) -}}
+	{{/* $header = printf "%s • %s • %s" .post.Params.eventType $eventDate .post.Params.location - */}}
+	{{ $eventType = .post.Params.eventType -}}
+	{{ if not .post.Params.eventDate.allDay -}}
+		{{ $starttime := .post.Params.eventDate.start | time.Format ":time_short" -}}
+		{{ $endtime := .post.Params.eventDate.end | time.Format ":time_short" -}}
+		{{ $time = printf "%s - %s" $starttime $endtime -}}
+	{{ end -}}
+	
+	{{ if .post.Params.speakers -}}
+		{{ $subtitle = "" -}}
+		{{ $index := 1 -}}
+		{{ $len := .post.Params.speakers | len -}}
+		{{ range .post.Params.speakers -}}
+			{{ $subtitle = printf "%s %s, %s" $subtitle .name .affiliation -}}
+			{{ if lt $index $len -}}
+				{{ $subtitle = printf "%s <br>" $subtitle -}}
+			{{ end -}}
+			{{ $index = add $index 1 -}}
+		{{ end -}}
+	{{ end -}}
+{{ else if $isNews -}}
+	{{ $type = "news" -}}
+	{{ $header = .post.Date.Format "02.01.2006" }}
+{{ end -}}
+
+{{ $text := partial "myMarkdownify" (dict "txt" .post.Params.teaser "truncate" $truncate "p" "p-mxs") -}}
+
+{{ partialCached "cardDeckInner" (dict 
+	"page" $thisPage
+	"header" $header
+	"title" .post.Title
+	"germanTitle" .post.Params.germanTitle
+	"titleLevel" $titleLevel 
+	"subtitle" $subtitle 
+	"link" .post.Permalink
+	"linktext" "Read more" 
+	"img" .post.Params.img 
+	"copyright" .post.Params.copyright 
+	"buttonSize" "small" 
+	"tinyLogo" .post.Params.tinyLogo 
+	"tinyLogoSize" .post.Params.tinyLogoSize 
+	"text" $text 
+	"pClass" "p-mxs" 
+	"tags" .post.Params.tags
+	"showTags" $showTags
+	"showEventDate" "true"
+	"start" .post.Params.eventDate.start
+	"end" .post.Params.eventDate.end
+	"time" $time
+	"location" .post.Params.location
+	"eventType" $eventType 
+	"type" $type 
+) .post.Permalink -}}
+{{ "<!-- cardPost End -->" | safeHTML }}

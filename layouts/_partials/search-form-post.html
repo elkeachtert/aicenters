@@ -1,0 +1,60 @@
+
+{{"<!-- partial search-form-post Start -->" | safeHTML}}
+<div class="col-12 justify-content-end text-end mt-2">
+	<form id="custom-search" name="custom-search" method="post" action="" onsubmit="customSearchResults(); return false;">
+	{{ if eq .Section "events" -}}
+		<input id="custom-search-field" type="text" name="search" value="" title="Search String" placeholder="Search Events" class="rounded-4 b-none ps-2">
+	{{ else if eq .Section "news" -}}
+		<input id="custom-search-field" type="text" name="search" value="" title="Search String" placeholder="Search News" class="rounded-4 b-none ps-2">
+	{{ end -}}
+		<p class="p-s pt-2 bold">
+			<label>AND&nbsp;<input type="radio" name="option" value="AND" checked="checked"></label>
+			<label>&nbsp;&nbsp;OR&nbsp;<input type="radio" name="option" value="OR"></label>
+		</p>
+	</form>
+</div>
+
+<div id="custom-search-results" class="row row-cols-1 mt-0">
+</div>
+
+<script>
+// CUSTOM AREA
+let params = {
+    json_src       : {{ if eq .Section "events" -}}'/events.json' {{ else }} '/news.json' {{ end }}, // for multiple sources: comma separated list of JSONarrays
+    minlength      : 3,
+    defaultsearch  : 'AND',
+    sort_id        : 'ASC',
+    autocomplete   : 1, // 0: form needs a submit button
+    section_search : 0, // 1: needs checkboxes with name="section[]"
+    badwords       : '', //ignore this words
+    json_wait      : '<p>One moment please, search is loading...</p>',
+    json_ready     : '', //'<p><em>Bitte geben Sie einen Suchbegriff ein</em></p>',
+    extern_icon    : ' (externer Link)', // marker for external links (optional)
+    err_badstring  : '<p>The search term is too short!</p>',
+	err_nostring   : '', //'<p><Bitte geben Sie einen Suchbegriff ein</p>',
+    err_noresult   : '<p>Sorry, no search result. Please try again.</p>',
+    err_norequest  : '<p style="text-align: center; color:red;">The full text search is currently not available.</p>',
+    err_filefailed : '<p style="text-align: center;color: red;">A file could not be accessed.</p>',
+    res_one_item   : '<h2>[CNT] Search Result for &quot;[SEARCH]&quot;</h2>',
+    res_more_items : '<h2>[CNT] Search Results for &quot;[SEARCH]&quot;</h2>',
+    res_out_top    : '',
+    res_out_bottom : '',
+    res_item_tpl   : '<div class="post col-12 col-lg-6 col-xl-4 mt-3 mb-3">[HTML]</div>',
+    add_searchlink : ''
+};
+// Translation of section name (optional)
+let section_trans = {
+    "post" : "Blog",
+    // "other-section" : "Other Section"
+};
+
+let searchfield_weight = {
+    "title"   : 1,
+    "subtitle": 1,
+    "teaser" : 1,
+    "content" : 1
+};
+// CUSTOM AREA END
+</script>
+<script type="text/javascript" src="{{ "/js/searchNews.js" | absURL }}"></script>
+{{"<!-- partial search-form-post End -->" | safeHTML}}

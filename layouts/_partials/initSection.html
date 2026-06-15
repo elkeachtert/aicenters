@@ -1,0 +1,44 @@
+
+{{ "<!-- initSection Start -->" | safeHTML }}
+{{ $section := . }}
+{{ with .Ancestors }}
+	{{ if ge (len .) 2 }}
+		{{ $section = index . (sub (len .) 2) }}
+	{{ else if eq (len .) 1 }}
+		{{ $section = index . 0 }}
+	{{ end }}
+{{ end }}
+
+{{ $background := .Params.background -}}
+{{ $video := .Params.backgroundVideo -}}
+
+{{ $opac := false -}}
+{{ if not $background -}}
+	{{ $background = $section.Params.background -}}
+	{{ $video = $section.Params.backgroundVideo -}}
+	{{ $opac = true -}}
+{{ end -}}
+
+{{ $bgClass := "" -}}
+{{ if and $background $video $opac -}}
+	{{ $bgClass = printf "mcml-content noshow-lg bg-%s-opac opac" $background -}}
+{{ else if and $background $video (not $opac) -}}
+	{{ $bgClass =  printf "mcml-content noshow-lg bg-%s" $background -}}
+{{ else -}}
+	{{ $bgClass =  printf "mcml-content %s" $background -}}
+{{ end -}}
+
+ç
+
+{{ partial "breadcrumbs.html" (dict "page" .) }}
+
+<!--
+Section: {{ $section }}<br>
+BG CLASS: {{ $bgClass }}<br>
+$background {{ $background }}<br>
+$video {{ $video }}<br>
+$opac {{ $opac }}<br>
+-->
+
+{{ partial "makeTitle.html" . }}
+{{ "<!-- initSection End -->" | safeHTML }}

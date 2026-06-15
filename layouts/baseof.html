@@ -1,0 +1,34 @@
+{{ block "header" . }}
+{{"<!-- header baseof.html Start -->" | safeHTML }}
+{{ $title := strings.Title .Title -}}
+{{ if eq .Section "news" -}}
+	{{ partial "header.html" (dict "title" $title "description" .Description "page" .Permalink "image" .Params.img "rss" true) -}}
+{{ else if eq .Section "tags" -}}
+	{{ $title = printf "#%s" (lower .Title) -}}
+	{{ $description := printf "All articles associated with #%s." (lower .Title) -}}
+	{{ partial "header.html" (dict "title" $title "description" $description "page" .Permalink "image" .Params.img) -}}
+{{ else -}}
+	{{ partial "header.html" (dict "title" $title "description" .Description "page" .Permalink "image" .Params.img) -}}
+{{ end -}}
+{{"<!-- header baseof.html End -->" | safeHTML }}
+{{ end -}}
+
+{{ block "navigation" . }}
+{{"<!-- navigation baseof.html Start -->" | safeHTML }}
+{{ partialCached "navigation.html" . }}
+{{"<!-- navigation baseof.html End -->" | safeHTML }}
+{{ end -}}
+
+
+{{ block "content" . }}
+{{"<!-- content baseof.html Start -->" | safeHTML }}
+{{ partial "content.html" . -}}
+{{"<!-- content baseof.html End -->" | safeHTML }}
+{{ end -}}
+
+{{ block "footer" . }}
+{{"<!-- footer baseof.html Start -->" | safeHTML }}
+{{ partialCached "footer.html" . }}
+{{"<!-- footer baseof.html End -->" | safeHTML }}
+{{ end -}}
+

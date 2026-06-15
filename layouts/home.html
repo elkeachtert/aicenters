@@ -1,0 +1,42 @@
+{{ define "content" }}
+{{"<!-- content home.html Start -->" | safeHTML}}
+{{ partial "content.html" . }}
+<section>
+	<div class="container-fluid">
+		<div class="row">
+			{{ range sort hugo.Data.aicenters "center_short_name" -}}
+				<div class="col-4 col-md-2 pt-2 pb-2">
+					<a href="{{ .center_url }}">
+						<img src="{{ .center_logo }}" class="img-partnerx rounded-3" alt="{{ .center_short_name }}" width=2 height=1 style="width:100%; height:auto;">
+					</a>
+				</div>
+			{{ end -}}
+		</div>
+		
+		<div class="row mt-3">
+			<div class="col-12 col-md-6">
+				<img src="/images/logos/german_ai_centers.webp" class="rounded-5" alt="The Network of the German AI Centers of Excellence" width=3 height=2 style="width:100%; height:auto;">
+				<p class="mt-1 pb-0 mb-1 p-xs gray">The Network of the German AI Centers of Excellence</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 pt-3 pb-3">
+			{{ range sort hugo.Data.aicenters "center_short_name" -}}
+				{{ partial "cardDeck" (dict 
+					"title" .center_short_name 
+					"subtitle" .center_full_name
+					"text" .center_description
+					"link" .center_url 
+					"linktext" (printf "Website %s" .center_short_name)
+					"location" .center_location
+					"mail" .center_contact
+					"img" .center_logo 
+				)}}
+			{{ end -}}
+		</div>
+	</div>
+</section>
+{{"<!-- content home.html End -->" | safeHTML}}
+{{- end -}}

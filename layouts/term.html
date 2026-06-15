@@ -1,0 +1,149 @@
+{{ define "content" }}
+{{"<!-- content layout term Start -->" | safeHTML}}
+{{ $navname := printf "#%s" (lower .Title) -}}
+{{ $page := . -}}
+<section class="mcml-content">
+	{{ partial "breadcrumbs.html" (dict "page" . "navname" $navname) }}
+	<div class="container-fluid pb-0 pt-3"> 
+		<div class="row">
+			<div class="col">
+				{{ $tags := partialCached "getTags" . -}}
+				{{ partial "pagination_item" (dict "pages" $tags.allTags "thisPage" . "link" "/tags/" "type" "tags") -}}
+			</div>
+		</div>
+	</div>
+	
+	{{ partial "makeTitle.html" . -}}
+		
+	<div class="container-fluid mt-0 pt-2">
+		{{ $tag := lower .Title -}}
+
+		{{ $pages := .Pages -}}
+		{{ $p := index $pages 0 -}}
+		{{ $isNews := eq $p.Layout "newsitem" -}}
+		{{ $isEvent := eq $p.Layout "eventitem" -}}
+		{{ $isPublication := eq $p.Layout "publication" -}}
+		
+		{{ $pClass := "p-xs mb-2" -}}
+		
+		{{ if $isNews -}}
+			{{ $pages = sort .Pages ".Date" "desc" -}}
+		{{ else if $isEvent -}}
+			{{ $pages = sort .Pages ".Params.eventDate.start" "desc" -}}
+		{{ else if $isPublication -}}
+			{{ $pages = (sort .Pages ".Params.publication.no" "desc") -}}
+		{{ else -}}
+			{{ errorf "Wrong type %s" .Pages -}}
+		{{ end -}}
+		
+		{{/* für VWN */}}
+		{{ $home := printf "%s" (.Site.Home.Permalink | absURL) -}}
+		{{ if strings.Contains $home "localhost" -}}
+		<div class="row m-0 p-0">
+		{{ range $pages -}}
+			{{ $date := .Date }}
+			{{ if $isEvent -}}
+				{{ $date = time .Params.eventDate.start }}
+			{{ end -}}
+			
+			{{ if eq ($date.Year) 2025 }}
+				{{ $dateStr := time.Format "02.01.2006" $date -}}
+				<!--
+				<div class="col col-1"><p class="p-s">{{ $dateStr }}</p></div>
+				<div class="col col-5"><a href="{{ .Permalink | absURL }}">{{ .Title }}</a></div>
+				<div class="col col-6"><p class="p-xs">{{ .Permalink }}</p></div>
+				-->
+				{{/* für copy-paste */}}
+				<span class="p-xs">{{ $dateStr }}, {{ .Title }}, {{ .Permalink }}</span><br>
+			{{ end -}}
+		{{ end -}}
+		</div>
+		{{ end -}}
+
+		<div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-3 m-0 p-0">
+		{{ range $pages -}}	
+			{{ $title := .Title -}}
+			{{ if .Params.germanTitle -}}
+				{{ $title = .Params.title -}}
+			{{ end -}}
+			{{ $subtitle := .Params.subtitle -}}		
+			{{ $text := partial "myMarkdownify" (dict "txt" .Params.teaser "p" "p-xs" "truncate" 200 ) -}}
+			
+			{{ $type := "" -}}
+			{{ $header := "" -}}
+			{{ $time := "" -}}
+			
+			{{ if $isNews -}}
+				{{ $type = "news" -}}
+				{{ $header = .Date.Format "02.01.2006" -}}
+			
+			{{ else if $isEvent -}}
+				{{ $type = "event" -}}
+				{{ $start := time.Format "02.01.2006" .Params.eventDate.start -}}
+				{{ $end := time.Format "02.01.2006" .Params.eventDate.end -}}
+				{{ $eventDate := $start -}}
+				{{ if ne $start $end -}}
+					{{ $eventDate = printf "%s - %s" $start $end -}}
+				{{ end -}}
+				{{ $header = printf "%s • %s • %s" .Params.eventType $eventDate .Params.location -}}
+				
+				{{ if .Params.speakers -}}
+					{{ $subtitle = "" -}}
+					{{ $index := 1 -}}
+					{{ $len := .Params.speakers | len -}}
+					{{ range .Params.speakers -}}
+						{{ $subtitle = printf "%s %s, %s" $subtitle .name .affiliation -}}
+						{{ if lt $index $len -}}
+							{{ $subtitle = printf "%s <br>" $subtitle -}}
+						{{ end -}}
+						{{ $index = add $index 1 -}}
+					{{ end -}}
+				{{ end -}}
+				
+				{{ if not .Params.eventDate.allDay -}}
+					{{ $starttime := .Params.eventDate.start | time.Format ":time_short" -}}
+					{{ $endtime := .Params.eventDate.end | time.Format ":time_short" -}}
+					{{ $time = printf "%s - %s" $starttime $endtime -}}
+				{{ end -}}
+			
+			{{ else if $isPublication -}}
+				{{ $type = "publication" -}}
+				{{ if eq .Params.publication.type "INPROCEEDINGS" -}}
+					{{ $subtitle = .Params.publication.conference_abbr -}}
+				{{ else -}}
+					{{ $subtitle = .Params.publication.journal -}}
+				{{ end -}}
+				{{ $header = .Params.publication.bibtexkey -}}
+			{{ end -}}			
+			
+			{{ partialCached "cardDeck" (dict 
+				"page" $page
+				"header" $header
+				"title" $title
+				"germanTitle" .Params.germanTitle
+				"titleLevel" "h2-small" 
+				"subtitle" $subtitle 
+				"link" .Permalink
+				"linktext" "Read more" 
+				"img" .Params.img
+				"copyright" .Params.copyright 
+				"buttonSize" "small" 
+				"tinyLogo" .Params.tinyLogo 
+				"tinyLogoSize" .Params.tinyLogoSize 
+				"text" $text 
+				"pClass" $pClass 
+				"tags" .Params.tags
+				"showTags" "true"
+				"type" $type
+				"showEventDate" "true"
+				"start" .Params.eventDate.start
+				"end" .Params.eventDate.end
+				"time" $time
+				"eventType" .Params.eventType
+			) .Permalink "tag" -}}
+		{{ end -}}
+		</div>
+	</div>
+</section>
+{{"<!-- content layout term End -->" | safeHTML}}
+{{ end -}}

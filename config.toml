@@ -1,227 +1,130 @@
-baseURL = "https://mcml.ai"
+baseURL = "https://dbs.ifi.lmu.de"
 languageCode = "en"
-title = "Data Mining Lab @LMU"
-description = "The MCML is a top place for AI and ML research in Europe. We attract the most promising researchers from all career levels to our center and transfer innovations and AI potential to industry and society."
-paginate = 3
+title = "German AI Centers of Excellence"
+
+titleCaseStyle = 'ap'
+
+#disableKinds = ['taxonomy', 'term']
+
+[taxonomies]
+	category = "categories"
+	tag = "tags" 
+
+[pagination]
+	pagerSize = 6
 
 [module]
 [[module.mounts]]
-    source = 'static'
-    target = 'static'
-	excludeFiles = ['images/**/archive']
-
-disableKinds = ['taxonomy', 'term']
-
-[outputFormats.Publications]
-mediaType = "application/json"
-baseName = "publications"
-isPlainText = true
-notAlternative = true
-
-[outputFormats.Software]
-mediaType = "application/json"
-baseName = "software"
-isPlainText = true
-notAlternative = true
+	source = 'static'
+	target = 'static'
+	files = ['! images/**/archive']
+	
+[[module.mounts]]
+	source = 'static'
+	target = 'assets'
+	files = ['! images/**/archive']
 
 [outputFormats.News]
 mediaType = "application/json"
 baseName = "news"
 isPlainText = true
 notAlternative = true
-	
-[outputs]
-   home = [ "HTML", "Publications", "Software", "News" ]
-   
-[frontmatter]
-	lastmod = ["lastmod", ":fileModTime"]
 
-#[taxonomies]
-#  category = 'categories'
-#  series = 'series'
-#  tag = 'tags'
+[outputs]
+	home = [ 'html', 'News' ]
+	section = ['html']
+	taxonomy = ['html']
+	term = ['html']
+	
+[frontmatter]
+  date = ['date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified']
+  expiryDate = ['expirydate', 'unpublishdate']
+  lastmod = ['lastmod', ':fileModTime']
+  publishDate = ['publishdate', 'pubdate', 'published', 'date']
 
 [blackfriday]
 extensions = ["hardLineBreak"]
+
 [markup.goldmark.renderer]
-unsafe="true"
+unsafe = true
 
 [sitemap]
   changefreq = 'daily'
   filename = 'sitemap.xml'
   priority = 0.5
-    
+
 [params]
+
+[[params.aicenter]]
+name = "DFKI"
+image = "/images/logos/dfki.jpg"
+link = "https://www.dfki.de/web"
+
+[[params.aicenter]]
+name = "BIFOLD"
+image = "/images/logos/bifold.jpg"
+link = "https://www.bifold.berlin"
+
+[[params.aicenter]]
+name = "Scads.AI"
+image = "/images/logos/scads.webp"
+link = "https://scads.ai"
+description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+
+
+[[params.aicenter]]
+name = "LAMARR"
+image = "/images/logos/lamarr.webp"
+link = "https://lamarr-institute.org"
+description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+
+[[params.aicenter]]
+name = "Tue.AI"
+image = "/images/logos/tueai.jpg"
+link = "https://tuebingen.ai"
+description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+
+[[params.aicenter]]
+name = "MCML"
+image = "/images/logos/mcml.webp"
+link = "https://mcml.ai"
+description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 
 # ----------------------------------------------------------------------------------------
 # Navigation
 # ----------------------------------------------------------------------------------------      
 [params.navigation]
 	home  = "Home"
-    logo = "images/dmlab.png"
+    logo = "images/aicenters.png"
 	
-	# About #
-    [[params.navigation.entry]]
-	  id     = "about"
-	  linkto = "/about/"
-	  name = "About"
-	  hasChildren = "true"
-
-	#[[params.navigation.subentry]]
-	  #parent = "about"
-	  #linkto = "/team/"
-	  #name = "Team"
-    [[params.navigation.subentry]]
-	  parent = "about"
-	  linkto = "/about/collaborations/"
-	  name = "Collaborations"
-    [[params.navigation.subentry]]
-	  parent = "about"
-	  linkto = "/about/transfer/"
-	  name = "Transfer"
-    [[params.navigation.subentry]]
-	  parent = "about"
-	  name  = "Contact"
-	  linkto = "/contact/"
-	  
-	# People  
-    [[params.navigation.entry]]
-	  id = "people"
-	  name = "People"
-	  linkto = "/team/"
-	  hasChildren = "true"
-	
-	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/directors/"
-	  name = "Directors"
-	
-	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/management/"
-	  name = "Management" 
-	  divider = true
-	  
-	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/pis/"
-	  name = "Principal Investigators"
-	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/phds/"
-	  name = "Junior Members"
-	  divider = true
-	  
-	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/strategyboard/"
-	  name = "Strategy Board"
-	
-	[[params.navigation.subentry]]
-	  parent = "people"
-	  linkto = "/team/advisoryboard/"
-	  name = "Advisory Board"
-	
-	# Research #  
-    [[params.navigation.entry]]
-	  id = "research"
-	  name = "Research"
-	  linkto = "/research/"
-	  hasChildren = "true"
-	
-	[[params.navigation.subentry]]
-	  parent = "research"
-	  linkto = "/research/areaa/"
-	  name = "A | Foundations of ML"
-    [[params.navigation.subentry]]
-	  parent = "research"
-	  linkto = "/research/areab/"
-	  name = "B | Perception, Vision and NLP"
-    [[params.navigation.subentry]]
-	  parent = "research"
-	  linkto = "/research/areac/"
-	  name = "C | Domain-specific ML"    
-	[[params.navigation.subentry]]
-	  parent = "research"
-	  linkto = "/publications/"
-	  name = "Publications"	
-	[[params.navigation.subentry]]
-	  parent = "research"
-	  linkto = "/publications/software/"
-	  name = "Software"
-	  
-	# Opportunities #    
-	[[params.navigation.entry]]
-	  id = "opportunities"
-	  name = "Opportunities"
-	  linkto = "/opportunities/"	
-	  hasChildren = "true"  
-	  
-	[[params.navigation.subentry]]
-	  parent = "opportunities"
-	  linkto = "/opportunities/funding/"
-	  name = "Funding Programs"
-	[[params.navigation.subentry]]
-	  parent = "opportunities"
-	  linkto = "/opportunities/education/"
-	  name = "Education Programs"
-	[[params.navigation.subentry]]
-	  parent = "opportunities"
-	  linkto = "/opportunities/training/"
-	  name = "Professional Training"
-	[[params.navigation.subentry]]
-	  parent = "opportunities"
-	  linkto = "/opportunities/jobs/"
-	  name = "Jobs"
-	  
-    [[params.navigation.entry]]
-  	  id = "news"
-  	  name = "News"
-  	  linkto = "/news/"
-    [[params.navigation.entry]]
-	  id = "events"
-	  name = "Events"
-	  linkto = "/events/"
-  
-# LWDA Navigation
-[params.lwda2021_navigation]
-    home  = "LWDA Home"
-	linkto = "/lwda2021/"
-	
-	[[params.lwda2021_navigation.entry]]
-    name  = "Attending"
-    linkto = "/lwda2021/attending/"
-	
-	[[params.lwda2021_navigation.entry]]
-    name  = "Call for Papers"
-    linkto = "/lwda2021/cfp/"
-	
-	[[params.lwda2021_navigation.entry]]
-    name  = "History"
-    linkto = "/lwda2021/history/"
-	
-	[[params.lwda2021_navigation.entry]]
-    name  = "Organization"
-    linkto = "/lwda2021/organization/"
-    
-	[[params.lwda2021_navigation.entry]]
-    name  = "Program"
-    linkto = "/lwda2021/program/"
-	
-	[[params.lwda2021_navigation.entry]]
-    name  = "MCML"
+  # About us #  
+  [[params.navigation.entry]]
+    id = "about"
+    name = "Our Network"
     linkto = "/"
-	
-# ----------------------------------------------------------------------------------------
-# Hero Area (Big Picture)
-# ----------------------------------------------------------------------------------------        
-  [params.hero]
-    enable              = true
-    title               = "A top spot for AI and ML research in Europe"
-	subtitle            = "We attract the most promising researchers from all career levels to our center and transfer innovations and AI potential to industry and society."
-    vision              = "Unite leading researchers in Germany, to strengthen international, national and regional competence in the field of ML and AI. We foster talent and make corresponding potential accessible to users from science, industry and society."
-	description         = "MCML is one of six national AI Competence Centers. It is funded on a permanent basis by the German and Bavarian government's AI strategy, and brings together the leading ML researchers from LMU, TUM and associated institutions."
+    hasChildren = "false"
+    
+  # News #  
+  [[params.navigation.entry]]
+    id = "news"
+    name = "News"
+    linkto = "/news/"
+    hasChildren = "false"
+       
+  # Partner Programs #    
+  [[params.navigation.entry]]
+    id = "partner"
+    name = "Partner Programs"
+    linkto = "/partner-programs/"	
+    hasChildren = "false"  
 
+  # European Network #    
+  [[params.navigation.entry]]
+    id = "network"
+    name = "European Network"
+    linkto = "/european-network/"	
+    hasChildren = "false"
+	  
 # ----------------------------------------------------------------------------------------
 # Disable all tracking (DSVGO)
 # ----------------------------------------------------------------------------------------
@@ -232,7 +135,7 @@ unsafe="true"
     disable = true
   [privacy.instagram]
     disable = true
-  [privacy.twitter]
+  [privacy.x]
     disable = true
   [privacy.vimeo]
     disable = true

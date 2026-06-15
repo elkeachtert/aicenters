@@ -1,0 +1,17 @@
+
+{{ "<!-- shortcode listAICenterLogos -->" | safeHTML }}
+<div class="row pt-3 pb-3">	
+	{{ range sort hugo.Data.aicenters "center_short_name" -}}
+		{{ $path := printf "/static%s" .center_logo -}} 
+		{{ if not (os.FileExists $path) -}}
+			{{ errorf "The image at %q requires a valid image path:%q" .Page.Permalink $path -}}
+		{{ end -}}
+			
+		<div class="col-4 col-md-2">
+			<a href="{{ .link }}">
+				<img src="{{ .center_logo }}" class="img-partner" alt="{{ .center_short_name }}" width=2 height=1 style="width:100%; height:auto;">
+			</a>
+		</div>
+	{{ end -}}
+</div>
+{{ "<!-- shortcode listAICenterLogos End -->" | safeHTML }}

@@ -1,0 +1,20 @@
+[ {{- $i := 0 -}}
+
+{{ range sort (where site.RegularPages "Section" "news") ".Date" "desc" -}}
+  {{- if gt $i 0 }},{{ end }}
+  {
+	{{ $title := strings.Title .Title -}}
+	{{ $subtitle := .Params.subtitle -}}
+	{{ $teaser := .Params.teaser -}}
+	"title":{{ $title | plainify | jsonify  }}, 
+	"subtitle":{{ $subtitle | plainify | jsonify }}, 
+	"content":{{ .Content | plainify | jsonify }},
+	"teaser":{{ $teaser | plainify | jsonify }},
+	"html": {{ partialCached "cardPost" (dict "post" . "type" "news") .Permalink | jsonify (dict "noHTMLEscape" true)}}
+}
+  {{- $i = add $i 1 -}}
+{{ end -}}
+
+]
+
+

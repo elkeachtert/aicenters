@@ -24,6 +24,8 @@ window.addEventListener('load', function() {
 			var json_src_str = params['json_src'].replace("/\s/g", "");
 			var json_sources = json_src_str.split(",");
 			
+			//console.log("json: :"+params['json_src']);
+			
 			var src_count = 0;
 			for (var i = 0; i < json_sources.length; i++) {
 				var xmlhttp = new XMLHttpRequest();
@@ -143,7 +145,8 @@ function customSearchResults() {
 		if (badwords.includes(search_words[i])) {
 			continue;
 		} else {
-			words.push(search_words[i]);
+			if (search_words[i] != '')
+				words.push(search_words[i]);
 		}
 	}
 	if (!words.length) {
@@ -153,16 +156,12 @@ function customSearchResults() {
 	
 	var results = [];
 	for (var i = 0; i < data.length; i++) {
-		var id = data[i].id;
-		var permalink = data[i].permalink;
+		
 		var title   = data[i].title;
 		var subtitle   = data[i].subtitle;
-		var date = data[i].date;
-		var img = data[i].img;
-		var copyright = data[i].copyright;
 		var teaser = data[i].teaser;
 		var content = data[i].content;
-		var description = data[i].description;
+		var html = data[i].html;
 		
 		var searchtext = '';
 		if (title != '')   searchtext += title;
@@ -179,6 +178,7 @@ function customSearchResults() {
 		var content_matches = 0;
 		for (var y = 0; y < words.length; y++) {
 			var searchword = new RegExp(words[y], 'gi');
+			//console.log("searchword "+searchword);
 			if (searchword.test(searchtext) === true) {
 				var wordmatches = searchtext.match(searchword);
 				matches = matches + wordmatches.length;
@@ -220,6 +220,7 @@ function customSearchResults() {
 			}
 		} else {
 			if (matched == words.length) {
+				//console.log("data "+data[i].title);
 				results.push(data[i]);
 			}
 		}
@@ -253,17 +254,12 @@ function customSearchResults() {
 		var results_content = '';
 		for (var i = 0; i < results.length; i++) {
 			
-			var id = results[i].id;
-			var permalink = results[i].permalink;
 			var title   = results[i].title;
 			var subtitle   = results[i].subtitle;
-			var date = results[i].date;
-			var img = results[i].img;
-			var copyright = results[i].copyright;
 			var teaser = results[i].teaser;
 			var content = results[i].content;
-			var description = results[i].description; 
-			
+			var html = results[i].html;
+					
 			// only for debug mode
 			var infos = '';
 			if ((debug != '') && (debug != null)) {
@@ -302,51 +298,20 @@ function customSearchResults() {
             }
           }
 		  
-          if (templ.includes("[PERMALINK]")) {
-            if (permalink != '') { 
-              templ = templ.replaceAll("[PERMALINK]", permalink);
-            } else {
-              templ = templ.replaceAll("[PERMALINK]", '');
-            }
-          }
-		  if (templ.includes("[ID]")) {
-			  if (id != '') { 
-				  templ = templ.replaceAll("[ID]", id);
+     	  //console.log("teaser: "+teaser);
+		  if (templ.includes("[TEASER]")) {
+			  if (teaser != '') { 
+				  templ = templ.replaceAll("[TEASER]", teaser);
 			  } else {
-				  templ = templ.replaceAll("[ID]", '');
+				  templ = templ.replaceAll("[TEASER]", '');
 			  }
 		  }
-		  //console.log("templ: "+templ);
-		  var newdate = new Date(date*1000);
-		  var datestr = getFormattedDate(newdate);
-		  if (templ.includes("[DATE]")) {
-			  console.log("date: "+date+" "+datestr);
-			  if (date != '') { 
-				  templ = templ.replaceAll("[DATE]", datestr);
+		  //console.log("html: "+html);
+		  if (templ.includes("[HTML]")) {
+			  if (html != '') { 
+				  templ = templ.replaceAll("[HTML]", html);
 			  } else {
-				  templ = templ.replaceAll("[DATE]", '');
-			  }
-		  }
-		  if (templ.includes("[IMG]")) {
-			  if (img != '') { 
-				  templ = templ.replaceAll("[IMG]", img);
-			  } else {
-				  templ = templ.replaceAll("[IMG]", '');
-			  }
-		  }
-		  if (templ.includes("[COPYRIGHT]")) {
-			  if (copyright != '' && copyright != "<no value>") { 
-				  console.log("copyright: "+copyright+"xxx");
-				  templ = templ.replaceAll("[COPYRIGHT]", "&copy;"+copyright);
-			  } else {
-				  templ = templ.replaceAll("[COPYRIGHT]", '');
-			  }
-		  }
-		  if (templ.includes("[DESCRIPTION]")) {
-			  if (description != '') { 
-				  templ = templ.replaceAll("[DESCRIPTION]", description);
-			  } else {
-				  templ = templ.replaceAll("[DESCRIPTION]", '');
+				  templ = templ.replaceAll("[HTML]", '');
 			  }
 		  }
 		  results_content += templ;
@@ -356,7 +321,9 @@ function customSearchResults() {
 	  }
   } 
   sOutput.innerHTML = results_header+tag_top+results_content+tag_bottom;
+  //console.log("elemnet "+document.getElementById("content"));
   document.getElementById("content").style.display = "none";
+  
 } else {
 	var noresult = '';
 	if ((add_searchlink) && (add_searchlink != '')) {

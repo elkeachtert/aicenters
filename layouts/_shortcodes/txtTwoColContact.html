@@ -1,0 +1,55 @@
+{{ if .Get "img" -}}
+<div class="row mt-lg-5">
+	<div class="col col-12 col-lg-4 pe-lg-4 txtTwoCol">
+		<h2 id="{{ .Get "id" }}">{{ .Get "title" | markdownify }}</h2>
+	</div>
+</div>
+<div class="row mb-lg-5">
+	<div class="col col-12 col-lg-4 pe-lg-4 mt-3  mt-lg-2 txtTwoCol">
+	  <img class="img-100" src="{{ .Get "img" }}" alt="{{ .Get "title" }}" width="300" height="200">
+		  {{ if .Get "copyright" -}}
+		  <p class="pt-0 pb-0 mb-0 copyright">&copy;{{ .Get "copyright" }}</p>
+		  {{ end -}}
+		  {{ if .Get "caption" -}}
+		  <p class="mt-1 caption gray">{{ .Get "caption" }}</p>
+		  {{ end -}}
+	</div>
+	<div class="col col-12 col-lg-8 txtTwoCol mt-3 mt-lg-0">
+		{{ partial "myMarkdownify" (dict "txt" (.Get "txt1")) }}
+		
+		{{ if .Get "phone" -}}
+		<p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;{{ .Get "phone" }}</p>
+		{{ end -}}
+		
+		{{ if .Get "fax" -}}
+		<p><i class="fa-solid fa-fax"></i>&nbsp;&nbsp;{{ .Get "fax" }}</p>
+		{{ end -}}
+		
+		{{ if .Get "link" -}}
+		<p class="bold">Office: <a href="{{ .Get "link" }}">{{ .Get "linktext" }}</a></p>
+		{{ end -}}		
+	</div>
+</div>
+
+{{ else -}}
+<div class="row mb-lg-5 mt-lg-5">
+	<div class="col col-12 col-lg-4 pe-lg-4 txtTwoCol">
+		<h2 id="{{ .Get "id" }}">{{ .Get "title" | markdownify }}</h2>
+	</div>
+	<div class="col col-12 col-lg-8 txtTwoCol">
+		{{ partial "myMarkdownify" (dict "txt" (.Get "txt1")) }}
+		
+		{{ if .Get "phone" -}}
+		<p><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;{{ .Get "phone" }}</p>
+		{{ end -}}
+		
+		{{ if .Get "fax" -}}
+		<p><i class="fa-solid fa-fax"></i>&nbsp;&nbsp;{{ .Get "fax" }}</p>
+		{{ end -}}
+		
+		{{ if .Get "link" -}}
+		<p class="bold">Office: <a href="{{ .Get "link" }}">{{ .Get "linktext" }}</a></p>
+		{{ end -}}		
+	</div>
+</div>
+{{ end -}}

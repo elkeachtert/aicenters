@@ -1,0 +1,36 @@
+{{ $len := .sectionLinks | len -}}
+{{"<!-- Section Cards Start -->" | safeHTML}}
+<div class="container-fluid pt-5 pb-5 mb-0">
+  {{ if .title -}}
+  {{ if eq .square "false" -}}
+  <h2>{{ .title -}}</h2>
+  {{ else -}}
+  <div class="row">
+		<div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3">
+			<div class="card card-news bg-black ratio ratio-1x1 p-2">
+		    <div class="p-3 d-flex align-items-center">
+			    <h2>{{ .title -}}</h2>
+			 </div>
+			</div>
+		</div>
+	</div>
+	{{ end -}}
+	{{ end -}}
+  
+	{{ if eq $len 4 -}}
+	<div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-4 mt-0">
+	{{ else -}}
+	<div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3 mt-0">
+	{{ end -}}
+	
+	{{ range .sectionLinks -}}
+		{{ partial "cardDeck" (dict "title" .title "text" .text "link" .link "img" .img "copyright" .copyright) }}
+  {{ end -}}
+		
+	</div>		
+</div>
+{{"<!-- Section Cards End -->" | safeHTML -}}
+
+
+
+

@@ -1,0 +1,43 @@
+{{ $path := printf "/static%s" .Params.image -}} 
+{{ if not (os.FileExists $path) -}}
+{{ errorf "The member %q %q requires a valid image path: %q (%q)" .Params.name .Params.firstName $path . }}
+{{ end -}}
+
+<div class="card card-news h-100 m-0 p-0 b-gray">
+  <div class="row g-0 mb-0 pb-0">
+    <div class="col-4 card-body p-0 m-0">
+      <a href="{{ .Permalink }}" aria-label="Link to {{ .Params.firstName}} {{ .Params.name }}">
+        <img src="{{ .Params.image }}" class="img-member pr-2" alt="Image of {{ .Params.firstName}} {{ .Params.name }}" width="100" height="100">
+      </a>
+      {{ if .Params.copyright -}}
+      <p class="copyright">&copy;{{ .Params.copyright }}</p>
+      {{ end -}}
+    </div>
+    <div class="col-8 card-body ps-lg-5 pb-0 mb-0">
+      {{ if eq .Params.academicTitle "-none-" -}}
+      <p class="h3 card-title bold pt-2 mb-1" style="line-height:1.1;">{{ .Params.firstName}} {{ .Params.name }}</p>
+      {{ else -}}
+      <p class="h3 card-title bold pt-2 mb-1" style="line-height:1.1;">{{ .Params.academicTitle }} {{ .Params.firstName}} {{ .Params.name }}</p>
+      {{ end -}}
+      
+      {{ if .Params.position -}}
+      <p class="card-text mb-3" style="line-height:1.1;">{{ .Params.position }} </p>	
+      {{ end -}}
+      {{ if .Params.room -}}
+      <p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Room {{ .Params.room }}</p>	
+      {{ end -}}
+      {{ if .Params.phone -}}
+      <p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;{{ .Params.phone }}</p>	
+      {{ end -}}
+      {{ if .Params.fax -}}
+      <p class="card-text p-s mb-1 mt-1 pt-0"><i class="fa-solid fa-fax"></i>&nbsp;&nbsp;{{ .Params.fax }}</p>	
+      {{ end -}}
+			
+			{{ if .Params.mail -}}
+			<p class="card-text p-s mb-1 mt-1 pt-0"><a class="maillink" aria-label="Mail to {{ .Params.firstName}} {{ .Params.name }}" href="{{ .Params.mail }}"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Send an email</a></p>
+			{{ end -}}	
+			
+			{{ partial "learnMore" (dict "link" .Permalink "size" "small" "margin" "3" ) -}}
+		</div>
+	</div>
+</div>

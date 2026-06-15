@@ -1,0 +1,49 @@
+
+{{ "<!-- listAICenters Start -->" | safeHTML }}
+<div class="container-fluid mybreadcrumb pt-lg-5 pb-0"> 
+	<div class="row row-cols-1">
+		<div class="col">
+			{{ $.Scratch.Set "url" "" -}}
+			{{ $links := split .RelPermalink "/" -}}
+			{{ $maxlength := sub (len $links) 1 -}}
+			{{ $counter := 0 -}}
+			{{ $i := $links | len -}}
+			<a href="/">Home</a>
+		
+			{{ if or (eq .Section "news") (eq .Section "events") -}}
+				{{ $i = 2 -}}
+			{{ end -}}	
+				
+			{{ range first $i $links -}}
+				{{ $counter = add $counter 1 -}}
+				{{ if and (gt $counter 1) (lt $counter (len $links)) -}}
+					{{ $.Scratch.Add "url" (print "/" . ) -}}
+					{{ $page := $.GetPage ($.Scratch.Get "url") -}}
+					
+					{{ if eq $counter $maxlength -}}
+						{{ if $page.Params.navname -}}
+							&nbsp;|&nbsp;{{ $page.Params.navname }}
+						{{ else if $.Scratch.Get "navname" -}}
+						  &nbsp;|&nbsp;{{ $.Scratch.Get "navname" }}
+						{{ else if $page.Params.shorttitle -}}
+				 			&nbsp;|&nbsp;{{ $page.Params.shorttitle }}
+				 		{{ else -}}
+				 		  	&nbsp;|&nbsp;{{ $page.Title }}
+						{{ end -}}
+		
+					{{ else -}}
+						{{ if $page.Params.navname -}}
+						&nbsp;|&nbsp;<a href="{{ $.Scratch.Get "url" }}/">{{ $page.Params.navname }}</a>
+						{{ else if $page.Params.shorttitle -}}
+						&nbsp;|&nbsp;<a href="{{ $.Scratch.Get "url" }}/">{{ $page.Params.shorttitle }}</a>
+						{{ else -}}
+						&nbsp;|&nbsp;<a href="{{ $.Scratch.Get "url" }}/">{{ $page.Title }}</a>
+						{{ end -}}
+					{{ end -}}
+				{{ end -}}
+			{{ end -}}
+		</div>
+	</div>
+</div>
+{{ "<!-- listAICenters End -->" | safeHTML }}
+	

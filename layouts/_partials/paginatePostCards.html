@@ -1,0 +1,28 @@
+
+{{"<!-- paginatePostCards Start -->" | safeHTML}}
+<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 m-0 p-0 posts" id="posts">
+	{{ $posts := .posts -}}
+	{{ $page := .page -}}
+		
+	{{ $paginator := $page.Paginate $posts -}}
+	{{ $pageSize := $paginator.PagerSize -}}
+	{{ $totalPostsToShow := mul $paginator.PageNumber $pageSize -}}
+	
+	{{ range $index, $p := (first $totalPostsToShow $posts) -}}
+	<div {{ if eq $index (sub $totalPostsToShow $pageSize) }}id="newpage"{{ end }} class="col p-2">
+		{{ partialCached "cardPost" (dict "post" . "page" $page) .Permalink -}}
+	</div>
+	{{ end -}}
+<div>
+		
+{{ if and (gt $paginator.TotalPages 1) ($paginator.HasNext) -}}
+<div class="mt-3">
+	<a href="{{ $paginator.Next.URL | absURL }}#newpage" class="quicklink has--icon mt-0 mb-0 medium nextpage">
+		<span class="quicklink_icon">
+			<i class="fas fa-arrow-right"></i>
+		</span>
+		Load more
+	</a>
+</div>
+{{ end -}}
+{{"<!-- paginatePostCards End -->" | safeHTML}}

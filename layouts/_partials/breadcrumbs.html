@@ -1,0 +1,68 @@
+
+{{ "<!-- breadcrumbs Start -->" | safeHTML }}
+<div class="container-fluid mybreadcrumb pb-0">
+	{{ if .page.Draft -}}
+	<div class="row row-cols-1">
+		<div class="col">
+			<p class="p-xl bold b-red red"> *** DRAFT!!! ***</p>
+		</div>
+	</div>
+	{{ end -}}
+	
+	{{ if gt .page.Date now -}}
+	<div class="row row-cols-1">
+		<div class="col">
+			<p class="p-xl bold b-red red"> *** FUTURE!!! ***</p>
+		</div>
+	</div>
+	{{ end -}}
+		
+	<div class="row row-cols-1">
+		<div class="col">
+			{{ $thispage := site.GetPage .page.RelPermalink -}}
+			{{ $thisnavname := .navname -}}
+			{{ if not .navname -}}
+				{{ $thisnavname = .page.Params.navname -}}
+			{{ end -}}
+			
+			{{ $url := "" -}}
+			{{ $links := split $thispage.RelPermalink "/" -}}
+			
+			{{ $maxlength := sub (len $links) 1 -}}
+			{{ $counter := 0 -}}
+			{{ $i := $links | len -}}
+			
+			<a href="{{ "/" | absURL }}">Home</a>
+		
+			{{ if or (eq .page.Section "news") (eq .page.Section "events") -}}
+				{{ $i = 2 -}}
+			{{ end -}}	
+				
+			{{ range first $i $links -}}
+				{{ $counter = add $counter 1 -}}
+				{{ if and (gt $counter 1) (lt $counter (len $links)) -}}
+					{{- $url = printf "%s/%s" $url . -}}
+					{{- $page := site.GetPage $url -}}
+
+					{{ if or (eq $counter $maxlength) (gt $counter $maxlength) -}}
+						{{ if $page.Params.navname -}}
+							&nbsp;|&nbsp;{{ $page.Params.navname }}
+						{{ else if and (eq $thispage $page) ($thisnavname) -}}
+							&nbsp;|&nbsp;{{ $thisnavname }}
+						{{ else -}}
+				 			&nbsp;|&nbsp;{{  humanize . }}
+						{{ end -}}
+		
+					{{ else -}}
+						{{- with $page.Params.navname -}}
+							&nbsp;|&nbsp;<a href="{{ $url | absURL }}/">{{ . }}</a>
+						{{- else -}}
+							&nbsp;|&nbsp;<a href="{{ $url | absURL }}/">{{ humanize . }}</a>
+						{{- end -}}
+					{{ end -}}
+				{{ end -}}
+			{{ end -}}
+		</div>
+	</div>
+</div>
+{{ "<!-- breadcrumbs End -->" | safeHTML }}

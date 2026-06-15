@@ -1,0 +1,46 @@
+{{"<!-- navigation Start -->" | safeHTML}}
+{{ $baseURL := .Site.BaseURL -}}
+{{ $quicklinks := slice -}}
+{{ range .Site.Params.navigation.subentry -}}
+	{{ if eq .isQuickLink "true" -}}
+		{{ $quicklinks = $quicklinks | append . -}}
+	{{ end -}}
+{{ end -}}
+
+<nav class="navbar navbar-expand-xl fixed-top navbar-light bg-navbar mt-0 mb-3 pt-2 pb-3">
+	<a class="navbar-brand" href="{{ .Site.BaseURL }}">
+		<img class="img-logo ms-3 ms-md-5 mt-2 mb-2 rounded-4" src="{{ .Site.Params.navigation.logo | absURL }}" width="1472" height="408" alt="Logo and Link to Home">
+	</a>
+		
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+		
+	<div class="collapse navbar-collapse flex-column" id="navbarNav">
+		<ul class="navbar-nav ms-auto me-xl-5 mb-0 pe-xl-5 pb-0">
+			{{ range .Site.Params.navigation.entry -}}
+				{{ if eq .hasChildren "true" -}}	
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="{{.linkto | absURL}}" id="navbarDropdown-{{ .id }}" role="button" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">{{ .name }}</a>
+						<ul class="dropdown-menu shadow" aria-labelledby="navbarDropdown-{{ .id }}">
+						{{ $id := .id -}}
+						{{ range $.Site.Params.navigation.subentry -}}
+							{{ if eq .parent $id -}}
+								<li><a class="dropdown-item" href="{{.linkto | absURL}}">{{ .name }}</a></li>
+								{{ if eq .divider true -}}
+								<li><hr class="dropdown-divider"></li>
+								{{ end -}}
+							{{ end -}}
+						{{ end -}}
+						</ul>
+					</li>
+				{{ else -}}
+					<li class="nav-item">
+						<a class="nav-link" href="{{.linkto | absURL}}">{{ .name }}</a>
+					</li>
+				{{ end -}}
+			{{ end -}}
+		</ul>
+	</div>
+</nav>
+{{"<!-- navigation End -->"| safeHTML}}

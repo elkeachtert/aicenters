@@ -1,6 +1,0 @@
-{{ $position := .posabbr }}
-<div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 mt-0">
-	{{- range sort (where site.Data.transfer.position "posabbr" .posabbr ) "name" }}
-		{{ partial "cardMember" (dict "image" .image " title" .title "firstName" .firstName "name" .name "title" .title "uni" .uni "unishort" .unishort "position" .position "contact" .contact "mail" .mail ) -}}
-	{{ end }}
-</div>
